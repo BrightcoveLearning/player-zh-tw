@@ -1,0 +1,1813 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>程式碼範例</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Player_Logo.svg" alt="產品標誌" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+      <option value="">其他布萊特灣文件</option>
+      
+        
+          <option value="https://support.brightcove.com">文件首頁</option>
+        
+      
+        
+          <option value="https://audience.support.brightcove.com">布萊特灣觀眾</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">布萊特灣燈塔</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">布萊特灣戰役</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">布萊特灣參與</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">Brightcove 圖庫</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">布萊特灣</option>
+        
+      
+        
+          <option value="https://social.support.brightcove.com">布萊特灣社會</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">視訊雲端工作室</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">布萊特灣球員開發</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">視訊雲端平台 API</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">視訊雲端裝置開發套件</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">整合與 CMS 連接器</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">視訊雲端一般資訊</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+        
+      
+    </select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">首頁</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/code-samples/">程式碼範例</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">程式碼範例</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">首頁</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/index.html">開始使<strong>用 + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/what-brightcove-player.html">什麼是布萊特灣玩家？</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/overview-brightcove-player.html">概述：布萊特灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/overview-brightcove-player-plugins.html">概述：布萊特灣播放器外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/step-step-brightcove-player.html">逐步：布萊特灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/learning-guide-using-rest-apis.html">學習指南：使用其他應用程式介</a>面</li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/basics/index.html">學習基本知識<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/basics/developer-basics-advanced-player-code.html">進階播放程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-autoplaying-video.html">自動播放視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-custom-plugin-converting-code.html">自定義插件-轉換代碼</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-custom-plugin-passing-data.html">自定義插件-傳遞數據</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-custom-plugin-using-studio.html">自定義插件-使用工作室</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-custom-plugin-why-and-how.html">自定義插件-為什麼和如何</a></li>
+                  
+                
+                  
+                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-generating-player-code.html">產生播放程式代碼</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-preparing-write-code.html">準備撰寫程式碼</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/references/index.html">參考資料<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/references/brightcove-player-5-6-migration-guide.html">布萊特灣玩家 5 至 6 轉移指南</a></li>
+                  
+                
+                  
+                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/index.html">布萊特灣播放器 API 文檔（外部網站）</a></li>
+                  
+                
+                  
+                    <li><a href="/references/brightcove-player-cookies.html">布萊特灣球員曲奇</a></li>
+                  
+                
+                  
+                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
+                  
+                
+                  
+                    <li><a href="https://groups.google.com/forum/embed/?place=forum/bcplayerdev#!forum/bcplayerdev">布萊特灣球員公告論壇</a></li>
+                  
+                
+                  
+                    <li><a href="/references/brightcove-player-system-requirements.html">布萊特灣玩家系統需求</a></li>
+                  
+                
+                  
+                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋架構</a></li>
+                  
+                
+                  
+                    <li><a href="https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html">已知問題</a></li>
+                  
+                
+                  
+                    <li><a href="/references/player-catalog.html">播放器目錄</a></li>
+                  
+                
+                  
+                    <li><a href="/references/player-feature-support-browser.html">瀏覽器支援播放器功能</a></li>
+                  
+                
+                  
+                    <li><a href="/references/player-metadata-bcinfo.html">來自 bcinfo 的播放器中繼資料</a></li>
+                  
+                
+                  
+                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html">播放器方法/事件 API（外部網站）</a></li>
+                  
+                
+                  
+                    <li><a href="/references/guide-playlist-api.html">播放清單 API 指南</a></li>
+                  
+                
+                  
+                    <li><a href="/references/video-metadata-mediainfo.html">來自媒體資訊的視訊中繼資料</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/plugins/index.html">外掛程式<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/plugins/360degvr-video-plugin.html">360 度影片</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/ad-only-plugin.html">僅廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/upgrading-ima3-plugin-version-3.html">升級至 IM3 外掛程式版本 3 </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">廣告與 SAI </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/chromecast-plugin-brightcove-player.html">鉻</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕終止畫面</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-thumbnail-previews-plugin.html">顯示縮圖預覽</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/google-tag-manager-plugin-brightcove-player.html">谷歌代碼管理工具</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/hls-plugin.html">HLS </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/live-dvrux-plugin.html">直播 DVRUX </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-overlay-plugin.html">覆疊</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/overview-brightcove-player-plugins.html">概述：玩家外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/picture-picture-plugin-aka-floating-or-pinned.html">子母畫面</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/changelog/index.html">外掛程式變更記錄</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/plugin-registry.html">外掛程式登錄</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/plugin-version-reference.html">外掛程式版本參考</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/tealium-plugin-brightcove-player.html">茶葉標籤管理程式</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/video-seo-schema-generator-plugin.html">視頻 SEO 模式生成器</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/advertising/index.html">廣告<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/advertising/ad-events-and-ad-objects.html">廣告事件和廣告物件</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/ad-only-plugin.html">僅廣告外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/client-side-preroll-with-live-ssai.html">使用即時 SSAI 的客戶端預先廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/displaying-ads-using-ad-cue-points.html">使用廣告提示點顯示廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/flash-no-longer-valid-ima.html">閃光燈在 IMA 中不再有效</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/guide-ad-partner-integration.html">指南：廣告合作夥伴整合</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/guide-contrib-ads-migration.html">指南：接觸式廣告移轉</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">與布萊特灣玩家一起實施 SSAI </a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/jump-start-header-bidding-ad.html">跳躍開始：標頭出價廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/jump-start-outstream-ad.html">跳躍開始：外游廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/jump-start-pre-roll-ad.html">跳躍開始：播放前廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/known-issues-server-side-ad-insertion-ssai.html">已知問題：伺服器端廣告插入 (SSAI) </a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/step-step-implementing-advertising.html">逐步：實作廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/testing-pre-release-advertising-plugins.html">測試發行前廣告外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/using-dfp-premium-brightcove-player.html">與布萊特灣玩家一起使用 DFP 加值</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/using-player-enhancements-live-ssai-brightcove-player.html">使用即時 SSAI 和進階播放器工具組</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/video-cloud-ssai-ad-tag-validation.html">視訊雲端 SSAI 廣告標籤驗證</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/publish/index.html">發佈影片與播放器<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/assigning-video-player-programmatically.html">以程式設計方式將視訊指派給播放程式</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/available-options-advanced-page-embed-code.html">進階 (頁內) 內嵌程式碼的可用選項</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/available-options-standard-iframe-embed-code.html">標準 (iframe) 內嵌程式碼的可用選項</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/bulk-updating-brightcove-default-player.html">大量更新布萊特灣預設播放器</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html">選擇正確的內嵌程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/delaying-player-instantiation.html">延遲播放程式實例化</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/pre-release-player.html">發行前播放程式</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/syndication-strategies.html">聯合發行策略</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-non-brightcove-player.html">使用非亮灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html">在一個頁面上使用多個玩家</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/using-reference-ids.html">使用參考 ID </a></li>
+                  
+                
+                  
+                    <li><a href="">視訊轉譯檢查器</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/troubleshooting/index.html">疑難排解<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
+                  
+                
+                  
+                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/brightcove-player-information-modal.html">布萊特灣球員資訊模態</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/brightcove-player-troubleshooting-guide.html">布萊特灣玩家疑難排解指南</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/creating-charles-log.html">創建查理日誌</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/creating-network-log.html">建立網路記錄</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/manually-setting-player-version.html">手動設定播放程式版本</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/player-informational-properties.html">玩家資訊屬性</a></li>
+                  
+                
+                  
+                    <li><a href="/code-samples/brightcove-player-sample-live-custom-error-message.html">範例：即時自訂錯誤訊息</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/step-step-brightcove-player-debugger.html">逐步：布萊特灣播放器除錯器</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/running-network-path-trace.html">執行網路路徑追蹤</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/using-player-reference.html">使用播放器參照</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/vetting-brightcove-player-releases.html">評審布萊特灣球員發布</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/styling/index.html">造型與外觀<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/styling/customizing-player-appearance.html">自訂播放程式外觀</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/customizing-player-appearance-legacy-skin.html">自訂玩家外觀-舊版外觀</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/brightcove-player-sample-player-styling-playground.html">玩家造型遊樂場</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/quick-start-player-customization-legacy-skin.html">快速入門：玩家自訂-傳統造型</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/responsive-sizing-brightcove-player.html">適用於布萊特灣玩家的反應尺寸</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/sizing-player.html">調整播放器大小</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/skins-and-player-versions.html">外觀與播放程式版本</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/media/styling-captions.html">樣式註解</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/playback/index.html">播放<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/playback/autoplay-considerations.html">自動播放注意事項</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/xdr-with-bcplayer.html">與布萊特灣播放器的跨裝置履歷</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/deep-linking.html">深層連結</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/delivering-hls-video.html">提供 HLS 視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/determining-which-rendition-will-play.html">決定要播放哪些轉譯</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/hls-plugin.html">HLS 外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/ios-and-brightcove-player.html">iOS 和布萊特灣播放器</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/static-url-delivery.html">靜態 URL 傳送</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/streaming-playready-protected-content-dynamic-delivery.html">串流播放就緒受保護的內容</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/using-brightcove-player-tve.html">在 TVE 中使用布萊特灣玩家</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/content-protection/index.html">DRM 與內容保護<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html">設定播放程式內容限制</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/creating-dash-drm-manifest-brightcove-player.html">為布萊特灣玩家建立破折號 DRM 資訊清單</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM 外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/overview-content-protection.html">概述：內容保護</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/policy-keys.html">原則金鑰</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/restricting-video-playback-using-ip-address.html">使用 IP 位址限制視訊播放</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/coding-topics/index.html">編碼主題<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
+                  
+                
+                  
+                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋升級</a></li>
+                  
+                
+                  
+                    <li><a href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html">自訂事件</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/programmatically-localizing-brightcove-player.html">本地化布萊特灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/localizing-plugins.html">本地化外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/player-events.html">玩家事件</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/overview-components.html">概述：元件</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/overview-player-api.html">概述：播放器 API </a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/pass-data-plugin.html">將資料傳遞給外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/react-player-loader.html">反應播放器載入器</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/reporting-brightcove-player-configurations.html">有關布萊特灣玩家配置的報告</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/requirejs-and-brightcove-player.html">要求 JS 和布萊特灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/step-step-plugin-development.html">逐步：外掛程式開發</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/step-step-videojs-plugin-generator.html">逐步：Video.js 外掛程式產生器</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/using-bc-and-getplayer-methods.html">使用 BC（）和獲取播放器（）方法</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/index.html">一般資訊<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html">將應用程式 ID 新增至播放程式內嵌程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/general/adding-captions-videos-programmatically.html">以程式設計方式將字幕新增至視訊</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/media/adding-chapters-video.html">新增章節至視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/general/brightcove-player-6-now-default-version.html">布萊特灣球員 6 現在預設版本</a></li>
+                  
+                
+                  
+                    <li><a href="/general/brightcove-player-accessibility.html">布萊特灣玩家無障礙</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-overlay-plugin.html">顯示覆蓋外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/references/guide-playlist-api.html">指南：播放清單 API </a></li>
+                  
+                
+                  
+                    <li><a href="/general/identify-and-delete-low-performing-videos.html">識別和刪除效能不佳的影片</a></li>
+                  
+                
+                  
+                    <li><a href="/general/implementing-cue-points-programmatically.html">以程式設計方式實作提示點</a></li>
+                  
+                
+                  
+                    <li><a href="/general/implementing-playlists.html">實作播放清單</a></li>
+                  
+                
+                  
+                    <li><a href="/general/implementing-modaldialog.html">實現模式對話框</a></li>
+                  
+                
+                  
+                    <li><a href="/general/live-hls.html">即時 HLS </a></li>
+                  
+                
+                  
+                    <li><a href="/general/live-stream-configuration.html">即時串流組態</a></li>
+                  
+                
+                  
+                    <li><a href="/general/multiple-audio-tracks.html">多個音軌</a></li>
+                  
+                
+                  
+                    <li><a href="/general/player-configuration-guide.html">播放程式組態指南</a></li>
+                  
+                
+                  
+                    <li><a href="/general/playing-live-streams.html">播放即時串流</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI 插件</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/step-step-player-management.html">逐步：玩家管理</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
+                  
+                
+                  
+                    <li><a href="/general/using-screen-reader-brightcove-player.html">使用螢幕閱讀程式與布萊特灣播放器</a></li>
+                  
+                
+                  
+                    <li><a href="/general/versions-brightcove-player-documentation.html">布萊特灣玩家文件的版本</a></li>
+                  
+                
+                  
+                    <li><a href="/general/volume-control.html">音量控制</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/code-samples/index.html">程式碼範例<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/code-samples/index-thumb.html">依群組的程式碼範例</a></li>
+                  
+                
+                  
+                    <li><a href="/code-samples/index.html">程式碼範例索引</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/amp/index.html">放大器<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/amp/amp-using-video-cloud-video.html">AMP 使用視訊雲端視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/amp/amp-using-external-video.html">使用外部視訊的 AMP </a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/training/index.html">訓練<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/online-training-courses.html">所有線上訓練課程</a></li>
+                  
+                
+                  
+                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
+                  
+                
+                  
+                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
+                  
+                
+                  
+                    <li><a href="/training/register-training.html">註冊參加講師指導訓練</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
+                  
+                
+                  
+                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/training-demand-quick-start-player-management.html">訓練：玩家管理快速入門</a></li>
+                  
+                
+                  
+                    <li><a href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">版本說明<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/brightcove-player-release-notes.html">布萊特灣玩家發行紀錄</a></li>
+                  
+                
+                  
+                    <li><a href="/release-notes/brightcove-player-prerelease-notes.html">布萊特灣玩家預先發行紀錄</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">支援<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">布萊特灣答案</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">聯絡銷售人員</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">頁面內容</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>程式碼範例</h1>
+  <summary>下列程式碼範例示範 Brightcove 播放器的自訂和增強功能。標有雙星號**的樣本部分或全部取決於Video Cloud功能。&nbsp;您還可以找到按字母順序排列的樣本列表<a href="/code-samples/index.html">這裡</a>。</summary>
+  <link href="//learning-services-media.brightcove.com/doc-assets/css/samples-pages/samples.css" rel="stylesheet" />
+  <!-- if there are no groups, the following tag should be commented out, though it won't break anything if it's there -->
+  <section class="buttons-wrapper" id="buttons_wrapper">&nbsp;</section>
+  <!-- wrapper for all sample blocks -->
+  
+  <section class="samples-wrapper" id="samples_wrapper"><!-- wrapper for a sample block -->
+    <section class="samples-section advertising">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-outstream-ad-only-player.html"><img alt="外游 (僅廣告) 播放器" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/outstream_player.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-outstream-ad-only-player.html">外游 (僅廣告) 播放器</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-outstream-ad-only-player.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-outstream-ad-only-player.html">此示例提供了輔助JavaScript函數，這些函數演示瞭如何動態調整<code translate="No">&lt;div&gt;</code>頁面DOM中的元素，將Brightcove Player注入其中，加載並播放廣告，然後刪除播放器</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-outstream-ad-only-player.html"> </a></div>
+    </section>
+    <section class="samples-section advertising">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view-ads.html"><img alt="使用廣告捲動播放器進入檢視" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/scrolling_player_into_view_with_ads.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view-ads.html">使用廣告捲動播放器進入檢視</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view-ads.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view-ads.html">在播放器中，請注意水平音量控制欄取代了默認的垂直控制欄。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view-ads.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-volume-control.html"><img alt="水平音量控制（僅限 1.x 播放器）" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/horizontal_volume_control.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-volume-control.html">水平音量控制（僅限 1.x 播放器）</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-volume-control.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-volume-control.html">在播放器中，水平音量控制條代替了默認的垂直控制條。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-volume-control.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-volume-control.html"><img alt="垂直體積" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/vertical-volume.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-volume-control.html">垂直體積</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-volume-control.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-volume-control.html">設置音量控件以顯示垂直滑塊，而不是默認的水平佈局。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-volume-control.html"> </a></div>
+    </section>
+    <section class="samples-section advertising">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-indicators-playback-bar.html"><img alt="播放列中的廣告指示器" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/Ad_Indicators_in_Playback_Bar.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-indicators-playback-bar.html">播放列中的廣告指示器</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-indicators-playback-bar.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-indicators-playback-bar.html">此示例顯示了一個播放器，其中與視頻關聯的三個廣告提示點在播放欄中顯示為藍色標記。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-indicators-playback-bar.html"> </a></div>
+    </section>
+    <section class="samples-section advertising">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/plugins/implementing-server-side-ads-brightcove-player.html"><img alt="使用 SSAI 外掛程式進行廣告" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/advertising_with_the_ssai_plugin.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/plugins/implementing-server-side-ads-brightcove-player.html">使用 SSAI 外掛程式進行廣告</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/plugins/implementing-server-side-ads-brightcove-player.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/plugins/implementing-server-side-ads-brightcove-player.html">本示例使用VMAP文件中定義的IMA廣告在視頻流中投放服務器端廣告。有一個預捲，中捲和卷後廣告。VMAP文件在廣告配置中定義。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/plugins/implementing-server-side-ads-brightcove-player.html"> </a></div>
+    </section>
+    <section class="samples-section advertising">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-countdown-timer.html"><img alt="廣告倒數計時器" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/ad-countdown-timer.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-countdown-timer.html">廣告倒數計時器</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-countdown-timer.html">使用覆蓋插件為廣告創建倒數計時器。</a>
+        <p>&nbsp;</p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-ad-countdown-timer.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate-modaldialog.html"><img alt="與模式對話框的年齡門" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/age_gate_using_modaldialog.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate-modaldialog.html">與模式對話框的年齡門</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate-modaldialog.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate-modaldialog.html">此示例使用ModalDialog最初覆蓋播放器。當用戶通過單擊模態窗口確認年齡時，將顯示控件並播放視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate-modaldialog.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-cue-points-display-cta.html"><img alt="提示點顯示 CTA" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/cue_points_display_cta.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-cue-points-display-cta.html">提示點顯示CTA **</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-cue-points-display-cta.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-cue-points-display-cta.html">播放器根據提示點顯示兩個不同的CTA。第一個 CTA 會以 3 秒顯示，持續時間為 5 秒。第二個CTA在13秒時顯示，持續3秒。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-cue-points-display-cta.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-call-action.html"><img alt="動態呼叫動作 **" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/dynamic_call_to_action.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-call-action.html">動態號召性用語**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-call-action.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-call-action.html">您將可以使用此播放器看到三種不同的號召性用語顯示技術。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-call-action.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playpause-video-iframe-parent.html"><img alt="播放/暫停iframe 父母的視頻" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/pause_video_from_iframe_parent.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playpause-video-iframe-parent.html">播放/暫停iframe 父母的視頻</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playpause-video-iframe-parent.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playpause-video-iframe-parent.html">點擊播放或暫停按鈕（這是iframe父頁面的一部分），以查看其在iframe播放器中啟動了視頻的播放/暫停。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playpause-video-iframe-parent.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate.html"><img alt="年齡門" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/age_gate.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate.html">年齡門</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate.html">此示例顯示一個疊加層，該疊加層隱藏了播放器控件和播放按鈕。當用戶通過單擊覆蓋圖確認年齡時，將顯示控件並播放視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-autoplay-unmute-button.html"><img alt="使用「取消靜音」按鈕自動播放" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/autoplay-unmute.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-autoplay-unmute-button.html">使用取消靜音按鈕自動播放</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-autoplay-unmute-button.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-autoplay-unmute-button.html">視頻的行為會有所不同，具體取決於您運行視頻的瀏覽器/平台。如果視頻將自動播放音頻，它會這樣做。否則，視頻將開始播放，但將顯示一個取消靜音按鈕。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-autoplay-unmute-button.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-random-playlist.html"><img alt="背景視訊隨機播放清單" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/background_video_random_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-random-playlist.html">背景視頻隨機播放列表**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-random-playlist.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-random-playlist.html">在播放器中，您會看到從播放列表中隨機選擇的視頻，這些視頻會繼續作為背景視頻播放。在每個視頻的開頭，將顯示每個視頻的標題和描述。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-random-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-playlist.html"><img alt="背景影片播放清單" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/background_video_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-playlist.html">背景視頻播放列表**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-playlist.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-playlist.html">在播放器中，您將看到有四個連續播放為背景視頻的視頻。同樣，在每個視頻的開頭，每個視頻的標題和描述都顯示在背景視頻上。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-full-window-background-video.html"><img alt="全視窗背景影片" src="https://learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/full-backgroun-video.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-full-window-background-video.html">全窗口背景視頻**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-full-window-background-video.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-full-window-background-video.html">在本主題中，您將學習如何使用播放列表來提供背景視頻，並在調整瀏覽器窗口的大小時自動調整播放器的大小，以使視頻完全填滿瀏覽器窗口。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-full-window-background-video.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-creating-video-loop.html"><img alt="建立視訊迴圈" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/creating_a_video_loop.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-creating-video-loop.html">建立視訊迴圈</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-creating-video-loop.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-creating-video-loop.html">在某些情況下，您可能需要使用循環播放的視頻。本示例使視頻循環播放3次，然後停止視頻播放。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-creating-video-loop.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui player_styling">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-disable-progress-scrubber.html"><img alt="停用進度定位器" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/disabling_the_progress_scrubber.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-disable-progress-scrubber.html">禁用進度清理器</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-disable-progress-scrubber.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-disable-progress-scrubber.html">播放視頻。請注意，您不能使用進度進度條來推進視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-disable-progress-scrubber.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality playback_behavior popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-stopping-other-players-page-when-video-starts.html"><img alt="當視訊開始時停止頁面上的其他播放程式" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/stopping_other_players_on_the_page_when_a_video_starts.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-stopping-other-players-page-when-video-starts.html">當視訊開始時停止頁面上的其他播放程式</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-stopping-other-players-page-when-video-starts.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-stopping-other-players-page-when-video-starts.html">開始播放其中一個視頻。接下來，在其他播放器中播放視頻，然後在另一個正在播放的播放器中觀看視頻停止播放。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-stopping-other-players-page-when-video-starts.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality playback_behavior popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-variable-speed-playback.html"><img alt="可變速度播放" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/variable_speed_playback.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-variable-speed-playback.html">可變速度播放</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-variable-speed-playback.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-variable-speed-playback.html">開始視頻播放，然後選擇控制欄中的播放速率按鈕（默認為1x）。選擇不同的速率以查看視頻播放速度如何變化。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-variable-speed-playback.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-loading-player-dynamically.html"><img alt="動態載入播放程式" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/loading_the_player_dynamically.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-loading-player-dynamically.html">動態載入播放程式</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-loading-player-dynamically.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-loading-player-dynamically.html">在此示例中，單擊“添加播放器”按鈕以動態生成和加載播放器，然後播放視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-loading-player-dynamically.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/coding-topics/requirejs-and-brightcove-player.html"><img alt="要求 JS 和布萊特灣玩家" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/requirejs_and_brightcove_player.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/coding-topics/requirejs-and-brightcove-player.html">要求 JS 和布萊特灣玩家</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/coding-topics/requirejs-and-brightcove-player.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/coding-topics/requirejs-and-brightcove-player.html">在本主題中，您將學習如何在Brightcove Player中使用RequireJS，JavaScript文件和模塊加載器。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/coding-topics/requirejs-and-brightcove-player.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamically-change-source-videos.html"><img alt="動態變更來源視訊 **" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/dynamically_change_source_videos.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamically-change-source-videos.html">動態更改源視頻**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamically-change-source-videos.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamically-change-source-videos.html">單擊播放器下方的按鈕以動態更改源視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamically-change-source-videos.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-kiosk-app.html"><img alt="資訊站應用程式 **" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/kiosk_app.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-kiosk-app.html">信息亭應用**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-kiosk-app.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-kiosk-app.html">播放器將無限循環播放視頻對像數組中的視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-kiosk-app.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-caption-animation.html"><img alt="標題動畫" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/caption_animation.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-caption-animation.html">標題動畫</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-caption-animation.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-caption-animation.html">開始播放視頻。當您將鼠標移到播放器上並從播放器上移開時，字幕將設置為動畫，以保持在控制欄上方。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-caption-animation.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-related-link.html"><img alt="顯示相關連結 **" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/display_related_link.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-related-link.html">顯示相關鏈接**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-related-link.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-related-link.html">對於此示例，您將看到與播放器下方顯示的視頻相關的文本。您可以使用Studio的媒體&gt;視頻信息部分來提供文本和關聯的鏈接。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-related-link.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui player_styling">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-views-controlbar.html"><img alt="在控制列中顯示視圖" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/display_views_in_controlbar.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-views-controlbar.html">在控制欄中顯示視圖</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-views-controlbar.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-views-controlbar.html">播放視頻時，您將在控制欄中看到視頻視圖。信息顯示為之前可能會稍有延遲。<span translate="No">Analytics API</span>異步查詢數據。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-views-controlbar.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-thumbnails-hover.html"><img alt="懸停時顯示縮圖" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/display_thumbnails_on_hover.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-thumbnails-hover.html">懸停時顯示縮圖</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-age-gate.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-thumbnails-hover.html">本示例使用ModalDialog來顯示從視頻中的各個點拍攝的四個縮略圖。這使用戶可以在視頻中看到一個潛行高峰。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-thumbnails-hover.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-random-bumpers.html"><img alt="顯示隨機保險槓" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/display_random_bumpers.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-random-bumpers.html">顯示隨機保險槓</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-random-bumpers.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-random-bumpers.html">在此示例中，在播放列表中的每個視頻之前播放隨機選擇的保險槓。在這種情況下，保險槓是廣告，但不是從廣告服務器繪製的，而是在視頻雲庫中定義的視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-display-random-bumpers.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-hyperlinked-company-logo.html"><img alt="超連結公司標誌" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/hyperlinked_company_logo.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-hyperlinked-company-logo.html">超鏈接公司徽標</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-hyperlinked-company-logo.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-hyperlinked-company-logo.html">本示例在播放器的控制欄中顯示公司徽標。選擇徽標會將您重定向到公司的網站。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-hyperlinked-company-logo.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-carousel.html"><img alt="燈箱旋轉木馬" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/lightbox_carousel.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-carousel.html">燈箱旋轉木馬</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-carousel.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-carousel.html">瀏覽輪播中的視頻。選取縮圖，以在影像預視燈箱容器中播放視訊。顯示影像預視燈箱時，選取「關閉」連結以隱藏影像預視燈箱容器。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-carousel.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-scroller.html"><img alt="帶捲軸的燈箱" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/lightbox_with_scroller.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-scroller.html">帶捲軸的燈箱</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-scroller.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-scroller.html">將滾動條拖動到縮略圖下方，以瀏覽視頻。選取要在影像預視燈箱容器中播放視訊的視訊。顯示影像預視燈箱時，選取「關閉」連結以隱藏影像預視燈箱容器。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-lightbox-scroller.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-simple-lightbox.html"><img alt="簡單燈箱" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/simple_lightbox.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-simple-lightbox.html">簡單燈箱</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-simple-lightbox.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-simple-lightbox.html">本示例顯示一個交互式視頻海報圖像，該圖像會使用Brightcove Player打開一個燈箱。選擇海報圖像以在燈箱容器中播放視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-simple-lightbox.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-logo-overlay-plugin.html"><img alt="圖誌覆蓋外掛程式" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/simple_lightbox.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-logo-overlay-plugin.html">圖誌覆蓋外掛程式</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-logo-overlay-plugin.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-logo-overlay-plugin.html">在以下示例中，您將看到一個徽標顯示在播放器的左下角。視頻播放五秒鐘後，徽標將逐漸消失。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-logo-overlay-plugin.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-multiple-session-playback.html"><img alt="多重工作階段回放" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/multiple_session_playback.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-multiple-session-playback.html">多重工作階段回放</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-multiple-session-playback.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-multiple-session-playback.html">播放視頻，然後在播放過程中將其停止。刷新頁面後，視頻將從您上次停下的位置繼續播放。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-multiple-session-playback.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-navigate-video-end.html"><img alt="在視訊結束時導覽" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/navigate_on_video_end.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-navigate-video-end.html">在視訊結束時導覽</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-navigate-video-end.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-navigate-video-end.html">在完成非常短的視頻後，您將看到一個覆蓋，其中顯示了指向Brightcove主頁的鏈接。使用了布萊特灣提供的覆蓋插件，因此不需要 JavaScript。CSS用於設置疊加層的樣式。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-navigate-video-end.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view-ads.html"><img alt="捲動播放器進入檢視" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/scrolling_player_into_view.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view.html">捲動播放器進入檢視</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view.html">向內和向外滾動播放器。當播放器完全捲動到視圖中時，視訊就會開始播放。當您滾動播放器到視線之外時，視頻將停止播放。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-scrolling-player-view.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggling-overlay.html"><img alt="切換覆疊" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/toggling_an_overlay.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggling-overlay.html">切換覆疊</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggling-overlay.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggling-overlay.html">本示例使您可以切換交互式疊加的顯示。選擇“切換覆蓋”按鈕以顯示和隱藏覆蓋。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggling-overlay.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html"><img alt="使用自訂事件觸發倒轉" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/trigger_rewind_with_a_custom_event.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html">使用自定義事件觸發倒帶</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html">開始播放視頻。然後點擊倒帶視頻按鈕。您應該看到視頻回放可以倒退5秒鐘。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-video-plugin.html"><img alt="下載影片外掛程式" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/download_video_plugin.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-video-plugin.html">下載視頻插件**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-video-plugin.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-video-plugin.html">您將在控制欄的右側看到一個下載圖標，以下載播放器中加載的視頻的最高質量的MP4再現。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-video-plugin.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-live-custom-error-message.html"><img alt="即時自訂錯誤訊息" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/live_custom_error_message.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-live-custom-error-message.html">即時自訂錯誤訊息</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-live-custom-error-message.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-live-custom-error-message.html">播放器將無法連接到實時流。一個模式 Dialog 對象被創建，一個自定義圖像放置在其中，然後顯示模式對話框。如果關閉了ModalDialog，則顯示默認錯誤。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-live-custom-error-message.html"> </a></div>
+    </section>
+    <section class="samples-section player_styling">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/styling/brightcove-player-sample-player-styling-playground.html"><img alt="玩家造型遊樂場" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/player_styling_playground.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/styling/brightcove-player-sample-player-styling-playground.html">玩家造型遊樂場</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/styling/brightcove-player-sample-player-styling-playground.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/styling/brightcove-player-sample-player-styling-playground.html">在本主題中，您將使用如下所示的Codepen作為樣式操場。在codepen.io網站上進行查看以進行更改，並隨意派生Codepen供您自己使用。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/styling/brightcove-player-sample-player-styling-playground.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-responsive-playlist.html"><img alt="水平回應播放清單" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/horizontal_responsive_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-responsive-playlist.html">水平響應播放列表</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-responsive-playlist.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-responsive-playlist.html">您將在播放器下方看到水平播放列表。如果您調整瀏覽器的大小，將會看到播放器和播放列表的大小都已調整。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-responsive-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-most-watched-videos-playlist.html"><img alt="播放清單中最多觀賞的影片 **" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/most_watched_videos_in_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-most-watched-videos-playlist.html">播放列表中觀看次數最多的視頻**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-most-watched-videos-playlist.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-most-watched-videos-playlist.html">在以下示例中，您將看到播放器的播放列表顯示在右側。通過使用Brightcove Player目錄檢索基於大多數播放次數的最受歡迎的視頻來填充播放列表。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-most-watched-videos-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-newest-videos-playlist.html"><img alt="播放清單中的最新影片 **" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/newest_videos_in_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-newest-videos-playlist.html">播放列表中的最新視頻**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-newest-videos-playlist.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-newest-videos-playlist.html">在以下播放器中，您會看到一個播放列表，其中包含添加到知識團隊帳戶中的10個最新視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-newest-videos-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-api-paging.html"><img alt="播放 API 分頁" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/playback_api_paging.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-api-paging.html">播放API分頁**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-api-paging.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-api-paging.html">本示例使用Brightcove播放器在播放器中顯示視頻以及播放列表中的前3個視頻。選擇“下一個視頻”按鈕以顯示播放列表中的下三個視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-api-paging.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-overlay.html"><img alt="熱門影片重疊" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/popular_videos_overlay.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-overlay.html">熱門影片疊加**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-overlay.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-overlay.html">當您暫停視頻或視頻結束時，將顯示疊加層。系統會顯示收<span translate="No">Analytics API</span>到過去 24 小時內觀看最多 6 部影片的請求，以及 API 回應。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-overlay.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-playlist.html"><img alt="熱門影片播放清單" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/popular_videos_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-playlist.html">熱門影片播放清單**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-overlay.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-playlist.html">檢索視頻數據後，播放列表將自動出現。系統會顯示收<span translate="No">Analytics API</span>到過去 24 小時內觀看最多 6 部影片的請求，以及 API 回應。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-popular-videos-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-playlist.html"><img alt="播放清單中的相關影片" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/related_videos_from_a_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-playlist.html">播放列表中的相關視頻**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-playlist.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-playlist.html">當播放暫停或結束時，此示例顯示相關視頻縮略圖的交互式疊加。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-cms-api.html"><img alt="透過標籤進行相關影片" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/related_videos_via_tags.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-cms-api.html">通過標籤（CMS API）相關的視頻**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-cms-api.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-cms-api.html">當播放暫停或結束時，此示例顯示相關視頻縮略圖的交互式疊加。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-cms-api.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-playback-api.html"><img alt="透過標籤進行相關影片" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/related_videos_via_tags_playback_api.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-playback-api.html">通過標籤關聯的視頻（播放API）**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-playback-api.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-playback-api.html">當播放暫停或結束時，此示例顯示相關視頻縮略圖的交互式疊加。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-related-videos-tags-playback-api.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-tabbed-playlist.html"><img alt="標籤式播放清單" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/tabbed_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-tabbed-playlist.html">分頁播放列表**</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-tabbed-playlist.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-tabbed-playlist.html">在選項卡式導航中選擇一個選項卡可在播放列表之間切換。在播放列表中選擇一個視頻以開始播放視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-tabbed-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui player_functionality">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-all-time-video-views.html"><img alt="所有時間影片觀看次數" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/all_time_video_views.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-all-time-video-views.html">所有時間的視頻觀看次數</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-all-time-video-views.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-all-time-video-views.html">下面的播放器包括一個播放列表，向您顯示用於檢索所有時間視圖的代碼將與該播放列表一起使用。它也可以與單個視頻播放器一起使用。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-all-time-video-views.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-play-video-playlist.html"><img alt="播放清單前的影片" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/video-before-playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-play-video-playlist.html">播放列表之前的視頻</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-play-video-playlist.html">創建啟用播放列表的播放器，以播放列表中未包含的視頻開始。</a>
+        <p>&nbsp;</p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-play-video-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section playlists_and_groups">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-play-video-end-playlist.html"><img alt="播放清單結尾的影片" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/video_at_end_of_playlist.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-play-video-end-playlist.html">播放列表結尾的視頻</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-play-video-end-playlist.html">您會看到播放列表中有三個視頻。播放這三個影片後，播放清單中的另一部影片將會播放。不在播放列表中的視頻播放後，視頻播放停止。</a>
+        <p>&nbsp;</p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-play-video-end-playlist.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-rate-adjuster.html"><img aalt="Playback Rate Adjuster" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/playback-rate-adjuster.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-rate-adjuster.html">播放速率調整器</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-rate-adjuster.html">將播放速率按鈕添加到Brightcove Player控制欄。</a>
+        <p>&nbsp;</p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-playback-rate-adjuster.html"> </a></div>
+    </section>
+    <section class="samples-section player_styling popular">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video.html"><img alt="背景影片" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/bkgd-video.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video.html">背景影片</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video.html">使用Brightcove Player在您的網頁上播放背景視頻。</a>
+        <p>&nbsp;</p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-background-video.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-get-seeked-time.html"><img alt="取得搜尋時間" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/get_seeked_time.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-get-seeked-time.html">取得搜尋時間</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-get-seeked-time.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-get-seeked-time.html">當您單擊搜尋欄時，將在播放器下方顯示您單擊的時間。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-get-seeked-time.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-chapter-markers-progress-bar.html"><img alt="進度列中的章節標記" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/chapter-markers-progress-bar.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-chapter-markers-progress-bar.html">進度列中的章節標記</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-chapter-markers-progress-bar.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-chapter-markers-progress-bar.html">在進度欄中創建標記以顯示定義的章節。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-chapter-markers-progress-bar.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-custom-endscreens.html"><img alt="動態自訂端螢幕" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/dynamic-custom-endscreen.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-custom-endscreens.html">動態自定義最終屏幕</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-custom-endscreens.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-custom-endscreens.html">在自定義最終屏幕中添加與視頻數據關聯的鏈接。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-dynamic-custom-endscreens.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-are-you-still-watching.html"><img alt="你還在看嗎？" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/are-you-still-watching.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-are-you-still-watching.html">你還在看嗎？</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-are-you-still-watching.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-are-you-still-watching.html">在本主題中，您將學習如何創建Brightcove播放器，該播放器可以檢測觀看者何時停止觀看，同時不播放視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-are-you-still-watching.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-enlarge-player-mouseover.html"><img alt="放大滑鼠移動上的播放器" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/enlarge-player-mouseover.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-enlarge-player-mouseover.html">放大滑鼠移動上的播放器</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-enlarge-player-mouseover.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-enlarge-player-mouseover.html">在本主題中，您將學習如何使用JavaScript和CSS將小型播放器懸停在其上，然後將其縮小至較小的大小。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-enlarge-player-mouseover.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-floating-player.html"><img alt="浮動播放器" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/floating-player.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-floating-player.html">浮動播放器</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-floating-player.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-floating-player.html">在本主題中，您將學習如何配置HTML / CSS / JavaScript以允許將播放器拖動到新位置。這樣，即使用戶上下滾動頁面，播放器的位置也將保持固定。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-floating-player.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-limited-plays.html"><img alt="限制遊戲" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/limited-plays.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-limited-plays.html">限制遊戲</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-limited-plays.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-limited-plays.html">在本主題中，您將學習如何使用Brightcove Player來限制用戶在一天內觀看視頻的次數。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-limited-plays.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play.html"><img alt="註冊以播放" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/register-play.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play.html">註冊以播放</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play.html">在本主題中，您將學習如何使用Brightcove Player，用戶必須填寫表格才能觀看視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play-after-preview.html"><img alt="預覽後註冊播放" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/register-play.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play-after-preview.html">預覽後註冊播放</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-horizontal-volume-control.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play-after-preview.html">在本主題中，您將學習如何使用Brightcove Player，在顯示簡短預覽後，用戶必須填寫表格才能觀看視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-register-play-after-preview.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-password-view-video.html"><img alt="檢視影片的密碼" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/password-view-video.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-password-view-video.html">檢視影片的密碼</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-password-view-video.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-password-view-video.html">在本主題中，您將學習如何要求密碼才能觀看視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-password-view-video.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggle-controlbar.html"><img alt="切換控制列" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/toggle-controlbar.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggle-controlbar.html">切換控制列</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggle-controlbar.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggle-controlbar.html">在本主題中，您將學習如何使按鈕切換控制欄的顯示。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-toggle-controlbar.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-back-and-forward-buttons.html"><img alt="後退和前進按鈕" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/back-forward-buttons.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-back-and-forward-buttons.html">後退前進按鈕</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-back-and-forward-buttons.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-back-and-forward-buttons.html">在本主題中，您將學習如何在控制欄中放置按鈕以使視頻後退和前進指定的秒數。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-back-and-forward-buttons.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-add-country-flag-caption-label.html"><img alt="新增國旗至標題標籤" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/add-country-flag-caption-label.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-add-country-flag-caption-label.html">新增國旗至標題標籤</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-add-country-flag-caption-label.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-add-country-flag-caption-label.html">在本主題中，您將學習如何在國家標題標籤前面添加國家標誌。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-add-country-flag-caption-label.html"> </a></div>
+    </section>
+    <section class="samples-section customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-transcript.html"><img alt="下載成績單" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/download-transcript.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-transcript.html">下載成績單</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-transcript.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-transcript.html">在本主題中，您將學習如何使用字幕WebVTT文件並將其轉換為可下載的腳本。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-transcript.html"> </a></div>
+    </section>
+    <section class="samples-section player_functionality customize_ui">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-audio-plugin.html"><img alt="下載音訊" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/download-audio.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-audio-plugin.html">下載音頻</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-audio-plugin.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-audio-plugin.html">在本主題中，您將學習如何創建鏈接，以允許下載在Brightcove Player中播放的音頻資產的最佳質量的MP4。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-download-audio-plugin.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-caption-language.html"><img alt="設定標題語言" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/automatically-set-caption-language.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-caption-language.html">自動設定字幕語言</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-caption-language.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-caption-language.html">在本主題中，您將學習如何基於瀏覽器語言設置默認字幕語言。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-caption-language.html"> </a></div>
+    </section>
+    <section class="samples-section playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-audio-track-language.html"><img alt="設定音軌語言" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/automatically-set-audio-track-language.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-audio-track-language.html">自動設置音軌語言</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-audio-track-language.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-audio-track-language.html">在本主題中，您將學習如何基於瀏覽器語言設置默認的音軌語言。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-automatically-set-audio-track-language.html"> </a></div>
+    </section>
+    <section class="samples-section player_styling playback_behavior">
+      <div class="samples-div"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-video.html"><img alt="設定音軌語言" src="//learning-services-media.brightcove.com/doc-assets/node/18630-popular-brightcove-player-samples/vertical-video.png"/> </a>
+        <h2 class="sample-title"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-video.html">垂直視訊</a></h2>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-video.html"> </a>
+        <p class="sample-description"><a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-video.html">在本主題中，您將學習如何使用Brightcove Player顯示垂直視頻。</a></p>
+        <a class="nturl" style="text-decoration:none" href="/code-samples/brightcove-player-sample-vertical-video.html"> </a></div>
+    </section>
+  </section>
+  <script src="//learning-services-media.brightcove.com/doc-assets/js/samples/samples.js"></script><script>
+  // if the sample_groups array is empty, all samples will be shown
+  var group_names = [
+        'popular',
+        'all',
+        'advertising',
+        'playback_behavior',
+        'player_functionality',
+        'customize_ui',
+        'player_styling',
+        'playlists_and_groups'
+      ];
+  if (group_names.length > 0) {
+    BCLS_player_samples(group_names);
+  }
+</script> 
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">頁面內容</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  頁面最後更新日期為 9 月 28 日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>布萊特灣支援</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">系統狀態</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">文獻資料</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>訓練</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">布萊特灣大學</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">亮麗</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="talla_wrapper">
+  <p style="text-align: right;position: relative;"><button style="background:rgb(9, 7, 140);color:Snow;padding:.3rem;position:fixed;right:0;bottom:1em;z-index:9999999" onclick="javascript:displayChat()">有問題嗎？ </button> </p>
+  <div id="talla_chat">
+</div>
+</div>
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="https://assets.talla.com/latest/embeddedjs/talla.js"></script>
+  <script src="/assets/js/talla-init.js"></script>
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

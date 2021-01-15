@@ -1,0 +1,2291 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="在本主題中，您將學習如何為Brightcove Player使用Google跟踪代碼管理器（GTM）插件。">
+  
+  <title>適用於Brightcove Player的Google跟踪代碼管理器插件</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Player_Logo.svg" alt="產品標誌" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+      <option value="">其他布萊特灣文件</option>
+      
+        
+          <option value="https://support.brightcove.com">文件首頁</option>
+        
+      
+        
+          <option value="https://audience.support.brightcove.com">布萊特灣觀眾</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">布萊特灣燈塔</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">布萊特灣戰役</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">布萊特灣參與</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">Brightcove 圖庫</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">布萊特灣</option>
+        
+      
+        
+          <option value="https://social.support.brightcove.com">布萊特灣社會</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">視訊雲端工作室</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">布萊特灣球員開發</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">視訊雲端平台 API</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">視訊雲端裝置開發套件</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">整合與 CMS 連接器</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">視訊雲端一般資訊</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+        
+      
+    </select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">首頁</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/plugins/">外掛程式</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">適用於Brightcove Player的Google跟踪代碼管理器插件</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">首頁</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/index.html">開始使<strong>用 + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/what-brightcove-player.html">什麼是布萊特灣玩家？</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/overview-brightcove-player.html">概述：布萊特灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/overview-brightcove-player-plugins.html">概述：布萊特灣播放器外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/step-step-brightcove-player.html">逐步：布萊特灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/learning-guide-using-rest-apis.html">學習指南：使用其他應用程式介</a>面</li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/basics/index.html">學習基本知識<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/basics/developer-basics-advanced-player-code.html">進階播放程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-autoplaying-video.html">自動播放視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-custom-plugin-converting-code.html">自定義插件-轉換代碼</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-custom-plugin-passing-data.html">自定義插件-傳遞數據</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-custom-plugin-using-studio.html">自定義插件-使用工作室</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-custom-plugin-why-and-how.html">自定義插件-為什麼和如何</a></li>
+                  
+                
+                  
+                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-generating-player-code.html">產生播放程式代碼</a></li>
+                  
+                
+                  
+                    <li><a href="/basics/developer-basics-preparing-write-code.html">準備撰寫程式碼</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/references/index.html">參考資料<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/references/brightcove-player-5-6-migration-guide.html">布萊特灣玩家 5 至 6 轉移指南</a></li>
+                  
+                
+                  
+                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/index.html">布萊特灣播放器 API 文檔（外部網站）</a></li>
+                  
+                
+                  
+                    <li><a href="/references/brightcove-player-cookies.html">布萊特灣球員曲奇</a></li>
+                  
+                
+                  
+                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
+                  
+                
+                  
+                    <li><a href="https://groups.google.com/forum/embed/?place=forum/bcplayerdev#!forum/bcplayerdev">布萊特灣球員公告論壇</a></li>
+                  
+                
+                  
+                    <li><a href="/references/brightcove-player-system-requirements.html">布萊特灣玩家系統需求</a></li>
+                  
+                
+                  
+                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋架構</a></li>
+                  
+                
+                  
+                    <li><a href="https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html">已知問題</a></li>
+                  
+                
+                  
+                    <li><a href="/references/player-catalog.html">播放器目錄</a></li>
+                  
+                
+                  
+                    <li><a href="/references/player-feature-support-browser.html">瀏覽器支援播放器功能</a></li>
+                  
+                
+                  
+                    <li><a href="/references/player-metadata-bcinfo.html">來自 bcinfo 的播放器中繼資料</a></li>
+                  
+                
+                  
+                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html">播放器方法/事件 API（外部網站）</a></li>
+                  
+                
+                  
+                    <li><a href="/references/guide-playlist-api.html">播放清單 API 指南</a></li>
+                  
+                
+                  
+                    <li><a href="/references/video-metadata-mediainfo.html">來自媒體資訊的視訊中繼資料</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/plugins/index.html">外掛程式<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/plugins/360degvr-video-plugin.html">360 度影片</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/ad-only-plugin.html">僅廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/upgrading-ima3-plugin-version-3.html">升級至 IM3 外掛程式版本 3 </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">廣告與 SAI </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/chromecast-plugin-brightcove-player.html">鉻</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕終止畫面</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-thumbnail-previews-plugin.html">顯示縮圖預覽</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/google-tag-manager-plugin-brightcove-player.html">谷歌代碼管理工具</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/hls-plugin.html">HLS </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/live-dvrux-plugin.html">直播 DVRUX </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-overlay-plugin.html">覆疊</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/overview-brightcove-player-plugins.html">概述：玩家外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/picture-picture-plugin-aka-floating-or-pinned.html">子母畫面</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI </a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/changelog/index.html">外掛程式變更記錄</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/plugin-registry.html">外掛程式登錄</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/plugin-version-reference.html">外掛程式版本參考</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/tealium-plugin-brightcove-player.html">茶葉標籤管理程式</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/video-seo-schema-generator-plugin.html">視頻 SEO 模式生成器</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/advertising/index.html">廣告<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/advertising/ad-events-and-ad-objects.html">廣告事件和廣告物件</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/ad-only-plugin.html">僅廣告外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/client-side-preroll-with-live-ssai.html">使用即時 SSAI 的客戶端預先廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/displaying-ads-using-ad-cue-points.html">使用廣告提示點顯示廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/flash-no-longer-valid-ima.html">閃光燈在 IMA 中不再有效</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/guide-ad-partner-integration.html">指南：廣告合作夥伴整合</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/guide-contrib-ads-migration.html">指南：接觸式廣告移轉</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">與布萊特灣玩家一起實施 SSAI </a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/jump-start-header-bidding-ad.html">跳躍開始：標頭出價廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/jump-start-outstream-ad.html">跳躍開始：外游廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/jump-start-pre-roll-ad.html">跳躍開始：播放前廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/known-issues-server-side-ad-insertion-ssai.html">已知問題：伺服器端廣告插入 (SSAI) </a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/step-step-implementing-advertising.html">逐步：實作廣告</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/testing-pre-release-advertising-plugins.html">測試發行前廣告外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/using-dfp-premium-brightcove-player.html">與布萊特灣玩家一起使用 DFP 加值</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/using-player-enhancements-live-ssai-brightcove-player.html">使用即時 SSAI 和進階播放器工具組</a></li>
+                  
+                
+                  
+                    <li><a href="/advertising/video-cloud-ssai-ad-tag-validation.html">視訊雲端 SSAI 廣告標籤驗證</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/publish/index.html">發佈影片與播放器<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/assigning-video-player-programmatically.html">以程式設計方式將視訊指派給播放程式</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/available-options-advanced-page-embed-code.html">進階 (頁內) 內嵌程式碼的可用選項</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/available-options-standard-iframe-embed-code.html">標準 (iframe) 內嵌程式碼的可用選項</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/bulk-updating-brightcove-default-player.html">大量更新布萊特灣預設播放器</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html">選擇正確的內嵌程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/delaying-player-instantiation.html">延遲播放程式實例化</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/pre-release-player.html">發行前播放程式</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/syndication-strategies.html">聯合發行策略</a></li>
+                  
+                
+                  
+                    <li><a href="/publish/using-non-brightcove-player.html">使用非亮灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html">在一個頁面上使用多個玩家</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/using-reference-ids.html">使用參考 ID </a></li>
+                  
+                
+                  
+                    <li><a href="">視訊轉譯檢查器</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/troubleshooting/index.html">疑難排解<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
+                  
+                
+                  
+                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/brightcove-player-information-modal.html">布萊特灣球員資訊模態</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/brightcove-player-troubleshooting-guide.html">布萊特灣玩家疑難排解指南</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/creating-charles-log.html">創建查理日誌</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/creating-network-log.html">建立網路記錄</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/manually-setting-player-version.html">手動設定播放程式版本</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/player-informational-properties.html">玩家資訊屬性</a></li>
+                  
+                
+                  
+                    <li><a href="/code-samples/brightcove-player-sample-live-custom-error-message.html">範例：即時自訂錯誤訊息</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/step-step-brightcove-player-debugger.html">逐步：布萊特灣播放器除錯器</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/running-network-path-trace.html">執行網路路徑追蹤</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/using-player-reference.html">使用播放器參照</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/vetting-brightcove-player-releases.html">評審布萊特灣球員發布</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/styling/index.html">造型與外觀<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/styling/customizing-player-appearance.html">自訂播放程式外觀</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/customizing-player-appearance-legacy-skin.html">自訂玩家外觀-舊版外觀</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/brightcove-player-sample-player-styling-playground.html">玩家造型遊樂場</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/quick-start-player-customization-legacy-skin.html">快速入門：玩家自訂-傳統造型</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/responsive-sizing-brightcove-player.html">適用於布萊特灣玩家的反應尺寸</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/sizing-player.html">調整播放器大小</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/skins-and-player-versions.html">外觀與播放程式版本</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/media/styling-captions.html">樣式註解</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/playback/index.html">播放<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/playback/autoplay-considerations.html">自動播放注意事項</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/xdr-with-bcplayer.html">與布萊特灣播放器的跨裝置履歷</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/deep-linking.html">深層連結</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/delivering-hls-video.html">提供 HLS 視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/determining-which-rendition-will-play.html">決定要播放哪些轉譯</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/hls-plugin.html">HLS 外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/ios-and-brightcove-player.html">iOS 和布萊特灣播放器</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/static-url-delivery.html">靜態 URL 傳送</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/streaming-playready-protected-content-dynamic-delivery.html">串流播放就緒受保護的內容</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/using-brightcove-player-tve.html">在 TVE 中使用布萊特灣玩家</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/content-protection/index.html">DRM 與內容保護<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html">設定播放程式內容限制</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/creating-dash-drm-manifest-brightcove-player.html">為布萊特灣玩家建立破折號 DRM 資訊清單</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM 外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/overview-content-protection.html">概述：內容保護</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/policy-keys.html">原則金鑰</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/restricting-video-playback-using-ip-address.html">使用 IP 位址限制視訊播放</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/coding-topics/index.html">編碼主題<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
+                  
+                
+                  
+                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋升級</a></li>
+                  
+                
+                  
+                    <li><a href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html">自訂事件</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/programmatically-localizing-brightcove-player.html">本地化布萊特灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/localizing-plugins.html">本地化外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/player-events.html">玩家事件</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/overview-components.html">概述：元件</a></li>
+                  
+                
+                  
+                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/overview-player-api.html">概述：播放器 API </a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/pass-data-plugin.html">將資料傳遞給外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/react-player-loader.html">反應播放器載入器</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/reporting-brightcove-player-configurations.html">有關布萊特灣玩家配置的報告</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/requirejs-and-brightcove-player.html">要求 JS 和布萊特灣玩家</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/step-step-plugin-development.html">逐步：外掛程式開發</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/step-step-videojs-plugin-generator.html">逐步：Video.js 外掛程式產生器</a></li>
+                  
+                
+                  
+                    <li><a href="/coding-topics/using-bc-and-getplayer-methods.html">使用 BC（）和獲取播放器（）方法</a></li>
+                  
+                
+                  
+                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general/index.html">一般資訊<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html">將應用程式 ID 新增至播放程式內嵌程式碼</a></li>
+                  
+                
+                  
+                    <li><a href="/general/adding-captions-videos-programmatically.html">以程式設計方式將字幕新增至視訊</a></li>
+                  
+                
+                  
+                    <li><a href="https://studio.support.brightcove.com/media/adding-chapters-video.html">新增章節至視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/general/brightcove-player-6-now-default-version.html">布萊特灣球員 6 現在預設版本</a></li>
+                  
+                
+                  
+                    <li><a href="/general/brightcove-player-accessibility.html">布萊特灣玩家無障礙</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/display-overlay-plugin.html">顯示覆蓋外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="/references/guide-playlist-api.html">指南：播放清單 API </a></li>
+                  
+                
+                  
+                    <li><a href="/general/identify-and-delete-low-performing-videos.html">識別和刪除效能不佳的影片</a></li>
+                  
+                
+                  
+                    <li><a href="/general/implementing-cue-points-programmatically.html">以程式設計方式實作提示點</a></li>
+                  
+                
+                  
+                    <li><a href="/general/implementing-playlists.html">實作播放清單</a></li>
+                  
+                
+                  
+                    <li><a href="/general/implementing-modaldialog.html">實現模式對話框</a></li>
+                  
+                
+                  
+                    <li><a href="/general/live-hls.html">即時 HLS </a></li>
+                  
+                
+                  
+                    <li><a href="/general/live-stream-configuration.html">即時串流組態</a></li>
+                  
+                
+                  
+                    <li><a href="/general/multiple-audio-tracks.html">多個音軌</a></li>
+                  
+                
+                  
+                    <li><a href="/general/player-configuration-guide.html">播放程式組態指南</a></li>
+                  
+                
+                  
+                    <li><a href="/general/playing-live-streams.html">播放即時串流</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI 插件</a></li>
+                  
+                
+                  
+                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
+                  
+                
+                  
+                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體外掛程式</a></li>
+                  
+                
+                  
+                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/step-step-player-management.html">逐步：玩家管理</a></li>
+                  
+                
+                  
+                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
+                  
+                
+                  
+                    <li><a href="/general/using-screen-reader-brightcove-player.html">使用螢幕閱讀程式與布萊特灣播放器</a></li>
+                  
+                
+                  
+                    <li><a href="/general/versions-brightcove-player-documentation.html">布萊特灣玩家文件的版本</a></li>
+                  
+                
+                  
+                    <li><a href="/general/volume-control.html">音量控制</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/code-samples/index.html">程式碼範例<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/code-samples/index-thumb.html">依群組的程式碼範例</a></li>
+                  
+                
+                  
+                    <li><a href="/code-samples/index.html">程式碼範例索引</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/amp/index.html">放大器<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/amp/amp-using-video-cloud-video.html">AMP 使用視訊雲端視訊</a></li>
+                  
+                
+                  
+                    <li><a href="/amp/amp-using-external-video.html">使用外部視訊的 AMP </a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/training/index.html">訓練<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/training/online-training-courses.html">所有線上訓練課程</a></li>
+                  
+                
+                  
+                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
+                  
+                
+                  
+                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
+                  
+                
+                  
+                    <li><a href="/training/register-training.html">註冊參加講師指導訓練</a></li>
+                  
+                
+                  
+                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
+                  
+                
+                  
+                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/training-demand-quick-start-player-management.html">訓練：玩家管理快速入門</a></li>
+                  
+                
+                  
+                    <li><a href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">版本說明<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/brightcove-player-release-notes.html">布萊特灣玩家發行紀錄</a></li>
+                  
+                
+                  
+                    <li><a href="/release-notes/brightcove-player-prerelease-notes.html">布萊特灣玩家預先發行紀錄</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">支援<strong> + </strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">布萊特灣答案</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">聯絡銷售人員</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">頁面內容</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<h1>適用於Brightcove Player的Google跟踪代碼管理器插件</h1>
+<article class="bcls-article">
+  <summary>在本主題中，您將學習如何為Brightcove Player使用Google跟踪代碼管理器（GTM）插件。</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">概覽</h2>
+
+    <p>
+      Google跟踪代碼管理器（GTM）插件可讓您將GTM功能與Brightcove Player集成。
+    </p>
+
+    <p>
+      標記管理器使您可以添加和發布標記，而不必使用代碼。因為它們是客戶端解決方案，因此標籤管理程式可讓您收集不同行銷技術的資料。這使營銷人員能夠跨各種收集點收集用戶和玩家數據，從而為他們提供支持。
+    </p>
+
+    <p>
+      如果您已經在使用Google Analytics（分析），Adwords和DoubleClick，那麼您可能還希望使用Google跟踪代碼管理器，因為它可以與這些工具很好地集成。GTM提供了大量的變量和触發器選項。
+    </p>
+    <p>
+      Google跟踪代碼管理器插件可啟用&nbsp;你追踪&nbsp; Brightcove &nbsp;播放器&nbsp;大事記&nbsp;使用&nbsp; Google Analytics &nbsp;儀表板。&nbsp;的&nbsp;跟隨玩家&nbsp;大事記&nbsp;可以跟踪：&nbsp;
+    </p>
+    <ul>
+      <li>
+        播放器負載
+      </li>
+      <li>
+        影片曝光
+      </li>
+      <li>
+        影片觀看
+      </li>
+      <li>
+        視頻&nbsp;訂婚
+      </li>
+      <li>
+        播放要求
+      </li>
+      <li>
+        影片完成
+      </li>
+      <li>
+        進階玩家活動&nbsp;如&nbsp;廣告開始&nbsp;廣告結束
+      </li>
+      <li>
+        錯誤會破壞&nbsp;播放體驗
+      </li>
+    </ul>
+
+    <aside class="bcls-aside bcls-aside--tip">
+      Brightcove Player 6.36.5及更高版本支持Google跟踪代碼管理器插件。
+    </aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Tag_management_terminology">標籤管理術語</h2>
+
+    <p>
+      以下是使用Google跟踪代碼管理器（GTM）時會遇到的一些常見術語。
+    </p>
+
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th style="width:15%">期限</th>
+          <th style="width:85%">描述</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><strong>容器</strong></td>
+          <td>
+            您的標籤管理系統帳戶可以有多個容器（配置文件），並具有自己的標籤和變量。每個容器可以具有多個環境，通常為開發，分段和生產而設置。
+          </td>
+        </tr>
+        <tr>
+          <td><strong>資料層</strong></td>
+          <td>
+            數據層是指駐留在網頁代碼中的數據集合。此JavaScript對像用於將信息從您的網站傳遞到標籤管理器容器。然後，您可以使用此信息來填充變量並激活標籤配置中的觸發器。
+          </td>
+        </tr>
+        <tr>
+          <td><strong>事件</strong></td>
+          <td>
+            事件是用於將數據發送到報表工具的數據點。這些與視頻加載和播放有關。
+          </td>
+        </tr>
+        <tr>
+          <td><strong>標籤</strong></td>
+          <td>
+            標籤是放置在您的網頁上的代碼片段，用於收集用戶交互數據。標記管理系統簡化了將標記添加到站點的過程，僅要求您提供標記ID和標記事件類型。
+          </td>
+        </tr>
+        <tr>
+          <td><strong>標籤市場</strong></td>
+          <td>
+            標籤市場模板提供用於部署標籤的代碼段。儘管這減少了所需的代碼知識量，但要成功實現還需要一定程度的對JavaScript和HTML的熟悉。
+          </td>
+        </tr>
+        <tr>
+          <td><strong>追踪器</strong></td>
+          <td>
+            跟踪器是用於收集，存儲數據並將該數據發送到Google跟踪代碼管理器的對象。
+          </td>
+        </tr>
+        <tr>
+          <td><strong>觸發</strong></td>
+          <td>
+            觸發器告訴您何時應將標記代碼添加到頁面。這些是用戶定義的條件。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Getting_started">入門</h2>
+    <p>
+      要設置Google跟踪代碼管理器，請按以下步驟操作：
+    </p>
+    <!-- <ul>
+      <li>Define tag configurations for Google Analytics</li>
+      <li>Define triggers to fire beacons</li>
+      <li>
+        <p>Create variables for events and custom dimensions</p>
+
+        <aside class="bcls-aside bcls-aside--information">
+          Make sure that each dimension's name and index number from Google Tag
+          Manager matches the player's plugin JSON file.
+        </aside>
+      </li>
+    </ul> -->
+
+    <h3>步驟</h3>
+    <ol class="bcls-tasklist">
+      <li>
+        查看Google的文檔以<a href="https://support.google.com/tagmanager/answer/6103696?hl=en">設置和安裝標籤管理器</a>。
+      </li>
+      <li>
+        <p>
+         在<a href="https://tagmanager.google.com/#/home">標籤管理器</a>，創建一個帳戶或使用現有帳戶。要創建一個新帳戶，請選擇<strong>創建帳號</strong>按鈕。
+        </p>
+        <p>
+          默認情況下，將為新帳戶創建一個新容器。您可以在每個帳戶中創建其他容器。
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="創建帳號" src="/assets/images/plugins/google-tag-manager/create-account.png"/>
+          <figcaption class="bcls-caption--image">創建帳號</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+         輸入新帳戶頁面的值，包括帳戶名稱和容器名稱。選擇目標平台。
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="新帳戶信息" src="/assets/images/plugins/google-tag-manager/new-account.png"/>
+          <figcaption class="bcls-caption--image">新帳戶信息</figcaption>
+        </figure>
+      </li>
+      <li>
+        選取「<strong>建立</strong>」按鈕。
+      </li>
+      <!-- <li>
+        Copy your Google Analytics account id for later use.
+      </li>
+      <li>
+        Copy your Google Tag Manager tracking id for later use. This should be formatted as <code translate="No">GTM-XXXXXX</code>.
+      </li> -->
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Reviewing_events_to_track">查看事件以進行跟踪</h2>
+
+    <p>查看下表，並確定要跟踪的事件。</p>
+
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th style="width:15%">類型</th>
+          <th style="width:20%">事件</th>
+          <th style="width:65%">描述</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>播放程式載入</td>
+          <td><code translate="No">bcvideo_player_load</code></td>
+          <td>
+            在加載播放器並準備播放時發送
+          </td>
+        </tr>
+        <tr>
+          <td>視訊曝光</td>
+          <td><code translate="No">bcvideo_video_impression</code></td>
+          <td>
+            將視頻加載到播放器並準備播放時發送
+          </td>
+        </tr>
+        <tr>
+          <td>影片觀看</td>
+          <td><code translate="No">bcvideo_video_view</code></td>
+          <td>
+            當視頻通過自動播放或由於用戶互動而開始播放時發送
+          </td>
+        </tr>
+        <tr>
+          <td>視訊觀看期間</td>
+          <td><code translate="No">bcvideo_video_engagement</code></td>
+          <td>
+            使用者觀看影片時間軸的秒範圍。此事件是追蹤視訊參與的活動訊號，可能會在播放期間傳送多次，視使用者互動和視訊的長度而定。
+          </td>
+        </tr>
+        <tr>
+          <td>播放請求</td>
+          <td><code translate="No">bcvideo_play_request</code></td>
+          <td>
+            由用戶明確單擊播放按鈕啟動播放時發送，或者在平台在自動播放場景中觸發播放時自動發送
+          </td>
+        </tr>
+        <tr>
+          <td>廣告開始</td>
+          <td><code translate="No">bcvideo_ad_start</code></td>
+          <td>
+            播放平台將控制權移交給廣告代理時發送
+          </td>
+        </tr>
+        <tr>
+          <td>廣告結束</td>
+          <td><code translate="No">bcvideo_ad_end</code></td>
+          <td>
+            當控制權從廣告代理移交給播放平台時發送
+          </td>
+        </tr>
+        <tr>
+          <td>錯誤</td>
+          <td><code translate="No">bcvideo_error</code></td>
+          <td>
+            當遇到致命錯誤並破壞播放體驗時發送
+          </td>
+        </tr>
+        <tr>
+          <td>影片完成</td>
+          <td><code translate="No">bcvideo_video_complete</code></td>
+          <td>
+            視頻播放結束時發送
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Creating_variables_tags_&_triggers">創建變量，標籤和触發器</h2>
+    <p>
+      必須將每個要跟踪的Brightcove事件創建為<strong>活動標籤</strong>在Google跟踪代碼管理器中。來自GTM的事件ID在播放器內部使用，從而可以將Brightcove事件數據傳遞到GTM事件。
+    </p>
+    <p>
+      需要為每個代碼創建GTM觸發器，以將這些事件發送到Google Analytics（分析）。與事件關聯的自定義參數也在GTM中創建<strong>變數</strong>標籤。
+    </p>
+    <!-- <p>You can create Variables, Tags and Triggers in Google Tag Manager, as shown below, or you can <a href="#Importing_a_container_file_in_GTM">import a Container file in GTM</a>. </p> -->
+    
+    <h3>將變量添加到GTM</h3>
+    <p>參數攜帶額外的數據，並與事件傳遞。必須在Google跟踪代碼管理器中將每個將要記錄的Brightcove參數創建為變量。然後，命名的參數將在播放器內部使用，從而將Brightcove參數傳遞到Google跟踪代碼管理器變量。</p>
+
+    <p>
+      要在Google跟踪代碼管理器中創建變量，請按照以下步驟操作
+    </p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>
+         登錄到您的Google跟踪代碼管理器帳戶
+        </p>
+      </li>
+      <li>
+        選擇<strong>變數</strong>在左側導航中。 
+      </li>
+      <li>
+        對於<strong>用戶定義的變量</strong>，選擇<strong>新</strong>按鈕。 
+      </li>
+      <li>
+        <p>
+          選擇<strong>變量類型</strong>如<strong>數據層變量</strong>。
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="數據層變量" src="/assets/images/plugins/google-tag-manager/data-layer-variable.png"/>
+          <figcaption class="bcls-caption--image">數據層變量</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          輸入詳細信息：
+        </p>
+        <ul>
+          <li>
+            <strong>數據層變量名稱</strong> -變量名
+          </li>
+          <li>
+            <strong>資料層&nbsp;版</strong> -版本2
+          </li>
+        </ul>   
+      </li>
+      <li>
+        <p>
+          要創建的參數：
+        </p>
+        <ul>
+          <li>
+            <strong>帳戶</strong> -Brightcove帳戶名
+          </li>
+          <li>
+            <strong>播放器</strong> -玩家編號
+          </li>
+          <li>
+            <strong>選手姓名</strong> - 選手姓名
+          </li>
+          <li>
+            <strong>平台版本</strong> -平台版本號
+          </li>
+          <li>
+            <strong>屆會</strong> -會話標識符
+          </li>
+          <li>
+            <strong>視頻</strong> -影片ID
+          </li>
+          <li>
+            <strong>影片名稱</strong> -影片名稱
+          </li>
+          <li>
+            <strong>範圍</strong> -以StartSecond..EndSecond格式查看的秒數範圍
+          </li>
+          <li>
+            <strong>觀看視頻秒數</strong> -觀看秒數
+          </li>
+          <li>
+            <strong>視頻時長</strong> -視頻的持續時間（以秒為單位）
+          </li>
+          <li>
+            <strong>觀看視頻百分比</strong> -觀看視頻的百分比
+          </li>
+          <li>
+            <strong>錯誤代碼</strong> -與事件相關的平台特定的錯誤代碼
+          </li>
+          <li>
+            <strong>視頻里程碑</strong> -視頻完成的里程碑（25％，50％，75％，100％）
+          </li>
+          <li>
+            <strong>影片播放頭</strong> -視頻中觸發事件的時間
+          </li>
+          <li>
+            <strong>國家</strong> -ISO-3166（alpha 2）國家/地區代碼，&nbsp;例如：我們
+          </li>
+          <li>
+            <strong>國家的名字</strong> -可讀的國家名稱&nbsp;例如：美國
+          </li>
+          <li>
+            <strong>地區</strong> -ISO-3166（alpha 2）區域代碼
+          </li>
+          <li>
+            <strong>地區名稱</strong> -可讀區域名稱
+          </li>
+          <li>
+            <strong>市</strong> - 城市名稱
+          </li>
+          <li>
+            <strong>瀏覽器</strong> -使用的瀏覽器的全名和版本
+          </li>
+          <li>
+            <strong>瀏覽器類型</strong> -使用的瀏覽器的通用名稱（即Chrome，Edge，Firefox）
+          </li>
+          <li>
+            <strong>目的地</strong> -發起事件的URI
+          </li>
+          <li>
+            <strong>資源</strong> -將最終用戶發送到目的地的URI
+          </li>
+          <li>
+            <strong>設備類型</strong> -在User-Agent不可靠的情況下重寫以指定引發事件的設備的OS
+          </li>
+          <li>
+            <strong>設備操作系統</strong> -設備使用的操作系統名稱
+          </li>
+          <li>
+            <strong>設備操作系統版本</strong> -設備使用的操作系統版本
+          </li>
+        </ul>   
+      </li>
+      <li>
+        <p>
+          您的用戶定義變量在GTM中應類似於此：
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="用戶定義的變量" src="/assets/images/plugins/google-tag-manager/user-defined-vars.png"/>
+          <figcaption class="bcls-caption--image">用戶定義的變量</figcaption>
+        </figure>
+      </li>
+    </ol>
+
+    <h3>將標籤添加到GTM</h3>
+    <p>確定要跟踪的事件後，必須在Google跟踪代碼管理器中創建代碼。</p>
+
+    <p>
+      要在Google跟踪代碼管理器中創建代碼，請按照以下步驟操作
+    </p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>
+         登錄到您的Google跟踪代碼管理器帳戶
+        </p>
+      </li>
+      <li>
+        選擇<strong>標籤</strong>在左側導航欄中，然後選擇<strong>新</strong>按鈕。 
+      </li>
+      <li>
+        <p>
+          選擇<strong>標籤類型</strong>如<strong>谷歌分析：通用分析</strong>。
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="標籤配置" src="/assets/images/plugins/google-tag-manager/tag-configuration.png"/>
+          <figcaption class="bcls-caption--image">標籤配置</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          輸入標籤詳細信息：
+        </p>
+        <ul>
+          <li>
+            <strong>軌道類型</strong> - 設置<strong>事件</strong>
+          </li>
+          <li>
+            <strong>類別</strong> -事件類別變量
+          </li>
+          <li>
+            <strong>行動</strong> -事件動作變量
+          </li>
+          <li>
+            <strong>標籤</strong> -事件標籤變量
+          </li>
+          <li>
+            <strong>值</strong> -無
+          </li>
+          <li>
+            <strong>非互動命中</strong> - 設置<strong>真正</strong>
+          </li>
+          <li>
+            <strong>Google Analytics（分析）設置</strong> - 默認設置
+          </li>
+          <li>
+            <strong>跟踪號碼</strong> -GA信息中心的跟踪ID。選擇“跟踪ID變量”。
+          </li>
+        </ul>   
+      </li>
+      <li>
+        <p>
+          轉到高級設置，然後設置相關的自定義尺寸索引和尺寸值。這些索引應與Google Analytics（分析）中的索引匹配。
+        </p>
+      </li>
+      <li>
+        <p>
+          您的代碼在GTM中看起來應該與此類似：
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="GTM中的標籤" src="/assets/images/plugins/google-tag-manager/tags-in-gtm.png"/>
+          <figcaption class="bcls-caption--image">GTM中的標籤</figcaption>
+        </figure>
+      </li>
+    </ol>
+
+    <h3>向GTM添加觸發器</h3>
+    <p>對於每個要跟踪的事件，您還需要Google跟踪代碼管理器中的觸發器。</p>
+
+    <p>
+      要在Google跟踪代碼管理器中創建觸發器，請按照以下步驟操作
+    </p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>
+         登錄到您的Google跟踪代碼管理器帳戶
+        </p>
+      </li>
+      <li>
+        選擇<strong>扳機</strong>在左側導航欄中，然後選擇<strong>新</strong>按鈕。 
+      </li>
+      <li>
+        <p>
+          選擇<strong>觸發類型</strong>如<strong>自訂活動</strong>。
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="觸發配置" src="/assets/images/plugins/google-tag-manager/trigger-configuration.png"/>
+          <figcaption class="bcls-caption--image">觸發配置</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          輸入事件名稱。
+        </p>
+      </li>
+      <li>
+        <p>
+          為要跟踪的每個事件創建一個觸發器。
+        </p>
+      </li>
+      <li>
+        <p>
+          您的觸發器應在GTM中看起來與此類似：
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="GTM中的觸發器" src="/assets/images/plugins/google-tag-manager/triggers-in-gtm.png"/>
+          <figcaption class="bcls-caption--image">GTM中的觸發器</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Integrating_with_Brightcove">與Brightcove集成</h2>
+    <p>
+      要將GTM與Brightcove Player集成，請將Google跟踪代碼管理器插件添加到播放器中。
+    </p>
+
+    <h3>使用工作室</h3>
+
+    <p>
+      使用視頻雲工作室加載插件下面的步驟細節。
+    </p>
+
+    <ol class="bcls-tasklist-restart">
+      <li>
+        在視頻雲工作室，打開<strong>播</strong>放器模塊，並創建一個新的播放器或找到你想添加插件的播放器。
+      </li>
+      <li>選取播放程式的連結，以開啟播放程式的內容。</li>
+      <li>在左側導覽選單中選取<strong>外掛程式</strong>。</li>
+      <li>
+        <p>
+          接下來，選取 [ <strong>新增外掛程式</strong> ] 按鈕，然後選取 [ <strong> Brightcove 外掛程式</strong> ]。
+        </p>
+
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="新增外掛程式按鈕" src="/assets/images/plugins/google-tag-manager/add-a-plugin.png"/>
+          <figcaption class="bcls-caption--image">
+            新增外掛程式按鈕
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          展開<strong>Brightcove插件</strong>下拉菜單並選擇<strong>Google跟踪代碼管理器</strong>。
+        </p>
+
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Google跟踪代碼管理器插件" src="/assets/images/plugins/google-tag-manager/gtm-plugin.png"/>
+          <figcaption class="bcls-caption--image">
+            Google跟踪代碼管理器插件
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          要告訴播放器您要跟踪哪些事件和自定義維度，請創建一個JSON對像以粘貼到<strong>選項（JSON）</strong>文本框。
+        </p>
+        <p>
+          欄位說明：
+        </p>
+
+        <ul>
+          <li><code translate="No">tracker</code> -您的Google跟踪代碼管理器跟踪ID（GTM-XXXXXXX）</li>
+          <li><code translate="No">eventsToTrack</code> -您要追踪的活動</li>
+          <li>
+            <code translate="No">paramsToTrack</code> -您要跟踪的自定義尺寸
+          </li>
+        </ul>
+        <p>這是一個例子：</p>
+
+        <pre class="line-numbers">
+<code class="language-json" translate="No">{
+  "tracker":"<span class="bcls-input">your Google Tag Manager id</span>",
+  "eventsToTrack": {
+    "error":"Error",
+    "play_request":"Play Request",
+    "video_engagement":"Video Engagement"
+  },
+  "paramsToTrack": {
+    "bcvideo_video_seconds_viewed":"dimension1",
+    "bcvideo_video_playhead":"dimension2",
+    "bcvideo_account":"dimension3",
+    "bcvideo_player":"dimension4",
+    "bcvideo_player_name":"dimension5",
+    "bcvideo_session":"dimension8",
+    "bcvideo_video":"dimension6",
+    "bcvideo_video_name":"dimension7",
+    "bcvideo_platform_version":"dimension9",
+    "bcvideo_video_duration":"dimension11",
+    "bcvideo_range":"dimension10",
+    "bcvideo_video_percent_viewed":"dimension12",
+    "bcvideo_error_code":"dimension13",
+    "bcvideo_video_milestone":"dimension14",
+    "bcvideo_destination":"dimension15"
+  }
+}</code></pre>
+
+        <aside class="bcls-aside bcls-aside--tip">
+          確保JSON對像中的自定義維度與Google Analytics（分析）中的名稱和索引匹配。
+        </aside>
+      </li>
+      <li>
+        <p>
+          選取「<strong>儲存</strong>」按鈕。您現在將看到<strong>Google跟踪代碼管理器</strong>插件已添加到播放器的插件列表中。
+        </p>
+
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="保存按鈕" src="/assets/images/plugins/google-tag-manager/gtm-save.png"/>
+          <figcaption class="bcls-caption--image">保存按鈕</figcaption>
+        </figure>
+      </li>
+      <li>
+        若要發佈播放程式，請選取 [ <strong>發佈和嵌入 &gt; 發佈變更</strong> ]。
+      </li>
+      <li>要關閉對話框，請選擇<strong>關</strong>。</li>
+      <li>
+        <p>
+          返回到<strong>媒體</strong>並使用您剛剛為Google跟踪代碼管理器更新的播放器發布視頻或播放列表。
+        </p>
+
+        <p>
+          當您的播放器加載並且用戶與播放器交互時，將跟踪指定的事件和參數。
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Creating_custom_dimensions">
+      創建自定義尺寸
+    </h2>
+    <p>
+      自定義維度是您在Google Analytics（分析）中創建的指標。有關詳細信息，請參見Google的<a href="https://support.google.com/analytics/answer/2709828?hl=en">自定義維度和指標</a>文件。
+    </p>
+    <p>
+      使用Google腳本，您可以自動化在Google Analytics（分析）中添加自定義維度的過程。
+    </p>
+
+    <h3>步驟</h3>
+    <p>請按照以下步驟使用Google App腳本創建自定義尺寸：</p>
+    <ol class="bcls-tasklist-restart">
+      <!-- <li>
+    Open the <a href="https://drive.google.com/file/d/1Boxem7n4UNy7IbofMTTw2bmsdviSIvbZ/view">custom app script</a>.
+  </li> -->
+    <li>
+      登錄到Google。
+    </li>
+    <li>
+      <p>
+        導航到<a href="https://script.google.com/home/start">G Suite開發人員中心</a>並選擇Apps Script新的空白項目。
+      </p>
+
+      <figure class="bcls-figure">
+        <img class="bcls-image--no-border" alt="應用程式腳本專案" src="/assets/images/plugins/google-tag-manager/apps-script-project.png"/>
+        <figcaption class="bcls-caption--image">
+          應用程式腳本專案
+        </figcaption>
+      </figure>
+    </li>
+    <li>
+      <p>
+        選擇<strong>無標題項目</strong>並給您的項目起個名字。
+      </p>
+
+      <figure class="bcls-figure">
+        <img class="bcls-image--no-border" alt="腳本編輯器" src="/assets/images/plugins/google-tag-manager/script-editor.png"/>
+        <figcaption class="bcls-caption--image">
+          腳本編輯器
+        </figcaption>
+      </figure>
+    </li>
+    <li>
+      <p>將以下定制應用程序腳本代碼複製到編輯器，並更新以下值：</p>
+      <ul>
+        <li>
+          <code translate="No">accountId</code> -您的Google Analytics（分析）帳戶ID
+        </li>
+        <li>
+          <code translate="No">webPropertyId</code> -您的Google帳戶跟踪ID
+        </li>
+        <li>
+          <code translate="No">dimensions</code> -要添加的自定義尺寸。當前列表包含所有自定義維度。請注意，尺寸以開頭<code translate="No">bcvideo_</code>。這是為了確保與這些變量沒有命名衝突。
+        </li>
+      </ul>
+
+        <pre class="line-numbers">
+<code class="language-javascript" translate="No">//Set values for GA Account ID and web property ID to which you have to set custom dimensions.
+var accountId='<span class="bcls-input">your account id</span>';
+var webPropertyId='<span class="bcls-input">your tracking code</span>';
+//Add required custom dimensions to be created to this list
+var dimensions=<span class="bcls-highlight">['bcvideo_video_seconds_viewed','bcvideo_video_playhead','bcvideo_account','bcvideo_player','bcvideo_player_name','bcvideo_video','bcvideo_video_name','bcvideo_session','bcvideo_platform_version','bcvideo_range','bcvideo_video_duration',
+'bcvideo_video_percent_viewed','bcvideo_error_code','bcvideo_milestone','bcvideo_destination'];</span>
+
+
+//Function to create custom dimensions in GA
+function createGACustomDimensions() {
+
+  //This loop iterates through the custom dimensions in order to set the custom dimension scope, active values into our GA property
+  for(var index=0;index&lt;dimensions.length;index++){
+  var customDimensions ={
+    'name': dimensions[index],
+    'scope':'HIT',
+    'active':true,
+  }
+
+  //This create a request to the new custom dimension
+  Analytics.Management.CustomDimensions.insert(customDimensions,accountId,webPropertyId);
+
+  // Pause for 1 second between adding each custom dimension, this ensure that the GA property has time
+  // to process the request fully before moving to the next custom dimension.
+  Utilities.sleep(1000)
+  }
+}</code></pre>
+
+        <aside class="bcls-aside bcls-aside--tip">
+        在此示例中，我們將尺寸放置在名為<code translate="No">customDimensions</code>。要將它們添加為數據層變量，您需要將每個變量名稱引用為<code translate="No">customDimensions.{dimension}</code>
+      </aside>
+
+        <!-- <aside class="bcls-aside bcls-aside--tip">The script should be configured to access the <a href="https://developers.google.com/analytics/devguides/reporting/core/v4">Google Analytics API</a> from the resource menu.</aside> -->
+      </li>
+      <li>
+        <p>
+          更換<code translate="No">function myFunction(){}</code>代碼塊（如下所示）以及您的自定義應用腳本。
+        </p>
+
+        <pre class="line-numbers">
+<code class="language-javascript" translate="No">function myFunction() {
+
+}</code></pre>
+      </li>
+      <li>
+        保存項目。您需要保存項目才能使用Google Analytics（分析）API。
+      </li>
+      <li>
+        <p>
+          要啟用Google Analytics（分析）API，請在腳本編輯器中選擇<strong>資源資源</strong> &gt; <strong>進階Google服務</strong>。
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="進階谷歌服務" src="/assets/images/plugins/google-tag-manager/advanced-services.png"/>
+          <figcaption class="bcls-caption--image">
+            進階谷歌服務
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          然後找到<strong>進階Google服務</strong>，然後將其打開<strong>上</strong>。選擇<strong>好</strong>。
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Google Analytics API" src="/assets/images/plugins/google-tag-manager/enable-gtm2.png"/>
+          <figcaption class="bcls-caption--image">
+            Google Analytics API
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>要運行您的應用腳本，請選擇<strong>跑</strong> &gt; <strong>運行功能</strong>，然後選擇您的腳本。</p>
+
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="運行腳本" src="/assets/images/plugins/google-tag-manager/run-script.png"/>
+          <figcaption class="bcls-caption--image">運行腳本</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>在授權對話框中，選擇<strong>審閱權限</strong>。</p>
+
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="授權對話方塊" src="/assets/images/plugins/google-tag-manager/authorization-dialog.png"/>
+          <figcaption class="bcls-caption--image">授權對話方塊</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          選擇<strong>允許</strong>按鈕。
+        </p>
+         <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="允許權限" src="/assets/images/plugins/google-tag-manager/allow-permissions.png"/>
+          <figcaption class="bcls-caption--image">允許權限</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Viewing_custom_dimensions">
+      查看自定義尺寸
+    </h2>
+    <p>
+      要在Google Analytics（分析）中查看自定義維度，請按照以下步驟操作：
+    </p>
+
+    <ol class="bcls-tasklist-restart">
+    <li>
+      登錄谷歌分析。
+    </li>
+    <li>
+      <p>
+       選擇<strong>管理員</strong>
+      </p>
+      <figure class="bcls-figure">
+        <img class="bcls-image--no-border" alt="分析管理員" src="/assets/images/plugins/google-tag-manager/analytics-admin.png"/>
+        <figcaption class="bcls-caption--image">
+          分析管理員
+        </figcaption>
+      </figure>
+    </li>
+    <li>
+      <p>
+       點擊<strong>自定義定義</strong>展開它，然後選擇<strong>自定義尺寸</strong>。
+      </p>
+      <figure class="bcls-figure">
+        <img class="bcls-image--no-border" alt="自定義尺寸" src="/assets/images/plugins/google-tag-manager/custom-dimensions.png"/>
+        <figcaption class="bcls-caption--image">
+          自定義尺寸
+        </figcaption>
+      </figure>
+    </li>
+    <li>
+      <p>
+       您應該看到自定義維度及其關聯的索引。
+      </p>
+      <figure class="bcls-figure">
+        <img class="bcls-image--no-border" alt="尺寸和指標" src="/assets/images/plugins/google-tag-manager/dimensions-indices.png"/>
+        <figcaption class="bcls-caption--image">
+          尺寸和指標
+        </figcaption>
+      </figure>
+    </li>
+    
+    </ol>
+  </section>
+
+  <!-- <section class="bcls-section">
+    <h2 id="Importing_a_container_file_in_GTM">Importing a container file</h2>
+
+    <p>
+     One way to add Variables, Tags and Triggers to Google Tag Manager is to import a JSON-formatted Container file. For details, see Google's <a href="https://support.google.com/tagmanager/answer/6106997?hl=en">Container export and import</a> document.
+    </p>
+    <h3>Steps</h3>
+    <p>
+      Follow these steps to import a Container file:
+    </p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>
+         In your JSON-formatted Container file, set the following values:
+        </p>
+        <ul>
+          <li>
+            <code translate="No">publicID</code> - Your GTM tracker ID (GTM-XXXXXX)
+          </li>
+          <li>
+             <code translate="No">value</code> - Your GA tracker ID (UA-111111111-1)
+          </li>
+        </ul>
+        <p>
+          Snippet1 from an example Container file:
+        </p>
+        <pre class="line-numbers">
+<code class="language-json" translate="No">...
+&quot;container&quot;: {
+   &quot;path&quot;: &quot;accounts/470123456/containers/13171830&quot;,
+    &quot;accountId&quot;: &quot;470123456&quot;,
+    &quot;containerId&quot;: &quot;13171830&quot;,
+    &quot;name&quot;: &quot;solutions.brightcove.com&quot;,
+    &quot;publicId&quot;: &quot;<span class="bcls-input">your GTM tracker ID</span>&quot;,
+    &quot;usageContext&quot;: [
+        &quot;WEB&quot;
+    ],
+    &quot;fingerprint&quot;: &quot;1571234567890&quot;,
+    ...
+</code></pre>
+  <p>
+      Snippet2 from an example Container file:
+    </p>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">...
+{
+    &quot;accountId&quot;: &quot;470123456&quot;,
+    &quot;containerId&quot;: &quot;13171830&quot;,
+    &quot;variableId&quot;: &quot;2&quot;,
+    &quot;name&quot;: &quot;Google Analytics Settings&quot;,
+    &quot;type&quot;: &quot;gas&quot;,
+    &quot;parameter&quot;: [
+        {
+            &quot;type&quot;: &quot;TEMPLATE&quot;,
+            &quot;key&quot;: &quot;trackingId&quot;,
+            &quot;value&quot;: &quot;<span class="bcls-input">your GA tracker ID</span>&quot;
+        }
+    ],
+    &quot;fingerprint&quot;: &quot;1573675830590&quot;
+}
+ ...
+</code></pre>
+      </li>
+      <li>
+        Log in to your GTM account.
+      </li>
+      <li>
+        Select the <strong>Admin</strong> tab. 
+      </li>
+      <li>
+        Select <strong>Import Container</strong>
+      </li>
+      <li>
+        <p>
+         Select <strong>Choose container file</strong>.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt="Import container file"
+            src="/assets/images/plugins/google-tag-manager/import-container.png"
+          />
+          <figcaption class="bcls-caption--image">Import container file</figcaption>
+        </figure>
+      </li>
+      <li>
+        Select <strong>Existing</strong> workspace.
+      </li>
+      <li>
+        Preview the file and publish it. This will create the necessary Variables, Tags and Triggers in GTM.
+      </li>
+    </ol>
+  </section> -->
+
+  <section class="bcls-section">
+    <h2 id="Events_and_parameters">事件和參數</h2>
+
+    <p>
+      以下事件和參數可以發送到Google跟踪代碼管理器。
+    </p>
+
+    <h3>活動</h3>
+
+    <p>這些事件來自您的播放器。</p>
+
+    <ul>
+      <li><code translate="No">player_load</code></li>
+      <li><code translate="No">video_impression</code></li>
+      <li><code translate="No">play_request</code></li>
+      <li><code translate="No">video_view</code></li>
+      <li>
+        <code translate="No">video_engagement</code>
+        <ul>
+          <li><code translate="No">video_engagement</code> -25％里程碑</li>
+          <li><code translate="No">video_engagement</code> -50％里程碑</li>
+          <li><code translate="No">video_engagement</code> -75％里程碑</li>
+        </ul>
+      </li>
+      <li><code translate="No">ad_start</code></li>
+      <li><code translate="No">ad_end</code></li>
+      <li><code translate="No">error</code></li>
+      <li><code translate="No">video_complete</code> -100％里程碑</li>
+    </ul>
+
+    <p>
+      觀看視頻的百分比（<code translate="No">video_engagement</code>）的計算方式如下（類似於Google和Adobe Analytics中的video_engagement事件）：
+    </p>
+
+    <pre>
+<code class="language-json" translate="No">Video watched percentage = duration the user actually watched / total video duration</code></pre>
+
+    <p>
+      例如，在20秒的視頻中，以下兩種情況均可實現25％的里程碑
+    </p>
+
+    <ul>
+      <li>用戶觀看時間為0-5秒</li>
+      <li>
+        用戶從0-1秒觀看，然後跳到11秒，然後觀看15秒
+      </li>
+    </ul>
+
+    <p>
+      在上述兩種情況下，用戶觀看了5秒，因此里程碑將報告為25％。
+    </p>
+
+    <h3>參數</h3>
+
+    <p>這些參數來自播放器。</p>
+
+    <ul>
+      <li><code translate="No">account</code></li>
+      <li><code translate="No">player</code></li>
+      <li><code translate="No">player_name</code></li>
+      <li><code translate="No">video</code></li>
+      <li><code translate="No">video_name</code></li>
+      <li><code translate="No">video_duration</code></li>
+      <li><code translate="No">range</code></li>
+      <li><code translate="No">video_seconds_viewed</code></li>
+      <li><code translate="No">session</code></li>
+      <li><code translate="No">platform_version</code></li>
+      <li><code translate="No">video_percent_viewed</code></li>
+      <li><code translate="No">video_playhead</code></li>
+    </ul>
+
+    <h3>自動參數</h3>
+
+    <p>
+      這些參數會自動發送到Google跟踪代碼管理器，因此您無需在JSON代碼中指定這些參數。
+    </p>
+
+    <ul>
+      <li><code translate="No">country</code></li>
+      <li><code translate="No">country_name</code></li>
+      <li><code translate="No">region</code></li>
+      <li><code translate="No">region_name</code></li>
+      <li><code translate="No">city</code></li>
+      <li><code translate="No">browser</code></li>
+      <li><code translate="No">browser_type</code></li>
+      <li><code translate="No">destination</code></li>
+      <li><code translate="No">source</code></li>
+      <li><code translate="No">device_type</code></li>
+      <li><code translate="No">device_os</code></li>
+      <li><code translate="No">device_os_version</code></li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Changelog">變更記錄檔</h2>
+
+    <p>
+      <a href="/plugins/changelog/google-tag-manager-plugin-changelog.html">在這裡看到更改日誌</a>。
+    </p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">頁面內容</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  頁面最後更新日期為 9 月 28 日
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>布萊特灣支援</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">系統狀態</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">文獻資料</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>訓練</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">布萊特灣大學</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">亮麗</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="talla_wrapper">
+  <p style="text-align: right;position: relative;"><button style="background:rgb(9, 7, 140);color:Snow;padding:.3rem;position:fixed;right:0;bottom:1em;z-index:9999999" onclick="javascript:displayChat()">有問題嗎？ </button> </p>
+  <div id="talla_chat">
+</div>
+</div>
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="https://assets.talla.com/latest/embeddedjs/talla.js"></script>
+  <script src="/assets/js/talla-init.js"></script>
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>
