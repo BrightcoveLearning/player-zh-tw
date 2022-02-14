@@ -1,0 +1,129 @@
+---
+title:布萊特灣 AirPlay 外掛程式
+description:在本主題中，您將學習如何使用 Bright湾 AirPlay 外掛程式，將布萊特灣播放器的內容串流到您的 Apple TV。
+parent: Plugins
+---
+ <h1>{{ page.title }}</h1>    
+<article class="bcls-article">
+  <summary>{{ page.description }} </summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">概述</h2> 
+    <p>Bright湾 AirPlay 外掛程式允許您將影片從您的布萊特灣播放器串流到高清晰度顯示器與蘋果 TV。只要點一下布萊特灣播放程式中的 AirPlay 圖示，即可將影片和影片分享到您的 Apple TV 或 AirPlay 2 的智慧型電視。</p> 
+    
+    <p>請注意，播放器控制列中的 AirPlay 圖示，如下所示，只有在下列情況適用時才會出現：</p>
+    <ul>
+      <li>您的布萊特灣播放器位於 Safari 瀏覽器</li>
+      <li>此布萊特灣 AirPlay 外掛程式已新增至您的播放器</li>
+      <li>適用於 AirPlay 的 Safari 內建網路套件</li>
+    </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="AirPlay icon" src="/assets/images/plugins/airplay/airplay-icon.png" />
+      <figcaption class="bcls-caption--image">「AirPlay」圖示</figcaption>
+      </figure>
+
+  
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Requirements">需求</h2> 
+    <p>若要使用布萊特灣 AirPlay 外掛程式，需要以下條件：</p>
+    <ul>
+      <li>布萊特灣玩家 v6.51.4 版及更新版本</li> 
+    </ul>
+  </section>
+
+  <!-- <section class="bcls-section">
+    <h2 id="Implement_using_Players_module">Implement using Players module</h2> 
+    <p>Playlist end screens can be implemented using Video Cloud Studio's <strong>Players</strong> module. For details, see the <a href="https://studio.support.brightcove.com/players/configuring-playlist-endscreen-using-plugin.html">Configuring a Playlist Endscreen Using the playlist-endscreen Plugin</a> document.</p>
+  </section> -->
+
+  <section class="bcls-section">
+    <h2 id="Implement_using_code">使用程式碼實作</h2> 
+    <p>要實現插件的播放器需要知道插件代碼的位置，如果需要的話，插件名稱和插件配置選項的樣式表。插件代碼和樣式表的位置如下：</p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>包含外掛程式碼：</p>
+        <pre>
+<code class="language-javascript" translate="No">https://players.brightcove.net/videojs-bc-airplay/1/videojs-bc-airplay.js</code>   </pre>
+      </li>
+      <li>
+        <p>包含外掛程式樣式：</p>
+        <pre>
+<code class="language-javascript" translate="No">https://players.brightcove.net/videojs-bc-airplay/1/videojs-bc-airplay.css</code>   </pre>
+      </li>
+      <li>使用插件名稱將其加載到播放器中：<code translate="No">bcAirplay</code>   </li> 
+      <!-- <li>
+        <p>An example set of options is:</p>
+        <pre class="line-numbers">
+<code class="language-html" translate="No">{
+  &quot;playlistId&quot;: &quot;4602525726001&quot;,
+  &quot;title&quot;: &quot;Watch More&quot;
+}</code></pre>
+      </li> -->
+      <li>
+        <p>以下是使用進階嵌入實作的範例，將播放清單 Endscreen 外掛程式與播放器的單一實體建立關聯。</p>
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;link href=&quot;https://players.brightcove.net/videojs-bc-airplay/1/videojs-bc-airplay.css&quot; rel=&quot;stylesheet&quot;&gt;
+  
+  &lt;div style=&quot;max-width: 960px;&quot;&gt;
+  &lt;video-js id=&quot;myPlayerID&quot;
+    data-account=&quot;<span class="bcls-input">your account ID</span>&quot;
+    data-player=&quot;<span class="bcls-input">your player ID</span>&quot;
+    data-embed=&quot;default&quot;
+    controls=&quot;&quot;
+    data-video-id=&quot;<span class="bcls-input">your video ID</span>&quot;
+    data-playlist-id=&quot;&quot;
+    data-application-id=&quot;&quot;
+    class=&quot;vjs-fluid&quot;&gt;
+  &lt;/video-js&gt;
+&lt;/div&gt;
+&lt;script src=&quot;https://players.brightcove.net/<span class="bcls-input">your account ID</span>/<span class="bcls-input">your player ID</span>_default/index.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- script for the Brightcove AirPlay plugin --&gt;
+&lt;script src=&quot;https://players.brightcove.net/videojs-bc-airplay/1/videojs-bc-airplay.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- custom script --&gt;
+&lt;script&gt;
+  videojs.getPlayer('myPlayerID').ready(function() {
+    var myPlayer = this;
+
+    // initialize the Brightcove AirPlay plugin
+    myPlayer.bcAirplay(); 
+  });
+&lt;/script&gt;</code>   </pre>
+      </li>
+    </ol>
+  </section>
+
+  <!-- <section class="bcls-section">
+    <h2 id="Options">Options</h2> 
+    <p>You may pass in an options object to the plugin upon initialization. This object may contain any of the following options:</p>
+
+    <h3>playlistId</h3>
+    <code translate="No">playlistId</code>
+    <ul>
+      <li>The string representing the playlist ID to be displayed in the end screen.</li>
+      <li>Type: <code translate="No">string</code></li>
+      <li>Default: <code translate="No">""</code></li>
+    </ul>
+
+    <h3>title</h3>
+    <code translate="No">title</code>
+    <ul>
+      <li>The string to customize the end screen title, this will also modify the button tooltip.</li>
+      <li>Type: <code translate="No">string</code></li>
+      <li>Default: <code translate="No">"Related videos"</code></li>
+    </ul>
+  </section> -->
+  
+  <!-- <section class="bcls-section">
+    <h2 id="Known_issues">Known issues</h2>
+    <ul>
+      <li></li>
+    </ul>
+  </section> -->
+  <section class="bcls-section"> 
+    <h2 id="changelog">變更記錄檔</h2>
+    <p>請參閱<a href="http://players.brightcove.net/release-notes/brightcove-player-airplay/index.html">布萊特灣 AirPlay 外掛程式版本說明</a>。</p>
+  </section>
+</article>

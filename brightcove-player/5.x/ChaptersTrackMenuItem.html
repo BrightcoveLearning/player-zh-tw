@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Brightcove Player v5.22.2 類：章節功能表項目 </title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.yeti.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Brightcove Player v5.22.2</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">模組<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="module-browser.html">瀏覽器</a></li><li><a href="module-buffer.html">緩衝</a></li><li><a href="module-computed-style.html">計算式</a></li><li>dom</li><li><a href="module-events.html">事件</a></li><li><a href="module-extend.html">延長</a></li><li>flash-rtmp</li><li>fn</li><li><a href="module-Format-time.html">格式化時間</a></li><li><a href="module-guid.html">嚮導</a></li><li><a href="module-log.html">日誌</a></li><li><a href="module-merge-options.html">合併選項</a></li><li><a href="module-obj.html">對象</a></li><li><a href="module-plugins.html">外掛程式</a> </li><li><a href="module-setup.html">設定</a> </li><li><a href="module-stylesheet.html">樣式表</a> </li><li><a href="module-text-track-list-converter.html">文本軌道列表-轉換器</a> </li><li><a href="module-time-ranges.html">時間範圍</a> </li><li><a href="module-to-title-case.html">對標頭大小寫</a> </li><li><a href="module-url.html">網址</a> </li><li><a href="module-videojs.html">視訊</a> </li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">類別<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="AudioTrack.html">音軌</a></li><li><a href="AudioTrackButton.html">音軌按鈕</a></li><li><a href="AudioTrackList.html">音軌列表</a></li><li><a href="AudioTrackMenuItem.html">音軌菜單項</a></li><li><a href="BigPlayButton.html">大播放按鈕</a></li><li><a href="Button.html">按鈕</a></li><li><a href="CaptionsButton.html">字幕按鈕</a></li><li><a href="CaptionSettingsMenuItem.html">字幕設置菜單項</a></li><li><a href="ChaptersButton.html">章節按鈕</a></li><li><a href="ChaptersTrackMenuItem.html">章節TrackMenuItem</a></li><li><a href="ClickableComponent.html">可點擊組件</a></li><li><a href="CloseButton.html">關閉按鈕</a></li><li><a href="Component.html">成分</a></li><li><a href="ControlBar.html">控制欄</a></li><li><a href="CurrentTimeDisplay.html">當前時間顯示</a></li><li><a href="CustomControlSpacer.html">自定義控件間隔器</a></li><li><a href="DescriptionsButton.html">說明按鈕</a></li><li><a href="DurationDisplay.html">持續時間顯示</a></li><li><a href="ErrorDisplay.html">錯誤顯示</a></li><li><a href="EventTarget.html">事件目標</a></li><li><a href="Flash.html">閃光</a></li><li><a href="FullscreenToggle.html">全屏切換</a></li><li><a href="Html5.html">html5</a></li><li>HTMLTrackElement</li><li>HtmlTrackElementList</li><li><a href="LiveDisplay.html">實時顯示</a></li><li><a href="LoadingSpinner.html">加載旋轉器</a></li><li><a href="LoadProgressBar.html">加載進度條</a></li><li><a href="MediaError.html">媒體錯誤</a></li><li><a href="MediaLoader.html">媒體加載器</a></li><li><a href="Menu.html">菜單</a></li><li><a href="MenuButton.html">菜單按鈕</a></li><li><a href="MenuItem.html">菜單項</a></li><li><a href="ModalDialog.html">模態對話框</a></li><li><a href="module-videojs-videojs.AudioTrack.videojs.AudioTrack.html">視訊 JS (~V). 音訊追蹤. 視訊追蹤. 音訊追蹤</a> </li><li><a href="module-videojs-videojs.EventTarget.videojs.EventTarget.html">影片 JR 影片 (~J)。活動資訊顯示器。</a> </li><li><a href="module-videojs-videojs.TextTrack.videojs.TextTrack.html">視訊 JS. 視訊追蹤. 視訊追蹤 (~F)。視訊追蹤</a> </li><li><a href="module-videojs-videojs.VideoTrack.videojs.VideoTrack.html">視訊 JS (~V). 視訊追蹤. 視訊追蹤. 視訊追蹤</a> </li><li><a href="MouseTimeDisplay.html">鼠標時間顯示</a></li><li><a href="MuteToggle.html">靜音切換</a></li><li>OffTextTrackMenuItem</li><li><a href="PlaybackRateMenuButton.html">播放速率功能表按鈕</a> </li><li><a href="PlaybackRateMenuItem.html">播放速率功能表項目</a> </li><li><a href="Player.html">玩家</a>  </li><li><a href="PlayProgressBar.html">播放進度列</a> </li><li><a href="PlayToggle.html">播放切換</a> </li><li><a href="Popup.html">快顯</a> </li><li><a href="PopupButton.html">快顯按鈕</a> </li><li><a href="PosterImage.html">色調</a> </li><li><a href="ProgressControl.html">進度控制</a> </li><li><a href="RemainingTimeDisplay.html">剩餘時間顯示</a> </li><li><a href="SeekBar.html">搜尋列</a> </li><li><a href="Slider.html">滑桿</a> </li><li><a href="Spacer.html">墊片</a> </li><li><a href="SubtitlesButton.html">字幕按鈕</a> </li><li><a href="Tech.html">技術</a> </li><li><a href="TextTrack.html">文字追蹤</a> </li><li><a href="TextTrackButton.html">文字追蹤按鈕</a> </li><li><a href="TextTrackCueList.html">文本軌跡清單</a> </li><li><a href="TextTrackDisplay.html">文字追蹤顯示</a> </li><li><a href="TextTrackList.html">文字追蹤清單</a> </li><li><a href="TextTrackMenuItem.html">文字軌跡功能表項目</a> </li><li><a href="TextTrackSettings.html">文字追蹤設定</a> </li><li><a href="TimeDivider.html">計時器</a> </li><li><a href="TooltipProgressBar.html">工具提示進度列</a> </li><li><a href="Track.html">追蹤</a> </li><li><a href="TrackButton.html">追蹤按鈕</a> </li><li><a href="TrackList.html">追蹤清單</a> </li><li><a href="VideoTrack.html">視訊追蹤</a> </li><li><a href="VideoTrackList.html">視訊追蹤清單</a> </li><li><a href="VolumeBar.html">體積列</a> </li><li><a href="VolumeControl.html">磁碟區控制</a> </li><li><a href="VolumeLevel.html">磁碟區層級</a> </li><li><a href="VolumeMenuButton.html">音量選單按鈕</a> </li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">混入<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li>flash-rtmp~FlashRtmpDecorator</li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">活動<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="AudioTrack.html#event:enabledchange">音軌#event:enabledchange</a></li><li><a href="AudioTrackList.html#event:addtrack">AudioTrackList#event:addtrack</a></li><li><a href="AudioTrackList.html#event:change">AudioTrackList#event:change</a></li><li><a href="AudioTrackList.html#event:removetrack">AudioTrackList#event:removetrack</a></li><li><a href="BigPlayButton.html#event:dispose">BigPlayButton#event:dispose</a></li><li><a href="BigPlayButton.html#event:ready">BigPlayButton#event:ready</a></li><li><a href="BigPlayButton.html#event:resize">BigPlayButton#event:resize</a></li><li><a href="BigPlayButton.html#event:tap">BigPlayButton#event:tap</a></li><li><a href="Button.html#event:dispose">按鈕#事件：處置</a></li><li><a href="Button.html#event:ready">按鈕#事件：準備好</a></li><li><a href="Button.html#event:resize">按鈕#事件：調整大小</a></li><li><a href="Button.html#event:tap">按鈕#事件：點擊</a></li><li><a href="ClickableComponent.html#event:dispose">ClickableComponent#event:dispose</a></li><li><a href="ClickableComponent.html#event:ready">ClickableComponent#event:ready</a></li><li><a href="ClickableComponent.html#event:resize">ClickableComponent#event:resize</a></li><li><a href="ClickableComponent.html#event:tap">ClickableComponent#event:tap</a></li><li><a href="CloseButton.html#event:close">關閉按鈕#event:close</a></li><li><a href="CloseButton.html#event:dispose">關閉按鈕#event:dispose</a></li><li><a href="CloseButton.html#event:ready">關閉按鈕#event:ready</a></li><li><a href="CloseButton.html#event:resize">關閉按鈕#事件：調整大小</a></li><li><a href="CloseButton.html#event:tap">關閉按鈕#event:tap</a></li><li><a href="Component.html#event:dispose">組件#事件：處理</a></li><li><a href="Component.html#event:ready">組件#事件：就緒</a></li><li><a href="Component.html#event:resize">組件#事件：調整大小</a></li><li><a href="Component.html#event:tap">組件#事件：點擊</a></li><li><a href="ControlBar.html#event:dispose">ControlBar#event:dispose</a></li><li><a href="ControlBar.html#event:ready">ControlBar#event：準備好</a></li><li><a href="ControlBar.html#event:resize">ControlBar#event:resize</a></li><li><a href="ControlBar.html#event:tap">ControlBar#event:tap</a></li><li>CurrentTimeDisplay#event:dispose</li><li>CurrentTimeDisplay#event:ready</li><li>CurrentTimeDisplay#event:resize</li><li>CurrentTimeDisplay#event:tap</li><li>CustomControlSpacer#event:dispose</li><li>CustomControlSpacer#event:ready</li><li>CustomControlSpacer#event:resize</li><li>CustomControlSpacer#event:tap</li><li>DurationDisplay#event:dispose</li><li>DurationDisplay#event:ready</li><li>DurationDisplay#event:resize</li><li>DurationDisplay#event:tap</li><li>ErrorDisplay#event:beforemodalclose</li><li>ErrorDisplay#event:beforemodalempty</li><li>ErrorDisplay#event:beforemodalfill</li><li>ErrorDisplay#event:beforemodalopen</li><li>ErrorDisplay#event:modalclose</li><li>ErrorDisplay#event:modalempty</li><li>ErrorDisplay#event:modalfill</li><li>ErrorDisplay#event:modalopen</li><li>Flash#event:audiotrackchange</li><li>Flash#event:progress</li><li>Flash#event:texttrackchange</li><li>Flash#event:timeupdate</li><li>Flash#event:videotrackchange</li><li>Flash#event:vttjsloaded</li><li>FullscreenToggle#event:dispose</li><li>FullscreenToggle#event:ready</li><li>FullscreenToggle#event:resize</li><li>FullscreenToggle#event:tap</li><li>Html5#event:audiotrackchange</li><li>Html5#event:progress</li><li>Html5#event:texttrackchange</li><li><a href="Html5.html#event:timeupdate">HTML5#event:timeupdate</a></li><li>Html5#event:videotrackchange</li><li>Html5#event:vttjsloaded</li><li>LiveDisplay#event:dispose</li><li>LiveDisplay#event:ready</li><li>LiveDisplay#event:resize</li><li>LiveDisplay#event:tap</li><li>LoadingSpinner#event:dispose</li><li>LoadingSpinner#event:ready</li><li>LoadingSpinner#event:resize</li><li>LoadingSpinner#event:tap</li><li>LoadProgressBar#event:dispose</li><li>LoadProgressBar#event:ready</li><li>LoadProgressBar#event:resize</li><li>LoadProgressBar#event:tap</li><li>MediaLoader#event:dispose</li><li>MediaLoader#event:ready</li><li>MediaLoader#event:resize</li><li>MediaLoader#event:tap</li><li><a href="Menu.html#event:dispose">菜單#事件：處置</a></li><li><a href="Menu.html#event:ready">菜單#事件：準備好了</a></li><li><a href="Menu.html#event:resize">菜單#事件：調整大小</a></li><li><a href="Menu.html#event:tap">菜單#事件：點擊</a></li><li><a href="MenuButton.html#event:dispose">菜單按鈕#event:dispose</a></li><li><a href="MenuButton.html#event:ready">菜單按鈕#event:ready</a></li><li>MenuButton#event:resize</li><li><a href="MenuButton.html#event:tap">菜單按鈕#event:tap</a></li><li><a href="MenuItem.html#event:dispose">菜單項#event:dispose</a></li><li><a href="MenuItem.html#event:ready">菜單項#event:ready</a></li><li><a href="MenuItem.html#event:resize">菜單項#事件：調整大小</a></li><li><a href="MenuItem.html#event:tap">菜單項#event:tap</a></li><li>ModalDialog#event:beforemodalclose</li><li>ModalDialog#event:beforemodalempty</li><li>ModalDialog#event:beforemodalfill</li><li>ModalDialog#event:beforemodalopen</li><li>ModalDialog#event:dispose</li><li>ModalDialog#event:modalclose</li><li>ModalDialog#event:modalempty</li><li>ModalDialog#event:modalfill</li><li>ModalDialog#event:modalopen</li><li>ModalDialog#event:ready</li><li>ModalDialog#event:resize</li><li>ModalDialog#event:tap</li><li>MouseTimeDisplay#event:dispose</li><li>MouseTimeDisplay#event:ready</li><li>MouseTimeDisplay#event:resize</li><li>MouseTimeDisplay#event:tap</li><li>MuteToggle#event:dispose</li><li>MuteToggle#event:ready</li><li>MuteToggle#event:resize</li><li>MuteToggle#event:tap</li><li><a href="Player.html#event:abort">玩家 #活動：中止</a> </li><li><a href="Player.html#event:canplay">玩家 #活動：可以進行活動</a> </li><li><a href="Player.html#event:canplaythrough">玩家 #事件：可以播放</a> </li><li><a href="Player.html#event:controlsdisabled">玩家 #事件:控制項已停用</a> </li><li><a href="Player.html#event:controlsenabled">玩家 #事件:控制</a> </li><li><a href="Player.html#event:dispose">玩家 #事件：處置</a> </li><li><a href="Player.html#event:durationchange">玩家 #活動時間變更</a> </li><li><a href="Player.html#event:emptied">玩家 #活動：已清空</a> </li><li><a href="Player.html#event:ended">玩家 #事件：結束</a> </li><li><a href="Player.html#event:enterFullWindow">玩家 #活動：進入視窗</a> </li><li><a href="Player.html#event:error">玩家 #事件：錯誤</a> </li><li><a href="Player.html#event:exitFullWindow">玩家 #事件：結束視窗</a> </li><li><a href="Player.html#event:firstplay">玩家 #活動：第一次玩法</a> </li><li><a href="Player.html#event:fullscreenchange">玩家 #事件：全螢幕變更</a> </li><li><a href="player_.html#event:loadeddata">播放器 #事件:已載入的資料</a> </li><li><a href="Player.html#event:loadeddata">玩家 #事件：已載入的資料</a> </li><li><a href="Player.html#event:loadedmetadata">播放器 #事件:已載入的中繼資料</a> </li><li><a href="Player.html#event:loadstart">玩家 #事件：載入啟動</a> </li><li><a href="Player.html#event:pause">玩家 #活動：暫停</a> </li><li><a href="Player.html#event:play">玩家 #活動: 播放</a> </li><li><a href="Player.html#event:playing">玩家 #活動：播放</a> </li><li><a href="Player.html#event:posterchange">玩家 #活動：變更海報</a> </li><li><a href="Player.html#event:progress">玩家 #活動：進度</a> </li><li><a href="player_.html#event:ratechange">玩家 #事件:價格變更</a> </li><li><a href="Player.html#event:ready">玩家 #事件：就緒</a> </li><li><a href="Player.html#event:resize">玩家 #事件:調整大小</a> </li><li><a href="Player.html#event:seeked">玩家 #事件：被搜尋</a> </li><li><a href="Player.html#event:seeking">玩家 #活動：寻求</a> </li><li><a href="Player.html#event:stalled">玩家 #事件：停滯</a> </li><li><a href="Player.html#event:suspend">玩家 #活動：暫停</a> </li><li><a href="Player.html#event:tap">玩家 #事件：點選</a> </li><li><a href="Player.html#event:textdata">玩家 #事件:文字資料</a> </li><li><a href="player_.html#event:texttrackchange">播放器 #事件: 文字追蹤變更</a> </li><li><a href="player_.html#event:timeupdate">玩家 #活動：時間更新</a> </li><li><a href="Player.html#event:timeupdate">玩家 #活動：時間更新</a> </li><li><a href="Player.html#event:useractive">玩家 #活動：使用者活動</a> </li><li><a href="Player.html#event:userinactive">玩家 #活動：使用者不活動</a> </li><li><a href="Player.html#event:usingcustomcontrols">玩家 #事件:使用自訂控制項</a> </li><li><a href="Player.html#event:usingnativecontrols">玩家 #事件:使用控制項</a> </li><li><a href="Player.html#event:volumechange">玩家 #活動：體積變化</a> </li><li><a href="player_.html#event:volumechange">玩家 #事件:音量變化</a> </li><li><a href="Player.html#event:waiting">玩家 #活動：等待</a> </li><li><a href="PlayProgressBar.html#event:dispose">播放進度列 #事件:處置</a> </li><li><a href="PlayProgressBar.html#event:ready">播放進度列 #事件:就緒</a> </li><li><a href="PlayProgressBar.html#event:resize">播放進度列 #事件:調整大小</a> </li><li><a href="PlayProgressBar.html#event:tap">播放進度列 #事件：點選</a> </li><li><a href="PlayToggle.html#event:dispose">播放切換 #事件:處置</a> </li><li><a href="PlayToggle.html#event:ready">播放切換 #事件:就緒</a> </li><li><a href="PlayToggle.html#event:resize">播放切換 #事件:調整大小</a> </li><li><a href="PlayToggle.html#event:tap">播放切換 #事件：點選</a> </li><li><a href="Popup.html#event:dispose">彈出窗口 #事件：處置</a> </li><li><a href="Popup.html#event:ready">彈出式 #事件：就緒</a> </li><li><a href="Popup.html#event:resize">彈出式 #事件：調整大小</a> </li><li><a href="Popup.html#event:tap">彈出式 #事件：點選</a> </li><li><a href="PopupButton.html#event:dispose">彈出按鈕 #事件：處置</a> </li><li><a href="PopupButton.html#event:ready">彈出式按鈕 #事件：就緒</a> </li><li><a href="PopupButton.html#event:resize">彈出按鈕 #事件：調整大小</a> </li><li><a href="PopupButton.html#event:tap">彈出式按鈕 #事件：點擊</a> </li><li><a href="PosterImage.html#event:dispose">色調影像 #事件:處置</a> </li><li><a href="PosterImage.html#event:ready">色調成像 #事件:就緒</a> </li><li><a href="PosterImage.html#event:resize">色調影像 #事件:調整大小</a> </li><li><a href="PosterImage.html#event:tap">色調影像 #事件：點選</a> </li><li><a href="ProgressControl.html#event:dispose">進度控制 #事件:處置</a> </li><li><a href="ProgressControl.html#event:ready">進度控制 #事件:就緒</a> </li><li><a href="ProgressControl.html#event:resize">進度控制 #事件:調整大小</a> </li><li><a href="ProgressControl.html#event:tap">進度控制 #事件：點選</a> </li><li><a href="RemainingTimeDisplay.html#event:dispose">剩餘時間顯示 #事件:處置</a> </li><li><a href="RemainingTimeDisplay.html#event:ready">剩餘時間顯示 #事件:就緒</a> </li><li><a href="RemainingTimeDisplay.html#event:resize">剩餘時間顯示 #事件:調整大小</a> </li><li><a href="RemainingTimeDisplay.html#event:tap">剩餘時間顯示 #事件：輕按</a> </li><li><a href="SeekBar.html#event:slideractive">搜尋列 #事件:滑動</a> </li><li><a href="SeekBar.html#event:sliderinactive">搜尋列 #事件:幻燈片非作用中</a> </li><li><a href="Slider.html#event:dispose">滑桿 #事件: 處置</a> </li><li><a href="Slider.html#event:ready">滑桿 #事件:就緒</a> </li><li><a href="Slider.html#event:resize">滑桿 #事件:調整大小</a> </li><li><a href="Slider.html#event:slideractive">滑桿 #事件: 滑桿啟動</a> </li><li><a href="Slider.html#event:sliderinactive">滑棒 #事件:幻燈片非作用中</a> </li><li><a href="Slider.html#event:tap">滑桿 #事件：點選</a> </li><li><a href="Spacer.html#event:dispose">間隔符號 #事件:處置</a> </li><li><a href="Spacer.html#event:ready">間隔符號 #事件：就緒</a> </li><li><a href="Spacer.html#event:resize">分隔符號 #事件:調整大小</a> </li><li><a href="Spacer.html#event:tap">分隔符號 #事件：點選</a> </li><li><a href="Tech.html#event:audiotrackchange">技術 #事件：音訊追蹤器變更</a> </li><li><a href="Tech.html#event:dispose">技術 #事件: 處置</a> </li><li><a href="Tech.html#event:progress">技術 #活動:進度</a> </li><li><a href="Tech.html#event:ready">技術 #活動：就緒</a> </li><li><a href="Tech.html#event:resize">技術 #事件：調整大小</a> </li><li><a href="Tech.html#event:tap">技術 #活動：點選</a> </li><li><a href="Tech.html#event:texttrackchange">技術 #事件: 文字追蹤變更</a> </li><li><a href="Tech.html#event:timeupdate">技術 #事件：時間更新</a> </li><li><a href="Tech.html#event:videotrackchange">技術 #活動：視訊追蹤變更</a> </li><li><a href="Tech.html#event:vttjsloaded">技術 #事件：載入 Vttjsn </a> </li><li><a href="TextTrack.html#event:modechange">文字追蹤 #事件:模式變更</a> </li><li><a href="TextTrackDisplay.html#event:dispose">文字軌道顯示 #事件:處置</a> </li><li><a href="TextTrackDisplay.html#event:ready">文字追蹤顯示 #事件:就緒</a> </li><li><a href="TextTrackDisplay.html#event:resize">文字追蹤顯示 #事件:調整大小</a> </li><li><a href="TextTrackDisplay.html#event:tap">文字追蹤顯示 #事件:點選</a> </li><li><a href="TextTrackList.html#event:addtrack">文字追蹤清單 #事件:新增軌道</a> </li><li><a href="TextTrackList.html#event:change">文字追蹤清單 #事件:變更</a> </li><li><a href="TextTrackList.html#event:removetrack">文字追蹤清單 #事件:移除追蹤</a> </li><li><a href="TextTrackSettings.html#event:dispose">文字追蹤設定 #事件:處置</a> </li><li><a href="TextTrackSettings.html#event:ready">文字追蹤設定 #事件:就緒</a> </li><li><a href="TextTrackSettings.html#event:resize">文字追蹤設定 #事件:調整大小</a> </li><li><a href="TextTrackSettings.html#event:tap">文字追蹤設定 #事件:點選</a> </li><li><a href="TimeDivider.html#event:dispose">計時器 #事件: 處置</a> </li><li><a href="TimeDivider.html#event:ready">計時器 #事件：就緒</a> </li><li><a href="TimeDivider.html#event:resize">計時器 #事件:調整大小</a> </li><li><a href="TimeDivider.html#event:tap">計時器 #事件：輕觸</a> </li><li><a href="TooltipProgressBar.html#event:dispose">工具提示進度列 #事件:處置</a> </li><li><a href="TooltipProgressBar.html#event:ready">工具提示進度列 #事件:就緒</a> </li><li><a href="TooltipProgressBar.html#event:resize">工具提示進度列 #事件:調整大小</a> </li><li><a href="TooltipProgressBar.html#event:tap">工具提示進度列 #事件：點選</a> </li><li><a href="TrackList.html#event:addtrack">追蹤清單 #事件:新增軌道</a> </li><li><a href="TrackList.html#event:change">追蹤清單 #事件:變更</a> </li><li><a href="TrackList.html#event:removetrack">追蹤清單 #事件:移除軌道</a> </li><li><a href="VideoTrack.html#event:selectedchange">視訊追蹤 #事件:選取的變更</a> </li><li><a href="VideoTrackList.html#event:addtrack">影片追蹤清單 #事件:新增音軌</a> </li><li><a href="VideoTrackList.html#event:change">視訊追蹤清單 #事件:變更</a> </li><li><a href="VideoTrackList.html#event:removetrack">視訊追蹤清單 #事件:移除音軌</a> </li><li><a href="VolumeBar.html#event:slideractive">音量列 #事件:滑動</a> </li><li><a href="VolumeBar.html#event:sliderinactive">體積列 #事件: 滑塊非活動</a> </li><li><a href="VolumeControl.html#event:dispose">磁碟區控制 #事件:處置</a> </li><li><a href="VolumeControl.html#event:ready">音量控制 #事件:就緒</a> </li><li><a href="VolumeControl.html#event:resize">音量控制 #事件:調整大小</a> </li><li><a href="VolumeControl.html#event:tap">音量控制 #事件：點選</a> </li><li><a href="VolumeLevel.html#event:dispose">音量等級 #事件:處置</a> </li><li><a href="VolumeLevel.html#event:ready">音量等級 #事件:就緒</a> </li><li><a href="VolumeLevel.html#event:resize">音量等級 #事件:調整大小</a> </li><li><a href="VolumeLevel.html#event:tap">音量等級 #事件：輕觸</a> </li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">全域<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="global.html#activeCues">活動提示</a></li><li><a href="global.html#createTrackHelper">創建跟踪助手</a></li><li><a href="global.html#cues">線索</a></li><li><a href="global.html#currentSrc">電流源</a></li><li><a href="global.html#default">默認</a></li><li><a href="global.html#emulateTextTracks">模擬TextTracks</a></li><li><a href="global.html#enabled">啟用</a></li><li><a href="global.html#id">ID</a></li><li><a href="global.html#kind">種類</a></li><li><a href="global.html#label">標籤</a></li><li><a href="global.html#language">語</a></li><li><a href="global.html#length">長度</a></li><li><a href="global.html#mode">模式</a></li><li><a href="global.html#NONE">沒有任何</a></li><li><a href="global.html#readyState">就緒狀態</a> </li><li><a href="global.html#selected">已選取</a> </li><li><a href="global.html#track">軌道</a> </li><li><a href="global.html#tryUpdateStyle">嘗試更新樣式</a> </li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">類別：章節功能表項目</h1> 
+<section>
+
+<header>
+    
+        <h2>
+        章節TrackMenuItem
+        </h2>
+        
+            <div class="class-description"><p>章節追蹤功能表項目</p></div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="ChaptersTrackMenuItem"><span class="type-signature"></span>新章節TrackMenuItem（播放器[，選項]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建這個類的一個實例。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>播放器</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Player.html">玩家</a></span>  
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>此兵種應該附加到的<code>玩家</code>。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>選項</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選的&gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>玩家選項的鍵/值存儲。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		control-bar/text-track-controls/chapters-track-menu-item.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">延伸</h3>
+
+        
+
+
+    <ul>
+        <li><a href="MenuItem.html">菜單項</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">方法</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="createEl"><span class="type-signature"></span>創造者（[種類] [，道具] [，屬性]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建 '菜單項的 DOM 元素</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+        <th>默認</th>
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>類型</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選的&gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    李
+                
+                </td>
+            
+
+            <td class="description last"><p>元素的節點類型，未實際使用，始終設置為<code>李</code> .</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>道具</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選的&gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last"><p>屬性的對象，應該在元素上設置</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>屬性</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選的&gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last"><p>屬性的對象，應該在元素上設置</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="MenuItem.html#createEl">菜單項#createEl</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		menu/menu-item.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>被創建的元素。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">元素</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="handleClick"><span class="type-signature"></span>把手點擊（[事件]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>當一個文<code>章鏈接菜單項被「點擊」時，這</code>被調用。如需有關<a href="ClickableComponent.html">點擊可點擊</a>的更多詳細信息，請參閱可點擊組件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>事件</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選的&gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>這<code>按鍵</code> , <code>輕敲</code>， 或者<code>點擊</code>導致調用此函數的事件。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+    <dt class="tag-overrides">覆寫：</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="MenuItem.html#handleClick">菜單項#handleClick</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		control-bar/text-track-controls/chapters-track-menu-item.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li>事件：點擊</li>
+    
+        <li>事件：點擊</li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="selected"><span class="type-signature"></span>已選取 (已選取)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置為選擇與否此菜單項的狀態。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>已選取</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布爾值</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>如果菜單項被選中與否</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="MenuItem.html#selected">菜單項#selected</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		menu/menu-item.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="update"><span class="type-signature"></span>更新 ([事件])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>更新章節功能表項目</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>事件</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選的&gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>導致此函數運行的<code>  cue</code>  change 事件。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		control-bar/text-track-controls/chapters-track-menu-item.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li>文字追蹤 #事件:提示變更</li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">搜尋結果</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright"> Copyright 2017 </span> <span class="jsdoc-message"> Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on 5 Jun 2017 using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>. </span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () { $( "[id*='$']" ).each( function () { var $this = $( this ); $this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) ); } ); $( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () { var $this = $( this ); var example = $this.find( "code" ); exampleText = example.html(); var lang = /{@lang (.*?)}/.exec( exampleText ); if ( lang &amp;&amp; lang[1] ) { exampleText = exampleText.replace( lang[0], "" ); example.html( exampleText ); lang = lang[1]; } else { var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/); lang = langClassMatch ? langClassMatch[1] : "javascript"; } if ( lang ) { $this .addClass( "sunlight-highlight-" + lang ) .addClass( "linenums" ) .html( example.html() ); } } ); Sunlight.highlightAll( { lineNumbers : false, showMenu : true, enableDoclinks : true } ); $.catchAnchorLinks( { navbarOffset: 10 } ); $( "#toc" ).toc( { anchorName : function ( i, heading, prefix ) { return $( heading ).attr( "id" ) || ( prefix + i ); }, selectors : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4", showAndHide : false, smoothScrolling: true } ); $( "#main span[id^='toc']" ).addClass( "toc-shim" ); $( '.dropdown-toggle' ).dropdown(); $( "table" ).each( function () { var $this = $( this ); $this.addClass('table'); } ); } );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+<script>
+	$( function () { $( '#main' ).localScroll( { offset : { top : 60 } //offset by the height of your header (give or take a few px, see what works for you) } ); $( "dt.name" ).each( function () { var $this = $( this ).find("h4"); var icon = $( "<i/>" ).addClass( "icon-plus-sign" ).addClass( "pull-right" ).addClass( "icon-white" ); var dt = $(this); var children = dt.next( "dd" ); dt.prepend( icon ).css( {cursor : "pointer"} ); dt.addClass( "member-collapsed" ).addClass( "member" ); children.hide(); dt.children().on( "click", function () { children = dt.next( "dd" ); children.slideToggle( "fast", function () { if ( children.is( ":visible" ) ) { icon.addClass( "icon-minus-sign" ).removeClass( "icon-plus-sign" ).removeClass( "icon-white" ); dt.addClass( "member-open" ).animate( "member-collapsed" ); } else { icon.addClass( "icon-plus-sign" ).removeClass( "icon-minus-sign" ).addClass( "icon-white" ); dt.addClass( "member-collapsed" ).removeClass( "member-open" ); } } ); } ); } ); } );
+</script>
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() { SearcherDisplay.init(); });
+    </script>
+
+
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/https-fix.js"></script>
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/support-feedback.js"></script><script src="https://support.brightcove.com/site-assets/js/site/feedback-docs.js"></script>
+</body>
+</html>

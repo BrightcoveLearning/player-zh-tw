@@ -1,1161 +1,84 @@
-﻿<!doctype html>
-<html lang="zh-TW">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  
-  <title>AMP 使用視訊雲端視訊</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="/assets/css/local.css">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-  <script src="/assets/js/sajari-head.js"></script>
-</head>
-
-<body class="body">
-
-<header>
-  <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Player_Logo.svg" alt="產品標誌" style="max-height: 100px;max-width: 232px;"/></a>
-<!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
-
-<script>
-/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-/* ]]> */
-</script>
-
-Brightcove 
-
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
-    
-  </div>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb arr-right">
-      
-      <li class="breadcrumb-item"><a href="/">首頁</a></li>
-      
-      
-      
-      <li class="breadcrumb-item"><a href="/amp/">放大器</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">AMP 使用視訊雲端視訊</li>
-    </ol>
-  </nav>
-</header>
-<div class="container">
-    <div class="row">
-      <div class="col-sm-3 left-side-bar">
-        				<select id="site_select" class="bcls-select" style="margin-right: 1rem;">
-					<option value="">其他布萊特灣文件</option>
-					
-						
-							<option value="https://support.brightcove.com">文件首頁</option>
-						
-					
-						
-							<option value="https://audience.support.brightcove.com">布萊特灣觀眾</option>
-						
-					
-						
-							<option value="https://beacon.support.brightcove.com">布萊特灣燈塔</option>
-						
-					
-						
-							<option value="https://campaign.support.brightcove.com">布萊特灣戰役</option>
-						
-					
-						
-							<option value="https://engage.support.brightcove.com">布萊特灣參與</option>
-						
-					
-						
-							<option value="https://live.support.brightcove.com">Brightcove Live</option>
-						
-					
-						
-							<option value="https://gallery.support.brightcove.com">Brightcove 圖庫</option>
-						
-					
-						
-							<option value="https://ssai.support.brightcove.com">布萊特灣</option>
-						
-					
-						
-							<option value="https://social.support.brightcove.com">布萊特灣社會</option>
-						
-					
-						
-							<option value="https://studio.support.brightcove.com">視訊雲端工作室</option>
-						
-					
-						
-							<option value="https://player.support.brightcove.com">布萊特灣球員開發</option>
-						
-					
-						
-							<option value="https://apis.support.brightcove.com">視訊雲端平台 API</option>
-						
-					
-						
-							<option value="https://sdks.support.brightcove.com">視訊雲端裝置開發套件</option>
-						
-					
-						
-							<option value="https://integrations.support.brightcove.com">整合與 CMS 連接器</option>
-						
-					
-						
-							<option value="https://general.support.brightcove.com">視訊雲端一般資訊</option>
-						
-					
-						
-							<option value="https://zencoder.support.brightcove.com">Zencoder</option>
-						
-					
-				</select>
-						<nav class="sidenav" id="side_nav">
-
-          
-            
-            <h5><a href="/index.html">首頁</a></h5>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/getting-started/index.html">開始使<strong>用 + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/what-brightcove-player.html">什麼是布萊特灣玩家？</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/overview-brightcove-player.html">概述：布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/overview-brightcove-player-plugins.html">概述：布萊特灣播放器外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-brightcove-player.html">逐步：布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-using-rest-apis.html">學習指南：使用其他應用程式介</a>面</li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/basics/index.html">學習基本知識<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/basics/developer-basics-advanced-player-code.html">進階播放程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-autoplaying-video.html">自動播放視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-converting-code.html">自定義插件-轉換代碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-passing-data.html">自定義插件-傳遞數據</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-using-studio.html">自定義插件-使用工作室</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-why-and-how.html">自定義插件-為什麼和如何</a></li>
-                  
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-generating-player-code.html">產生播放程式代碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-preparing-write-code.html">準備撰寫程式碼</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/references/index.html">參考資料<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/references/brightcove-player-5-6-migration-guide.html">布萊特灣玩家 5 至 6 轉移指南</a></li>
-                  
-                
-                  
-                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/index.html">布萊特灣播放器 API 文檔（外部網站）</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-cookies.html">布萊特灣球員曲奇</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
-                  
-                
-                  
-                    <li><a href="https://groups.google.com/forum/embed/?place=forum/bcplayerdev#!forum/bcplayerdev">布萊特灣球員公告論壇</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-system-requirements.html">布萊特灣玩家系統需求</a></li>
-                  
-                
-                  
-                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋架構</a></li>
-                  
-                
-                  
-                    <li><a href="https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html">已知問題</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-catalog.html">播放器目錄</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-feature-support-browser.html">瀏覽器支援播放器功能</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-metadata-bcinfo.html">來自 bcinfo 的播放器中繼資料</a></li>
-                  
-                
-                  
-                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html">播放器方法/事件 API（外部網站）</a></li>
-                  
-                
-                  
-                    <li><a href="/references/guide-playlist-api.html">播放清單 API 指南</a></li>
-                  
-                
-                  
-                    <li><a href="/references/video-metadata-mediainfo.html">來自媒體資訊的視訊中繼資料</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/plugins/index.html">外掛程式<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/plugins/360degvr-video-plugin.html">360 度影片</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/ad-only-plugin.html">僅廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/upgrading-ima3-plugin-version-3.html">升級至 IM3 外掛程式版本 3 </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">廣告與 SAI </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/chromecast-plugin-brightcove-player.html">鉻</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕終止畫面</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-thumbnail-previews-plugin.html">顯示縮圖預覽</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/google-tag-manager-plugin-brightcove-player.html">谷歌代碼管理工具</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/hls-plugin.html">HLS </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/live-dvrux-plugin.html">直播 DVRUX </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-overlay-plugin.html">覆疊</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/overview-brightcove-player-plugins.html">概述：玩家外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/picture-picture-plugin-aka-floating-or-pinned.html">子母畫面</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/changelog/index.html">外掛程式變更記錄</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/plugin-registry.html">外掛程式登錄</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/plugin-version-reference.html">外掛程式版本參考</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/tealium-plugin-brightcove-player.html">茶葉標籤管理程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/video-seo-schema-generator-plugin.html">視頻 SEO 模式生成器</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/advertising/index.html">廣告<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/advertising/ad-events-and-ad-objects.html">廣告事件和廣告物件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/ad-only-plugin.html">僅廣告外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/client-side-preroll-with-live-ssai.html">使用即時 SSAI 的客戶端預先廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/displaying-ads-using-ad-cue-points.html">使用廣告提示點顯示廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/flash-no-longer-valid-ima.html">閃光燈在 IMA 中不再有效</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/guide-ad-partner-integration.html">指南：廣告合作夥伴整合</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/guide-contrib-ads-migration.html">指南：接觸式廣告移轉</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">與布萊特灣玩家一起實施 SSAI </a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-header-bidding-ad.html">跳躍開始：標頭出價廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-outstream-ad.html">跳躍開始：外游廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-pre-roll-ad.html">跳躍開始：播放前廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/known-issues-server-side-ad-insertion-ssai.html">已知問題：伺服器端廣告插入 (SSAI) </a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/step-step-implementing-advertising.html">逐步：實作廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/testing-pre-release-advertising-plugins.html">測試發行前廣告外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/using-dfp-premium-brightcove-player.html">與布萊特灣玩家一起使用 DFP 加值</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/using-player-enhancements-live-ssai-brightcove-player.html">使用即時 SSAI 和進階播放器工具組</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/video-cloud-ssai-ad-tag-validation.html">視訊雲端 SSAI 廣告標籤驗證</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/publish/index.html">發佈影片與播放器<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/publish/assigning-video-player-programmatically.html">以程式設計方式將視訊指派給播放程式</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/available-options-advanced-page-embed-code.html">進階 (頁內) 內嵌程式碼的可用選項</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/available-options-standard-iframe-embed-code.html">標準 (iframe) 內嵌程式碼的可用選項</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/bulk-updating-brightcove-default-player.html">大量更新布萊特灣預設播放器</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html">選擇正確的內嵌程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/delaying-player-instantiation.html">延遲播放程式實例化</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/pre-release-player.html">發行前播放程式</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/syndication-strategies.html">聯合發行策略</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/using-non-brightcove-player.html">使用非亮灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html">在一個頁面上使用多個玩家</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/using-reference-ids.html">使用參考 ID </a></li>
-                  
-                
-                  
-                    <li><a href="">視訊轉譯檢查器</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/troubleshooting/index.html">疑難排解<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-player-information-modal.html">布萊特灣球員資訊模態</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-player-troubleshooting-guide.html">布萊特灣玩家疑難排解指南</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/creating-charles-log.html">創建查理日誌</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/creating-network-log.html">建立網路記錄</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/manually-setting-player-version.html">手動設定播放程式版本</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/player-informational-properties.html">玩家資訊屬性</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/brightcove-player-sample-live-custom-error-message.html">範例：即時自訂錯誤訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/step-step-brightcove-player-debugger.html">逐步：布萊特灣播放器除錯器</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/running-network-path-trace.html">執行網路路徑追蹤</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/using-player-reference.html">使用播放器參照</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/vetting-brightcove-player-releases.html">評審布萊特灣球員發布</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/styling/index.html">造型與外觀<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/styling/customizing-player-appearance.html">自訂播放程式外觀</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/customizing-player-appearance-legacy-skin.html">自訂玩家外觀-舊版外觀</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/brightcove-player-sample-player-styling-playground.html">玩家造型遊樂場</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/quick-start-player-customization-legacy-skin.html">快速入門：玩家自訂-傳統造型</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/responsive-sizing-brightcove-player.html">適用於布萊特灣玩家的反應尺寸</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/sizing-player.html">調整播放器大小</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/skins-and-player-versions.html">外觀與播放程式版本</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/media/styling-captions.html">樣式註解</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/playback/index.html">播放<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/playback/autoplay-considerations.html">自動播放注意事項</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/xdr-with-bcplayer.html">與布萊特灣播放器的跨裝置履歷</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/deep-linking.html">深層連結</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/delivering-hls-video.html">提供 HLS 視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/determining-which-rendition-will-play.html">決定要播放哪些轉譯</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/hls-plugin.html">HLS 外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/ios-and-brightcove-player.html">iOS 和布萊特灣播放器</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/static-url-delivery.html">靜態 URL 傳送</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/streaming-playready-protected-content-dynamic-delivery.html">串流播放就緒受保護的內容</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/using-brightcove-player-tve.html">在 TVE 中使用布萊特灣玩家</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/content-protection/index.html">DRM 與內容保護<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html">設定播放程式內容限制</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/creating-dash-drm-manifest-brightcove-player.html">為布萊特灣玩家建立破折號 DRM 資訊清單</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM 外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/overview-content-protection.html">概述：內容保護</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/policy-keys.html">原則金鑰</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/restricting-video-playback-using-ip-address.html">使用 IP 位址限制視訊播放</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/coding-topics/index.html">編碼主題<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
-                  
-                
-                  
-                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋升級</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html">自訂事件</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/programmatically-localizing-brightcove-player.html">本地化布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/localizing-plugins.html">本地化外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/player-events.html">玩家事件</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/overview-components.html">概述：元件</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/overview-player-api.html">概述：播放器 API </a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/pass-data-plugin.html">將資料傳遞給外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/react-player-loader.html">反應播放器載入器</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/reporting-brightcove-player-configurations.html">有關布萊特灣玩家配置的報告</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/requirejs-and-brightcove-player.html">要求 JS 和布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/step-step-plugin-development.html">逐步：外掛程式開發</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/step-step-videojs-plugin-generator.html">逐步：Video.js 外掛程式產生器</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/using-bc-and-getplayer-methods.html">使用 BC（）和獲取播放器（）方法</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/general/index.html">一般資訊<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html">將應用程式 ID 新增至播放程式內嵌程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/general/adding-captions-videos-programmatically.html">以程式設計方式將字幕新增至視訊</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/media/adding-chapters-video.html">新增章節至視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/general/brightcove-player-6-now-default-version.html">布萊特灣球員 6 現在預設版本</a></li>
-                  
-                
-                  
-                    <li><a href="/general/brightcove-player-accessibility.html">布萊特灣玩家無障礙</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-overlay-plugin.html">顯示覆蓋外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/references/guide-playlist-api.html">指南：播放清單 API </a></li>
-                  
-                
-                  
-                    <li><a href="/general/identify-and-delete-low-performing-videos.html">識別和刪除效能不佳的影片</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-cue-points-programmatically.html">以程式設計方式實作提示點</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-playlists.html">實作播放清單</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-modaldialog.html">實現模式對話框</a></li>
-                  
-                
-                  
-                    <li><a href="/general/live-hls.html">即時 HLS </a></li>
-                  
-                
-                  
-                    <li><a href="/general/live-stream-configuration.html">即時串流組態</a></li>
-                  
-                
-                  
-                    <li><a href="/general/multiple-audio-tracks.html">多個音軌</a></li>
-                  
-                
-                  
-                    <li><a href="/general/player-configuration-guide.html">播放程式組態指南</a></li>
-                  
-                
-                  
-                    <li><a href="/general/playing-live-streams.html">播放即時串流</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI 插件</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/step-step-player-management.html">逐步：玩家管理</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
-                  
-                
-                  
-                    <li><a href="/general/using-screen-reader-brightcove-player.html">使用螢幕閱讀程式與布萊特灣播放器</a></li>
-                  
-                
-                  
-                    <li><a href="/general/versions-brightcove-player-documentation.html">布萊特灣玩家文件的版本</a></li>
-                  
-                
-                  
-                    <li><a href="/general/volume-control.html">音量控制</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/code-samples/index.html">程式碼範例<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/code-samples/index-thumb.html">依群組的程式碼範例</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/index.html">程式碼範例索引</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/amp/index.html">放大器<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/amp/amp-using-video-cloud-video.html">AMP 使用視訊雲端視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/amp/amp-using-external-video.html">使用外部視訊的 AMP </a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/training/index.html">訓練<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/training/online-training-courses.html">所有線上訓練課程</a></li>
-                  
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
-                  
-                
-                  
-                    <li><a href="/training/register-training.html">註冊參加講師指導訓練</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
-                  
-                
-                  
-                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/training-demand-quick-start-player-management.html">訓練：玩家管理快速入門</a></li>
-                  
-                
-                  
-                    <li><a href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/release-notes/index.html">版本說明<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/release-notes/brightcove-player-release-notes.html">布萊特灣玩家發行紀錄</a></li>
-                  
-                
-                  
-                    <li><a href="/release-notes/brightcove-player-prerelease-notes.html">布萊特灣玩家預先發行紀錄</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/support/index.html">支援<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    
-                  
-                
-                  
-                    <li><a href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
-                  
-                
-                  
-                    <li><a href="/support/contact-sales.html">聯絡銷售人員</a></li>
-                  
-                
-                  
-                    <li><a href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
-                  
-                
-              </ul>
-            
-          
-      </nav>
-    </div>
-    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
-  <!-- bootstrap layout -->
-
-<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
-
-<!-- search bar -->
-<div id="nav-search-box" style="margin-top: 1rem;"></div>
-<!-- in-page navigation for narrow screens -->
-<details class="centered-inpage-nav" id="centered_inpage_nav">
-  <summary><h6 class="toc">頁面內容</h6></summary>
-  <nav id="centered_toc"></nav>
-  <ul id="centered_in_page_toc" class="list-none"></ul>
-</details>
-<!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
-
-
-
-  
-    
-
+---
+title:AMP 使用視訊雲端影片
+parent: amp
+description: In this topic, you will learn how Accelerated Mobile Pages (AMP) can be used with Brightcove Player.
+---
 
 <article class="bcls-article">
-    <h1>AMP 使用視訊雲端視訊</h1>
-    <summary>在本主題中，您將學習如何與Brightcove Player一起使用加速移動頁面（AMP）。</summary>
+    <h1> AMP 使用視訊雲端視訊</h1> 
+    <summary>{{ page.description }} </summary>
     <section class="bcls-section">
-        <aside class="bcls-aside bcls-aside--warning">本文檔將AMP與Brightcove Player版本6和Video Cloud視頻一起使用。如果您不是非視頻雲客戶，請參見<a href="/amp/amp-using-external-video.html">AMP使用外部視頻</a>。</aside>
-        <h2 id="Overview">概覽</h2>
-        <p>加速行動網頁是一個 Google 專案，旨在讓「在裝置和分銷平台之間建立一致的快速、美觀和高效能的網站和廣告」。您可以在 AMP 中使用 Brightcove 播放器，因為該項目包含一個<code translate="No">amp-brightcove</code>組件，允許發布商將布萊特灣播放器嵌入 AMP HTML 文檔中。</p>
+        <aside class="bcls-aside bcls-aside--warning">本文件使用 AMP 搭配布萊特灣播放器第 6 版以及視訊雲端視訊。如果您是非視訊雲端客戶，請參閱<a href="/amp/amp-using-external-video.html">  AMP 使用外部視訊</a>。</aside> 
+        <h2 id="Overview">概述</h2>
+        <p>加速行動網頁是一個 Google 專案，旨在讓「在裝置和分銷平台之間建立一致的快速、美觀和高效能的網站和廣告。「您可以在 AMP 中使用 Brightcove 播放器，因為該項目包含一個<code translate="No">amp-brightcove</code>組件，允許發布商將布萊特灣播放器嵌入 AMP HTML 文檔中。</p>
     </section>
     <section class="bcls-section">
         <h2 id="Sample">範例</h2>
         <p>以下是一個範例 AMP HTML 頁面，其中包括一個布萊特灣播放器。播放器正常運作，所以 HTML 是這個示例的有趣部分。本文件稍後會檢查 HTML 程式碼。</p>
-        <p class="codepen" data-height="330" data-theme-id="34967" data-default-tab="html,result" data-user="rcrooks1969" data-slug-hash="ddKwre" style="height: 330px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="AMP Example"><span>看筆<a href="https://codepen.io/team/rcrooks1969/pen/ddKwre/">AMP示例</a>通過Brightcove學習服務（<a href="https://codepen.io/rcrooks1969"> @ rcrooks1969</a>） 上<a href="https://codepen.io">密碼筆</a>。</span></p>
+        <p class="codepen" data-height="330" data-theme-id="34967" data-default-tab="html,result" data-user="rcrooks1969" data-slug-hash="ddKwre" style="height: 330px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="AMP Example"><span>看筆<a href="https://codepen.io/team/rcrooks1969/pen/ddKwre/">AMP 示例</a>通過 Brightcove 學習服務 ( <a href="https://codepen.io/rcrooks1969"> @rcooks1969</a>） 在<a href="https://codepen.io">代碼筆</a> .</span></p>
         <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
         <aside class="bcls-aside bcls-aside--warning">請注意，由於 AMP 的運作方式，您必須在使用前仔細考慮其限制。例如：
             <ul>
-                <li>AMP 有什麼 HTML 可以和不能在頁面上使用非常嚴格的規則。有關這方面的詳細信息可以在<a href="https://www.ampproject.org/docs/reference/spec"> AMP HTML 規範</a>中查看。</li>
+                <li>AMP 有什麼 HTML 可以和不能在頁面上使用非常嚴格的規則。有關這方面的詳細信息可以在<a href="https://www.ampproject.org/docs/reference/spec">  AMP HTML 規範中查看</a>。</li>
                 <li>Brightcove Analytics 不會正確報告 AMP 頁面的引用頁面-而是<code translate="No">referrer_domain</code>將空白，並<code translate="No">source_type</code>將記錄為<code translate="No">direct</code>。</li>
-                <li>Brightcove Player的“高級”（頁內）實施中使用的屬性很少對<code translate="No">&lt;amp-brightcove ..&gt;</code>。檢查<a href="https://www.ampproject.org/docs/reference/spec">AMP HTML規範</a>對於那些可以使用的。</li>
+                <li>與布萊特灣玩家的進階（頁面內）實施一起使用的屬性很少是有效的<code translate="No">&lt;amp-brightcove ..&gt;</code>。檢查<a href="https://www.ampproject.org/docs/reference/spec">  AMP HTML 規範</a>的那些可以使用。</li>
                 <li>AMP 不適用於受網域限制的玩家。</li>
             </ul>
-        </aside>
+        </aside> 
     </section>
     <section class="bcls-section">
         <h2 id="Player_configuration">播放程式組態</h2>
-        <p>Brightcove提供了您要加載的插件，以增強Brightcove Player的AMP使用。該插件增加了對AMP要求的AMP視頻接口API的支持&nbsp;在AMP文檔中控製播放器。它還使一些&nbsp;高級功能：</p>
+        <p>布萊特灣提供了一個插件，你會想要加載，以增強與布萊特灣播放器的 AMP 的使用。該插件增加了對 AMP 的視頻接口 API 的支持，AMP 需&nbsp;要控制 AMP 文檔中的播放器。它還啟用了一些&nbsp;高級功能：</p>
         <ul>
-            <li><strong>與擴充分析</strong>整合：允許根據 AMP 頁面網域追蹤第三方分析的檢視次數。</li>
-            <li><strong>與安培綁定</strong>集成：播放可由 AMP 頁面中的其他元素控制。</li>
+            <li><strong>與擴充分析整合</strong>：允許根據 AMP 頁面網域追蹤第三方分析的檢視次數。</li>
+            <li><strong>與安培綁定集成</strong>：播放可由 AMP 頁面中的其他元素控制。</li>
         </ul>
-        <p>沒有插件的播放器可能無法在AMP文檔中正常運行。</p>
-        <h3><strong>外掛程式安裝</strong></h3>
+        <p>沒有此外掛程式的玩家在 AMP 文件中可能無法如預期般運作。</p>
+        <h3><strong>外掛程式安裝</strong> </h3>
+        <aside class="bcls-aside bcls-aside--warning">您必須安裝外掛程式。在過去的 AMP 將在不添加插件的情況下工作。這不再是真的。</aside> 
         <p>與所有 Brightcove 播放器插件一樣，您需要插件的名稱和 URL 到插件的 JavaScript，這是這裡提供的（這個插件的使用不需要 CSS 文件）：</p>
         <h4>外掛程式名稱</h4>
         <pre class="line-numbers">
-  <code class="language-html" translate="No">ampSupport</code></pre>
+  <code class="language-html" translate="No">ampSupport</code>   </pre>
         <h4>網址</h4>
         <pre class="line-numbers">
-  <code class="language-html" translate="No">//players.brightcove.net/videojs-amp-support/1/videojs-amp-support.js</code></pre>
-        <p>要實現AMP插件，您需要將插件的函數名稱和URL添加到插件的JavaScript中：</p>
+  <code class="language-html" translate="No">//players.brightcove.net/videojs-amp-support/1/videojs-amp-support.js</code>   </pre>
+        <p>要實現 AMP 插件，您將添加插件的功能名稱和 URL 插件的 JavaScript：</p>
         <ol class="bcls-tasklist">
-            <li>在Studio中，打開<strong>選手們</strong>模塊，然後創建一個新播放器或找到您要向其添加插件的播放器。</li>
+            <li>在 Studio 中，打開<strong>球員</strong>模塊並創建一個新播放器或找到您希望添加插件的播放器。</li>
             <li>按一下播放程式的連結以開啟播放程式的屬性。</li>
-            <li>按一下左側導覽選單中的<strong>外掛程式</strong>。</li>
-            <li>接下來從三個選項單擊<strong>插件</strong>。
-                <figure class="bcls-figure"><img class="bcls-image" alt="選擇外掛程式" src="//learning-services-media.brightcove.com/doc-assets/general/players-plugin-options.png"/></figure>
+            <li>點擊<strong>插件</strong>在左側導航菜單中。</li>
+            <li>下一步點擊<strong>插件</strong>從三個選項。
+                <figure class="bcls-figure"><img class="bcls-image" alt="Select Plugin" src="/assets/images/amp/amp-vc-players-plugin-options.png" /></figure>
             </li>
             <li>從<strong>添加插件中</strong>選擇<strong>自定義插件</strong>。</li>
             <li>在「<strong>外掛程式名稱</strong>」中輸入<code translate="No">ampSupport</code>。</li>
-            <li><strong>在</strong>這個網址中，輸入：
+            <li><strong>在這個</strong>網址中，輸入：
                 <pre>
-  <code class="language-json" translate="No">//players.brightcove.net/videojs-amp-support/1/videojs-amp-support.js</code></pre>
+  <code class="language-json" translate="No">//players.brightcove.net/videojs-amp-support/1/videojs-amp-support.js</code>   </pre>
             </li>
-            <li>您無需為此插件輸入任何CSS或選項。
-                <figure class="bcls-figure"><img class="bcls-image" alt="安裝插件" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/AMP/studio-install-plugin.png"/></figure>
+            <li>您不必為此外掛程式輸入任何 CSS 或選項。
+                <figure class="bcls-figure"><img class="bcls-image" alt="Install plugin" src="/assets/images/amp/amp-vc-studio-install-plugin.png" /></figure>
             </li>
-            <li>按一下「<strong>儲存</strong>」。</li>
-            <li>要發布播放器，請點擊<strong>發布和嵌入&gt;發布更改</strong>。</li>
-            <li>要關閉打開的對話框，請單擊<strong>關</strong>。</li>
+            <li>按一下「<strong>儲存」</strong>。</li>
+            <li>若要發佈播放程式，請按一下「<strong>發佈與內嵌」&gt;「發佈變更」</strong>。</li>
+            <li>若要關閉開啟對話方塊，請按一下「<strong>關閉」</strong>。</li>
         </ol>
     </section>
     <section class="bcls-section">
         <h2 id="Resources_from_AMP">來自 AMP 的資源</h2>
-        <p>AMP 項目開發了一個特殊的<code translate="No">amp-brightcove</code>組件，顯示布萊特灣播放器。該組件詳細說明在<a href="https://www.ampproject.org/docs/reference/components/amp-brightcove">安培亮口文件中。</a></p>
+        <p>AMP 項目開發了一個特殊的<code translate="No">amp-brightcove</code>組件，顯示布萊特灣播放器。該組件詳細說明在<a href="https://www.ampproject.org/docs/reference/components/amp-brightcove">安培亮口文件中。</a> </p>
         <p>AMP 提供了一個示例<code translate="No">amp-brightcove</code>實現，詳細信息在以下文檔中：</p>
         <ul>
             <!-- 2 links below broken - couldn't find an replacements, but leaving it in place in case someone else can -->
             <!-- <li><a href="https://ampbyexample.com/components/amp-brightcove/">amp-brightcove</a></li> -->
-            <li><a href="https://github.com/ampproject/amp-by-example/blob/master/src/20_Components/amp-brightcove.html">逐個範例</a></li>
+            <li><a href="https://github.com/ampproject/amp-by-example/blob/master/src/20_Components/amp-brightcove.html">逐個範例</a> </li>
             <!-- <li><a href="https://ampbyexample.com/playground/#url=https%3A%2F%2Fampbyexample.com%2Fcomponents%2Famp-brightcove%2Fsource%2F">AMP Playground</a></li> -->
         </ul>
     </section>
     <section class="bcls-section">
         <h2 id="Code_examination">代碼檢查</h2>
-        <p>上面的CodePen示例的代碼如下所示。代碼的完整解釋由 AMP 在鏈接到上面的文檔中提供。在下面的列表中有一些需要注意的技巧/陷阱：</p>
+        <p>從上面的 CodePen 示例代碼如下所示。代碼的完整解釋由 AMP 在鏈接到上面的文檔中提供。在下面的列表中有一些需要注意的技巧/陷阱：</p>
         <ul>
             <li>第二行：不要美化代碼。樣板 CSS 是需要由 AMP 提供。</li>
             <li>第三十五行：<code translate="No">width</code>和<code translate="No">height</code>屬性決定了嵌入在自適應版面中的播放器的外觀比例。</li>
@@ -1199,7 +122,7 @@ Brightcove
     &lt;/amp-brightcove&gt;
 
   &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
+  &lt;/html&gt;</code>   </pre>
     </section>
     <section class="bcls-section">
         <h2 id="Features">功能</h2>
@@ -1207,20 +130,20 @@ Brightcove
         <!-- These are features that are common to both Video Cloud and external videos -->
         <!-- THIS SECTION CAN BE ADDED TO THEN COPIED TO SIMILAR SECTION IN EXTERNAL VIDEO FEATURES SECTION -->
 
-        <h3>自訂參數</h3>
-        <p>您可能想要將其他資訊傳遞給您的播放器，以便您的外掛程式存取。您可以通過在必須命名的<code translate="No">amp-brightcove</code>元素上添加額外的屬性來完成此操作<code translate="No">data-param-*</code>，其中<code translate="No">*</code>是屬性的名稱。</p>
+        <h3 id="Custom_parameters">自訂參數</h3>
+        <p>您可能想要將其他資訊傳遞給您的播放器，以便您的外掛程式存取。您可以通過在必須命名的<code translate="No">amp-brightcove</code>元素上添加額外的屬性來完成此操作<code translate="No">data-param-*</code>，其中<code translate="No">*</code>是您的財產的名稱。</p>
         <p>參數被傳遞為駱駝套裝的屬性名稱附加到播放器 URL。鍵和值是 URL 編碼的。例如：</p>
         <ul>
-            <li><code translate="No">data-param-language="de"</code>變成<code translate="No">&amp;language=de</code></li>
-            <li><code translate="No">data-param-ad-vars="key:val;key2:val2"</code>變成<code translate="No">&amp;adVars=key%3Aval%3Bkey2%3Aval2</code></li>
+            <li><code translate="No">data-param-language="de"</code>變成<code translate="No">&amp;language=de</code>   </li>
+            <li><code translate="No">data-param-ad-vars="key:val;key2:val2"</code>變成<code translate="No">&amp;adVars=key%3Aval%3Bkey2%3Aval2</code>   </li>
         </ul>
-        <h3 id="dock">擴展塢（畫中畫）</h3>
-        <p>的<code translate="No">dock</code>屬性將滾動到視線之外時將“停靠”玩家。播放器變得更小，並移至網頁右上角附近。請注意，HTML標準將此功能稱為<strong>畫中畫</strong>。停靠播放器的屏幕截圖如下：</p>
-        <figure class="bcls-figure"><img class="bcls-image" alt="碼頭" src="//learning-services-media.brightcove.com/doc-assets/general/amp-dock.png"/></figure>
+        <h3 id="dock">Dock (子母畫面)</h3>
+        <p>該<code translate="No">dock</code>屬性將「停靠」播放器時，它將被滾動到視野外。播放器是由較小和移動附近的網頁的右上角。請注意，HTML 標準將此功能稱為<strong>子母畫面</strong>。停駐播放器的螢幕擷取畫面如下：</p>
+        <figure class="bcls-figure"><img class="bcls-image" alt="dock" src="/assets/images/amp/amp-vc-amp-dock.png" /></figure>
         <p>要實現此功能，您需要執行以下操作：</p>
         <ol>
-            <li>包括一個包含停靠功能代碼的腳本，如第2行的以下代碼片段所示。</li>
-            <li>添加<code translate="No">dock</code>歸因於<code translate="No">&lt;amp-brightcove&gt;</code>標籤，如第13行所示。</li>
+            <li>包含包含停駐功能程式碼的指令碼，如下列第 2 行的程式碼片段所示。</li>
+            <li>將<code translate="No">dock</code>屬性加入至標<code translate="No">&lt;amp-brightcove&gt;</code>籤，如第 13 行所示。</li>
         </ol>
         <pre class="line-numbers" data-start="1">
   <code class="language-html" translate="No">...
@@ -1237,40 +160,45 @@ Brightcove
       width="16" height="9"
       <span class="bcls-highlight">dock</span>&gt;
     &lt;/amp-brightcove&gt;
-    ...</code></pre>
+    ...</code>   </pre>
         <h3>外部反向連結支援</h3>
         <p>布萊特灣播放器 v6.25.0+ 支持在 iframe 上設置任意引用。AMP 組件現在支持通過其自己的反向連結傳遞給玩家，通過添加一個<code translate="No">referrer="EXTERNAL_REFERRER"</code>屬性它們的放大亮度嵌入。</p>
-        <p>外部參照者是 AMP 自己的宏-有關更多信息，請參閱<a href="https://github.com/ampproject/amphtml/blob/19135a3aac7813a9ff263a9f863fe35aeb316582/spec/amp-var-substitutions.md#external-referrer"> https://github.com/ampproject/amphtml/blob/19135a3aac7813a9ff263a9f863fe35aeb316582/spec/amp-var-substitutions.md#external-referrer </a>。</p>
+        <p>外部參照者是 AMP 自己的宏-有關更多信息，請參閱<a href="https://github.com/ampproject/amphtml/blob/19135a3aac7813a9ff263a9f863fe35aeb316582/spec/amp-var-substitutions.md#external-referrer">  https://github.com/ampproject/amphtml/blob/19135a3aac7813a9ff263a9f863fe35aeb316582/spec/amp-var-substitutions.md#external-referrer </a>。</p>
         <h3>AMP 分析</h3>
-        <p>AMP 文件中可使用<strong> Amp-Analytics </strong>元件，以追蹤任何任意分析的資料。如果發佈商希望包含視頻活動，他們現在可以這樣做。</p>
-        <p>AMP 關於 AMP 分析語法的文檔（這很麻煩）在這裡：<a href="https://www.ampproject.org/docs/reference/components/amp-analytics"> https://www.ampproject.org/docs/reference/components/amp-analytics </a>。特別是視訊分析：<a href="https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md"> https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md </a>。</p>
-        <p>有一個範例可用，追蹤到<strong> example.com </strong>，因此您會在網路索引標籤中看到信標為錯誤：<a href="http://solutions.brightcove.com/bclifford/ampexamples/analytics.html"> http://solutions.brightcove.com/bclifford/ampexamples/analytics.html </a>。</p>
+        <p>一個<strong>amp-analytics</strong>組件可用於 AMP 文檔以跟踪數據以進行任意分析。如果發佈商希望包含視頻活動，他們現在可以這樣做。</p>
+        <p>AMP 關於 AMP 分析語法的文檔（這很麻煩）在這裡：<a href="https://www.ampproject.org/docs/reference/components/amp-analytics">  https://www.ampproject.org/docs/reference/components/amp-analytics </a>。特別是視訊分析：<a href="https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md">  https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/amp-video-analytics.md </a>。</p>
+        <p>有一個範例可用，追蹤到<strong>  example.com，</strong>因此您會在網路索引標籤中看到信標為錯誤：<a href="http://solutions.brightcove.com/bclifford/ampexamples/analytics.html">  http://solutions.brightcove.com/bclifford/ampexamples/analytics.html </a>。</p>
         <h3>AMP 繫結</h3>
-        <p>AMP 綁定是 AMP 的 API 組件之間的交互。在基本層面上，它允許您擁有播放器外部的東西來控制播放。例如，下面的代碼將播放視頻，其<code translate="No">id</code>中<code translate="No">myPlayer</code>是安培亮灣播放器的。</p>
+        <p>AMP 綁定是 AMP 的 API 組件之間的交互。在基本層面上，它允許您擁有播放器外部的東西來控制播放。例如，以下代碼將播放視頻，其中<code translate="No">myPlayer</code>是個<code translate="No">id</code> amp-brightcove 播放器。</p>
         <pre class="line-numbers">
-    <code class="language-html" translate="No">&lt;button on="tap:myPlayer.play"&gt;Play&lt;/button&gt;</code></pre>
-        <p>AMP 不信任視頻事件，所以你目前無法做一些更有用的事情，例如在視頻端。這裡有一個例子：<a href="http://solutions.brightcove.com/bclifford/ampexamples/bind.html"> http://solutions.brightcove.com/bclifford/ampexamples/bind.html </a>。</p>
+    <code class="language-html" translate="No">&lt;button on="tap:myPlayer.play"&gt;Play&lt;/button&gt;</code>   </pre>
+        <p>AMP 不信任視頻事件，所以你目前無法做一些更有用的事情，例如在視頻端。這裡有一個例子：<a href="http://solutions.brightcove.com/bclifford/ampexamples/bind.html">  http://solutions.brightcove.com/bclifford/ampexamples/bind.html </a>。</p>
         <!-- END OF COMMON FEATURES -->
         <!-- These are features unique to Video Cloud videos and NOT shared with external videos -->
 
-        <h3>廣告</h3>
-        <p>廣告包括在 AMP 中使用的玩家的預售作品。</p>
-        <p>廣告插件及其配置只需要包含在播放器的配置中。如果您需要在廣告伺服器呼叫中包含特定文章的值，您可以將自訂資料傳遞至播放器外掛程式，如下所述。</p>
-        <p>如前所述，AMP 是在什麼可以添加到一個有效的 AMP 頁面非常嚴格。例如，您無法將標籤新增<code translate="No">id</code>至標<code translate="No">amp-brightcove</code>籤，然後使用<code translate="No">script</code>區塊來設定，例如 IM3 外掛程式。為了重申上一段中所說的內容，廣告必須在播放器的配置中實現，無論是使用 Studio 或播放器管理 API。</p>
-        <p>如果您希望使用利用廣告宏的廣告配置網址，例如<code translate="No">{pageVariable.adId}</code>，您必須更改播放器的配置。您可以使用自定義參數（如上所述）：</p>
+<!--         <h3>Advertising</h3>
+        <p>Advertising, including prerolls, works in players used in AMP. The ad plugin and its configuration just needs to be included in the player's configuration. If you need to include article-specific values in your ad server calls, you can pass custom data through to a player plugin as described later in this document.</p>
+        <p>AMP is very strict in what can be added to a valid AMP page, as detailed in the <a href="/amp/amp-using-video-cloud-video.html">AMP Using a Video Cloud Video</a> document. For example, you CANNOT use the standard practice of adding an <code translate="No">id</code> to the <code translate="No">amp-brightcove</code> tag then use a <code translate="No">script</code> block to configure, for instance, the IMA3 plugin. To reiterate, advertising must be implemented in the player's configuration, either using Studio or the Player Management API.</p>
+        <p>If you wish to use ad configuration URLs that utilize an ad macro such as <code translate="No">{pageVariable.<span class="bcls-highlight">adId</span>}</code>, you must alter the player's configuration. You can use a custom parameter like:</p>
         <pre class="line-numbers">
   <code class="language-html" translate="No">data-param-ad-id="preonlybumper"</code></pre>
-        <p>這不會使該值自動提供給廣告宏<code translate="No">{pageVariable.adId}</code>。為了使<code translate="No">ad-id/adId</code>廣告網址可用的媒體資源，您必須使用Brightcove Player的<a href="/general/player-configuration-guide.html#query_string_to_window">query_string_to_window</a>配置選項。此選項控制查詢字符串參數中全局名稱空間（窗口）變量的填充。所以要<code class="language-html" translate="No">data-param-ad-id="..."</code>插件可用，您必須使用以下命令將以下內容添加到播放器配置中：<a href="https://apis.support.brightcove.com/player-management/">播放器管理API</a>（另請參見代碼下方的註釋）：</p>
-        <pre class="line-numbers">
-  <code class="language-bash" translate="No">  "query_string_to_window": {
-      "globals": [
-        "adId"
-      ]
-    }</code></pre>
-        <p>有關更新播放器的具體說明，請參見<a href="https://apis.support.brightcove.com/player-management/references/reference.html#operation/UpdatePlayerConfiguration">Player_Configurations-更新播放器配置</a>從Player Management API參考中獲得。</p>
-        <h3>設定播放器樣式</h3>
-        <p>如果要為播放器設置樣式，則必須使用特殊語法。例如，如果您要設置播放器的大小，則可以創建一個<code translate="No">style</code>如圖所示阻止並用<code translate="No">div</code>，如下所示：</p>
-        <pre class="line-numbers">
+        <p>This does not make the value automatically available to the ad macro <code translate="No">{pageVariable.adId}</code>. To make the <code translate="No">ad-id/adId</code> property available to the ad URL, you must use Brightcove Player's <a href="/general/player-configuration-guide.html#query_string_to_window">query_string_to_window</a> configuration option. This option controls the population of the global namespace (window) variables from query string parameters. To add all query parameters to the global namespace, add the following to your player configuration:
+            <pre class="line-numbers">
+<code class="language-bash" translate="No">"query_string_to_window": {
+  "target": "queryStringParams"
+}</code></pre>
+            <p>Note the <code translate="no">queryStringsParams</code> name is the "variable" in which the parameters will be stored, and you can change the name as you choose.</p>
+            <p>If for some reason you prefer to only assign limited parameters to the global namespace you can do so. For instance, to make only the <code class="language-html" translate="No">data-param-<span class="bcls-highlight">ad-id</span>="..."</code> available to the plugin, you add the following to the player configuration:</p>
+            <pre class="line-numbers">
+<code class="language-bash" translate="No">"query_string_to_window": {
+  "globals": [
+    "adId"
+  ]
+}</code></pre>
+            <p>For specific instructions on updating a player configuration see <a href="https://apis.support.brightcove.com/player-management/references/reference.html#operation/UpdatePlayerConfiguration">Player Configurations - Update a Player Configuration</a> from the Player Management API reference.</p>
+ -->            <h3>設定播放器樣式</h3>
+            <p>如果你想要風格播放器，你必須使用特殊的語法來做到這一點。例如，如果您想要設定播放器的大小，您可以建立一個<code translate="No">style</code>區塊<code translate="No">div</code>，如下所示：</p>
+            <pre class="line-numbers">
   <code class="language-html" translate="No">&lt;style <span class="bcls-highlight">amp-custom</span>&gt;
     .player-container {
       width: 640px;
@@ -1288,171 +216,15 @@ Brightcove
       layout="responsive"
       width="16" height="9"&gt;
     &lt;/amp-brightcove&gt;
-  &lt;/div&gt;</code></pre>
-        <p>您可以新增單一<code translate="No">style</code>標籤，但必須包含<code translate="No">amp-custom</code>屬性。</p>
+  &lt;/div&gt;</code>   </pre>
+            <p>您可以新增單一<code translate="No">style</code>標籤，但必須包含<code translate="No">amp-custom</code>屬性。</p>
     </section>
 
     <section class="bcls-section">
         <h2 id="Error_suppression">機器人的錯誤抑制</h2>
-        <p>當不支持AMP的漫遊器瀏覽包含AMP視頻播放器的頁面時，會生成失敗的視頻錯誤。這可能會損害SEO排名。您可以使用<code translate="No">suppressNotSupportedError</code> Brightcove Player的JSON配置中的選項以阻止這種情況的發生。添加以下內容以消除這些虛假錯誤：</p>
-        <pre class="line-numbers"><code class="language-json" translate="No">"suppress_not_supported_error": true</code></pre>
-        <aside class="bcls-aside bcls-aside--warning">為此，您必須使用Brightcove Player 6.38.4或更高版本。</aside>
+        <p>當不支援 AMP 的機器人瀏覽包含 AMP 視訊播放程式的網頁時，就會產生失敗的視訊錯誤。這樣會傷害 SEO 排名。您可以使用 Brightcove 播放器的 JSON 配置中的<code translate="No">suppressNotSupportedError</code>選項來阻止這種情況發生。添加以下內容以抑制這些偽錯誤：</p>
+        <pre class="line-numbers"><code class="language-json" translate="No">"suppress_not_supported_error": true</code>   </pre>
+        <aside class="bcls-aside bcls-aside--warning">要使用此功能，您必須使用布萊特灣播放器版本 6.38.4 或更高版本。</aside> 
     </section>
 
 </article>
-<!-- complete bootstrap layout -->
-    </div>
-    <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav" id="right_side_nav">
-        <h6 class="toc">頁面內容</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
-      
-    </div>
-  </div>
-</div>
-
-<hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
-    <div class="region region-footer-top-center col-md-12">
-      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
-
-        <h2>布萊特灣支援</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://status.brightcove.com">系統狀態</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
-          </li>
-          <li>
-            <a href="https://support.brightcove.com/">文獻資料</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
-
-        <h2>訓練</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
-          </li>
-          <li>
-            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
-          </li>
-          <li>
-            <a href="https://university.brightcove.com/">布萊特灣大學</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
-
-        <h2>Brightcove</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://www.brightcove.com">亮麗</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="region region-footer-bottom-center col-md-12">
-      <div class="bcls-copyright footer-menu">
-        <table>
-          <tr>
-            <td>
-              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
-            </td>
-            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
-            <td>
-              <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</div>
-</div>
-<script>
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documenation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/js/sajari-search-foot.js"></script>
-  
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <style>
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
-
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
-
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
-
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
-    </style>
-
-</body>
-
-</html>

@@ -1,0 +1,15 @@
+<video id="myPlayerID"
+  data-video-id="5993987133001"
+  data-account="1752604059001"
+  data-player="default"
+  data-embed="default"
+  data-application-id
+  class="video-js"
+  controls
+  width="640" height="380"></video>
+<script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+
+<script>
+  影片 JS.GET 播放器 (「我的播放器 ID」)。就緒 (函數 () { var myPlayer = this; myPlayer.on("loadedmetadata", function() { // +++ Retrieve the menu options +++ var menuOptions = myPlayer.controlBar.subsCapsButton.menu.children(); console.log(menuOptions); // +++ Add flag to each menu option +++ menuOptions.forEach(function(item) { if (item.track.language === "de") { item.$(".vjs-menu-item-text").innerHTML = "🇩🇪 " + item.track.label; } }); 功能表選項。福利 (函數 (項目) { if (item.track.language === "en") { item.$(".vjs-menu-item-text").innerHTML = "🇺🇸 " + item.track.label; } });});});
+
+</script>

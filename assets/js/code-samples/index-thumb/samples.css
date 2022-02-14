@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('https://files.brightcove.com/bc-icons/bc-icons.eot?hsl5ru');
+    src:    url('https://files.brightcove.com/bc-icons/bc-icons.eot?hsl5ru#iefix') format('embedded-opentype'),
+        url('https://files.brightcove.com/bc-icons/bc-icons.ttf?hsl5ru') format('truetype'),
+        url('https://files.brightcove.com/bc-icons/bc-icons.woff?hsl5ru') format('woff'),
+        url('https://files.brightcove.com/bc-icons/bc-icons.svg?hsl5ru#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^='icon-']:before, [class*=' icon-']:before {
+    display: inline-block;
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 55px;
+    color: #00b09c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: none;
+}
+
+.icon-enterprise:before {
+    content: "\e938";
+}
+.icon-ad-insertion:before {
+    content: "\e900";
+}
+.icon-add:before {
+    content: "\e901";
+}
+.icon-advertising:before {
+    content: "\e902";
+}
+.icon-analytics:before {
+    content: "\e903";
+}
+.icon-arrow-left-inverted:before {
+    content: "\e904";
+}
+.icon-arrow-left:before {
+    content: "\e905";
+}
+.icon-arrow-right-inverted:before {
+    content: "\e906";
+}
+.icon-arrow-right:before {
+    content: "\e907";
+}
+.icon-automation:before {
+    content: "\e908";
+}
+.icon-badge:before {
+    content: "\e909";
+}
+.icon-calendar:before {
+    content: "\e90a";
+}
+.icon-case-study:before {
+    content: "\e90b";
+}
+.icon-cdn:before {
+    content: "\e90c";
+}
+.icon-chat:before {
+    content: "\e90d";
+}
+.icon-check-mark:before {
+    content: "\e90e";
+}
+.icon-chevron-down:before {
+    content: "\e90f";
+}
+.icon-close:before {
+    content: "\e910";
+}
+.icon-connected-tv:before {
+    content: "\e911";
+}
+.icon-delivery:before {
+    content: "\e912";
+}
+.icon-desktop-player:before {
+    content: "\e913";
+}
+.icon-discover:before {
+    content: "\e914";
+}
+.icon-distribution:before {
+    content: "\e915";
+}
+.icon-document:before {
+    content: "\e916";
+}
+.icon-ecommerce:before {
+    content: "\e917";
+}
+.icon-education:before {
+    content: "\e918";
+}
+.icon-folder:before {
+    content: "\e919";
+}
+.icon-food:before {
+    content: "\e91a";
+}
+.icon-gallery:before {
+    content: "\e91b";
+}
+.icon-health:before {
+    content: "\e91c";
+}
+.icon-hex:before {
+    content: "\e91d";
+}
+.icon-idea:before {
+    content: "\e91e";
+}
+.icon-ingest:before {
+    content: "\e91f";
+}
+.icon-laptop:before {
+    content: "\e920";
+}
+.icon-location:before {
+    content: "\e921";
+}
+.icon-loyalty:before {
+    content: "\e922";
+}
+.icon-mobile-video:before {
+    content: "\e923";
+}
+.icon-mobile:before {
+    content: "\e924";
+}
+.icon-monetize:before {
+    content: "\e925";
+}
+.icon-multi-platform:before {
+    content: "\e926";
+}
+.icon-news:before {
+    content: "\e927";
+}
+.icon-ott:before {
+    content: "\e928";
+}
+.icon-recommendation:before {
+    content: "\e929";
+}
+.icon-schedule:before {
+    content: "\e92a";
+}
+.icon-search:before {
+    content: "\e92b";
+}
+.icon-security:before {
+    content: "\e92c";
+}
+.icon-settings:before {
+    content: "\e92d";
+}
+.icon-social:before {
+    content: "\e92e";
+}
+.icon-speaker:before {
+    content: "\e92f";
+}
+.icon-star:before {
+    content: "\e930";
+}
+.icon-stream:before {
+    content: "\e931";
+}
+.icon-subtract:before {
+    content: "\e932";
+}
+.icon-tablet:before {
+    content: "\e933";
+}
+.icon-touch:before {
+    content: "\e934";
+}
+.icon-user:before {
+    content: "\e935";
+}
+.icon-users:before {
+    content: "\e936";
+}
+.icon-video:before {
+    content: "\e937";
+}
+
+.samples-wrapper {
+  /* justify-content: space-evenly; */
+  width: 100%;
+  text-align: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+
+.buttons-wrapper {
+  text-align: center;
+}
+
+.group-button {
+  background-color: RGB(255, 255, 255);
+  border-top: none;
+  border-left: .2rem RGB(238, 238, 238) solid;
+  border-right: .2rem RGB(238, 238, 238) solid;
+  border-bottom: .2rem RGB(238, 238, 238) solid;
+  font-variant-caps: all-petite-caps;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.selected-button {
+  background-color: RGB(238, 238, 238);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: .4rem RGB(118, 174, 181) solid;
+  font-variant-caps: all-petite-caps;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.sample-title {
+  text-align: center;
+  font-size: 16px;
+  text-decoration: inherit;
+}
+
+.sample-description {
+  text-align: center !important;
+  font-size: 12px;
+  text-decoration: inherit;
+  visibility: hidden;
+}
+
+.samples-section {
+  margin: 1em;
+  display: inline-block;
+}
+
+.samples-section a div {
+  height: 300px;
+  min-height: 280px;
+  min-width: 280px;
+  width: 300px;
+  padding: 1em;
+  text-align: center;
+  /* -webkit-box-sizing: border-box;
+  box-sizing: border-box; */
+  border: 1px solid #efefef;
+  color: RGB(81, 81, 81);
+  -webkit-box-shadow: 0px 2px 5px 0 #ccc;
+  box-shadow: 0px 2px 5px 0 #ccc;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-out;
+  transition: -webkit-box-shadow 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+  text-decoration: none !important;
+}
+
+
+.samples-section a:hover div {
+  text-decoration: none !important;
+  box-shadow: 0px 5px 15px 0 RGB(204, 204, 204);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in;
+  transition: -webkit-box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
+}
+
+.samples-section a:hover div h2,
+.samples-section a:hover div p.sample-description {
+  text-decoration: none !important;
+  text-decoration-line: none;
+  text-decoration-color: transparent;
+  visibility: visible !important;
+}
+
+.samples-section a:hover div p.sample-description  {
+  text-decoration: none !important;
+  text-align: center;
+  visibility: hidden;
+}
+
+.samples-section a div p {
+  text-decoration: none;
+  text-align: center;
+}

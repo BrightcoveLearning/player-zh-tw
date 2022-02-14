@@ -1,1185 +1,101 @@
-﻿<!doctype html>
-<html lang="zh-TW">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  
-  <title>廣告與飛輪插件</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="/assets/css/local.css">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-  <script src="/assets/js/sajari-head.js"></script>
-</head>
-
-<body class="body">
-
-<header>
-  <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Player_Logo.svg" alt="產品標誌" style="max-height: 100px;max-width: 232px;"/></a>
-<!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
-
-<script>
-/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-/* ]]> */
-</script>
-
-Brightcove 
-
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
-    
-  </div>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb arr-right">
-      
-      <li class="breadcrumb-item"><a href="/">首頁</a></li>
-      
-      
-      
-      <li class="breadcrumb-item"><a href="/plugins/">外掛程式</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">廣告與飛輪插件</li>
-    </ol>
-  </nav>
-</header>
-<div class="container">
-    <div class="row">
-      <div class="col-sm-3 left-side-bar">
-        				<select id="site_select" class="bcls-select" style="margin-right: 1rem;">
-					<option value="">其他布萊特灣文件</option>
-					
-						
-							<option value="https://support.brightcove.com">文件首頁</option>
-						
-					
-						
-							<option value="https://audience.support.brightcove.com">布萊特灣觀眾</option>
-						
-					
-						
-							<option value="https://beacon.support.brightcove.com">布萊特灣燈塔</option>
-						
-					
-						
-							<option value="https://campaign.support.brightcove.com">布萊特灣戰役</option>
-						
-					
-						
-							<option value="https://engage.support.brightcove.com">布萊特灣參與</option>
-						
-					
-						
-							<option value="https://live.support.brightcove.com">Brightcove Live</option>
-						
-					
-						
-							<option value="https://gallery.support.brightcove.com">Brightcove 圖庫</option>
-						
-					
-						
-							<option value="https://ssai.support.brightcove.com">布萊特灣</option>
-						
-					
-						
-							<option value="https://social.support.brightcove.com">布萊特灣社會</option>
-						
-					
-						
-							<option value="https://studio.support.brightcove.com">視訊雲端工作室</option>
-						
-					
-						
-							<option value="https://player.support.brightcove.com">布萊特灣球員開發</option>
-						
-					
-						
-							<option value="https://apis.support.brightcove.com">視訊雲端平台 API</option>
-						
-					
-						
-							<option value="https://sdks.support.brightcove.com">視訊雲端裝置開發套件</option>
-						
-					
-						
-							<option value="https://integrations.support.brightcove.com">整合與 CMS 連接器</option>
-						
-					
-						
-							<option value="https://general.support.brightcove.com">視訊雲端一般資訊</option>
-						
-					
-						
-							<option value="https://zencoder.support.brightcove.com">Zencoder</option>
-						
-					
-				</select>
-						<nav class="sidenav" id="side_nav">
-
-          
-            
-            <h5><a href="/index.html">首頁</a></h5>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/getting-started/index.html">開始使<strong>用 + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/what-brightcove-player.html">什麼是布萊特灣玩家？</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/overview-brightcove-player.html">概述：布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/overview-brightcove-player-plugins.html">概述：布萊特灣播放器外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-brightcove-player.html">逐步：布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-using-rest-apis.html">學習指南：使用其他應用程式介</a>面</li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/basics/index.html">學習基本知識<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/basics/developer-basics-advanced-player-code.html">進階播放程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-autoplaying-video.html">自動播放視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-converting-code.html">自定義插件-轉換代碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-passing-data.html">自定義插件-傳遞數據</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-using-studio.html">自定義插件-使用工作室</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-why-and-how.html">自定義插件-為什麼和如何</a></li>
-                  
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-generating-player-code.html">產生播放程式代碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-preparing-write-code.html">準備撰寫程式碼</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/references/index.html">參考資料<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/references/brightcove-player-5-6-migration-guide.html">布萊特灣玩家 5 至 6 轉移指南</a></li>
-                  
-                
-                  
-                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/index.html">布萊特灣播放器 API 文檔（外部網站）</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-cookies.html">布萊特灣球員曲奇</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
-                  
-                
-                  
-                    <li><a href="https://groups.google.com/forum/embed/?place=forum/bcplayerdev#!forum/bcplayerdev">布萊特灣球員公告論壇</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-system-requirements.html">布萊特灣玩家系統需求</a></li>
-                  
-                
-                  
-                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋架構</a></li>
-                  
-                
-                  
-                    <li><a href="https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html">已知問題</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-catalog.html">播放器目錄</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-feature-support-browser.html">瀏覽器支援播放器功能</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-metadata-bcinfo.html">來自 bcinfo 的播放器中繼資料</a></li>
-                  
-                
-                  
-                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html">播放器方法/事件 API（外部網站）</a></li>
-                  
-                
-                  
-                    <li><a href="/references/guide-playlist-api.html">播放清單 API 指南</a></li>
-                  
-                
-                  
-                    <li><a href="/references/video-metadata-mediainfo.html">來自媒體資訊的視訊中繼資料</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/plugins/index.html">外掛程式<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/plugins/360degvr-video-plugin.html">360 度影片</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/ad-only-plugin.html">僅廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/upgrading-ima3-plugin-version-3.html">升級至 IM3 外掛程式版本 3 </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">廣告與 SAI </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/chromecast-plugin-brightcove-player.html">鉻</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕終止畫面</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-thumbnail-previews-plugin.html">顯示縮圖預覽</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/google-tag-manager-plugin-brightcove-player.html">谷歌代碼管理工具</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/hls-plugin.html">HLS </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/live-dvrux-plugin.html">直播 DVRUX </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-overlay-plugin.html">覆疊</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/overview-brightcove-player-plugins.html">概述：玩家外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/picture-picture-plugin-aka-floating-or-pinned.html">子母畫面</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/changelog/index.html">外掛程式變更記錄</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/plugin-registry.html">外掛程式登錄</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/plugin-version-reference.html">外掛程式版本參考</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/tealium-plugin-brightcove-player.html">茶葉標籤管理程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/video-seo-schema-generator-plugin.html">視頻 SEO 模式生成器</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/advertising/index.html">廣告<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/advertising/ad-events-and-ad-objects.html">廣告事件和廣告物件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/ad-only-plugin.html">僅廣告外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/client-side-preroll-with-live-ssai.html">使用即時 SSAI 的客戶端預先廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/displaying-ads-using-ad-cue-points.html">使用廣告提示點顯示廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/flash-no-longer-valid-ima.html">閃光燈在 IMA 中不再有效</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/guide-ad-partner-integration.html">指南：廣告合作夥伴整合</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/guide-contrib-ads-migration.html">指南：接觸式廣告移轉</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">與布萊特灣玩家一起實施 SSAI </a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-header-bidding-ad.html">跳躍開始：標頭出價廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-outstream-ad.html">跳躍開始：外游廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-pre-roll-ad.html">跳躍開始：播放前廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/known-issues-server-side-ad-insertion-ssai.html">已知問題：伺服器端廣告插入 (SSAI) </a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/step-step-implementing-advertising.html">逐步：實作廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/testing-pre-release-advertising-plugins.html">測試發行前廣告外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/using-dfp-premium-brightcove-player.html">與布萊特灣玩家一起使用 DFP 加值</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/using-player-enhancements-live-ssai-brightcove-player.html">使用即時 SSAI 和進階播放器工具組</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/video-cloud-ssai-ad-tag-validation.html">視訊雲端 SSAI 廣告標籤驗證</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/publish/index.html">發佈影片與播放器<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/publish/assigning-video-player-programmatically.html">以程式設計方式將視訊指派給播放程式</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/available-options-advanced-page-embed-code.html">進階 (頁內) 內嵌程式碼的可用選項</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/available-options-standard-iframe-embed-code.html">標準 (iframe) 內嵌程式碼的可用選項</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/bulk-updating-brightcove-default-player.html">大量更新布萊特灣預設播放器</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html">選擇正確的內嵌程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/delaying-player-instantiation.html">延遲播放程式實例化</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/pre-release-player.html">發行前播放程式</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/syndication-strategies.html">聯合發行策略</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/using-non-brightcove-player.html">使用非亮灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html">在一個頁面上使用多個玩家</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/using-reference-ids.html">使用參考 ID </a></li>
-                  
-                
-                  
-                    <li><a href="">視訊轉譯檢查器</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/troubleshooting/index.html">疑難排解<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-player-information-modal.html">布萊特灣球員資訊模態</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-player-troubleshooting-guide.html">布萊特灣玩家疑難排解指南</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/creating-charles-log.html">創建查理日誌</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/creating-network-log.html">建立網路記錄</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/manually-setting-player-version.html">手動設定播放程式版本</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/player-informational-properties.html">玩家資訊屬性</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/brightcove-player-sample-live-custom-error-message.html">範例：即時自訂錯誤訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/step-step-brightcove-player-debugger.html">逐步：布萊特灣播放器除錯器</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/running-network-path-trace.html">執行網路路徑追蹤</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/using-player-reference.html">使用播放器參照</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/vetting-brightcove-player-releases.html">評審布萊特灣球員發布</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/styling/index.html">造型與外觀<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/styling/customizing-player-appearance.html">自訂播放程式外觀</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/customizing-player-appearance-legacy-skin.html">自訂玩家外觀-舊版外觀</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/brightcove-player-sample-player-styling-playground.html">玩家造型遊樂場</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/quick-start-player-customization-legacy-skin.html">快速入門：玩家自訂-傳統造型</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/responsive-sizing-brightcove-player.html">適用於布萊特灣玩家的反應尺寸</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/sizing-player.html">調整播放器大小</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/skins-and-player-versions.html">外觀與播放程式版本</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/media/styling-captions.html">樣式註解</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/playback/index.html">播放<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/playback/autoplay-considerations.html">自動播放注意事項</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/xdr-with-bcplayer.html">與布萊特灣播放器的跨裝置履歷</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/deep-linking.html">深層連結</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/delivering-hls-video.html">提供 HLS 視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/determining-which-rendition-will-play.html">決定要播放哪些轉譯</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/hls-plugin.html">HLS 外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/ios-and-brightcove-player.html">iOS 和布萊特灣播放器</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/static-url-delivery.html">靜態 URL 傳送</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/streaming-playready-protected-content-dynamic-delivery.html">串流播放就緒受保護的內容</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/using-brightcove-player-tve.html">在 TVE 中使用布萊特灣玩家</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/content-protection/index.html">DRM 與內容保護<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html">設定播放程式內容限制</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/creating-dash-drm-manifest-brightcove-player.html">為布萊特灣玩家建立破折號 DRM 資訊清單</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM 外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/overview-content-protection.html">概述：內容保護</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/policy-keys.html">原則金鑰</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/restricting-video-playback-using-ip-address.html">使用 IP 位址限制視訊播放</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/coding-topics/index.html">編碼主題<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
-                  
-                
-                  
-                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋升級</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html">自訂事件</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/programmatically-localizing-brightcove-player.html">本地化布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/localizing-plugins.html">本地化外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/player-events.html">玩家事件</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/overview-components.html">概述：元件</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/overview-player-api.html">概述：播放器 API </a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/pass-data-plugin.html">將資料傳遞給外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/react-player-loader.html">反應播放器載入器</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/reporting-brightcove-player-configurations.html">有關布萊特灣玩家配置的報告</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/requirejs-and-brightcove-player.html">要求 JS 和布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/step-step-plugin-development.html">逐步：外掛程式開發</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/step-step-videojs-plugin-generator.html">逐步：Video.js 外掛程式產生器</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/using-bc-and-getplayer-methods.html">使用 BC（）和獲取播放器（）方法</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/general/index.html">一般資訊<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html">將應用程式 ID 新增至播放程式內嵌程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/general/adding-captions-videos-programmatically.html">以程式設計方式將字幕新增至視訊</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/media/adding-chapters-video.html">新增章節至視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/general/brightcove-player-6-now-default-version.html">布萊特灣球員 6 現在預設版本</a></li>
-                  
-                
-                  
-                    <li><a href="/general/brightcove-player-accessibility.html">布萊特灣玩家無障礙</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-overlay-plugin.html">顯示覆蓋外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/references/guide-playlist-api.html">指南：播放清單 API </a></li>
-                  
-                
-                  
-                    <li><a href="/general/identify-and-delete-low-performing-videos.html">識別和刪除效能不佳的影片</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-cue-points-programmatically.html">以程式設計方式實作提示點</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-playlists.html">實作播放清單</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-modaldialog.html">實現模式對話框</a></li>
-                  
-                
-                  
-                    <li><a href="/general/live-hls.html">即時 HLS </a></li>
-                  
-                
-                  
-                    <li><a href="/general/live-stream-configuration.html">即時串流組態</a></li>
-                  
-                
-                  
-                    <li><a href="/general/multiple-audio-tracks.html">多個音軌</a></li>
-                  
-                
-                  
-                    <li><a href="/general/player-configuration-guide.html">播放程式組態指南</a></li>
-                  
-                
-                  
-                    <li><a href="/general/playing-live-streams.html">播放即時串流</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI 插件</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/step-step-player-management.html">逐步：玩家管理</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
-                  
-                
-                  
-                    <li><a href="/general/using-screen-reader-brightcove-player.html">使用螢幕閱讀程式與布萊特灣播放器</a></li>
-                  
-                
-                  
-                    <li><a href="/general/versions-brightcove-player-documentation.html">布萊特灣玩家文件的版本</a></li>
-                  
-                
-                  
-                    <li><a href="/general/volume-control.html">音量控制</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/code-samples/index.html">程式碼範例<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/code-samples/index-thumb.html">依群組的程式碼範例</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/index.html">程式碼範例索引</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/amp/index.html">放大器<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/amp/amp-using-video-cloud-video.html">AMP 使用視訊雲端視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/amp/amp-using-external-video.html">使用外部視訊的 AMP </a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/training/index.html">訓練<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/training/online-training-courses.html">所有線上訓練課程</a></li>
-                  
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
-                  
-                
-                  
-                    <li><a href="/training/register-training.html">註冊參加講師指導訓練</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
-                  
-                
-                  
-                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/training-demand-quick-start-player-management.html">訓練：玩家管理快速入門</a></li>
-                  
-                
-                  
-                    <li><a href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/release-notes/index.html">版本說明<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/release-notes/brightcove-player-release-notes.html">布萊特灣玩家發行紀錄</a></li>
-                  
-                
-                  
-                    <li><a href="/release-notes/brightcove-player-prerelease-notes.html">布萊特灣玩家預先發行紀錄</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/support/index.html">支援<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    
-                  
-                
-                  
-                    <li><a href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
-                  
-                
-                  
-                    <li><a href="/support/contact-sales.html">聯絡銷售人員</a></li>
-                  
-                
-                  
-                    <li><a href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
-                  
-                
-              </ul>
-            
-          
-      </nav>
-    </div>
-    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
-  <!-- bootstrap layout -->
-
-<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
-
-<!-- search bar -->
-<div id="nav-search-box" style="margin-top: 1rem;"></div>
-<!-- in-page navigation for narrow screens -->
-<details class="centered-inpage-nav" id="centered_inpage_nav">
-  <summary><h6 class="toc">頁面內容</h6></summary>
-  <nav id="centered_toc"></nav>
-  <ul id="centered_in_page_toc" class="list-none"></ul>
-</details>
-<!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
-
-
-
-  
-    
-
-
+---
+title:使用 Freewheel 外掛程式進行廣告
+description: '在本主題中，您將學習如何使用 Freewheel 外掛程式來啟用影片播放廣告，以及如何使用 Studio 和自訂編碼來實作廣告'
+parent: Plugins
+---
+ <h1>{{ page.title }}</h1>   
 <article class="bcls-article">
-  <h1>廣告與飛輪插件</h1>
-  <summary>在本主題中，您將學習如何使用FreeWheel插件來啟用帶有視頻播放的廣告，以及如何使用Studio以及通過自定義編碼來實現廣告。</summary>
+    <summary>{{ page.description }} </summary>
+
   <style type="text/css">
-iframe {
-  width: 640px;
-  height: 360px;
-}
-
-.video-js {
-  width: 450px;
-  height: 240px;
-  float: left;
-  margin: 15px;
-}
-
-.vjs-playlist {
-  width: 250px;
-  float: left;
-  margin: 15px;
-}
+內嵌框架{ width: 640px; height: 360px; } .video-js { width: 450px; height: 240px; float: left; margin: 15px; } .vjs-播放列表{ width: 250px; float: left; margin: 15px; }
 </style>
   <section class="bcls-section">
-    <h2 id="Overview">概覽</h2>
-    <p>這個外掛程式可在布萊特灣播放器中使用閃光燈或 HTML5 的飛輪廣告技術。FreeWheel插件的默認渲染選項設置為<strong translate="No">Html5</strong>（有關更多信息，請參見<code translate="No">adTechOrder</code>下面的選項）。</p>
+    <h2 id="Overview">概述</h2>
+    <p>這個插件為布萊特灣播放器中的 HTML5 提供飛輪廣告技術。</p>
+    <!-- <p>This plugin enables FreeWheel ad technology, for HTML5, in Brightcove Player. The default rendering option for the FreeWheel plugin is set to <strong translate="No">Html5</strong> (for more information see the <code translate="No">adTechOrder</code> option below).</p> -->
   </section>
   <section class="bcls-section">
-    <h2 id="Using_versions_of_the_plugin">使用插件版本</h2>
-    <p>使用FreeWheel插件時，您將需要使用版本化的URL。</p>
+    <h2 id="Using_versions_of_the_plugin">使用外掛程式的版本</h2>
+    <p>使用 Freewheel 外掛程式時，您需要使用版本化的網址。</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
           <th>版本</th>
           <th>類型</th>
-          <th>版本化網址</th>
+          <th>版本化的 URL</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td rowspan="3">最新發布的</td>
+          <td rowspan="3">最新版本</td>
           <td>JS</td>
-          <td><code translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.js</code></td>
+          <td><code translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.js</code>   </td>
         </tr>
         <tr>
           <td>CSS</td>
-          <td><code translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</code></td>
+          <td><code translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</code>   </td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td>SWF *</td>
           <td><code translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs.freewheel.swf</code></td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
     <!-- <aside class="bcls-aside bcls-aside--information">* Compatible with FreeWheel Flash Plugin version 6.4.6</aside> -->
     
-    <p>作為參考，插件和兼容SWF的版本在<a href="/plugins/plugin-version-reference.html">插件版本參考</a>文件。</p>
+    <p>作為參考，插件的版本在<a href="/plugins/plugin-version-reference.html">插件版本參考</a>文檔。</p>
   </section>
   <section class="bcls-section">
     <h2 id="Testing_the_ad_server">測試廣告伺服器</h2>
-    <p>您應該做的第一件事是驗證您打算使用的廣告代碼的有效性。請確定您已複製其 URL 並瀏覽至以下頁面：<a target="_blank" rel="noopener noreferrer" href="//vi.freewheel.tv/apc/dropzone">廣告預覽器</a>（點擊此鏈接將導致頁面在新窗口或新標籤頁中打開）。</p>
-    <p>將廣告代碼網址粘貼到指示的表單輸入字段中。請點擊<strong translate="No">OPEN IN AD PREVIEWER</strong>。標題為<strong translate="No">Open In Ad Previewer</strong>將顯示，然後單擊<strong translate="No">OPEN</strong>按鈕來測試您的廣告。請點擊<strong translate="No">PLAY</strong>並且，如果運作正常，則您的廣告會與視頻一起顯示。如果您的廣告代碼在這個測試環境中無法運作，它將無法與 Brightcove 播放程式搭配使用。</p>
+    <p>您應該做的第一件事是驗證您打算使用的廣告代碼的有效性。請確定您已複製其 URL 並瀏覽至以下頁面：<a target="_blank" rel="noopener noreferrer" href="//vi.freewheel.tv/apc/dropzone">廣告預覽器</a>  (按一下此連結會讓頁面在新視窗或分頁中開啟)。</p>
+    <p>將廣告標籤網址貼到指定的表格輸入欄位中。按一下「在廣告預覽器中<strong translate="No">開啟」</strong>。一個彈出式標題<strong translate="No">在廣告預覽器中打開</strong>將顯示，然後單擊<strong translate="No">打開</strong>按鈕來測試您的廣告。按一下 [ <strong translate="No">播放</strong> ]，如果正常運作，您的廣告會與影片一起顯示。如果您的廣告代碼在這個測試環境中無法運作，它將無法與 Brightcove 播放程式搭配使用。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="Using_the_correct_SDK_URL">使用正確的SDK URL</h2>
-    <aside class="bcls-aside bcls-aside--warning language-editable">在SDK版本6.24之前，FreeWheel提供了一個“自動升級” URL到最新版本的JS AdManger SDK。該URL始終指向SDK的最新版本。這已經不再是這種情況。</aside>
-    <p>接下來的兩節提供了實現FreeWheel的替代方法。在這兩個部分中，您都將使用<code translate="No">sdkurl</code>。過去，您可以簡單地使用<code translate="No">http://adm.fwmrm.net/p/[]/AdManager.js</code>選項的值，並且知道它將指向FreeWheel SDK的最新版本。現在，您需要輸入指向特定版本的網址，例如<code translate="No">https://mssl.fwmrm.net/libs/adm/6.24.0/AdManager.js</code>。<strong>此外</strong>，在初始設置後，如果您希望使用最新版本的FreeWheel發布較新版本的SDK，則還需要更新該值。請注意，進行此更改後，您將需要重新發布Brightcove Player。</p>
-    <p>如果您不更新URL並繼續使用自動升級URL，那麼您將永遠指向版本6.23。</p>
+    <h2 id="Using_the_correct_SDK_URL">使用正確的 SDK 網址</h2>
+    <aside class="bcls-aside bcls-aside--warning">在 SDK 版本 6.24 之前，自由輪提供了一個「自動升級」網址到最新版本的 JS AdManger SDK。此 URL 始終指向最新版本的 SDK。這已經不再是這種情況。</aside> 
+    <p>接下來的兩個部分提供了實作 Freewheel 的替代方案。在這兩個部分中，您將使用<code translate="No">sdkurl</code>   .在過去，您可以簡單地使<code translate="No">http://adm.fwmrm.net/p/[]/AdManager.js</code>用該選項的值，並知道它將指向最新版本的 FreeWwheel SDK。現在，您需要輸入指向特定版本的 URL，例如<code translate="No">https://mssl.fwmrm.net/libs/adm/6.24.0/AdManager.js</code>。<strong>此外</strong>，在初始設置之後，如果您希望使用最新版本的 Freewheel，您還需要在 Freewheel 發行更新版本的 SDK 時更新該值。請注意，完成這項變更後，您將需要重新發佈您的 Brightcove 播放器。</p>
+    <p>如果您沒有更新 URL 並繼續使用自動升級 URL，您將永遠指向 6.23 版。</p>
     <p>您可能想要在他們的 Brightcove 播放器集成中管理自己的 SDK 版本。這涉及將<code translate="No">Html5.sdkurl</code>選項傳遞給 Freewheel 插件：</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">player.FreeWheelPlugin({
   Html5: {
-    sdkurl: '<em>preferred-sdk-url</em>'
+    sdkurl: '  <em>preferred-sdk-url</em>'
   }
-});</code></pre>
+});</code>  </pre>
   </section>
   <section class="bcls-section">
     <h2 id="Implement_using_Players_module">使用播放器模組實作</h2>
-    <p>要使用Players模塊實現FreeWheel插件，請按照以下步驟操作：</p>
+    <p>若要使用播放器模組來實作 Freewheel 外掛程式，請依照下列步驟執行：</p>
     <ol class="bcls-tasklist">
-      <li><strong>開啟 PLAYER 模組並建立新的播放器，或找到您想要新增外掛程式的播放程式。</strong></li>
+      <li>打開<strong>球員</strong>模塊並創建一個新播放器或找到您希望添加插件的播放器。</li>
       <li>按一下播放程式的連結以開啟播放程式的屬性。</li>
-      <li>按一下左側導覽選單中的<strong>外掛程式</strong>。</li>
-      <li>接下來從三個選項單擊<strong>插件</strong>。
-        <figure class="bcls-figure"><img class="bcls-image" alt="選擇外掛程式" src="//learning-services-media.brightcove.com/doc-assets/general/players-plugin-options.png"/></figure>
+      <li>點擊<strong>插件</strong>在左側導航菜單中。</li>
+      <li>從<strong>新增外掛程式</strong>下拉式清單中，選取<strong>自訂外掛程式</strong>。
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="Select Plugin" src="/assets/images/plugins/freewheel/custom-plugin.png" />
+        </figure>
       </li>
-      <li>從<strong>添加插件中</strong>選擇<strong>自定義插件</strong>。</li>
       <li>在「<strong>外掛程式名稱</strong>」中輸入<code translate="No">FreeWheelPlugin</code>。</li>
-      <li><strong>在</strong>這個網址中，輸入：
+      <li><strong>在這個</strong>網址中，輸入：
         <pre>
-<code class="language-json" translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.js</code></pre>
+<code class="language-json" translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.js</code>   </pre>
       </li>
-      <li>對於<strong> CSS </strong>網址，請輸入：
+      <li>對於<strong>  CSS </strong>網址，請輸入：
         <pre>
-<code class="language-json" translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</code></pre>
+<code class="language-json" translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</code>   </pre>
       </li>
-      <li>在 [選<strong>項 (JSON) </strong> ] 文字方塊中輸入組態選項。表格中提供的選項用於配置播放技術，其中<code translate="No">Flash</code>和<code translate="No">Html5</code>配置部分由FreeWheel提供。<a href="#exampleconfiguration">下</a>面顯示了一個稍微改變的（基於安全原因）完整的配置。存根示例如下所示：
+      <li>在 [選<strong>項 (JSON)] </strong>文字方塊中輸入組態選項。表單中提供的選項可設定 FreeWwheel 提供的播放技術，其中<code translate="No">Flash</code>和<code translate="No">Html5</code>配置區段的位置。<a href="#exampleconfiguration">下面顯示了一個稍微改變的（基於安全原因）完整的配置</a>。存根示例如下所示：
         <pre class="line-numbers">
 <code class="language-json" translate="No">{
+  "Html5": {
+    "sdkurl": "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
+    "serverUrl": "http://cue.v.fwmrm.net/..."
+    "profile": "3aaa_profile",
+    ...
+  }
+}</code>   </pre>
+<!-- <code class="language-json" translate="No">{
   "adTechOrder": ["html5"],
   "Flash": {
     "sdkurl": "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
@@ -1193,11 +109,11 @@ iframe {
     "profile": "3aaa_profile",
     ...
   }
-}</code></pre>
+}</code></pre> -->
       </li>
-      <li>按一下「<strong>儲存</strong>」。</li>
-      <li>要發布播放器，請點擊<strong>發布和嵌入&gt;發布更改</strong>。</li>
-      <li>要關閉打開的對話框，請單擊<strong>關</strong>。</li>
+      <li>按一下「<strong>儲存」</strong>。</li>
+      <li>若要發佈播放程式，請按一下「<strong>發佈與內嵌」&gt;「發佈變更」</strong>。</li>
+      <li>若要關閉開啟對話方塊，請按一下「<strong>關閉」</strong>。</li>
     </ol>
   </section>
   <section class="bcls-section">
@@ -1205,10 +121,17 @@ iframe {
     <p>要實現插件的播放器需要知道插件代碼的位置，如果需要的話，插件名稱和插件配置選項的樣式表。插件代碼和樣式表的位置如下：</p>
     <pre class="line-numbers">
 <code class="language-html" translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.js
-https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</code></pre>
-    <p>插件的名稱是<code translate="No">FreeWheelPlugin</code>。這些選項在以下位置配置播放技術<code translate="No">Flash</code>和<code translate="No">Html5</code>配置部分由FreeWheel提供。<a href="#exampleconfiguration">下</a>面顯示了一個稍微改變的（基於安全原因）完整的配置。存根示例如下所示：</p>
+https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</code>   </pre>
+    <p>外掛程式的名稱是<code translate="No">FreeWheelPlugin</code>。選項配置播放技術，其中<code translate="No">Flash</code>和<code translate="No">Html5</code>配置部分由 FreeWheel 提供。<a href="#exampleconfiguration">下面顯示了一個稍微改變的（基於安全原因）完整的配置</a>。存根示例如下所示：</p>
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
+  Html5: {
+    sdkurl: "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
+    serverUrl: "http://cue.v.fwmrm.net/..."
+    profile: "3aaa_profile",
+    ...
+}</code>   </pre>
+<!-- <code class="language-json" translate="No">{
   adTechOrder: ["html5"],
   Flash: {
     sdkurl: "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
@@ -1221,14 +144,14 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
     serverUrl: "http://cue.v.fwmrm.net/..."
     profile: "3aaa_profile",
     ...
-}</code></pre>
-    <p>下圖顯示了使用播放器的頁內嵌入實現將FreeWheel插件與播放器的單個實例相關聯。</p>
+}</code></pre> -->
+    <p>以下顯示使用播放程式的「頁內嵌」實作，將 FreeWewheel 外掛程式與播放器的單一實體建立關聯。</p>
     <ul>
-      <li>第90行：使用<code translate="No">link</code>標籤在 HTML 頁面中包含外掛程式<code translate="No">head</code>的 CSS。</li>
-      <li>第92行：在這種情況下，給<code translate="No">video</code>標籤一個<code translate="No">id</code>屬性，具有一定的值<strong translate="No">myPlayerID</strong>。</li>
-      <li>第100行：使用<code translate="No">script</code>標籤將外掛程式的 JavaScript 包含在<code translate="No">body</code> HTML 網頁中。</li>
-      <li>第105-125行：初始化插件並傳遞自定義選項。</li>
-      <li>第107行：建立對播放程式的參考。</li>
+      <li>第 90 行：使用<code translate="No">link</code>標籤在 HTML 頁面中包含外掛程式<code translate="No">head</code>的 CSS。</li>
+      <li>第 92 行：給標<code translate="No">video</code>籤一個<code translate="No">id</code>屬性，具有一定的值，在這種情況下<strong translate="No">  MyPlayerID </strong>。</li>
+      <li>第 100 行：使用<code translate="No">script</code>標籤將外掛程式的 JavaScript 包含在<code translate="No">body</code>    HTML 網頁中。</li>
+      <li>第一行：初始化插件並傳入自定義選項。</li>
+      <li>第 107 行：建立對播放程式的參考。</li>
     </ul>
     <pre class="line-numbers" data-start="90">
 <code class="language-html" translate="No">&lt;link href="https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css" rel="stylesheet"&gt;
@@ -1252,13 +175,6 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
 
     // initialize the FreeWheel plugin
     myPlayer.FreeWheelPlugin({
-      adTechOrder: ["html5"],
-      Flash: {
-        sdkurl: "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
-        serverUrl: "http://cue.v.fwmrm.net/..."
-        profile: "3aaa_profile",
-        ...
-      },
       Html5: {
         sdkurl: "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
         serverUrl: "http://cue.v.fwmrm.net/..."
@@ -1267,200 +183,218 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
       }
     });
   });
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;</code>   </pre>
+
+<!-- myPlayer.FreeWheelPlugin({
+  adTechOrder: ["html5"],
+  Flash: {
+    sdkurl: "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
+    serverUrl: "http://cue.v.fwmrm.net/..."
+    profile: "3aaa_profile",
+    ...
+  },
+  Html5: {
+    sdkurl: "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
+    serverUrl: "http://cue.v.fwmrm.net/..."
+    profile: "3aaa_profile",
+    ...
+  }
+}); -->
   </section>
-  <section class="bcls-section">
-    <h2 id="Rendering_options">渲染選項</h2>
-    <p>下表顯示了技術，其中FreeWheel插件將根據Brightcove Player（第1列）中的技術選擇來呈現廣告（第3列），<code translate="No">adTechOrder</code>在插件中設置（第2列）。</p>
+  <!-- <section class="bcls-section">
+    <h2 id="Rendering_options">Rendering options</h2>
+    <p>The following table shows the Tech in which the FreeWheel plugin will render an ad (column 3) based on Tech selections in Brightcove Player (column 1) and the <code translate="No">adTechOrder</code> set in the plugin (column 2).</p>
     <table class="bcls-table">
       <tbody class="bcls-table__body">
         <tr>
-          <th>Brightcove播放器<br/>選定技術</th>
+          <th>Brightcove Player<br />
+            Selected Tech</th>
           <th>FreeWheelPlugin adTechOrder</th>
-          <th>FreeWheel插件<br/>精選廣告技術</th>
+          <th>FreeWheel Plugin<br />
+            Selected Ad Tech</th>
         </tr>
         <tr>
-          <td>HTML5</td>
-          <td>[「閃光燈」，「html5」]</td>
-          <td>閃</td>
+          <td>html5</td>
+          <td>["flash","html5"]</td>
+          <td>flash</td>
         </tr>
         <tr>
-          <td>HTML5</td>
-          <td>["html5，" 閃光燈 "]</td>
-          <td>HTML5</td>
+          <td>html5</td>
+          <td>["html5","flash"]</td>
+          <td>html5</td>
         </tr>
         <tr>
-          <td>HTML5</td>
-          <td>["html5]</td>
-          <td>HTML5</td>
+          <td>html5</td>
+          <td>["html5"]</td>
+          <td>html5</td>
         </tr>
         <tr>
-          <td>HTML5</td>
-          <td>["閃光"]</td>
-          <td>閃</td>
+          <td>html5</td>
+          <td>["flash"]</td>
+          <td>flash</td>
         </tr>
         <tr>
-          <td>閃</td>
-          <td>[「閃光燈」，「html5」]</td>
-          <td>閃</td>
+          <td>flash</td>
+          <td>["flash","html5"]</td>
+          <td>flash</td>
         </tr>
         <tr>
-          <td>閃</td>
-          <td>["html5，" 閃光燈 "]</td>
-          <td>閃</td>
+          <td>flash</td>
+          <td>["html5","flash"]</td>
+          <td>flash</td>
         </tr>
         <tr>
-          <td>閃</td>
-          <td>["html5]</td>
-          <td>不可能</td>
+          <td>flash</td>
+          <td>["html5"]</td>
+          <td>Not possible</td>
         </tr>
         <tr>
-          <td>閃</td>
-          <td>["閃光"]</td>
-          <td>閃</td>
+          <td>flash</td>
+          <td>["flash"]</td>
+          <td>flash</td>
         </tr>
       </tbody>
     </table>
-    <aside class="bcls-aside bcls-aside--information">注意：為了在傳遞中間插播時獲得最佳的用戶體驗，您應該使用分段傳遞格式（例如HLS），並從支持字節範圍請求的CDN傳遞內容。</aside>
-  </section>
+    <aside class="bcls-aside bcls-aside--information">Note: For the best user experience when delivering midrolls, you should use a segmented delivery format like HLS and deliver your content from a CDN that supports byte­range requests.</aside>
+  </section> -->
   <section class="bcls-section">
     <h2 id="Configuration">組態</h2>
-    <p>以下設置用於配置FreeWheel插件：</p>
+    <p>下列設定用於配置 FreeWewheel 外掛程式：</p>
+    <aside class="bcls-aside bcls-aside--information">由於 Brightcove 播放器不再支援 Flash，因此<code translate="No">adTechOrder</code>和<code translate="No">Flash</code>選項不適用。</aside> 
     <ul>
-      <li><strong translate="No">adTechOrder</strong>：
+      <li><strong translate="No">廣告訂單</strong>：
+        
         <ul>
-          <li>類型：<code translate="No">Array</code>預設值：<code translate="No">["html5"]</code></li>
-          <li>該數組包含按優先級降序嘗試使用的廣告集成技術。</li>
+          <li>類型：<code translate="No">Array</code>預設值：<code translate="No">["html5"]</code>   </li>
+          <li>陣列包含要嘗試使用的廣告整合技術，依遞減優先順序排列。</li>
         </ul>
       </li>
-      <li><strong translate="No">Flash</strong>：
+      <li><strong translate="No">快閃記憶體</strong>：
         <ul>
-          <li>類型：<code translate="No">Object</code></li>
+          <li>類型：<code translate="No">Object</code>   </li>
           <li>技術特定飛輪配置的物件（由飛輪提供）。物件包含下列選項：
-            <aside class="bcls-aside bcls-aside--information">這些選項可以動態設定 (如<a href="#Dynamic_server_URL_assignment">下</a>所示)，也可以做為初始組態的一部分 (如<a href="#exampleconfiguration">下</a>所示)。</aside>
+            <!-- <aside class="bcls-aside bcls-aside--information">These options can either be set dynamically (shown <a href="#Dynamic_server_URL_assignment">here</a>) or as part of the initial configuration (shown <a href="#exampleconfiguration">here</a>).</aside> -->
           </li>
-          <li><strong translate="No">swfurl</strong>：
+          <li><strong translate="No">斯福爾</strong>：
             <ul>
-              <li>類型：<code translate="No">string</code>默認值：<code translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs.freewheel.swf</code>（與FW Flash SDK v6.4.6兼容）</li>
-              <li>可以根據FreeWheel Flash插件版本使用可選值。這些值可以在<strong translate="No">Using versions of the plugin</strong>本文檔頂部附近的部分。</li>
+              <li>類型：<code translate="No">string</code>預設值：<code translate="No">https://players.brightcove.net/videojs-freewheel/3/videojs.freewheel.swf</code>    (與快閃開發套件相容)</li>
+              <li>可選值可以根據 Freewheel 閃光外掛程式版本使用。這些值可以在本文件頂端附近的 [ <strong translate="No">使用外掛程式版本</strong> ] 區段中找到。</li>
               <li>必須是<code translate="No">Flash</code>物件的子屬性。如果使用 Flash 廣告技術，則會直接套用至物件元素。</li>
             </ul>
           </li>
-          <li><strong translate="No">autoplay</strong>：
+          <li><strong translate="No">自動播放</strong>：
             <ul>
-              <li>類型：<code translate="No">boolean</code>預設值：<code translate="No">true</code></li>
-              <li>指示內容是否自動播放。</li>
+              <li>類型：<code translate="No">boolean</code>預設值：<code translate="No">true</code>   </li>
+              <li>指出內容是否自動播放。</li>
               <li>必須是<code translate="No">Flash</code>物件的子屬性。如果使用 Flash 廣告技術，則會直接套用至物件元素。</li>
             </ul>
           </li>
-          <li><strong translate="No">unattendedPlay</strong>：
+          <li><strong translate="No">未參與遊戲</strong>：
             <ul>
-              <li>類型：<code translate="No">boolean</code>預設值：<code translate="No">false</code></li>
-              <li>什麼時候<code translate="No">autoPlay</code>設置為true，<code translate="No">unattendedPlay</code>指示用戶是否知道自動播放。</li>
+              <li>類型：<code translate="No">boolean</code>預設值：<code translate="No">false</code>   </li>
+              <li>當設定<code translate="No">autoPlay</code>為 true 時，<code translate="No">unattendedPlay</code>表示使用者是否知道自動播放。</li>
               <li>必須是<code translate="No">Flash</code>物件的子屬性。如果使用 Flash 廣告技術，則會直接套用至物件元素。</li>
             </ul>
           </li>
-          <li><strong translate="No">visitorCustomId</strong>：
+          <li><strong translate="No">訪客自訂</strong>：
             <ul>
-              <li>類型：<code translate="No">string</code>預設值：<code translate="No">unset</code></li>
-              <li>允許發布商為廣告請求傳遞自定義訪問者ID。設置後，此值將在請求有效負載的visitor塊中傳遞為<strong translate="No">customId="CustomID_001"</strong>。該ID將作為對廣告請求的響應，作為屬性返回到開頭的訪問者標籤中：<strong translate="No">customId="CustomID_001"</strong>。</li>
+              <li>類型：<code translate="No">string</code>預設值：<code translate="No">unset</code>   </li>
+              <li>允許發佈商傳遞廣告請求的自訂訪客 ID。當設置時，這個值將在請求有效載荷的訪問者塊<strong translate="No">中傳遞為自定義 =「自定義米德 _001" </strong>。該 ID 將在回應開啟訪客標籤中的廣告請求作為屬性返回：<strong translate="No">自定義中 =「Customid_001" </strong>。</li>
               <li>必須是<code translate="No">Flash</code>物件的子屬性。如果使用 Flash 廣告技術，則會直接套用至物件元素。</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li><strong translate="No">Html5</strong>：
+      <li><strong translate="No"> HTML5 </strong>：
         <ul>
-          <li>類型：<code translate="No">Object</code></li>
-          <li>技術特定飛輪配置的物件（由飛輪提供）。物件包含下列選項：
-            <aside class="bcls-aside bcls-aside--information">這些選項可以動態設定 (如<a href="#Dynamic_server_URL_assignment">下</a>所示)，也可以做為初始組態的一部分 (如<a href="#exampleconfiguration">下</a>所示)。</aside>
+          <li>類型：<code translate="No">Object</code>   </li>
+          <li>技術特定飛輪配置的物件（由飛輪提供）。物件包含下列選項：<aside class="bcls-aside bcls-aside--information">這些選項可以動態設定 (如<a href="#Dynamic_server_URL_assignment">下所示</a> )，也可以做為初始組態的一部分 (如<a href="#exampleconfiguration">下所示</a> )。</aside> 
           </li>
-          <li><strong translate="No">autoPlayType</strong>：
+          <li><strong translate="No">自動播放類型</strong>：
             <ul>
-              <li>類型：<code translate="No">integer</code>預設值：<code translate="No">1</code></li>
-              <li>指示內容視頻將自動播放，並且用戶知道該內容正在自動播放。</li>
-              <li>傳遞給autoPlayType的值會設置發送到FreeWheel廣告服務器的廣告請求網址中的標誌，並且可以是等於相關FreeWheel SDK常量的三個整數值之一：
+              <li>類型：<code translate="No">integer</code>預設值：<code translate="No">1</code>   </li>
+              <li>表示內容視訊將會自動播放，且使用者知道內容正在自動播放。</li>
+              <li>傳入 AutoPlayType 的值會設定傳送至 Freewheel 廣告伺服器的廣告請求網址中的旗標，且可以是三個整數值之一，這些值與相關的 Freewheel SDK 常數相同：
                 <ul>
-                  <li><strong translate="No">1: tv.freewheel.SDK.VIDEO_ASSET_AUTO_PLAY_TYPE_ATTENDED</strong>：手段<code translate="No">autoPlay</code>是<strong translate="No">true</strong>和<code translate="No">unattendedPlay</code>是<strong translate="No">false</strong>。設置標誌= <strong translate="No">+play-uapl</strong>。</li>
-                  <li><strong translate="No">2: tv.freewheel.SDK.VIDEO_ASSET_AUTO_PLAY_TYPE_UNATTENDED</strong>：表示<code translate="No">autoPlay</code>是<strong translate="No">true</strong>和<code translate="No">unattendedPlay</code>也是<strong translate="No">true</strong>。設置標誌= <strong translate="No">+play+uapl</strong>。</li>
-                  <li><strong translate="No">3: tv.freewheel.SDK.VIDEO_ASSET_AUTO_PLAY_TYPE_NONE</strong>：表示<code translate="No">autoPlay</code>是<strong translate="No">false</strong>和<code translate="No">unattendedPlay</code>是<strong translate="No">unset</strong>。設置標誌= <strong translate="No">-play</strong>。</li>
+                  <li><strong translate="No"> 1: 電視自由輪. 視訊資產 _ 自動播放類型</strong> :方法<code translate="No">autoPlay</code>是<strong translate="No">真的</strong>和<code translate="No">unattendedPlay</code>是<strong translate="No">錯誤的</strong> .這設置標誌 = <strong translate="No">  + 遊戲-無論如何</strong>。</li>
+                  <li><strong translate="No"> 2：自由輪。視頻資產自動播放類型</strong>：表示<code translate="No">autoPlay</code>是<strong translate="No">真實的</strong>，<code translate="No">unattendedPlay</code>也是<strong translate="No">如此</strong>。這設置標誌 = <strong translate="No">  + 播放 +UAPL </strong>。</li>
+                  <li><strong translate="No"> 3：自由輪。視頻資產 _ 自動播放類型無</strong>：表示<code translate="No">autoPlay</code>是<strong translate="No">假的</strong>，<code translate="No">unattendedPlay</code><strong translate="No">未設定</strong>。這設置標誌 = <strong translate="No"> -播放</strong>。</li>
                 </ul>
               </li>
               <li>必須是<code translate="No">Html5</code>物件的子屬性。如果使用 Html5 廣告技術，這將直接套用至物件元素。</li>
             </ul>
           </li>
-          <li><strong translate="No">visitorCustomId</strong>：
+          <li><strong translate="No">訪客自訂</strong>：
             <ul>
-              <li>類型：<code translate="No">string</code>預設值：<code translate="No">(optional)</code></li>
-              <li>的<code translate="No">visitorCustomId</code>選項可讓發布商為廣告請求傳遞自定義訪問者ID。設置後，此值將作為queryString傳遞到廣告請求網址中<strong translate="No">vcid=CustomID_001</strong>。ID將作為對訪問者JSON塊中廣告請求的響應而返回，如下所示：<strong translate="No">"customId" : "CustomID_001"</strong>。</li>
+              <li>類型：<code translate="No">string</code>預設值：<code translate="No">(optional)</code>   </li>
+              <li><code translate="No">visitorCustomId</code>此選項可讓發佈商傳遞廣告請求的自訂訪客 ID。設定後，這個值會在廣告請求 URL 中傳遞為查詢字串<strong translate="No">  VCID = 自訂密碼</strong>。該 ID 將返回訪問者 JSON 塊中的廣告請求作為<strong translate="No">「自定義」：「自訂 _001」</strong>。</li>
               <li>必須是<code translate="No">Html5</code>物件的子屬性。如果使用 Html5 廣告技術，這將直接套用至物件元素。</li>
             </ul>
           </li>
-          <li id="subsessionToken"><strong translate="No">subsessionToken</strong>：
+          <li id="subsessionToken"><strong translate="No">子階段作業權杖</strong>：
             <ul>
-              <li>類型：<code translate="No">int</code>預設值：<code translate="No">(optional)</code></li>
-              <li>的<code translate="No">subsessionToken</code>選項允許發布者使用給定令牌啟動子會話。設定後，這個值會在廣告請求網址中傳遞為查詢字串：
+              <li>類型：<code translate="No">int</code>預設值：<code translate="No">(optional)</code>   </li>
+              <li>該<code translate="No">subsessionToken</code>選項允許發布者使用給定的令牌啟動子會話。設定後，這個值會在廣告請求網址中傳遞為查詢字串：
                 <pre>
-<code class="language-javascript" translate="No"><strong translate="No">ssto=1234567890</strong></code></pre>
+<code class="language-javascript" translate="No"><strong translate="No">ssto=1234567890</strong></code>   </pre>
               </li>
-              <li>必須是<code translate="No">Html5</code>物件的子屬性。如果使用 Html5 廣告技術，這將直接套用至物件元素。
-                <aside class="bcls-aside bcls-aside--information">注意：為了<code translate="No">subsessionToken</code>要正常運行，您還必須在<code translate="No">[flag=+sync]</code>作為參數。</aside>
+              <li>必須是<code translate="No">Html5</code>物件的子屬性。如果使用 Html5 廣告技術，這將直接套用至物件元素。<aside class="bcls-aside bcls-aside--information">注意：<code translate="No">subsessionToken</code>若要正常運作，您也必須在的廣告請求中包含功能<code translate="No">[flag=+sync]</code>做為參數。</aside> 
               </li>
             </ul>
           </li>
-          <li id="compatibleDimensions"><strong translate="No">compatibleDimensions</strong>：
+          <li id="compatibleDimensions"><strong translate="No">相容維度</strong>：
             <ul>
-              <li>類型：<code translate="No">array</code>預設值：<code translate="No">(optional)</code></li>
+              <li>類型：<code translate="No">array</code>預設值：<code translate="No">(optional)</code>   </li>
               <li>
-                <p>的<code translate="No">compatibleDimensions</code>選項使發布者可以傳遞一系列兼容的尺寸。例如：</p>
+                <p><code translate="No">compatibleDimensions</code>此選項允許發佈者傳遞相容尺寸陣列。例如：</p>
                 <pre>
-<code class="language-javascript" translate="No">compatibleDimensions: [ {width: A, height: B}, {width: X, height: Y} ]</code></pre>
+<code class="language-javascript" translate="No">compatibleDimensions: [ {width: A, height: B}, {width: X, height: Y} ]</code>   </pre>
                 <p>設定後，這個值會在廣告請求網址中傳遞為查詢字串：</p>
                 <pre>
-<code class="language-javascript" translate="No"><strong translate="No">cd=widthA,heightA|widthX,heightY</strong></code></pre>
+<code class="language-javascript" translate="No"><strong translate="No">cd=widthA,heightA|widthX,heightY</strong></code>   </pre>
               </li>
               <li>必須是<code translate="No">Html5</code>物件的子屬性。如果使用 Html5 廣告技術，這將直接套用至物件元素。</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li id="loadWithCookie"><strong translate="No">loadWithCookie</strong>：
+      <li id="loadWithCookie"><strong translate="No">使用 Cookie 載入</strong>：
         <ul>
-          <li>類型：<code translate="No">boolean</code>預設值：<code translate="No">false</code></li>
-          <li>為VAST請求啟用或禁用Cookie。</li>
+          <li>類型：<code translate="No">boolean</code>預設值：<code translate="No">false</code>   </li>
+          <li>啟用或停用 VAST 請求的 Cookie。</li>
         </ul>
       </li>
-      <li id="reqestAdsMode"><strong translate="No">requestAdsMode</strong>：
+      <li id="reqestAdsMode"><strong translate="No">請求管理模式</strong>：
         <ul>
-          <li>類型：<code translate="No">string</code>預設值：<code translate="No">onload</code></li>
-          <li>該屬性的可能值為：
+          <li>類型：<code translate="No">string</code>預設值：<code translate="No">onload</code>   </li>
+          <li>屬性的可能值為：
             <ul>
-              <li><code translate="No">onload</code>：播放器完全加載後，請求廣告。</li>
-              <li><code translate="No">onplay</code>：當視頻開始播放時（用戶啟動或自動播放），請求廣告。</li>
-              <li><code translate="No">oncue</code>：在提示點的開始時間請求廣告。使用此屬性時，還請注意：
+              <li><code translate="No">onload</code>：當播放器完全載入時，系統會要求廣告。</li>
+              <li><code translate="No">onplay</code>：影片開始播放時，無論是使用者啟動或自動播放，都會要求廣告。</li>
+              <li><code translate="No">oncue</code>：我們會在提示點的開始時間要求廣告。使用此屬性時，還要注意：
                 <ul>
-                  <li>僅在<code translate="No">useMediaCuePoints</code>屬性也設置為<code translate="No">true</code>。</li>
-                  <li>必須在內容視頻上設置Video Cloud廣告提示點。見<a href="https://studio.support.brightcove.com/media/working-cue-points-media-module.html">在媒體模塊中使用提示點</a>有關如何在內容視頻中創建提示點的說明的文檔。</li>
-                  <li>如果有<code translate="No">temporalSlots</code>下的選項<code translate="No">Flash</code>要么<code translate="No">Html5</code>屬性，則忽略設置。</li>
+                  <li>只有在<code translate="No">useMediaCuePoints</code>屬性也設定為時才能運作<code translate="No">true</code>。</li>
+                  <li>影片雲端廣告提示點必須在內容影片上設定。見<a href="https://studio.support.brightcove.com/media/working-cue-points-media-module.html">在媒體模塊中使用提示點</a>有關如何在內容視頻中創建提示點的說明的文檔。</li>
+                  <li>如果有一個<code translate="No">temporalSlots</code>選項下<code translate="No">Flash</code>或者<code translate="No">Html5</code>屬性，該設置將被忽略。</li>
                 </ul>
               </li>
             </ul>
           </li>
         </ul>
-        <aside class="bcls-aside bcls-aside--warning">注意：將提示點廣告與FreeWheel插件一起使用時，不支持片尾廣告。</aside>
+        <aside class="bcls-aside bcls-aside--warning">注意：在 Freewheel 外掛程式中使用提示點廣告時，不支援推出後廣告。</aside> 
       </li>
-      <li><strong translate="No">useMediaCuePoints</strong>：
+      <li><strong translate="No">使用媒體點</strong>：
         <ul>
-          <li>類型：<code translate="No">boolean</code>預設值：<code translate="No">false</code></li>
-          <li>必須設置為true才能使用視頻雲廣告提示點觸發廣告。必須與<code translate="No">requestAdsMode: 'oncue'</code>屬性和分配的值。</li>
+          <li>類型：<code translate="No">boolean</code>預設值：<code translate="No">false</code>   </li>
+          <li>必須設定為 true，才能使用影片雲端廣告提示點來觸發廣告。必須與<code translate="No">requestAdsMode: 'oncue'</code>屬性和指定的值一起使用。</li>
         </ul>
       </li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="Ad_macros">廣告宏</h2>
-    <p>在配置FreeWheel時，有一些廣告宏可簡化您的工作。在您配置的任何位置，廣告宏都會替換為相應的值。</p>
-    <p>以下是將使用替代值的變量的完整列表：</p>
+    <h2 id="Ad_macros">廣告巨集</h2>
+    <p>有廣告巨集可讓您在設定 Freewheel 時更輕鬆地進行工作。廣告巨集會以組態中任何位置的對應值取代。</p>
+    <p>以下是將使用替代值的變數的完整清單：</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -1470,81 +404,83 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>{玩家 .id}</td>
-          <td>播放程式 ID</td>
+          <td>{player.id} </td>
+          <td>玩家 ID</td>
         </tr>
         <tr>
-          <td>{中間人 .id}</td>
-          <td>視訊 ID</td>
+          <td>{mediainfo.id} </td>
+          <td>視訊識別碼</td>
         </tr>
         <tr>
-          <td>{中間名稱}</td>
+          <td>{mediainfo.name} </td>
           <td>影片標題</td>
         </tr>
         <tr>
-          <td>{中介. 說明}</td>
+          <td>{mediainfo.description} </td>
           <td>簡短說明 (最多 250 個字元)</td>
         </tr>
         <tr>
-          <td>{中介標籤}</td>
+          <td>{mediainfo.tags} </td>
           <td>與視訊相關聯的標籤 (中繼資料)</td>
         </tr>
         <tr>
-          <td>{中間參考 ID}</td>
-          <td>參考 ID</td>
+          <td>{mediainfo.reference_id} </td>
+          <td>參考識別碼</td>
         </tr>
         <tr>
-          <td>{中位數持續時間}</td>
+          <td>{mediainfo.duration} </td>
           <td>視訊雲端報告的影片持續時間</td>
         </tr>
         <tr>
-          <td>{中位鍵}</td>
+          <td>{mediainfo.ad_keys} </td>
           <td>可以在 Studio 的媒體模組中新增和編輯的任意格式文字字串；您應該使用表單中的查詢參數
             <pre class="line-numbers">
-<code class="language-javascript" translate="No">cust_params={mediainfo.ad_keys}</code></pre></td>
+<code class="language-javascript" translate="No">cust_params={mediainfo.ad_keys}</code>   </pre></td>
         </tr>
         <tr>
-          <td>{玩家。持續時間}</td>
+          <td>{player.duration} </td>
           <td>播放器測量的視頻持續時間（可能<code translate="No">mediainfo.duration</code>與稍微不同，可能更準確）</td>
         </tr>
         <tr>
-          <td>{文件. 反向連結}</td>
+          <td>{document.referrer} </td>
           <td>參照頁面網址</td>
         </tr>
         <tr>
-          <td>{視窗 .href}</td>
+          <td>{window.location.href} </td>
           <td>目前的網頁 URL</td>
         </tr>
         <tr>
-          <td>{player.url}</td>
-          <td>播放器網址</td>
+          <td>{player.url} </td>
+          <td>玩家的網址</td>
         </tr>
         <tr>
-          <td>{時間戳記}</td>
+          <td>{timestamp} </td>
           <td>自 1/1/70 以來的目前本地時間 (以毫秒為單位)</td>
         </tr>
         <tr>
-          <td>{隨機}</td>
-          <td>隨機數0-1萬億</td>
+          <td>{random} </td>
+          <td>一個隨機數 0-1 萬億</td>
         </tr>
       </tbody>
     </table>
-    <aside class="bcls-aside bcls-aside--information">
-      <p>注意：如果您希望將視頻ID用作FreeWheel <code translate="No">videoAssetCustomId</code>，您可以使用<code translate="No">{mediainfo.id}</code>廣告宏。例如，在下面的配置中，您可以執行以下操作：</p>
+    <aside class="bcls-aside bcls-aside--information"> 
+      <p>注意：如果您希望使用視訊 ID 做為 Freewheel <code translate="No">videoAssetCustomId</code>，您可以使用<code translate="No">{mediainfo.id}</code>廣告巨集來執行此動作。例如，在下面的配置中，您可以執行以下操作：</p>
       <pre class="line-numbers">
-<code class="language-javascript" translate="No">'videoAssetCustomId' = '{mediainfo.id}';</code></pre>
-      <p>要注意的一個FreeWheel配置問題：如果視頻ID未配置為<code translate="No">Asset ID</code>在服務器上的FreeWheel廣告管理器配置中，FreeWheel將返回錯誤<strong translate="No">INVALID_ASSET_CUSTOM_ID</strong>。</p>
-    </aside>/
+<code class="language-javascript" translate="No">'videoAssetCustomId' = '{mediainfo.id}';</code>   </pre>
+      <p>一個 Freewheel 配置問題需要注意：如果<code translate="No">Asset ID</code>在伺服器的 Freewheel 廣告管理器設定中未設定視訊<strong translate="No">  ID，則會傳回錯誤訊息</strong>。</p>
+    </aside> /
   </section>
   <section class="bcls-section">
     <h2 id="exampleconfiguration">組態範例</h2>
-    <aside class="bcls-aside bcls-aside--information">
-      <p>注意：如果您需要在配置中使用HTTPS URL，請使用以下內容替換本文檔中配置中顯示的內容：</p>
+    <aside class="bcls-aside bcls-aside--information"> 
+      <p>注意：如果您需要在配置中使用 HTTPS URL，請將以下內容替換為此文檔中的配置中顯示的 URL：</p>
       <table class="bcls-table">
         <tbody class="bcls-table__body">
           <tr>
-            <td>SDK URL</td>
-            <td>https://mssl.fwmrm.net/p/release/latest-AS3/adm/prd/AdManager.swf https://mssl.fwmrm.net/p/release/latest-JS/adm/prd/AdManager.js<br/></td>
+            <td>SDK 網址</td>
+            <!-- <td>https://mssl.fwmrm.net/p/release/latest-AS3/adm/prd/AdManager.swf<br />
+              https://mssl.fwmrm.net/p/release/latest-JS/adm/prd/AdManager.js</td> -->
+              <td>https://mssl.fwmrm.net/p/release/latest-JS/adm/prd/AdManager.js</td>
           </tr>
           <tr>
             <td>伺服器 URL</td>
@@ -1552,39 +488,12 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
           </tr>
         </tbody>
       </table>
-    </aside>
-    <p>&nbsp;</p>
+    </aside> 
+    <p>&nbsp; </p>
     <pre class="line-numbers">
 <code class="language-json" translate="No">"plugins": [{
   "name": "FreeWheelPlugin",
   "options": {
-    "Flash": {
-      "networkId": 99999,
-      "profile": "2aaa_profile",
-      "sdkurl": "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
-      "serverUrl": "http://cue.v.fwmrm.net/ad/h/5",
-      "siteSectionCustomId": "<strong translate="No">your value here</strong>",
-      "swfurl": "https://players.brightcove.net/videojs-freewheel/3/videojs.freewheel.swf",
-      "temporalSlots": [{
-        "adUnit": "preroll",
-        "id": "Preroll_1",
-        "timePosition": 0
-      }, {
-        "adUnit": "postroll",
-        "id": "Postroll_1",
-        "timePosition": 60
-      }, {
-        "adUnit": "midroll",
-        "id": "Midroll_1",
-        "timePosition": 5
-      }, {
-        "adUnit": "overlay",
-        "id": "Overlay_1",
-        "timePosition": 10
-      }],
-      "videoAssetCustomId": "<strong translate="No">your value here</strong>",
-      "videoAssetDuration": 500
-    },
     "Html5": {
       "keyValues": [{
         "feature": "simpleAds",
@@ -1613,23 +522,52 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
       "videoAssetCustomId": "<strong translate="No">your value here</strong>",
       "videoAssetDuration": 500
     },
-    "adTechOrder": [
-      "flash",
-      "html5"
-    ],
     "debug": true,
     "prerollTimeout": 1000,
     "timeout": 5000
   }
-}]</code></pre>
+}]</code>   </pre>
+
+<!-- "Flash": {
+  "networkId": 99999,
+  "profile": "2aaa_profile",
+  "sdkurl": "https://mssl.fwmrm.net/libs/adm/<span class="bcls-highlight">{LATEST_VERSION}</span>/...",
+  "serverUrl": "http://cue.v.fwmrm.net/ad/h/5",
+  "siteSectionCustomId": "<strong translate="No">your value here</strong>",
+  "swfurl": "https://players.brightcove.net/videojs-freewheel/3/videojs.freewheel.swf",
+  "temporalSlots": [{
+    "adUnit": "preroll",
+    "id": "Preroll_1",
+    "timePosition": 0
+  }, {
+    "adUnit": "postroll",
+    "id": "Postroll_1",
+    "timePosition": 60
+  }, {
+    "adUnit": "midroll",
+    "id": "Midroll_1",
+    "timePosition": 5
+  }, {
+    "adUnit": "overlay",
+    "id": "Overlay_1",
+    "timePosition": 10
+  }],
+  "videoAssetCustomId": "<strong translate="No">your value here</strong>",
+  "videoAssetDuration": 500
+},
+
+"adTechOrder": [
+      "flash",
+      "html5"
+    ], -->
   </section>
   <section class="bcls-section">
     <h2 id="Events">活動</h2>
-    <p>插件在加載，初始化和播放過程中發出一些自定義事件類型。您可以像其他任何事件一樣監聽廣告框架事件：</p>
+    <p>插件在加載，初始化和播放過程中發出一些自定義事件類型。您可以像處理任何其他事件一樣聆聽廣告架構事件：</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">player.on('ads-ad-started', function(event) {
   console.log('event', event);
-});</code></pre>
+});</code>   </pre>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -1695,35 +633,36 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
           <td>所有線性廣告都已完成播放。</td>
         </tr>
         <tr>
-          <td>廣告請求前</td>
-          <td>該事件在播放器對像上公開，並在提交廣告請求之前觸發。通常，它用於播放列表的上下文中，以通過以下方式更新FreeWheel配置設置：<code translate="No">player.FreeWheelPlugin.settings.Html5</code>要么<code translate="No">player.FreeWheelPlugin.settings.Flash</code></td>
+          <td>廣告請求之前</td>
+          <td>此事件會公開在播放程式物件上，並在提交廣告請求之前觸發。通常它用於播放列表的內容中，通過以下方式更新 Free輪配置設置：<code translate="No">player.FreeWheelPlugin.settings.Html5</code>或<code translate="No">player.FreeWheelPlugin.settings.Flash</code>   </td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Dynamic_server_URL_assignment">動態服務器URL分配</h2>
-    <p>您可以使用<code translate="No">fw-before-ad-request</code>事件以動態分配服務器URL。您將使用<code translate="No">on()</code>方法來偵聽廣告請求，然後分配所需的服務器URL。當然，您需要在代碼中為佔位符提供所需的服務器URL：</p>
+    <h2 id="Dynamic_server_URL_assignment">動態伺服器 URL 指派</h2>
+    <p>您可以使用<code translate="No">fw-before-ad-request</code>事件來動態指派伺服器 URL。您將使用該<code translate="No">on()</code>方法來監聽廣告請求，然後分配所需的服務器 URL。當然，您需要在代碼中為佔位符提供所需的服務器 URL：</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">player.on('fw-before-ad-request', function () {
   player.FreeWheelPlugin.settings.Html5.serverUrl = '[your server url]'
   player.FreeWheelPlugin.settings.Flash.serverUrl = '[your server url]'
-})</code></pre>
-    <p>如果先前已配置服務器URL，則顯示的代碼將覆蓋先前的配置。</p>
+})</code>   </pre>
+    <p>如果您先前已設定伺服器 URL，顯示的程式碼將覆寫先前的組態。</p>
   </section>
   <section class="bcls-section">
-    <h2 id="Demos">演示版</h2>
-    <p>以下演示使用稍有不同的FreeWheel配置和最終的播放器。兩種配置都會在播放前插播，播放中插播（5秒）和播放後插播。配置相同，除了<code translate="No">adtechOrder</code>是不同的。在第一個演示中<code translate="No">html5</code>首先，如下所示：</p>
+    <h2 id="Demos">示範</h2>
+    <!-- <p>The following demos use slightly different FreeWheel configurations and the resulting player. Both configurations will play a pre-roll, a mid-roll at 5 seconds and then a post-roll. The configurations are the same, except that the <code translate="No">adtechOrder</code> is different. In the first demo <code translate="No">html5</code> is first, as shown here:</p> -->
+    <p>這個示範將播放前卷，在 5 秒後播放一個中卷，然後播放一個後卷。設定<code translate="No">adTechOrder</code>為<code translate="No">html5</code>第一個，如下所示：</p>
     <pre class="line-numbers">
 <code class="language-json" translate="No">"adTechOrder": [
   "html5",
   "flash"
-],</code></pre>
-    <p>在第二個順序顛倒。</p>
-    <h3>adtech訂單：html5，Flash</h3>
-    <p>本演示使用<code translate="No">html5</code>首先在<code translate="No">adtechOder</code>。</p>
+],</code>   </pre>
+    <!-- <p>In the second the order is reversed.</p> -->
+    <h3>廣告科技順序:html5, 閃光燈</h3>
+    <p>這個演示使用<code translate="No">html5</code>第一個在<code translate="No">adtechOder</code>   .</p>
     <iframe src="https://players.brightcove.net/1752604059001/24351871-efb6-4c3a-9002-dc8acd9192c6_default/index.html?videoId=4172255216001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
-    <p>以下是與播放器使用的實際配置。請注意，這可以用於工作室中的<strong translate="No">options</strong>值。</p>
+    <p>以下是與播放器使用的實際配置。請注意，這可以用於工作室的<strong translate="No">選項</strong>值。</p>
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
   "Flash": {
@@ -1784,11 +723,11 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
   "debug": true,
   "prerollTimeout": 1000,
   "timeout": 5000
-}</code></pre>
-    <h3>adtech訂單：Flash，html5</h3>
-    <p>本演示使用<code translate="No">flash</code>首先在<code translate="No">adtechOder</code>。</p>
+}</code>   </pre>
+    <!-- <h3>adtech order: flash, html5</h3>
+    <p>This demo uses <code translate="No">flash</code> first in the <code translate="No">adtechOder</code>.</p>
     <iframe src="https://players.brightcove.net/1752604059001/616d343c-33f6-45c3-8484-b889eb8095e1_default/index.html?videoId=4172255216001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
-    <p>以下是與播放器使用的實際配置。請注意，這可以用於工作室中的<strong translate="No">options</strong>值。</p>
+    <p>Following is the actual configuration used with the player. Note that this can be used for the <strong translate="No">options</strong> value in Studio.</p>
     <pre class="line-numbers">
 <code class="language-json" translate="No">{
   "Flash": {
@@ -1848,20 +787,20 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
   "debug": true,
   "prerollTimeout": 1000,
   "timeout": 5000
-}</code></pre>
+}</code></pre> -->
     <h3>播放清單</h3>
-    <p>本演示使用HTML優先配置和播放列表。您會在播放列表中看到每個視頻的前片前，5秒標記處的中片和後片。</p>
+    <p>此示範使用 HTML 第一個配置與播放清單。您會在播放清單中看到每個影片的預捲、5 秒鐘的中捲，以及播放後的影片。</p>
     <iframe src="https://players.brightcove.net/1752604059001/r1bhBb0Pe_default/index.html?playlistId=4845949311001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="428" height="150"></iframe>
   </section>
   <section class="bcls-section">
     <h2 id="Player_Ad_Libraries">播放器廣告庫</h2>
-    <p>該視<a href="https://github.com/videojs/videojs-contrib-ads">頻/視頻的聯繫方式廣</a>告 GitHub 存儲庫包含一個插件，它提供了通過視頻廣告庫與布萊特灣播放器工作所需的共同功能。此外掛程式提供影片廣告整合所需的一般功能，並負責廣告整合商的許多問題，減少您為廣告整合所撰寫的程式碼。</p>
+    <p>該視<a href="https://github.com/videojs/videojs-contrib-ads">頻/視頻的聯繫方式廣告</a>  GitHub 存儲庫包含一個插件，它提供了通過視頻廣告庫與布萊特灣播放器工作所需的共同功能。此外掛程式提供影片廣告整合所需的一般功能，並負責廣告整合商的許多問題，減少您為廣告整合所撰寫的程式碼。</p>
     <h3 id="contrib-ads-properties">性質</h3>
-    <p><strong translate="No">videojs-contrib-ads</strong>提供一些有用的屬性。它們是：</p>
+    <p><strong translate="No">視頻聯繫廣告</strong>提供了一些屬性，可以是有幫助的。它們是：</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>名字</th>
+          <th>名稱</th>
           <th>資料類型</th>
           <th>描述</th>
         </tr>
@@ -1885,12 +824,12 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
         <tr>
           <td>廣告類型</td>
           <td>字串</td>
-          <td>可以是<strong translate="No">PREROLL</strong>，<strong translate="No">MIDROLL</strong>或<strong translate="No">POSTROLL</strong></td>
+          <td>可以是<strong translate="No">預捲</strong>、中<strong translate="No">音</strong>或<strong translate="No">後捲</strong> </td>
         </tr>
         <tr>
-          <td>ads.ad.currentTime（）</td>
+          <td>廣告目前時間 ()</td>
           <td>函數</td>
-          <td>該函數可返回廣告的當前播放時間</td>
+          <td>返回廣告播放的當前時間的函數</td>
         </tr>
       </tbody>
     </table>
@@ -1908,11 +847,11 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
   setTimeout(function(){
     <span class="bcls-highlight">console.log('****myPlayer.ads.ad.currentTime()',myPlayer.ads.ad.currentTime());</span>
   },1000);
-});</code></pre>
+});</code>   </pre>
     <p>從上面的代碼控制台中的輸出如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="接觸式廣告屬性的控制台" src="//learning-services-media.brightcove.com/doc-assets/player-development/advertising/freewheel-plugin/contrib-ads-properties.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="console of contrib-ads properties" src="/assets/images/plugins/freewheel/contrib-ads-properties.png" /></figure>
     <h3 id="contrib-ads-methods">方法</h3>
-    <p><strong translate="No">videojs-contrib-ads</strong>提供了一些可能有用的方法。它們是：</p>
+    <p><strong translate="No">視頻系統廣告</strong>提供了一些可以幫助的方法。它們是：</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -1922,205 +861,46 @@ https://players.brightcove.net/videojs-freewheel/3/videojs-freewheel.min.css</co
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>inAdBreak（）</td>
-          <td>在startLinearAdMode和endLinearAdMode之間的某個時間（集成可能會播放廣告）之間，此方法返回true。這是廣告模式的一部分。</td>
+          <td>中斷 ()</td>
+          <td>這個方法返回 true，其中一個集成可能會播放廣告之間的開始線性模式和結束線性模式之間的時間。這是廣告模式的一部分。</td>
         </tr>
         <tr>
-          <td>isAdPlaying（）</td>
-          <td><strong translate="No">Deprecated</strong></td>
+          <td>播放 ()</td>
+          <td><strong translate="No">已停用</strong> </td>
         </tr>
         <tr>
           <td>內容建立 ()</td>
-          <td>如果內容在廣告之後恢復，則返回true。這是廣告模式的一部分。</td>
+          <td>如果內容在廣告後繼續，則傳回 true。這是廣告模式的一部分。</td>
         </tr>
         <tr>
           <td>以下模式 ()</td>
-          <td>如果播放器處於廣告模式，則返回true。</td>
+          <td>如果播放器處於廣告模式，則傳回 true。</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
     <h2 id="Known_issues">已知問題</h2>
-    <!-- <h3>FreeWheel plugin keeps sending timeupdate events even if connection is lost and playback stops in IE11</h3>
-
-          <p>In Internet Explorer 11, timeupdate media events will continue to fire on a &lt;video&gt; element if playback stalls due to loss of network connection or lack of buffering. This is a browser issue beyond the control of the Brightcove Player.</p> -->
     
-    <h3>使用FreeWheel動態重用同一播放器</h3>
-    <p>如果要動態加載視頻並重新使用同一播放器，則FreeWheel配置設置將包含與實例化FreeWheel插件時設置的值相同的值，但有兩個例外。第一個例外是如果您使用的是廣告宏。第二個例外是您可以使用來更新設置<code translate="No">player.FreeWheelPlugin.settings.Html5</code>要么<code translate="No">player.FreeWheelPlugin.settings.Flash</code>在<code translate="No">fw-before-ad-request</code>事件。</p>
+    <h3>使用飛輪動態重複使用同一個玩家</h3>
+    <p>如果您要動態載入影片並重新使用相同的播放器，FreeWewheel 組態設定將會包含與 FreeEwheel 外掛程式實例化時所設定的值相同，但有兩個例外狀況。第一個例外是如果您使用的是廣告巨集。第二個例外是您可以使用更新設置<code translate="No">player.FreeWheelPlugin.settings.Html5</code>或者<code translate="No">player.FreeWheelPlugin.settings.Flash</code>在一個<code translate="No">fw-before-ad-request</code>事件。</p>
     <h3>在廣告播放期間調整播放器大小</h3>
-    <p>如果在廣告或視頻播放期間調整播放器的大小，除非調用播放器的尺寸功能調整播放器的大小，否則廣告內容將不會調整大小。使用其他方法（例如樣式的寬度和高度）調整播放器的大小不會調整廣告的大小。</p>
-    <p>使用時<code translate="No">player.dimensions(width,height)</code>要調整播放器的大小，您必須觸發<code translate="No">fw-resizeplayer</code>事件，以使插件知道尺寸已更改。這是因為某些VPAID廣告保留了廣告的默認尺寸，並且在播放器調整尺寸時不會自動調整尺寸。</p>
+    <p>如果播放廣告或影片播放期間調整播放器的大小，除非呼叫播放器的尺寸功能來調整播放器大小，否則廣告內容將不會調整大小。使用其他方法 (例如：樣式寬度和高度) 調整播放器大小，不會調整廣告大小。</p>
+    <p>使<code translate="No">player.dimensions(width,height)</code>用調整播放器的大小時，您必須觸發<code translate="No">fw-resizeplayer</code>事件，以便插件知道尺寸已更改。這是因為某些 VPAID 廣告會保留廣告的預設尺寸，而且不會在播放器調整大小時自動調整大小。</p>
     <p>這是一個例子：</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">player.dimensions(960,540);
-player.trigger('fw-resizeplayer');</code></pre>
+player.trigger('fw-resizeplayer');</code>   </pre>
     <h3>重疊廣告</h3>
-    <p>如果FreeWheel插件正在Flash中呈現廣告，則重疊廣告不可點擊。如果FreeWheel插件使用HTML5呈現廣告，則覆蓋圖不會顯示在正確的坐標處。跟隨點擊網址後，點擊HTML5重疊式廣告不會暫停內容播放器。</p>
-    <h3>FreeWheel Live</h3>
-    <p>直播中的FreeWheel廣告可以在以下方面的幫助下實施：<a href="https://www.brightcove.com/en/services"> Brightcove全球服務（BGS）</a>。</p>
+    <p>如果 Freewheel 外掛程式在 Flash 中顯示廣告，則無法點選重疊廣告。如果 Freewheel 外掛程式在 HTML5 中顯示廣告，則覆蓋不會以正確的座標顯示。按一下 HTML5 重疊廣告後，不會暫停內容播放程式。</p>
+    <h3>即時飛輪</h3>
+    <p>直播中的 Freewheel 廣告可以在<a href="https://www.brightcove.com/en/services">布萊特灣全球服務（BGS）的協助下實施</a>。</p>
     <h3>已付</h3>
-    <p>如果啟用了廣告控制欄，則無法通過VPAID控件恢復廣告。</p>
+    <p>如果廣告控制列已啟用，則無法透過 VPAD 控制項繼續廣告。</p>
   </section>
   <section class="bcls-section">
     <h2 id="changelog">變更記錄檔</h2>
-    <p><a href="/plugins/changelog/advertising-freewheel-plugin-changelog.html">在這裡看到更改日誌</a>。</p>
+    <p>請參閱 F <a href="http://players.brightcove.net/release-notes/brightcove-player-freewheel/index.html">  reewheel 外掛程式版本說明</a>。</p>
+    <p>對於較舊版本，請參閱此處的<a href="/plugins/changelog/advertising-freewheel-plugin-changelog.html">變更記錄檔</a>。</p>
   </section>
 </article>
-
-<!-- complete bootstrap layout -->
-    </div>
-    <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav" id="right_side_nav">
-        <h6 class="toc">頁面內容</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
-      
-    </div>
-  </div>
-</div>
-
-<hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
-    <div class="region region-footer-top-center col-md-12">
-      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
-
-        <h2>布萊特灣支援</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://status.brightcove.com">系統狀態</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
-          </li>
-          <li>
-            <a href="https://support.brightcove.com/">文獻資料</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
-
-        <h2>訓練</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
-          </li>
-          <li>
-            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
-          </li>
-          <li>
-            <a href="https://university.brightcove.com/">布萊特灣大學</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
-
-        <h2>Brightcove</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://www.brightcove.com">亮麗</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="region region-footer-bottom-center col-md-12">
-      <div class="bcls-copyright footer-menu">
-        <table>
-          <tr>
-            <td>
-              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
-            </td>
-            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
-            <td>
-              <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</div>
-</div>
-<script>
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documenation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/js/sajari-search-foot.js"></script>
-  
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <style>
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
-
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
-
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
-
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
-    </style>
-
-</body>
-
-</html>

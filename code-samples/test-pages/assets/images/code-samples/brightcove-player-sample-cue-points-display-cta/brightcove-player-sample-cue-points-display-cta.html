@@ -1,0 +1,16 @@
+<video-js id="myPlayerID" 
+  data-video-id="4784521906001" 
+  data-account="1752604059001" 
+  data-player="ryeOJ8f5dZ" 
+  data-embed="default"
+  data-application-id 
+  class="video-js" 
+  controls></video-js>
+<script src="https://players.brightcove.net/1752604059001/ryeOJ8f5dZ_default/index.min.js"></script>
+
+<script>
+  var myPlayer, timeoutID, removeCTATime; videojs.getPlayer('myPlayerID').ready(function() { var cuePointAra = [], allCuePointData; myPlayer = this; // Hide overlay initially myPlayer.addClass("hide-overlay"); // +++ Listen for cue change then pass data to be displayed +++ myPlayer.on("loadstart", function(evt) { cuePointAra = myPlayer.mediainfo.cue_points; console.log(cuePointAra); var tt = myPlayer.textTracks()[0]; // When a cue point starts, extract cue data and pass data to be displayed tt.oncuechange = function() { if (tt.activeCues[0] !== undefined) { allCuePointData = getSubArray( cuePointAra, "time", tt.activeCues[0].startTime ); displayCTA(allCuePointData[0]); } }; myPlayer.play(); }); // +++ 從提示點元數據中提取數據片段並顯示疊加 +++ function displayCTA(cpData) { // 根據分號的位置將元數據拆分為三個片段的數組 var dataAra = cpData.metadata.split(" ;"), durationCTA = dataAra[0], textCTA = dataAra[1], urlCTA = dataAra[2], // 動態構建錨點標籤 hrefCTA = ' <a href="' +
+        urlCTA +
+        '"><span style="background-color: black; color: red;"></span> + textCTA + "</a> ", timeoutValue; // 設置時長，設置超時，注入動態html並顯示疊加 timeoutValue = Number(durationCTA) * 1000; timeoutID = window.setTimeout(checkTime, timeoutValue); document.getElementsByClassName("vjs-overlay")[0 ].innerHTML = hrefCTA; myPlayer.removeClass("hide-overlay"); } // +++ 清除超時並移除覆蓋 +++ // 超時時調用此函數 function checkTime() { window.clearTimeout(timeoutID); myPlayer.addClass("hide-overlay"); } // +++ 提取提示點信息的輔助函數 +++ 函數 getSubArray(targetArray, objProperty, value) { var i, totalItems = targetArray.length, objFound = false, idxArr = []; for (i = 0; i &lt; totalItems; i++) { if (targetArray[i][objProperty] === value) { objFound = true; idxArr.push(targetArray[i]); }返回 idxArr; } });
+
+</script>

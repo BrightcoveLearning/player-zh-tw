@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>布萊特灣球員樣本：限量劇</title>
+</head>
+
+<body>
+    <!-- Player embed code with an id attribute -->
+    <video-js id="myPlayerID" data-video-id="5718453946001" data-account="1752604059001" data-player="default" data-embed="default" data-application-id class="video-js" controls width="640" height="360"></video-js>
+    <script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+
+    <!-- Display the number of video views the user has watched -->
+    <p>觀看次數 = <span id="cookieDisplay1"></span></p>
+
+    <!-- custom script -->
+    <script type="text/javascript">
+        videojs.getPlayer('myPlayerID').ready(function() { // Function to read the browser cookie var read_cookie = function(key) { var result; return (result = new RegExp('(^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? result[2] : null; } // 初始化變量並讀取與 Brightcove 視頻視圖關聯的瀏覽器 cookie var myPlayer = this, videoStart = 0, currentPosition, cookie = read_cookie("BC_views"); // 定義當用戶達到最大觀看次數時的錯誤消息 myPlayer.errors( { "errors": { "-3": { "headline": "You've reached your maximum views.", "type": "USER_MAX_VIEWS", "message": "Please come back tomorrow." } } }); // 顯示 cookie 值 document.getElementById("cookieDisplay1").innerHTML = cookie; // 如果cookie值大於等於2，則顯示自定義錯誤信息 if (cookie != null &amp;&amp; cookie&gt; = 2) { // Wait for the player to be loaded before displaying the message myPlayer.on("loadedmetadata", function() { myPlayer.error({ code: '-3', dismiss: false } ); }) } // 每次用戶播放視頻時，增加瀏覽器cookie myPlayer.one("play", function() { var d = new Date(); d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000)); cookie++; document.cookie = "BC_views=" + cookie + ";expires=" + d.toUTCString(); } ); });
+    </script>
+
+</body>
+
+</html>

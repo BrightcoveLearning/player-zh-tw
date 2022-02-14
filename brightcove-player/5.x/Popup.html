@@ -1,0 +1,8762 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>布萊特灣玩家版本 5.22.2 級：快顯 </title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.yeti.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">布萊特灣玩家 v5.22.2 </a> 
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">模組<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="module-browser.html">瀏覽器</a> </li><li><a href="module-buffer.html">緩衝</a> </li><li><a href="module-computed-style.html">計算型式</a> </li><li><a href="module-dom.html"> dom </a> </li><li><a href="module-events.html">事件</a> </li><li><a href="module-extend.html">延伸</a> </li><li><a href="module-flash-rtmp.html">快閃記憶體</a> </li><li><a href="module-fn.html"> FN </a> </li><li><a href="module-Format-time.html">格式時間</a> </li><li><a href="module-guid.html"> GUID </a> </li><li><a href="module-log.html">記錄</a> </li><li><a href="module-merge-options.html">合併選項</a> </li><li><a href="module-obj.html"> OBJ </a> </li><li><a href="module-plugins.html">外掛程式</a> </li><li><a href="module-setup.html">設定</a> </li><li><a href="module-stylesheet.html">樣式表</a> </li><li><a href="module-text-track-list-converter.html">文本軌道列表-轉換器</a> </li><li><a href="module-time-ranges.html">時間範圍</a> </li><li><a href="module-to-title-case.html">對標頭大小寫</a> </li><li><a href="module-url.html">網址</a> </li><li><a href="module-videojs.html">視訊</a> </li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">類別<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="AudioTrack.html">音訊追蹤</a> </li><li><a href="AudioTrackButton.html">音訊追蹤按鈕</a> </li><li><a href="AudioTrackList.html">音訊追蹤清單</a>  </li><li><a href="AudioTrackMenuItem.html">音訊追蹤功能表項目</a> </li><li><a href="BigPlayButton.html">大按鈕</a> </li><li><a href="Button.html">按鈕</a> </li><li><a href="CaptionsButton.html">標題按鈕</a> </li><li><a href="CaptionSettingsMenuItem.html">標題設定功能表項目</a> </li><li><a href="ChaptersButton.html">章節按鈕</a> </li><li><a href="ChaptersTrackMenuItem.html">章節功能表項目</a> </li><li><a href="ClickableComponent.html">可按一下的元件</a>  </li><li><a href="CloseButton.html">關閉按鈕</a> </li><li><a href="Component.html">元件</a>  </li><li><a href="ControlBar.html">控制列</a> </li><li><a href="CurrentTimeDisplay.html">目前時間顯示</a> </li><li><a href="CustomControlSpacer.html">自訂控制項間隔</a> </li><li><a href="DescriptionsButton.html">說明按鈕</a> </li><li><a href="DurationDisplay.html">持續時間顯示</a> </li><li><a href="ErrorDisplay.html">錯誤顯示</a> </li><li><a href="EventTarget.html">事件參數取得</a> </li><li><a href="Flash.html">快閃</a> </li><li><a href="FullscreenToggle.html">全螢幕切換</a> </li><li><a href="Html5.html">  HTML5 </a>  </li><li><a href="HTMLTrackElement.html">  HTML追蹤</a>  </li><li><a href="HtmlTrackElementList.html">  HTML追蹤記錄清單</a>  </li><li><a href="LiveDisplay.html">即時顯示</a> </li><li><a href="LoadingSpinner.html">載入微調器</a> </li><li><a href="LoadProgressBar.html">載入進度列</a> </li><li><a href="MediaError.html">媒體錯誤</a>  </li><li><a href="MediaLoader.html">媒體編碼器</a> </li><li><a href="Menu.html">功能表</a>  </li><li><a href="MenuButton.html">功能表按鈕</a>  </li><li><a href="MenuItem.html">功能表項目</a> </li><li><a href="ModalDialog.html">模式對話方塊</a>  </li><li><a href="module-videojs-videojs.AudioTrack.videojs.AudioTrack.html">視訊 JS (~V). 音訊追蹤. 視訊追蹤. 音訊追蹤</a> </li><li><a href="module-videojs-videojs.EventTarget.videojs.EventTarget.html">影片 JR 影片 (~J)。活動資訊顯示器。</a> </li><li><a href="module-videojs-videojs.TextTrack.videojs.TextTrack.html">視訊 JS. 視訊追蹤. 視訊追蹤 (~F)。視訊追蹤</a> </li><li><a href="module-videojs-videojs.VideoTrack.videojs.VideoTrack.html">視訊 JS (~V). 視訊追蹤. 視訊追蹤. 視訊追蹤</a> </li><li><a href="MouseTimeDisplay.html">滑鼠時間顯示</a> </li><li><a href="MuteToggle.html">靜音切換</a> </li><li><a href="OffTextTrackMenuItem.html">外部文字追蹤功能表項目</a> </li><li><a href="PlaybackRateMenuButton.html">播放速率功能表按鈕</a> </li><li><a href="PlaybackRateMenuItem.html">播放速率功能表項目</a> </li><li><a href="Player.html">玩家</a>  </li><li><a href="PlayProgressBar.html">播放進度列</a> </li><li><a href="PlayToggle.html">播放切換</a> </li><li><a href="Popup.html">快顯</a> </li><li><a href="PopupButton.html">快顯按鈕</a> </li><li><a href="PosterImage.html">色調</a> </li><li><a href="ProgressControl.html">進度控制</a> </li><li><a href="RemainingTimeDisplay.html">剩餘時間顯示</a> </li><li><a href="SeekBar.html">搜尋列</a> </li><li><a href="Slider.html">滑桿</a> </li><li><a href="Spacer.html">墊片</a> </li><li><a href="SubtitlesButton.html">字幕按鈕</a> </li><li><a href="Tech.html">技術</a> </li><li><a href="TextTrack.html">文字追蹤</a> </li><li><a href="TextTrackButton.html">文字追蹤按鈕</a> </li><li><a href="TextTrackCueList.html">文本軌跡清單</a> </li><li><a href="TextTrackDisplay.html">文字追蹤顯示</a> </li><li><a href="TextTrackList.html">文字追蹤清單</a> </li><li><a href="TextTrackMenuItem.html">文字軌跡功能表項目</a> </li><li><a href="TextTrackSettings.html">文字追蹤設定</a> </li><li><a href="TimeDivider.html">計時器</a> </li><li><a href="TooltipProgressBar.html">工具提示進度列</a> </li><li><a href="Track.html">追蹤</a> </li><li><a href="TrackButton.html">追蹤按鈕</a> </li><li><a href="TrackList.html">追蹤清單</a> </li><li><a href="VideoTrack.html">視訊追蹤</a> </li><li><a href="VideoTrackList.html">視訊追蹤清單</a> </li><li><a href="VolumeBar.html">體積列</a> </li><li><a href="VolumeControl.html">磁碟區控制</a> </li><li><a href="VolumeLevel.html">磁碟區層級</a> </li><li><a href="VolumeMenuButton.html">音量選單按鈕</a> </li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">混入<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="module-flash-rtmp-FlashRtmpDecorator.html">快閃記憶體裝飾器 (~R) </a> </li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">活動<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="AudioTrack.html#event:enabledchange">音訊軌道 #事件:啟用的變更</a> </li><li><a href="AudioTrackList.html#event:addtrack">音訊追蹤清單 #事件:新增音軌</a> </li><li><a href="AudioTrackList.html#event:change">音訊追蹤清單 #事件:變更</a> </li><li><a href="AudioTrackList.html#event:removetrack">音訊追蹤清單 #事件:移除音軌</a> </li><li><a href="BigPlayButton.html#event:dispose">大按鈕 #事件:處置</a> </li><li><a href="BigPlayButton.html#event:ready">大按鍵 #事件:就緒</a> </li><li><a href="BigPlayButton.html#event:resize">大按鈕 #事件:調整大小</a> </li><li><a href="BigPlayButton.html#event:tap">大按鍵 #事件：點選</a> </li><li><a href="Button.html#event:dispose">按鈕 #事件: 處置</a> </li><li><a href="Button.html#event:ready">按鈕 #事件:就緒</a> </li><li><a href="Button.html#event:resize">按鈕 #事件:調整大小</a> </li><li><a href="Button.html#event:tap">按鈕 #事件：點選</a> </li><li><a href="ClickableComponent.html#event:dispose">可按一下元件 #事件:處置</a> </li><li><a href="ClickableComponent.html#event:ready">可按一下元件 #事件:就緒</a> </li><li><a href="ClickableComponent.html#event:resize">可按一下元件 #事件:調整大小</a> </li><li><a href="ClickableComponent.html#event:tap">可按一下元件 #事件：點選</a> </li><li><a href="CloseButton.html#event:close">關閉按鈕 #事件:關閉</a> </li><li><a href="CloseButton.html#event:dispose">關閉按鈕 #事件:處置</a> </li><li><a href="CloseButton.html#event:ready">關閉按鈕 #事件:就緒</a> </li><li><a href="CloseButton.html#event:resize">關閉按鈕 #事件:調整大小</a> </li><li><a href="CloseButton.html#event:tap">關閉按鈕 #事件：點選</a> </li><li><a href="Component.html#event:dispose">元件 #事件:處置</a> </li><li><a href="Component.html#event:ready">元件 #事件:就緒</a> </li><li><a href="Component.html#event:resize">元件 #事件:調整大小</a> </li><li><a href="Component.html#event:tap">元件 #事件：點選</a> </li><li><a href="ControlBar.html#event:dispose">控制列 #事件: 處置</a> </li><li><a href="ControlBar.html#event:ready">控制列 #事件:就緒</a> </li><li><a href="ControlBar.html#event:resize">控制列 #事件:調整大小</a> </li><li><a href="ControlBar.html#event:tap">控制列 #事件：點選</a> </li><li><a href="CurrentTimeDisplay.html#event:dispose">目前時間顯示 #事件:處置</a> </li><li><a href="CurrentTimeDisplay.html#event:ready">目前時間顯示 #事件:就緒</a> </li><li><a href="CurrentTimeDisplay.html#event:resize">目前時間顯示 #事件:調整大小</a> </li><li><a href="CurrentTimeDisplay.html#event:tap">目前時間顯示 #事件：輕觸</a> </li><li><a href="CustomControlSpacer.html#event:dispose">自訂控制分隔符號 #事件:處置</a> </li><li><a href="CustomControlSpacer.html#event:ready">自訂控制分隔符號 #事件：就緒</a> </li><li><a href="CustomControlSpacer.html#event:resize">自訂控制分隔符 #事件:調整大小</a> </li><li><a href="CustomControlSpacer.html#event:tap">自訂控制分隔符號 #事件：點選</a> </li><li><a href="DurationDisplay.html#event:dispose">持續時間顯示 #事件:處置</a> </li><li><a href="DurationDisplay.html#event:ready">持續時間顯示 #事件:就緒</a> </li><li><a href="DurationDisplay.html#event:resize">持續時間顯示 #事件:調整大小</a> </li><li><a href="DurationDisplay.html#event:tap">持續時間顯示 #事件：輕按</a> </li><li><a href="ErrorDisplay.html#event:beforemodalclose">錯誤顯示 #事件：關閉</a> </li><li><a href="ErrorDisplay.html#event:beforemodalempty">錯誤顯示 #事件：刪除空白</a> </li><li><a href="ErrorDisplay.html#event:beforemodalfill">錯誤顯示 #事件：刪除填充</a> </li><li><a href="ErrorDisplay.html#event:beforemodalopen">錯誤顯示 #事件：移除開啟</a> </li><li><a href="ErrorDisplay.html#event:modalclose">錯誤顯示 #事件:模式關閉</a> </li><li><a href="ErrorDisplay.html#event:modalempty">錯誤顯示 #事件: 模式空白</a> </li><li><a href="ErrorDisplay.html#event:modalfill">錯誤顯示 #事件: 模式填滿</a> </li><li><a href="ErrorDisplay.html#event:modalopen">錯誤顯示 #事件: 模式開啟</a> </li><li><a href="Flash.html#event:audiotrackchange">閃光燈 #事件: 音訊追蹤變更</a> </li><li><a href="Flash.html#event:progress">快閃記憶體 #事件:進度</a> </li><li><a href="Flash.html#event:texttrackchange">閃光 #事件: 文字追蹤變更</a> </li><li><a href="Flash.html#event:timeupdate">快閃記憶體 #事件:時間更新</a> </li><li><a href="Flash.html#event:videotrackchange">快閃記憶體 #事件:視訊追蹤變更</a> </li><li><a href="Flash.html#event:vttjsloaded">快閃記憶體 #事件:已載入</a> </li><li><a href="FullscreenToggle.html#event:dispose">全螢幕切換 #事件:處置</a> </li><li><a href="FullscreenToggle.html#event:ready">全螢幕切換 #事件:就緒</a> </li><li><a href="FullscreenToggle.html#event:resize">全螢幕切換 #事件:調整大小</a> </li><li><a href="FullscreenToggle.html#event:tap">全螢幕切換 #事件：點選</a> </li><li><a href="Html5.html#event:audiotrackchange"> Html5#事件: 音訊追蹤器變更</a> </li><li><a href="Html5.html#event:progress"> Html5#事件:進度</a> </li><li><a href="Html5.html#event:texttrackchange"> Html5＃ 事件：文本跟踪更改</a> </li><li><a href="Html5.html#event:timeupdate"> Html5#事件:時間更新</a> </li><li><a href="Html5.html#event:videotrackchange"> Html5#事件：視訊追蹤變更</a> </li><li><a href="Html5.html#event:vttjsloaded"> Html5#事件: 已載入</a> </li><li><a href="LiveDisplay.html#event:dispose">即時顯示 #事件:處置</a> </li><li><a href="LiveDisplay.html#event:ready">即時顯示 #事件:就緒</a> </li><li><a href="LiveDisplay.html#event:resize">即時顯示 #事件:調整大小</a> </li><li><a href="LiveDisplay.html#event:tap">即時顯示 #事件：輕按</a> </li><li><a href="LoadingSpinner.html#event:dispose">載入微調 #事件: 處置</a> </li><li><a href="LoadingSpinner.html#event:ready">載入微調 #事件:就緒</a> </li><li><a href="LoadingSpinner.html#event:resize">載入微調 #事件:調整大小</a> </li><li><a href="LoadingSpinner.html#event:tap">載入微調 #事件：點選</a> </li><li><a href="LoadProgressBar.html#event:dispose">載入進度列 #事件:處置</a> </li><li><a href="LoadProgressBar.html#event:ready">載入進度列 #事件:就緒</a> </li><li><a href="LoadProgressBar.html#event:resize">載入進度列 #事件:調整大小</a> </li><li><a href="LoadProgressBar.html#event:tap">載入進度列 #事件：點選</a> </li><li><a href="MediaLoader.html#event:dispose">媒體編碼器 #事件:處置</a> </li><li><a href="MediaLoader.html#event:ready">媒體編碼器 #事件:就緒</a> </li><li><a href="MediaLoader.html#event:resize">媒體編輯器 #事件:調整大小</a> </li><li><a href="MediaLoader.html#event:tap">媒體編輯器 #事件：點選</a> </li><li><a href="Menu.html#event:dispose">功能表 #事件:處置</a> </li><li><a href="Menu.html#event:ready">功能表 #事件:就緒</a> </li><li><a href="Menu.html#event:resize">功能表 #事件:調整大小</a> </li><li><a href="Menu.html#event:tap">選單 #事件：點選</a> </li><li><a href="MenuButton.html#event:dispose">功能表按鈕 #事件:處置</a> </li><li><a href="MenuButton.html#event:ready">功能表按鈕 #事件:就緒</a> </li><li><a href="MenuButton.html#event:resize">功能表按鈕 #事件:調整大小</a> </li><li><a href="MenuButton.html#event:tap">功能表按鈕 #事件：點選</a> </li><li><a href="MenuItem.html#event:dispose">功能表項目 #事件:處置</a> </li><li><a href="MenuItem.html#event:ready">功能表項目 #事件:就緒</a> </li><li><a href="MenuItem.html#event:resize">功能表項目 #事件:調整大小</a> </li><li><a href="MenuItem.html#event:tap">功能表項目 #事件：點選</a> </li><li><a href="ModalDialog.html#event:beforemodalclose">模式對話框 #事件：關閉</a> </li><li><a href="ModalDialog.html#event:beforemodalempty">模式對話方塊 #事件：刪除空</a> </li><li><a href="ModalDialog.html#event:beforemodalfill">模式對話方塊 #事件：刪除填充</a> </li><li><a href="ModalDialog.html#event:beforemodalopen">模式對話方塊 #事件：刪除開啟</a> </li><li><a href="ModalDialog.html#event:dispose">模式對話方塊 #事件: 處置</a> </li><li><a href="ModalDialog.html#event:modalclose">模式對話方塊 #事件: 模式關閉</a> </li><li><a href="ModalDialog.html#event:modalempty">模式對話框 #事件：模式空</a> </li><li><a href="ModalDialog.html#event:modalfill">模式對話方塊 #事件: 模式填充</a> </li><li><a href="ModalDialog.html#event:modalopen">模式對話方塊 #事件: 模式開啟</a> </li><li><a href="ModalDialog.html#event:ready">模式對話方塊 #事件：就緒</a> </li><li><a href="ModalDialog.html#event:resize">模式對話方塊 #事件：調整大小</a> </li><li><a href="ModalDialog.html#event:tap">模式對話方塊 #事件：點選</a> </li><li><a href="MouseTimeDisplay.html#event:dispose">滑鼠時間顯示 #事件:處置</a> </li><li><a href="MouseTimeDisplay.html#event:ready">滑鼠時間顯示 #事件：就緒</a> </li><li><a href="MouseTimeDisplay.html#event:resize">滑鼠時間顯示 #事件:調整大小</a> </li><li><a href="MouseTimeDisplay.html#event:tap">滑鼠時間顯示 #事件：點選</a> </li><li><a href="MuteToggle.html#event:dispose">靜音切換 #事件:處置</a> </li><li><a href="MuteToggle.html#event:ready">靜音切換 #事件:就緒</a> </li><li><a href="MuteToggle.html#event:resize">靜音切換 #事件:調整大小</a> </li><li><a href="MuteToggle.html#event:tap">靜音切換 #事件：點選</a> </li><li><a href="Player.html#event:abort">玩家 #活動：中止</a> </li><li><a href="Player.html#event:canplay">玩家 #活動：可以進行活動</a> </li><li><a href="Player.html#event:canplaythrough">玩家 #事件：可以播放</a> </li><li><a href="Player.html#event:controlsdisabled">玩家 #事件:控制項已停用</a> </li><li><a href="Player.html#event:controlsenabled">玩家 #事件:控制</a> </li><li><a href="Player.html#event:dispose">玩家 #事件：處置</a> </li><li><a href="Player.html#event:durationchange">玩家 #活動時間變更</a> </li><li><a href="Player.html#event:emptied">玩家 #活動：已清空</a> </li><li><a href="Player.html#event:ended">玩家 #事件：結束</a> </li><li><a href="Player.html#event:enterFullWindow">玩家 #活動：進入視窗</a> </li><li><a href="Player.html#event:error">玩家 #事件：錯誤</a> </li><li><a href="Player.html#event:exitFullWindow">玩家 #事件：結束視窗</a> </li><li><a href="Player.html#event:firstplay">玩家 #活動：第一次玩法</a> </li><li><a href="Player.html#event:fullscreenchange">玩家 #事件：全螢幕變更</a> </li><li><a href="player_.html#event:loadeddata">播放器 #事件:已載入的資料</a> </li><li><a href="Player.html#event:loadeddata">玩家 #事件：已載入的資料</a> </li><li><a href="Player.html#event:loadedmetadata">播放器 #事件:已載入的中繼資料</a> </li><li><a href="Player.html#event:loadstart">玩家 #事件：載入啟動</a> </li><li><a href="Player.html#event:pause">玩家 #活動：暫停</a> </li><li><a href="Player.html#event:play">玩家 #活動: 播放</a> </li><li><a href="Player.html#event:playing">玩家 #活動：播放</a> </li><li><a href="Player.html#event:posterchange">玩家 #活動：變更海報</a> </li><li><a href="Player.html#event:progress">玩家 #活動：進度</a> </li><li><a href="player_.html#event:ratechange">玩家 #事件:價格變更</a> </li><li><a href="Player.html#event:ready">玩家 #事件：就緒</a> </li><li><a href="Player.html#event:resize">玩家 #事件:調整大小</a> </li><li><a href="Player.html#event:seeked">玩家 #事件：被搜尋</a> </li><li><a href="Player.html#event:seeking">玩家 #活動：寻求</a> </li><li><a href="Player.html#event:stalled">玩家 #事件：停滯</a> </li><li><a href="Player.html#event:suspend">玩家 #活動：暫停</a> </li><li><a href="Player.html#event:tap">玩家 #事件：點選</a> </li><li><a href="Player.html#event:textdata">玩家 #事件:文字資料</a> </li><li><a href="player_.html#event:texttrackchange">播放器 #事件: 文字追蹤變更</a> </li><li><a href="player_.html#event:timeupdate">玩家 #活動：時間更新</a> </li><li><a href="Player.html#event:timeupdate">玩家 #活動：時間更新</a> </li><li><a href="Player.html#event:useractive">玩家 #活動：使用者活動</a> </li><li><a href="Player.html#event:userinactive">玩家 #活動：使用者不活動</a> </li><li><a href="Player.html#event:usingcustomcontrols">玩家 #事件:使用自訂控制項</a> </li><li><a href="Player.html#event:usingnativecontrols">玩家 #事件:使用控制項</a> </li><li><a href="Player.html#event:volumechange">玩家 #活動：體積變化</a> </li><li><a href="player_.html#event:volumechange">玩家 #事件:音量變化</a> </li><li><a href="Player.html#event:waiting">玩家 #活動：等待</a> </li><li><a href="PlayProgressBar.html#event:dispose">播放進度列 #事件:處置</a> </li><li><a href="PlayProgressBar.html#event:ready">播放進度列 #事件:就緒</a> </li><li><a href="PlayProgressBar.html#event:resize">播放進度列 #事件:調整大小</a> </li><li><a href="PlayProgressBar.html#event:tap">播放進度列 #事件：點選</a> </li><li><a href="PlayToggle.html#event:dispose">播放切換 #事件:處置</a> </li><li><a href="PlayToggle.html#event:ready">播放切換 #事件:就緒</a> </li><li><a href="PlayToggle.html#event:resize">播放切換 #事件:調整大小</a> </li><li><a href="PlayToggle.html#event:tap">播放切換 #事件：點選</a> </li><li><a href="Popup.html#event:dispose">彈出窗口 #事件：處置</a> </li><li><a href="Popup.html#event:ready">彈出式 #事件：就緒</a> </li><li><a href="Popup.html#event:resize">彈出式 #事件：調整大小</a> </li><li><a href="Popup.html#event:tap">彈出式 #事件：點選</a> </li><li><a href="PopupButton.html#event:dispose">彈出按鈕 #事件：處置</a> </li><li><a href="PopupButton.html#event:ready">彈出式按鈕 #事件：就緒</a> </li><li><a href="PopupButton.html#event:resize">彈出按鈕 #事件：調整大小</a> </li><li><a href="PopupButton.html#event:tap">彈出式按鈕 #事件：點擊</a> </li><li><a href="PosterImage.html#event:dispose">色調影像 #事件:處置</a> </li><li><a href="PosterImage.html#event:ready">色調成像 #事件:就緒</a> </li><li><a href="PosterImage.html#event:resize">色調影像 #事件:調整大小</a> </li><li><a href="PosterImage.html#event:tap">色調影像 #事件：點選</a> </li><li><a href="ProgressControl.html#event:dispose">進度控制 #事件:處置</a> </li><li><a href="ProgressControl.html#event:ready">進度控制 #事件:就緒</a> </li><li><a href="ProgressControl.html#event:resize">進度控制 #事件:調整大小</a> </li><li><a href="ProgressControl.html#event:tap">進度控制 #事件：點選</a> </li><li><a href="RemainingTimeDisplay.html#event:dispose">剩餘時間顯示 #事件:處置</a> </li><li><a href="RemainingTimeDisplay.html#event:ready">剩餘時間顯示 #事件:就緒</a> </li><li><a href="RemainingTimeDisplay.html#event:resize">剩餘時間顯示 #事件:調整大小</a> </li><li><a href="RemainingTimeDisplay.html#event:tap">剩餘時間顯示 #事件：輕按</a> </li><li><a href="SeekBar.html#event:slideractive">搜尋列 #事件:滑動</a> </li><li><a href="SeekBar.html#event:sliderinactive">搜尋列 #事件:幻燈片非作用中</a> </li><li><a href="Slider.html#event:dispose">滑桿 #事件: 處置</a> </li><li><a href="Slider.html#event:ready">滑桿 #事件:就緒</a> </li><li><a href="Slider.html#event:resize">滑桿 #事件:調整大小</a> </li><li><a href="Slider.html#event:slideractive">滑桿 #事件: 滑桿啟動</a> </li><li><a href="Slider.html#event:sliderinactive">滑棒 #事件:幻燈片非作用中</a> </li><li><a href="Slider.html#event:tap">滑桿 #事件：點選</a> </li><li><a href="Spacer.html#event:dispose">間隔符號 #事件:處置</a> </li><li><a href="Spacer.html#event:ready">間隔符號 #事件：就緒</a> </li><li><a href="Spacer.html#event:resize">分隔符號 #事件:調整大小</a> </li><li><a href="Spacer.html#event:tap">分隔符號 #事件：點選</a> </li><li><a href="Tech.html#event:audiotrackchange">技術 #事件：音訊追蹤器變更</a> </li><li><a href="Tech.html#event:dispose">技術 #事件: 處置</a> </li><li><a href="Tech.html#event:progress">技術 #活動:進度</a> </li><li><a href="Tech.html#event:ready">技術 #活動：就緒</a> </li><li><a href="Tech.html#event:resize">技術 #事件：調整大小</a> </li><li><a href="Tech.html#event:tap">技術 #活動：點選</a> </li><li><a href="Tech.html#event:texttrackchange">技術 #事件: 文字追蹤變更</a> </li><li><a href="Tech.html#event:timeupdate">技術 #事件：時間更新</a> </li><li><a href="Tech.html#event:videotrackchange">技術 #活動：視訊追蹤變更</a> </li><li><a href="Tech.html#event:vttjsloaded">技術 #事件：載入 Vttjsn </a> </li><li><a href="TextTrack.html#event:modechange">文字追蹤 #事件:模式變更</a> </li><li><a href="TextTrackDisplay.html#event:dispose">文字軌道顯示 #事件:處置</a> </li><li><a href="TextTrackDisplay.html#event:ready">文字追蹤顯示 #事件:就緒</a> </li><li><a href="TextTrackDisplay.html#event:resize">文字追蹤顯示 #事件:調整大小</a> </li><li><a href="TextTrackDisplay.html#event:tap">文字追蹤顯示 #事件:點選</a> </li><li><a href="TextTrackList.html#event:addtrack">文字追蹤清單 #事件:新增軌道</a> </li><li><a href="TextTrackList.html#event:change">文字追蹤清單 #事件:變更</a> </li><li><a href="TextTrackList.html#event:removetrack">文字追蹤清單 #事件:移除追蹤</a> </li><li><a href="TextTrackSettings.html#event:dispose">文字追蹤設定 #事件:處置</a> </li><li><a href="TextTrackSettings.html#event:ready">文字追蹤設定 #事件:就緒</a> </li><li><a href="TextTrackSettings.html#event:resize">文字追蹤設定 #事件:調整大小</a> </li><li><a href="TextTrackSettings.html#event:tap">文字追蹤設定 #事件:點選</a> </li><li><a href="TimeDivider.html#event:dispose">計時器 #事件: 處置</a> </li><li><a href="TimeDivider.html#event:ready">計時器 #事件：就緒</a> </li><li><a href="TimeDivider.html#event:resize">計時器 #事件:調整大小</a> </li><li><a href="TimeDivider.html#event:tap">計時器 #事件：輕觸</a> </li><li><a href="TooltipProgressBar.html#event:dispose">工具提示進度列 #事件:處置</a> </li><li><a href="TooltipProgressBar.html#event:ready">工具提示進度列 #事件:就緒</a> </li><li><a href="TooltipProgressBar.html#event:resize">工具提示進度列 #事件:調整大小</a> </li><li><a href="TooltipProgressBar.html#event:tap">工具提示進度列 #事件：點選</a> </li><li><a href="TrackList.html#event:addtrack">追蹤清單 #事件:新增軌道</a> </li><li><a href="TrackList.html#event:change">追蹤清單 #事件:變更</a> </li><li><a href="TrackList.html#event:removetrack">追蹤清單 #事件:移除軌道</a> </li><li><a href="VideoTrack.html#event:selectedchange">視訊追蹤 #事件:選取的變更</a> </li><li><a href="VideoTrackList.html#event:addtrack">影片追蹤清單 #事件:新增音軌</a> </li><li><a href="VideoTrackList.html#event:change">視訊追蹤清單 #事件:變更</a> </li><li><a href="VideoTrackList.html#event:removetrack">視訊追蹤清單 #事件:移除音軌</a> </li><li><a href="VolumeBar.html#event:slideractive">音量列 #事件:滑動</a> </li><li><a href="VolumeBar.html#event:sliderinactive">體積列 #事件: 滑塊非活動</a> </li><li><a href="VolumeControl.html#event:dispose">磁碟區控制 #事件:處置</a> </li><li><a href="VolumeControl.html#event:ready">音量控制 #事件:就緒</a> </li><li><a href="VolumeControl.html#event:resize">音量控制 #事件:調整大小</a> </li><li><a href="VolumeControl.html#event:tap">音量控制 #事件：點選</a> </li><li><a href="VolumeLevel.html#event:dispose">音量等級 #事件:處置</a> </li><li><a href="VolumeLevel.html#event:ready">音量等級 #事件:就緒</a> </li><li><a href="VolumeLevel.html#event:resize">音量等級 #事件:調整大小</a> </li><li><a href="VolumeLevel.html#event:tap">音量等級 #事件：輕觸</a> </li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">全域<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="global.html#activeCues">動態</a> </li><li><a href="global.html#createTrackHelper">建立追蹤協助程式</a> </li><li><a href="global.html#cues">提示</a> </li><li><a href="global.html#currentSrc">目前 RC </a> </li><li><a href="global.html#default">預設</a> </li><li><a href="global.html#emulateTextTracks">模擬文字軌道</a> </li><li><a href="global.html#enabled">已啟用</a> </li><li><a href="global.html#id">識別碼</a> </li><li><a href="global.html#kind">種</a> </li><li><a href="global.html#label">標籤</a> </li><li><a href="global.html#language">語言</a> </li><li><a href="global.html#length">長度</a> </li><li><a href="global.html#mode">模式</a> </li><li><a href="global.html#NONE">無</a> </li><li><a href="global.html#readyState">就緒狀態</a> </li><li><a href="global.html#selected">已選取</a> </li><li><a href="global.html#track">軌道</a> </li><li><a href="global.html#tryUpdateStyle">嘗試更新樣式</a> </li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">類別：快顯</h1> 
+<section>
+
+<header>
+    
+        <h2>
+        快顯 
+        </h2>
+        
+            <div class="class-description"><p>Popup 組件用於構建彈出控件。</p></div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="Popup"><span class="type-signature"></span>新彈出（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		popup/popup.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">延伸</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Component.html">元件</a>  </li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">方法 </h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="$"><span class="type-signature"></span>$(selector [, context])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>找到匹配選擇器的單個<code>  DOM 元素</code>。這可以在<code>組件</code>的<code>  CONTEL（）</code>或其他自定義上下文中。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+        <th>默認</th>
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>選擇器</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>一個有效的 CSS 選擇器，它將被傳遞給<code>查詢選擇器</code>。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>上下文</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">元素</span>  | <span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    這個。內容電話（）
+                
+                </td>
+            
+
+            <td class="description last"><p>要在其中查詢的 DOM 元素。也可以是一個選擇器字符串，在這種情況下，第一個匹配元素將被用作上下文。如果缺少<code>這</code>個。如果這個<code>  .contentel（）不</code>返回任何內容，它會回退到<code>文檔</code>。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#$">元件 #$ </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">有關 CSS 選擇器的信息</a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>被找到的 dom 元素，或者為空</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">元素</span>  | <span class="param-type">空</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="$$"><span class="type-signature"></span>$$(selector [, context])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>查找匹配<code>選擇器的所有 DOM 元素</code>。這可以在<code>組件</code>的<code>  CONTEL（）</code>或其他自定義上下文中。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+        <th>默認</th>
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>選擇器</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>一個有效的 CSS 選擇器，它將被傳遞給<code>查詢選擇器所有</code>。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>上下文</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">元素</span>  | <span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    這個。內容電話（）
+                
+                </td>
+            
+
+            <td class="description last"><p>要在其中查詢的 DOM 元素。也可以是一個選擇器字符串，在這種情況下，第一個匹配元素將被用作上下文。如果缺少<code>這</code>個。如果這個<code>  .contentel（）不</code>返回任何內容，它會回退到<code>文檔</code>。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#$$">元件 #$$ </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors">有關 CSS 選擇器的信息</a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>找到的 dom 元素列表</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">節點清單</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addChild"><span class="type-signature"></span>添加子項（子 [，選項] [，索引]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>在當前<code>組件</code>內添加一個子<code>組件</code>。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+        <th>默認</th>
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>子</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span>  | <span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>要新增的子系的名稱或實例。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>選項</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">物件</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last"><p>選項的鍵/值存儲將被傳遞給孩子的孩子。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>指數</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">號碼</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    這個。孩子長度
+                
+                </td>
+            
+
+            <td class="description last"><p>嘗試將子項新增到的索引。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#addChild">元件 #addChild </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>被添加為一個孩子的<code>組件</code>。使用字符串時，<code>組件</code>將通過這個過程創建。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addClass"><span class="type-signature"></span>新增類別 (類別新增)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>將 CSS 類名添加到<code>組件</code>的元素。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>類別新增</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要新增的 CSS 類別名稱</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#addClass">元件 #addClass </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addItem"><span class="type-signature"></span>添加劑 (元件)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>在彈出窗口中添加一個彈出項</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>元件</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">物件</span>  | <span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要添加的組件或組件類型</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		popup/popup.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="blur"><span class="type-signature"></span>模糊 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>移除此組件的焦點</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#blur">元件 #blur </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="buildCSSClass"><span class="type-signature"> &lt; 抽象 &gt; </span>構建 CSS 類（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>構建默認的 DOM 類名。應該被子組件覆蓋。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#buildCSSClass">元件 #buildCSSClass </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>這個對象的 DOM 類名。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">字串</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="children"><span class="type-signature"></span>子項 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取所有子組件的數組</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#children">元件 #children </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>孩子們</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">陣列</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="clearInterval"><span class="type-signature"></span>清除間隔 (有效)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>清除通過<code>  Window.set間隔</code>或<a href="Component.html#setInterval">元件#setInterval 創建的間隔</a>。如果您通過<a href="Component.html#setInterval">組件 #setInterval 設置一個整數，</a>請使用此函數而不是<code>窗口。清除間隔</code>。如果你沒有你的處置監聽器將不會被清理，直到<a href="Component.html#dispose">組件 #dispose </a>！</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>相互有效</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">號碼</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要清除的間隔 ID。<a href="Component.html#setInterval">元件 #setInterval </a>或<code>視窗的傳回值</code>。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#clearInterval">元件 #clearInterval </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/clearInterval">類似於</a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>傳回已清除的間隔 ID。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">號碼</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="clearTimeout"><span class="type-signature"></span>清除 (逾時)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>清除通過<code>窗口 .setTimeout </code>或<a href="Component.html#setTimeout">組件 #setTimeout 創建的超時</a>。如果您通過<a href="Component.html#setTimeout">組件 #setTimeout 設置超時，</a>請使用此功能而不是<code>窗口</code>。如果你沒有你的處置監聽器將不會被清理，直到<a href="Component.html#dispose">組件 #dispose </a>！</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>逾時</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">號碼</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要清除的逾時識別碼。<a href="Component.html#setTimeout">元件 #setTimeout </a>或<code>視窗的傳回值</code>。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#clearTimeout">元件 #clearTimeout </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/clearTimeout">類似於</a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回被清除的超時 ID。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">號碼</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="contentEl"><span class="type-signature"></span>內容電話 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>返回組<code>件</code>的 DOM 元素。這是孩子插入的地方。這通常會與元<a href="Component.html#el">件 #el 中傳回的元素相同</a>。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#contentEl">元件 #contentEl </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>此<code>組件的內容元素</code>。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">圖元</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="createEl"><span class="type-signature"></span>創建者（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建<code>彈出按鈕</code>的 DOM 元素。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+    <dt class="tag-overrides">覆寫：</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Component.html#createEl">元件 #createEl </a> 
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		popup/popup.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>被創建的元素。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">圖元</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="currentDimension"><span class="type-signature"></span>目前尺寸標註 (寬度高度)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取<code>組件元</code>素計算樣式的寬度或高度。使用<code>視窗。取得計算型式</code>。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>寬度高度</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>包含 '寬度' 或' 高度 '的字符串。無論你想拿到哪一個</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#currentDimension">元件 #currentDimension </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>如果該維度沒有設置任何內容，則被要求的維度或 0。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">號碼</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="currentDimensions"><span class="type-signature"></span>目前尺寸標註 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取包含寬度和高度值的對象<code>成分</code> s 計算樣式。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#currentDimensions">元件 #currentDimensions </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>元件元素的尺寸</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html#~DimensionObject">元件尺寸物件 (~D) </a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="currentHeight"><span class="type-signature"></span>目前之光 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取<code>組件</code>的計算樣式的高度。使用<code>視窗。取得計算型式</code>。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#currentHeight">元件 #currentHeight </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>高度「<code>元</code>件」計算型式的高度。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">號碼</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="currentWidth"><span class="type-signature"></span>目前寬度 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取<code>組件</code>的計算樣式的寬度。使用<code>視窗。取得計算型式</code>。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#currentWidth">元件 #currentWidth </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>寬度<code>組件</code>的計算樣式的寬度。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">號碼</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="dimension"><span class="type-signature"></span>尺寸 (寬度高度 [, num] [, 跳過程式])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取或設置<code>組件元</code>素的寬度或高度。這是<a href="Component.html#width">元件 #width </a>和<a href="Component.html#height">元件 #height 的共用程式碼</a>。</p>
+<p>要知道的事情：</p>
+<ul>
+<li>如果數字中的寬度或高度，這將返回以 'px' 後綴的數字。</li>
+<li>如果寬度/高度是百分比，這將返回以 '％' 後綴的百分比</li>
+<li>隱藏元素的寬度為 0，<code>具有視窗</code>。此函數默認為<code></code>組件<code>的樣式。寬度，</code>並回退到<code>窗口</code>。請參閱<a href="http://www.foliotek.com/devblog/getting-the-width-of-a-hidden-element-with-jquery-using-width/">此</a>處以獲取更多信息</li>
+<li>如果您想要元件的計算樣式，請使用<a href="Component.html#currentWidth">元件 #currentWidth </a>和 {元件 #currentHeight</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>寬度高度</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>8' 寬度' 或 '高度'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>數</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span> | <span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>8 新維度</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>跳過程式</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布林</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>略過調整大小事件觸發</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#dimension">元件 #dimension </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>火災：</h5>
+    <ul>
+        <li><a href="Component.html#event:resize">元件 #事件:調整大小</a> </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>獲取時的維度，或者如果取消設置為 0<pre class="prettyprint source"><code> - Returns itself when setting; method can be chained.</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="dimensions"><span class="type-signature"></span>尺寸 (寬度、高度)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>同時設置<code>組件元</code>素的寬度和高度。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>寬度</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span> | <span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>將元件圖<code>元</code>設定為的寬度。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>高度</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span> | <span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>將元件圖<code>元</code>設定為的高度。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#dimensions">元件 #dimensions </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="dispose"><span class="type-signature"></span>處置 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>處置元<code>件</code>和所有子元件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#dispose">元件 #dispose </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>火災：</h5>
+    <ul>
+        <li><a href="Component.html#event:dispose">元件 #事件:處置</a> </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="el"><span class="type-signature"></span>  el ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取<code>組件</code>的 DOM 元素</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#el">元件 #el </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>此<code>組件的 DOM 元素</code>。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">圖元</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="enableTouchActivity"><span class="type-signature"></span>啟用觸控活動 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>此功能每當觸摸事件發生時報告用戶活動。這可以被任何希望觸摸事件採取另一種方式的子組件關閉。</p>
+<p>當觸控事件發生時，報告使用者觸控活動。用戶活動被用來確定何時應該顯示/隱藏控件。當涉及到鼠標事件很簡單，因為任何鼠標事件都應該顯示控件。因此，我們會捕捉到玩家冒泡的鼠標事件，並在發生這種情況時報告活動。通過觸摸事件，它不像觸摸<code>啟動</code>和<code>觸摸端</code>切換播放器控制那麼容易。因此，觸摸事件在玩家級別也無法幫助我們。</p>
+<p>用戶活動被異步檢查。所以可能發生的是視頻上的點擊事件關閉控件。接著<code>觸面</code>事件就會向玩家冒泡。如果報告用戶活動，那麼它會立即重新打開控件。我們也不想完全阻止觸摸事件冒泡。此外，<code>觸摸移動</code>事件和點擊以外的任何東西都不應該重新打開控件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#enableTouchActivity">元件 #enableTouchActivity </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li>元件 #事件:觸控啟動</li>
+    
+        <li>元件 #事件:觸控移動</li>
+    
+        <li>元件 #事件:接觸端</li>
+    
+        <li>元件 #事件:觸控取消</li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="focus"><span class="type-signature"></span>焦點 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>將焦點設定為此組件</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#focus">元件 #focus </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getAttribute"><span class="type-signature"></span>獲取屬性（屬性）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>取得元<code>件</code>元素上屬性的值。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>屬性</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要從中取得值的屬性名稱。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#getAttribute">元件 #getAttribute </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute"> DOM API </a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>所要求的屬性值。<pre class="prettyprint source"><code> - Can be an empty string on some browsers if the attribute does not exist or has no value - Most browsers will return null if the attibute does not exist or has no value.</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">字串</span>  | <span class="param-type">空</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getChild"><span class="type-signature"></span>取得子項 (名稱)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>返回孩子<code>成分</code>與給定的<code>姓名</code> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>名稱</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要獲取的子<code>組件</code>的名稱。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#getChild">元件 #getChild </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>孩子<code>成分</code>與給定的<code>姓名</code>或未定義。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>   | <span class="param-type">未定義</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getChildById"><span class="type-signature"></span>取得子系識別碼 (識別碼)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>返回具有給定<code>  ID </code>的子<code>組件</code>。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>識別碼</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要獲取的子<code>組件</code>的 ID。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#getChildById">元件 #getChildById </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>孩子<code>成分</code>與給定的<code>ID</code>或未定義。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>   | <span class="param-type">未定義</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hasClass"><span class="type-signature"></span>具有類別 (類別檢查)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>檢查組件的元素是否有 CSS 類名。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>類別檢查</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要檢查的 CSS 類名稱。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#hasClass">元件 #hasClass </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>如果<code>組件</code>具有類，則為 true。<pre class="prettyprint source"><code> - False if the `Component` does not have the class`</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布林</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="height"><span class="type-signature"></span>高度 ([num] [, 跳過器])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取或設置基於 CSS 樣式組件的高度。看<a href="Component.html#dimension">組件#維度</a>了解更多詳細信息。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>數</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span> | <span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>您要設置後綴的高度為 '％'，'px ' 或沒有。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>跳過程式</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布林</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>跳過調整大小事件觸發器</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#height">元件 #height </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>獲得時的寬度，零，如果沒有寬度。可以是一個字符串<pre class="prettyprint source"><code>用 '%'  後像素化或“像素”。 - 設置時返回自身；方法可以鏈接。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">組件</a></span>   | <span class="param-type">號碼</span>  | <span class="param-type">字符串</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hide"><span class="type-signature"></span>隱藏 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>通過添加 'vjs-隱藏` 類名稱來隱藏<code>組</code>件的元素，如果目前正在顯示，則隱藏組件的元素。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#hide">元件 #hide </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="id"><span class="type-signature"></span>識別碼 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取此<code>組件</code>的 ID</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#id">元件 #id </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>此<code>組件的 ID </code> </p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">字串</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="initChildren"><span class="type-signature"></span>初創兒童 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>根據選項新增和初始化預設子<code>元件</code>。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#initChildren">元件 #initChildren </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="localize"><span class="type-signature"></span>本地化 (字串)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>在英文給定字符串的字符串本地化。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>字串</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要當地語系化的字串。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#localize">元件 #localize </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>當地語系化的字串，或者如果沒有當地語系化存在，則英文字串。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">字串</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="name"><span class="type-signature"></span>名稱 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取<code>組件</code>的名稱。該名稱被用於引用<code>組件，</code>並在註冊過程中設置。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#name">元件 #name </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>此<code>元件的名稱</code>。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">字串</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="off"><span class="type-signature"></span>關閉（[第一] [，第二] [，第三個]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>從此組件的元素中刪除一個事<code></code>件偵聽器。如果第二個參數被釋放，因為第一個參數將被刪除傳入的類型的所有偵聽器。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>第一</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字符串</span>  | 組<span class="param-type"><a href="Component.html">件</a></span>   | <span class="param-type">數組。 &lt; 字串 &gt; </span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>事件名稱和事件名稱的陣列，或其他組<code>件</code>。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>第二</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~EventListener">事件參數〜事件偵聽器</a></span>   | <span class="param-type">字符串</span>  | <span class="param-type">數組。 &lt; 字串 &gt; </span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>偵聽程式函數、事件名稱或事件名稱陣列。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>第三</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~EventListener">事件參數設定事件偵聽程式 (~F) </a></span>  
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>事件處理程序，如果<code>第一個</code>是一個組<code>件</code>，<code>第二個</code>是一個事件名稱或事件名稱的數組。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#off">元件 #off </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="on"><span class="type-signature"></span>  on ([第一] [, 第二] [, 第三個])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>將<code>事件偵聽器添加</code>到此<code>組件</code>的元素。</p>
+<p>使用它的好處如下：</p>
+<ul>
+<li><code>開啟 (已釋放、「事件名稱」、「MyFunc」) </code> </li>
+<li><p><code>其他組件開啟（'事件名稱'，MyFunc）</code> </p>
+</li>
+<li><p>是否在任何一個組件被處理時偵聽器都會被清理。</p>
+</li>
+<li>它也將綁定<code>我的組件</code>作為<code>  MyFunc 的上下文</code>。<blockquote>
+<p>注意：如果您從已使用<code>的 DOM 中刪除元素，</code>則需要</p>
+<pre class="prettyprint source"><code> clean up references using: `myComponent.trigger(el, 'dispose')` This will also allow the browser to garbage collect it.在特殊情況下，如「窗口」和「文檔」，這兩者都是永久性的，這是沒有必要的。</code> </pre></blockquote>
+</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>第一</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字符串</span>  | 組<span class="param-type"><a href="Component.html">件</a></span>   | <span class="param-type">數組。 &lt; 字串 &gt; </span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>事件名稱和事件名稱的陣列，或其他組<code>件</code>。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>第二</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~EventListener">事件參數〜事件偵聽器</a></span>   | <span class="param-type">字符串</span>  | <span class="param-type">數組。 &lt; 字串 &gt; </span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>偵聽程式函數、事件名稱或事件名稱陣列。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>第三</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~EventListener">事件參數設定事件偵聽程式 (~F) </a></span>  
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>事件處理程序，如果<code>第一個</code>是一個組<code>件</code>，<code>第二個</code>是一個事件名稱或事件名稱的數組。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#on">元件 #on </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li><a href="Component.html#event:dispose">元件 #事件:處置</a> </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="one"><span class="type-signature"></span>一個（[第一] [，第二] [，第三個]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>添加一個只觸發一次，然後被刪除的事件偵聽器。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>第一</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字符串</span>  | 組<span class="param-type"><a href="Component.html">件</a></span>   | <span class="param-type">數組。 &lt; 字串 &gt; </span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>事件名稱和事件名稱的陣列，或其他組<code>件</code>。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>第二</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~EventListener">事件參數〜事件偵聽器</a></span>   | <span class="param-type">字符串</span>  | <span class="param-type">數組。 &lt; 字串 &gt; </span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>偵聽程式函數、事件名稱或事件名稱陣列。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>第三</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~EventListener">事件參數設定事件偵聽程式 (~F) </a></span>  
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>事件處理程序，如果<code>第一個</code>是一個組<code>件</code>，<code>第二個</code>是一個事件名稱或事件名稱的數組。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#one">元件 #one </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="options"><span class="type-signature"></span>選項 (OBJ)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>選項物件與新選項深度合併。</p>
+<blockquote>
+<p>注意：當<code>  obj </code>和<code>選項都</code>包含其值為對象的屬性時。這兩個屬性得到使用模塊合併：合併選項</p>
+</blockquote>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code> OBJ </code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">物件</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>包含新選項的物件。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#options">元件 #options </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+	<dt class="important tag-deprecated method-doc-label method-doc-details-label">已停用：</dt>
+	
+    <dd>
+        <ul class="dummy">
+            <li>從版本 5 開始</li>
+        </ul>
+    </dd>
+    
+    
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p><code>這個 .options_ </code>和<code>  obj 的新對象</code>合併在一起。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">物件</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="player"><span class="type-signature"></span>播放器 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>返回<a href="Player.html">播放器</a>那個<code>成分</code>已附加到。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#player">元件 #player </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>此<code>組件所附加</code>的播放程式。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Player.html">玩家</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="ready"><span class="type-signature"></span>就緒（fn [，同步]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>將偵聽程式繫結至組件的就緒狀態。如果就緒事件已經發生，它將立即觸發該功能。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+        <th>默認</th>
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code> FN </code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Component.html#~ReadyCallback">元件就緒回呼 (~A) </a></span>  
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>當準備就緒被觸發時調用的函數。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>同步</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布林</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    錯誤的
+                
+                </td>
+            
+
+            <td class="description last"><p>如果<code>組件</code>已就緒，則同步執行監聽器。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#ready">元件 #ready </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeAttribute"><span class="type-signature"></span>移除屬性 (屬性)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>從元<code>件</code>的元素中移除屬性。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>屬性</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要移除的屬性名稱。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#removeAttribute">元件 #removeAttribute </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute"> DOM API </a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeChild"><span class="type-signature"></span>移除子項 (元件)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>移除一個孩子<code>成分</code>由此<code>成分</code> s 兒童名單。也會從此元<code>件</code>的元素中移除子<code>元件</code>的元素。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>元件</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>孩子<code>成分</code>去除。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#removeChild">元件 #removeChild </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeClass"><span class="type-signature"></span>移除向量 (類別移除)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>從<code>組</code>件的元素中刪除 CSS 類名。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>類別移除</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要刪除的 CSS 類名</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#removeClass">元件 #removeClass </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setAttribute"><span class="type-signature"></span>設定屬性 (屬性、值)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設定元<code>件</code>元素上的屬性值</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>屬性</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要設定的屬性名稱。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>價值</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要將屬性設定為的值。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#setAttribute">元件 #setAttribute </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute"> DOM API </a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setInterval"><span class="type-signature"></span>設定間隔 (fn、間隔)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建一個每<code>  x </code>毫秒運行一次的函數。這個函數是一個圍繞<code>窗口的包裝</code>。儘管如此，有幾個原因可以使用這個。</p>
+<ol>
+<li>當<a href="Component.html#clearInterval">組件 #dispose 被調用</a>時，它通過<a href="Component.html#dispose">組件 #clearInterval </a>被清除。</li>
+<li>函數回調將是一個<a href="Component.html#~GenericCallback">組件〜通用回調</a> </li>
+</ol>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code> FN </code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Component.html#~GenericCallback">組件一般回呼 (~C) </a></span>  
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>該功能每<code>  x </code>秒運行一次。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>間隔</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">號碼</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>每<code>  x </code>毫秒執行指定的函數。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#setInterval">元件 #setInterval </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval">類似於</a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li><a href="Component.html#event:dispose">元件 #事件:處置</a> </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回可用於識別間隔的 ID。也可以在<a href="Component.html#clearInterval">元件 #clearInterval 中使用它</a>來清除間隔。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">號碼</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setTimeout"><span class="type-signature"></span>設定逾時 (fn、逾時)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建一個<code>  x </code>毫秒超時後運行的函數。這個函數是一個圍繞<code>窗口的包裝</code>。儘管如此，有幾個原因可以使用這個：</p>
+<ol>
+<li>當<a href="Component.html#clearTimeout">組件 #dispose 被調用</a>時，它通過<a href="Component.html#dispose">組件 #clearTimeout </a>被清除。</li>
+<li>函數回調將變成一個<a href="Component.html#~GenericCallback">組件〜通用回調</a> </li>
+</ol>
+<blockquote>
+<p>注意：您可以使用<code>window.clearTimeout</code>在此函數返回的 id 上。這將導致它的處置偵聽器不被清理！請使用<a href="Component.html#clearTimeout">元件 #clearTimeout </a>或<a href="Component.html#dispose">元件 #dispose </a>。</p>
+</blockquote>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code> FN </code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Component.html#~GenericCallback">組件一般回呼 (~C) </a></span>  
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>將在<code>超時後運行的功能</code>。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>逾時</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">號碼</span> 
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>在執行指定函數之前延遲以毫秒為單位的逾時。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#setTimeout">元件 #setTimeout </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout">類似於</a> </p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li><a href="Component.html#event:dispose">元件 #事件:處置</a> </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回被用於識別超時的超時 ID。它也可以在<a href="Component.html#clearTimeout">組件 #clearTimeout 中使用</a>來清除設置的超時。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">號碼</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="show"><span class="type-signature"></span>顯示 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>顯示<code>成分</code> 元素，如果它通過刪除 'vjs-hidden' 類名來自它。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#show">元件 #show </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toggleClass"><span class="type-signature"></span>切換類別 (類別切換 [、謂詞])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>從組件的元素添加或刪除 CSS 類名。</p>
+<ul>
+<li><code>類到切換</code>被添加時<a href="Component.html#hasClass">組件#hasClass</a>會返回假。</li>
+<li><code>類到切換</code>被移除時<a href="Component.html#hasClass">組件#hasClass</a>會返回true。</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>類別切換</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">字串</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>要新增或移除的類別 (@link 元件 #hasClass}</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>謂詞</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布林值</span>  | <span class="param-type">  DOM 謂詞 (~D) </span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>DOM 〜謂詞函數或布爾值</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#toggleClass">元件 #toggleClass </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="trigger"><span class="type-signature"></span>觸發器 (事件 [, 雜湊])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>觸發元素上的事件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>事件</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span> | <span class="param-type">目的</span> | <span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>事件名稱和事件，或類似事件的物件，其 type 屬性設定為事件名稱。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>雜湊</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">物件</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>數據散列與事件一起傳遞</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#trigger">元件 #trigger </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回本身; 方法可以被鏈接。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">元件</a></span>  
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="triggerReady"><span class="type-signature"></span>觸發就緒 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>觸發此<code>組件的所有就緒偵聽器</code>。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#triggerReady">元件 #triggerReady </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>火災：</h5>
+    <ul>
+        <li><a href="Component.html#event:ready">元件 #事件:就緒</a> </li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="width"><span class="type-signature"></span>寬度 ([num] [, 跳過程])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取或設置基於 CSS 樣式組件的寬度。看<a href="Component.html#dimension">組件#維度</a>了解更多詳細信息。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>數</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span> | <span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>您要設置後綴為 '％'，'px ' 或沒有的寬度。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>跳過程式</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布林</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>跳過調整大小事件觸發器</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#width">元件 #width </a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>獲得時的寬度，零，如果沒有寬度。可以是一個字符串<pre class="prettyprint source"><code>用 '%'  後像素化或“像素”。 - 設置時返回自身；方法可以鏈接。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Component.html">組件</a></span>   | <span class="param-type">號碼</span>  | <span class="param-type">字符串</span> 
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+        <h3 class="subsection-title">活動</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:dispose">處置 </h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>處置元<code>件</code>時觸發。</p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件參數表示事件 (~T) </a></span>  
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">屬性：</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名稱</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>引數</th>
+        
+
+        
+        <th>默認</th>
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>泡沫</code> </td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布林</span> 
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                     &lt; 選用性 &gt;<br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    錯誤的
+                
+                </td>
+            
+
+            <td class="description last"><p>設置為 false，以便關閉事件不會冒泡</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#event:dispose">元件 #事件:處置</a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:ready">準備 </h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>當<code>組件準備就緒</code>時觸發。</p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件參數表示事件 (~T) </a></span>  
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#event:ready">元件 #事件:就緒</a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:resize">調整大小 </h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>重新調整元件大小時觸發。</p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件參數表示事件 (~T) </a></span>  
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#event:resize">元件 #事件:調整大小</a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:tap">點選 </h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>當一個<code>組件</code>被點擊觸發。</p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件參數表示事件 (~T) </a></span>  
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Component.html#event:tap">元件 #事件：點選</a> 
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		component.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">搜尋結果</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright"> Copyright 2017 </span> <span class="jsdoc-message"> Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on 5 Jun 2017 using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>. </span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () { $( "[id*='$']" ).each( function () { var $this = $( this ); $this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) ); } ); $( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () { var $this = $( this ); var example = $this.find( "code" ); exampleText = example.html(); var lang = /{@lang (.*?)}/.exec( exampleText ); if ( lang &amp;&amp; lang[1] ) { exampleText = exampleText.replace( lang[0], "" ); example.html( exampleText ); lang = lang[1]; } else { var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/); lang = langClassMatch ? langClassMatch[1] : "javascript"; } if ( lang ) { $this .addClass( "sunlight-highlight-" + lang ) .addClass( "linenums" ) .html( example.html() ); } } ); Sunlight.highlightAll( { lineNumbers : false, showMenu : true, enableDoclinks : true } ); $.catchAnchorLinks( { navbarOffset: 10 } ); $( "#toc" ).toc( { anchorName : function ( i, heading, prefix ) { return $( heading ).attr( "id" ) || ( prefix + i ); }, selectors : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4", showAndHide : false, smoothScrolling: true } ); $( "#main span[id^='toc']" ).addClass( "toc-shim" ); $( '.dropdown-toggle' ).dropdown(); $( "table" ).each( function () { var $this = $( this ); $this.addClass('table'); } ); } );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+<script>
+	$( function () { $( '#main' ).localScroll( { offset : { top : 60 } //offset by the height of your header (give or take a few px, see what works for you) } ); $( "dt.name" ).each( function () { var $this = $( this ).find("h4"); var icon = $( "<i/>" ).addClass( "icon-plus-sign" ).addClass( "pull-right" ).addClass( "icon-white" ); var dt = $(this); var children = dt.next( "dd" ); dt.prepend( icon ).css( {cursor : "pointer"} ); dt.addClass( "member-collapsed" ).addClass( "member" ); children.hide(); dt.children().on( "click", function () { children = dt.next( "dd" ); children.slideToggle( "fast", function () { if ( children.is( ":visible" ) ) { icon.addClass( "icon-minus-sign" ).removeClass( "icon-plus-sign" ).removeClass( "icon-white" ); dt.addClass( "member-open" ).animate( "member-collapsed" ); } else { icon.addClass( "icon-plus-sign" ).removeClass( "icon-minus-sign" ).addClass( "icon-white" ); dt.addClass( "member-collapsed" ).removeClass( "member-open" ); } } ); } ); } ); } );
+</script>
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() { SearcherDisplay.init(); });
+    </script>
+
+
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/https-fix.js"></script>
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/support-feedback.js"></script><script src="https://support.brightcove.com/site-assets/js/site/feedback-docs.js"></script>
+</body>
+</html>

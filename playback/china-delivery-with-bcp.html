@@ -1,0 +1,159 @@
+---
+title: 'Brightcove Player 提供中國配送服務'
+description:"In this topic, you will learn how to use Brightcove Player to deliver video to China from outside the country."
+parent: Playback
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary> 
+
+  <section class="bcls-section">
+    <h2 id="Introduction">介紹</h2>
+
+    <p>Brightcove提供了從國外向中國交付視頻的解決方案。解決方案由兩部分組成：</p>
+    <ul>
+      <li>中國境內託管的代理服務器</li>
+      <li>關聯的中國特定CDN</li>
+    </ul>
+
+    <p>代理將非視頻流量（播放 API 請求、分析信標和網絡播放器本身）路由到中國觀眾和來自外部的 Brightcove 基礎設施。</p>
+
+    <p>CDN 連接到代理並處理視頻和圖像內容。</p>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Requirements">需求</h2>
+    <p>要支持Brightcove中國交付，需要滿足以下要求：</p>
+    <h3>設置</h3>
+    <ul>
+      <li>
+        除了配置播放器外，還有一些設置要求
+        <p>有關詳細信息，請參見<a href="https://studio.support.brightcove.com/general/china-delivery-overview.html">概述：中國配送</a></p>
+      </li>
+    </ul>
+    <h3>布萊特灣玩家</h3>
+    <ul>
+      <li>需要Brightcove Player 6.44+版本；推薦最新版本</li>
+    </ul>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Configuring_Brightcove_Player">配置Brightcove Player</h2>
+    <p>要在中國境內交付視頻，您必須配置播放器以使用Brightcove China交付代理。</p>
+    <p>要創建與中國兼容的播放器，請按照以下步驟操作：</p>
+
+    <ol class="bcls-tasklist">
+      <li>
+        <p>
+          在Video Cloud Studio中，打開<strong>選手們</strong>模塊。使用現有播放器或創建一個新播放器。
+        </p>
+        <aside class="bcls-aside bcls-aside--information">請記住使用 Brightcove Player 6.44 或更新版本（推薦最新版本）。</aside>
+      </li>
+      <li>選擇播放器的名稱鏈接以打開播放器的屬性。</li>
+      <li><p>在左側導航中，選擇<strong>JSON編輯器</strong>。</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="JSON Editor" src="/assets/images/playback/china-json-editor.png" />
+        <figcaption class="bcls-caption--image">JSON編輯器</figcaption>
+        </figure>
+      </li>
+      <li><p>要設置代理，請添加以下內容：</p>
+        <pre class="line-numbers">
+<code class="language-json" translate="No">&quot;china_proxy_domain&quot;: &quot;china.example.com&quot;</code></pre>
+        <aside class="bcls-aside bcls-aside--information">這應該只是一個主機名。沒有協議（例如，https://），也沒有包括正斜杠在內的特殊字符。
+      </li>
+      <li>
+        <p>
+          你的代碼應該看起來像這樣：
+        </p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="China proxy setting" src="/assets/images/playback/china-proxy-setting.png" />
+        <figcaption class="bcls-caption--image">中國代理設置</figcaption>
+        </figure>
+      </li>
+      <li>點擊<strong>節省</strong>，並發布播放器。</li>
+      <li>當您嵌入或共享您的播放器時，請注意嵌入代碼使用 Brightcove Player CDN。
+        <pre class="line-numbers">
+<code class="language-json" translate="No">&lt;script
+  src=&quot;//<span class="bcls-highlight">players.brightcove.net</span>/1752604059001/jnOD8yLME_default/index.min.js&quot;&gt;
+&lt;/script&gt;</code></pre>
+      </li>
+      <li>更改 Brightcove Player CDN 以使用您的 China Delivery 域。
+        <pre class="line-numbers">
+<code class="language-json" translate="No">&lt;script
+  src=&quot;//<span class="bcls-highlight">china.example.com</span>/1752604059001/jnOD8yLME_default/index.min.js&quot;&gt;
+&lt;/script&gt;</code></pre>
+          <aside class="bcls-aside bcls-aside--warning">使用<code translate="No">players.brightcove.net</code>域將導致在中國無法播放內容和降低播放器加載時間。</aside>
+      </li>
+    </ol>
+
+    <h3>筆記</h3>
+    <p>和<code translate="No">china_proxy_domain</code>設置後，播放器發起的所有請求都將發送到該域內的URL。使用上面的樣本值（<strong> china.example.com</strong>）用戶可能會看到以下要求：</p>
+    <table class="bcls-table">
+            <!-- <caption class="bcls-caption--table">Table Caption (optional <strong><caption class="bcls-caption--table"></strong>)</caption> -->
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>系統</th>
+                    <th>小路</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body"> 
+                <tr>
+                    <td>播放器CDN</td>
+                    <td>//china.example.com/players / ...</td>
+                </tr>
+                <tr>
+                    <td>播放接口</td>
+                    <td>//china.example.com/playback/v1 / ...</td>
+                </tr>
+                <tr>
+                    <td>分析</td>
+                    <td>//china.example.com/v2/tracker ...</td>
+                </tr>
+                
+            </tbody>
+        </table>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Localization">本土化</h2>
+    <p>和<code translate="No">china_proxy_domain</code>設置，Brightcove Player將<strong>自動地</strong>配置兩種語言：</p>
+    <ul>
+      <li><code translate="No">zh-Hans</code>：簡體中文（默認）</li>
+      <li><code translate="No">zh-Hant</code>：繁體中文</li>
+    </ul>
+
+    <p>設置一個<code translate="No">china_proxy_domain</code>與設置以下配置具有相同的效果（儘管不需要這些設置）：</p>
+    <pre class="line-numbers">
+<code class="language-json" translate="No">&quot;language&quot;: &quot;zh-Hans&quot;,
+&quot;languages&quot;: [&quot;zh-Hans&quot;, &quot;zh-Hant&quot;],
+</code></pre>
+    <p>此默認效果<code translate="No">china_proxy_domain</code>如果為<code translate="No">language</code>或者<code translate="No">languages</code>配置！要覆蓋默認行為，您可以混合併匹配這些配置。</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Adding_more_languages">添加更多語言</h2>
+    <p>如果語言多於<code translate="No">zh-Hans</code>和<code translate="No">zh-Hant</code>需要時，您可以向播放器添加語言配置。此配置可能類似於：</p>
+   
+    <pre class="line-numbers">
+<code class="language-json" translate="No">&quot;china_proxy_domain&quot;: &quot;china.example.com&quot;,
+&quot;languages&quot;: [&quot;zh-Hans&quot;, &quot;zh-Hant&quot;, &quot;en&quot;, &quot;jp&quot;],
+</code></pre>
+    <p>在此示例中，播放器仍默認為<code translate="No">zh-Hans</code>，但還會添加英語和日語。</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Changing_the_default_language">更改默認語言</h2>
+    <p>要配置與默認語言不同的默認語言<code translate="No">zh-Hans</code>，添加一個<code translate="No">language</code>配置。該配置應類似於以下內容：</p>
+   
+    <pre class="line-numbers">
+<code class="language-json" translate="No">&quot;china_proxy_domain&quot;: &quot;china.example.com&quot;,
+&quot;language&quot;: &quot;zh-Hant&quot;,
+</code></pre>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Limitations">限制</h2>
+    <p>有關此功能限制的詳細信息，請參閱<a href="https://studio.support.brightcove.com/general/china-delivery-overview.html#Limitations">概述：中國交付</a>文件</p>
+  </section>
+
+</article>

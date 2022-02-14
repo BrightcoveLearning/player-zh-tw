@@ -1,0 +1,29 @@
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/SVG/{{ site.product_icon }}" alt="Brightcove" style="max-width: 200px;"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">英語</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">法國</option><option value="en|de" translate="No">德意志</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">西班牙文</option></select>
+
+<script>
+/*<![CDATA[ */ 函數 doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;} /*]]> */
+</script>
+
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><i data-feather="help-circle"></i> 聯絡支援</a><span style="vertical-align: middle;margin-left:1em;margin-right:1em;">   | </span><a href="https://status.brightcove.com/">  <i data-feather="cloud"></i> 系統狀況</a></span>
+    <br>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      {% if page.parent %}
+      <li class="breadcrumb-item first-item"><a href="/">家</a></li>
+      {% endif %} {% if page.grandparent_name %}
+      <li class="breadcrumb-item"><a href="{{ page.grandparent_path }}">{{ page.grandparent_name }}</a></li>
+      {% endif %} {% if page.parent and page.parent != "Home" %}
+      <li class="breadcrumb-item"><a href="{{ page.dir }}">{{ page.parent }}</a></li>
+      {% endif %}
+      <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+    </ol>
+  </nav>
+</header>

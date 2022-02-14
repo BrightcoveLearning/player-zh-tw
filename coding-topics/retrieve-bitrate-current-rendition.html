@@ -1,0 +1,89 @@
+---
+title:“檢索當前呈現的比特率”
+description:"In this topic, you will learn how to retrieve the bitrate of the currently playing rendition."
+parent: "coding-topics"
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="section-name">檢索比特率</h2>
+    <p>您可以使用以下代碼來檢索當前播放的播放的比特率：</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">player.tech(true).vhs.playlists.media().attributes.BANDWIDTH</code></pre>
+    <aside class="bcls-aside bcls-aside--tip language-editable">即使代碼包含單詞<strong>播放列表</strong>，這不是指視頻播放列表。見<a href="#What_playlist_is_used">使用什麼播放列表？</a>本文檔後面的部分進行澄清。
+    <p>下面顯示瞭如何將代碼與高級播放器實現一起使用：</p>
+    <pre class="line-numbers"><code class="language-html" translate="No">&lt;video-js id=&quot;myPlayerID&quot;
+  data-account=&quot;1507807800001&quot;
+  data-player=&quot;default&quot;
+  data-embed=&quot;default&quot;
+  controls=&quot;&quot;
+  data-video-id=&quot;6201753345001&quot;
+  data-playlist-id=&quot;&quot;
+  data-application-id=&quot;&quot;
+  width=&quot;960&quot; height=&quot;540&quot;&gt;&lt;/video-js&gt;
+&lt;script src=&quot;https://players.brightcove.net/1507807800001/default_default/index.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  videojs.getPlayer('myPlayerID').ready(function () {
+    var myPlayer = this;
+    myPlayer.on('play', function () {
+      console.log('Bitrate of playing rendition :', myPlayer.tech(true).vhs.playlists.media().attributes.BANDWIDTH);
+    })
+  });
+&lt;/script&gt;</code></pre>
+    <p>在這種情況下，結果將顯示在控制台中，如下所示：</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/coding-topics/retrieve-bitrate-current-rendition/result-in-console.png" alt="result in console">
+    </figure>
+
+    <h3>使用控制台</h3>
+    <p>您可以在控制台中檢索相同的信息。鑑於玩家被分配了一個 ID，在這種情況下<code>我的玩家ID</code>，以下可用於獲取當前播放的播放的比特率：</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/coding-topics/retrieve-bitrate-current-rendition/retrieve-in-console.png" alt="retrieve in console">
+    </figure>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Usage_details">使用詳情</h2>
+    <p>使用代碼時請注意以下細節：</p>
+    <ul>
+      <li>該代碼將根據 HLS 或 DASH 清單中為解復用視頻播放列表或複用視頻/音頻播放列表定義的內容返回比特率。</li>
+      <li>該代碼不適用於以下內容：
+        <ul>
+          <li>MP4 編碼的視頻</li>
+          <li>使用本機播放時，例如 Safari 上的 HLS</li>
+          <li>當僅發送媒體播放列表而沒有清單時。這將不起作用：
+            <pre class="line-numbers"><code class="language-javascript" translate="No">https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/gear2/prog_index.m3u8</code></pre>
+            雖然這會
+            <pre class="line-numbers"><code class="language-javascript" translate="No">https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8</code></pre>
+          </li>
+        </ul>
+      </li>
+      <li>由於 Brightcove Player 總是在當前播放位置之前緩衝內容，因此返回值可能比當前播放位置提前一點。</li>
+      <li>如果您希望查看有關當前播放視頻的播放列表的信息，可以使用以下方法之一：
+        <ul>
+          <li>這<a href="https://github.com/videojs/http-streaming#segment-metadata">段元數據文本軌道</a>獲取有關當前播放的解復用視頻播放列表或複用視頻/音頻播放列表的信息。</li>
+          <li>這<a href="/references/video-metadata-mediainfo.html">媒體信息屬性</a>您可以在哪裡查看<code>來源</code>數組，其示例如下所示：
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/coding-topics/retrieve-bitrate-current-rendition/mediainfo-sources.png" alt="mediainfo sources">
+            </figure>
+          </li>
+        </ul>
+      </li>
+      <li>無法獲得音頻內容的比特率信息，無論是多路復用還是多路分離。</li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="What_playlist_is_used">使用什麼播放列表？</h2>
+    <p>在代碼中引用了播放列表，但播放器實現僅播放單個視頻：</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">myPlayer.tech(true).vhs.<span class="bcls-highlight">playlists</span>.media().attributes.BANDWIDTH</code></pre>
+    <p>這不是指視頻播放列表。相反，它引用了一個 HLS 播放清單，也稱為播放列表。例如，在此視頻中，既有 HLS 也有 MP4 格式（HLS 格式或 HLS 播放列表被突出顯示）：</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/coding-topics/retrieve-bitrate-current-rendition/video-sources.png" alt="video sources">
+    </figure>
+
+  </section>
+
+</article>

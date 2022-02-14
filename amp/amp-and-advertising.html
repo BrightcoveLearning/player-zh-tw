@@ -1,0 +1,78 @@
+---
+title:「AMP 和廣告」
+description:在本主題中，您將學習如何與使用 AMP 的布萊特灣播放器展示廣告。您還將學習如何使用 Brightcove 播放器/擴音器配置的客戶端同意。「
+parent: "amp"
+---
+ <h1>{{ page.title }}</h1>    
+<article class="bcls-article">
+    <summary>{{ page.description }} </summary>
+    <section class="bcls-section">
+        <h2 id="section-name">在 AMP 播放器中實施廣告</h2>
+        <p>廣告，包括預刊，適用於 AMP 中使用的玩家。廣告插件及其配置只需要包含在播放器的配置中。如果您需要在廣告伺服器呼叫中包含特定文章的值，您可以將自訂資料傳遞給播放程式外掛程式，如本文稍後所述。</p>
+        <p>AMP 是在什麼可以添加到一個有效的 AMP 頁面非常嚴格，如<a href="/amp/amp-using-video-cloud-video.html">  AMP 使用視頻雲視頻</a>文檔中詳細說明。例如，您不能使用新增<code translate="No">id</code>至標<code translate="No">amp-brightcove</code>籤的標準做法，然後使用<code translate="No">script</code>塊來配置，例如 IM3 插件。</p>
+        <p>若要重申，廣告必須在播放器的設定中使用 Studio 或播放程式管理 API 來實作。</p>
+        <p>如果您想要使用廣告設定網址，例如使用廣告巨集<code translate="No">{pageVariable.<span class="bcls-highlight">adId</span>}</code>，您必須變更播放器的設定。您可以使用像這樣的自定義參數：</p>
+        <pre class="line-numbers">
+  <code class="language-html" translate="No">data-param-ad-id="preonlybumper"</code>   </pre>
+        <p>這不會讓廣告巨集自動使用此值<code translate="No">{pageVariable.adId}</code>。若要讓該<code translate="No">ad-id/adId</code>屬性可供廣告網址使用，您必須使用布萊特灣播放程式的<a href="/general/player-configuration-guide.html#query_string_to_window">查詢 _string_to_window </a>組態選項。此選項控制查詢字符串參數的全局命名空間（窗口）變量的人口。若要將所有查詢字串參數新增至全域命名空間，請將下列項目新增至您的播放程式組態：
+            <pre class="line-numbers">
+<code class="language-bash" translate="No">"query_string_to_window": {
+  "target": "queryStringParams"
+}</code>   </pre>
+            <p>請注意，<code translate="no">  QueryStringStringSparams </code>名稱是將存儲參數的「變量」，您可以根據選擇更改名稱。</p>
+            <p>如果由於某種原因，您更喜歡將有限的參數分配給全局命名空間，則可以這樣做。例如，若只要讓外掛程式<code class="language-html" translate="No">data-param-<span class="bcls-highlight">ad-id</span>="..."</code>可用，您可以在播放程式設定中加入以下內容：</p>
+            <pre class="line-numbers">
+<code class="language-bash" translate="No">"query_string_to_window": {
+  "globals": [
+    "adId"
+  ]
+}</code>   </pre>
+            <p>如需更新播放程式組態的特定指示，請參閱<a href="https://apis.support.brightcove.com/player-management/references/reference.html#operation/UpdatePlayerConfiguration">播放程式組態-</a>從播放程式管理 API 參考更新播放程式組態。</p>
+    </section>
+    <section class="bcls-section">
+        <h2 id="section-name">AMP 同意與廣告</h2>
+        <p>在 AMP 中，您可以使用客戶端同意，為使用者提供對其線上體驗的額外控制權。如果您的 AMP 網頁是經過 AMP 同意管理使用者同意，而且您正在播放器中使用廣告，您可能需要根據該同意調整播放器的廣告請求。通過添加一個
+            <pre><code class="language-javascript">數據塊同意 = "_till_響應」</code> </pre>
+            屬性添加到安培-亮灣元素。這會導致玩家的載入延遲，直到使用者接受或拒絕同意為止。在已知同意的後續頁面上，玩家將正常載入，不會延遲。</p>
+        <aside class="bcls-aside bcls-aside--information">有關 AMP 用戶同意的更多信息，請參閱 AMP 的<a href="https://amp.dev/documentation/examples/user-consent/client_side_user_consent_flow/">客戶端用戶同意流程</a>文檔。</aside> 
+        <h3>廣告設定</h3>
+        <p>實施廣告和 AMP 最簡單的場景是使用 Brightcove 播放器的標準 IMA 廣告整合與谷歌廣告管理器，預計<code translate="no">  npa=1 </code>在廣告請求未知或未給出同意時被添加到廣告請求中。若要執行這項操作，請將</p>
+            <pre><code class="language-javascript">「ImaAdnPA」：真實</code> </pre>
+            <p>到玩家的 AMP 支援外掛程式的選項，這將會自動新增至廣告伺服器網址，如下所示：</p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/amp/amp-ad-plugin-config.png" alt="plugin configuration">
+        </figure>
+        <p>對於廣告伺服器網址的其他變更，同意狀態會在播放器的 iframe 上設定三個查詢參數：</p>
+
+        <ul>
+            <li><code translate="no">兩次初始同意狀態</code>：同意是否被接受、拒絕、未知</li>
+            <li><code translate="no">同意共享資料</code>：來自同意供應商的 JSON 數據字符串</li>
+            <li><code translate="no">兩次初始同意值</code>：同意供應商的同意字串</li>
+        </ul>
+
+        <p>同意狀態是 AMP 中定義的整數：</p>
+
+        <ul>
+            <li>足夠：1</li>
+            <li>不足：2</li>
+            <li>不知道不需要：3</li>
+            <li>未知：4</li>
+        </ul>
+
+        <p>若要更新播放程式組態，使播放程式 iframe 的查詢參數可以做為簡單的 Javascript 變數使用，請在 JSON 編輯器中將下列項目新增至播放程式組態中：</p>
+        <pre><code class="language-javascript">「查詢窗口」: {"target": "queryStringParams"}</code>  </pre>
+        <p>如需協助，以下是 UI 的截圖：
+        </p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/amp/amp-ad-json-editor.png" alt="JSON editor">
+        </figure>
+        <p>然後，您可以在廣告伺服器請求中使用同意查詢參數，使用巨集或將 SeverUrl 設定為函數。</p>
+        <h4>巨集範例</h4>
+        <pre><code class="language-javascript">「廣告伺服器網址」：」https://ads.example.com/ad?consent = {pageVariable.queryStringParams.ampInitialConsentState}同意字串 = {pageVariable.queryStringParams.ampInitialConsentValue}  "</code> </pre>
+        <h4>函數範例</h4>
+        <p>使用下列方式設定沒有廣告伺服器網址的播放器：</p>
+        <pre><code class="language-javascript">視頻 J. 註冊外掛程式 ('設定網址', 函數 () { this.ima3.settings.serverUrl = function(callback) { if (window.queryStringParams.ampInitialConsentState === 1) { // Sufficient consent callback('https://ads.example.com/adwithconsent?string={pageVariable.queryStringParams.ampInitialConsentValue}  ');} 其他{ // Use a different ad callback('https://ads.example.com/basicad'); } }); </code> </pre>
+
+
+    </section>
+</article>

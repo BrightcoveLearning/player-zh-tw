@@ -1,0 +1,68 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Brightcove Player Development Documentation
+email: training@brightcove.com
+description: |- # this means to ignore newlines until "baseurl:"
+  With Video Cloud you can deliver fast, innovative, TV-like experiences out-of-the-box, dynamically insert server-side ads to maximize revenue, and reach your audiences wherever they are.
+
+  Using CSS and JavaScript, you can create highly customized video experiences for you viewers.
+# baseurl: "" # the subpath of your site, e.g. /blog
+site_url: "https://player.support.brightcove.com"
+site_domain: "player.support.brightcove.com"
+
+# Build settings
+# theme: minima
+
+# local server (for "jekyll serve") will be localhost:{PORT number below}
+port: 8300
+
+product: Brightcove Player
+color: rgb(51, 51, 51)
+product_color: rgb(43, 131, 223)
+product_icon: "COVE004_Brightcove_Player_Logo_RGB_K.svg"
+search_id: "017969773216783359937:ddno7qwxthp"
+feedbackify_id: "15082"
+bing_custom_config_id: "339e6956-4375-4564-8496-a6172209b7c1"
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+# plugins
+plugins:
+  - jekyll-last-modified-at
+
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

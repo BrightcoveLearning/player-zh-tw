@@ -1,1133 +1,53 @@
-﻿<!doctype html>
-<html lang="zh-TW">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  
-  <title>逐步：Video.js 外掛程式產生器</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="/assets/css/local.css">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-  <script src="/assets/js/sajari-head.js"></script>
-</head>
-
-<body class="body">
-
-<header>
-  <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Player_Logo.svg" alt="產品標誌" style="max-height: 100px;max-width: 232px;"/></a>
-<!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">選擇語言</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
-
-<script>
-/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-/* ]]> */
-</script>
-
-Brightcove 
-
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="支持"/>聯繫支持</a><span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span><a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="系統狀態"/>系統狀況</a></span><br/>
-    
-  </div>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb arr-right">
-      
-      <li class="breadcrumb-item"><a href="/">首頁</a></li>
-      
-      
-      
-      <li class="breadcrumb-item"><a href="/coding-topics/">編碼主題</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">逐步：Video.js 外掛程式產生器</li>
-    </ol>
-  </nav>
-</header>
-<div class="container">
-    <div class="row">
-      <div class="col-sm-3 left-side-bar">
-        				<select id="site_select" class="bcls-select" style="margin-right: 1rem;">
-					<option value="">其他布萊特灣文件</option>
-					
-						
-							<option value="https://support.brightcove.com">文件首頁</option>
-						
-					
-						
-							<option value="https://audience.support.brightcove.com">布萊特灣觀眾</option>
-						
-					
-						
-							<option value="https://beacon.support.brightcove.com">布萊特灣燈塔</option>
-						
-					
-						
-							<option value="https://campaign.support.brightcove.com">布萊特灣戰役</option>
-						
-					
-						
-							<option value="https://engage.support.brightcove.com">布萊特灣參與</option>
-						
-					
-						
-							<option value="https://live.support.brightcove.com">Brightcove Live</option>
-						
-					
-						
-							<option value="https://gallery.support.brightcove.com">Brightcove 圖庫</option>
-						
-					
-						
-							<option value="https://ssai.support.brightcove.com">布萊特灣</option>
-						
-					
-						
-							<option value="https://social.support.brightcove.com">布萊特灣社會</option>
-						
-					
-						
-							<option value="https://studio.support.brightcove.com">視訊雲端工作室</option>
-						
-					
-						
-							<option value="https://player.support.brightcove.com">布萊特灣球員開發</option>
-						
-					
-						
-							<option value="https://apis.support.brightcove.com">視訊雲端平台 API</option>
-						
-					
-						
-							<option value="https://sdks.support.brightcove.com">視訊雲端裝置開發套件</option>
-						
-					
-						
-							<option value="https://integrations.support.brightcove.com">整合與 CMS 連接器</option>
-						
-					
-						
-							<option value="https://general.support.brightcove.com">視訊雲端一般資訊</option>
-						
-					
-						
-							<option value="https://zencoder.support.brightcove.com">Zencoder</option>
-						
-					
-				</select>
-						<nav class="sidenav" id="side_nav">
-
-          
-            
-            <h5><a href="/index.html">首頁</a></h5>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/getting-started/index.html">開始使<strong>用 + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/what-brightcove-player.html">什麼是布萊特灣玩家？</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/overview-brightcove-player.html">概述：布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/overview-brightcove-player-plugins.html">概述：布萊特灣播放器外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-brightcove-player.html">逐步：布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-using-rest-apis.html">學習指南：使用其他應用程式介</a>面</li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/basics/index.html">學習基本知識<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/basics/developer-basics-advanced-player-code.html">進階播放程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-autoplaying-video.html">自動播放視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-converting-code.html">自定義插件-轉換代碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-passing-data.html">自定義插件-傳遞數據</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-using-studio.html">自定義插件-使用工作室</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-custom-plugin-why-and-how.html">自定義插件-為什麼和如何</a></li>
-                  
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-generating-player-code.html">產生播放程式代碼</a></li>
-                  
-                
-                  
-                    <li><a href="/basics/developer-basics-preparing-write-code.html">準備撰寫程式碼</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/references/index.html">參考資料<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/references/brightcove-player-5-6-migration-guide.html">布萊特灣玩家 5 至 6 轉移指南</a></li>
-                  
-                
-                  
-                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/index.html">布萊特灣播放器 API 文檔（外部網站）</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-cookies.html">布萊特灣球員曲奇</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
-                  
-                
-                  
-                    <li><a href="https://groups.google.com/forum/embed/?place=forum/bcplayerdev#!forum/bcplayerdev">布萊特灣球員公告論壇</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-system-requirements.html">布萊特灣玩家系統需求</a></li>
-                  
-                
-                  
-                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋架構</a></li>
-                  
-                
-                  
-                    <li><a href="https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html">已知問題</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-catalog.html">播放器目錄</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-feature-support-browser.html">瀏覽器支援播放器功能</a></li>
-                  
-                
-                  
-                    <li><a href="/references/player-metadata-bcinfo.html">來自 bcinfo 的播放器中繼資料</a></li>
-                  
-                
-                  
-                    <li><a href="https://docs.brightcove.com/brightcove-player/current-release/Player.html">播放器方法/事件 API（外部網站）</a></li>
-                  
-                
-                  
-                    <li><a href="/references/guide-playlist-api.html">播放清單 API 指南</a></li>
-                  
-                
-                  
-                    <li><a href="/references/video-metadata-mediainfo.html">來自媒體資訊的視訊中繼資料</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/plugins/index.html">外掛程式<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/plugins/360degvr-video-plugin.html">360 度影片</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/ad-only-plugin.html">僅廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/upgrading-ima3-plugin-version-3.html">升級至 IM3 外掛程式版本 3 </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">廣告與 SAI </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/chromecast-plugin-brightcove-player.html">鉻</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕終止畫面</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-thumbnail-previews-plugin.html">顯示縮圖預覽</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/google-tag-manager-plugin-brightcove-player.html">谷歌代碼管理工具</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/hls-plugin.html">HLS </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/live-dvrux-plugin.html">直播 DVRUX </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-overlay-plugin.html">覆疊</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/overview-brightcove-player-plugins.html">概述：玩家外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/picture-picture-plugin-aka-floating-or-pinned.html">子母畫面</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI </a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/changelog/index.html">外掛程式變更記錄</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/plugin-registry.html">外掛程式登錄</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/plugin-version-reference.html">外掛程式版本參考</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/tealium-plugin-brightcove-player.html">茶葉標籤管理程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/video-seo-schema-generator-plugin.html">視頻 SEO 模式生成器</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/advertising/index.html">廣告<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/advertising/ad-events-and-ad-objects.html">廣告事件和廣告物件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/ad-only-plugin.html">僅廣告外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-freewheel-plugin.html">廣告與飛輪插件</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/advertising-ima3-plugin.html">使用 IM3 外掛程式進行廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/client-side-preroll-with-live-ssai.html">使用即時 SSAI 的客戶端預先廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/displaying-ads-using-ad-cue-points.html">使用廣告提示點顯示廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/flash-no-longer-valid-ima.html">閃光燈在 IMA 中不再有效</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/guide-ad-partner-integration.html">指南：廣告合作夥伴整合</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/guide-contrib-ads-migration.html">指南：接觸式廣告移轉</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/implementing-server-side-ads-brightcove-player.html">與布萊特灣玩家一起實施 SSAI </a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-header-bidding-ad.html">跳躍開始：標頭出價廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-outstream-ad.html">跳躍開始：外游廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/jump-start-pre-roll-ad.html">跳躍開始：播放前廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/known-issues-server-side-ad-insertion-ssai.html">已知問題：伺服器端廣告插入 (SSAI) </a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/learning-guide-video-advertising.html">學習指南：影片廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/step-step-implementing-advertising.html">逐步：實作廣告</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/testing-pre-release-advertising-plugins.html">測試發行前廣告外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/using-dfp-premium-brightcove-player.html">與布萊特灣玩家一起使用 DFP 加值</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/using-player-enhancements-live-ssai-brightcove-player.html">使用即時 SSAI 和進階播放器工具組</a></li>
-                  
-                
-                  
-                    <li><a href="/advertising/video-cloud-ssai-ad-tag-validation.html">視訊雲端 SSAI 廣告標籤驗證</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/publish/index.html">發佈影片與播放器<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/publish/assigning-video-player-programmatically.html">以程式設計方式將視訊指派給播放程式</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/available-options-advanced-page-embed-code.html">進階 (頁內) 內嵌程式碼的可用選項</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/available-options-standard-iframe-embed-code.html">標準 (iframe) 內嵌程式碼的可用選項</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/bulk-updating-brightcove-default-player.html">大量更新布萊特灣預設播放器</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html">選擇正確的內嵌程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/delaying-player-instantiation.html">延遲播放程式實例化</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/pre-release-player.html">發行前播放程式</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/syndication-strategies.html">聯合發行策略</a></li>
-                  
-                
-                  
-                    <li><a href="/publish/using-non-brightcove-player.html">使用非亮灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html">在一個頁面上使用多個玩家</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/using-reference-ids.html">使用參考 ID </a></li>
-                  
-                
-                  
-                    <li><a href="">視訊轉譯檢查器</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/troubleshooting/index.html">疑難排解<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
-                  
-                
-                  
-                    <li><a href="/references/brightcove-player-error-reference.html">布萊特灣玩家錯誤參考</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-player-information-modal.html">布萊特灣球員資訊模態</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-player-troubleshooting-guide.html">布萊特灣玩家疑難排解指南</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/creating-charles-log.html">創建查理日誌</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/creating-network-log.html">建立網路記錄</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-error-messages-plugin.html">顯示錯誤訊息外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/manually-setting-player-version.html">手動設定播放程式版本</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playerplugin-version-testing.html">播放器/插件版本測試</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/player-informational-properties.html">玩家資訊屬性</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/brightcove-player-sample-live-custom-error-message.html">範例：即時自訂錯誤訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/step-step-brightcove-player-debugger.html">逐步：布萊特灣播放器除錯器</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/running-network-path-trace.html">執行網路路徑追蹤</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/using-player-reference.html">使用播放器參照</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/vetting-brightcove-player-releases.html">評審布萊特灣球員發布</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/styling/index.html">造型與外觀<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/styling/customizing-player-appearance.html">自訂播放程式外觀</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/customizing-player-appearance-legacy-skin.html">自訂玩家外觀-舊版外觀</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/brightcove-player-sample-player-styling-playground.html">玩家造型遊樂場</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/quick-start-player-customization-legacy-skin.html">快速入門：玩家自訂-傳統造型</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/step-step-player-customization.html">逐步：玩家自訂</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/responsive-sizing-brightcove-player.html">適用於布萊特灣玩家的反應尺寸</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/sizing-player.html">調整播放器大小</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/skins-and-player-versions.html">外觀與播放程式版本</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/media/styling-captions.html">樣式註解</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/playback/index.html">播放<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/playback/autoplay-considerations.html">自動播放注意事項</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/brightcove-playback-technology-app.html">布萊特灣播放技術應用程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/xdr-with-bcplayer.html">與布萊特灣播放器的跨裝置履歷</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/deep-linking.html">深層連結</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/delivering-hls-video.html">提供 HLS 視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/determining-which-rendition-will-play.html">決定要播放哪些轉譯</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/hls-plugin.html">HLS 外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/ios-and-brightcove-player.html">iOS 和布萊特灣播放器</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/quality-selection-plugin.html">品質選擇外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/static-url-delivery.html">靜態 URL 傳送</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/streaming-playready-protected-content-dynamic-delivery.html">串流播放就緒受保護的內容</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/using-brightcove-player-tve.html">在 TVE 中使用布萊特灣玩家</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/content-protection/index.html">DRM 與內容保護<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html">設定播放程式內容限制</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/creating-dash-drm-manifest-brightcove-player.html">為布萊特灣玩家建立破折號 DRM 資訊清單</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/domain-restrictions-messaging.html">網域限制訊息</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/configuring-brightcove-player-drm.html">DRM 外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/overview-content-protection.html">概述：內容保護</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/policy-keys.html">原則金鑰</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/restricting-video-playback-using-ip-address.html">使用 IP 位址限制視訊播放</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/coding-topics/index.html">編碼主題<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/publish/brightcove-player-loader.html">布萊特灣玩家裝載機</a></li>
-                  
-                
-                  
-                    <li><a href="/references/catalog-search-architecture.html">目錄搜尋升級</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/brightcove-player-sample-trigger-rewind-custom-event.html">自訂事件</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/guide-playback-technology.html">指南：播放技術</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/programmatically-localizing-brightcove-player.html">本地化布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/localizing-plugins.html">本地化外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/player-events.html">玩家事件</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/overview-components.html">概述：元件</a></li>
-                  
-                
-                  
-                    <li><a href="/playback/overview-https-support.html">概述：HTTPS 支援</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/overview-player-api.html">概述：播放器 API </a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/pass-data-plugin.html">將資料傳遞給外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/react-player-loader.html">反應播放器載入器</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/reporting-brightcove-player-configurations.html">有關布萊特灣玩家配置的報告</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/requirejs-and-brightcove-player.html">要求 JS 和布萊特灣玩家</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/step-step-plugin-development.html">逐步：外掛程式開發</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/step-step-videojs-plugin-generator.html">逐步：Video.js 外掛程式產生器</a></li>
-                  
-                
-                  
-                    <li><a href="/coding-topics/using-bc-and-getplayer-methods.html">使用 BC（）和獲取播放器（）方法</a></li>
-                  
-                
-                  
-                    <li><a href="/troubleshooting/viewing-player-configuration.html">檢視播放程式組態</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/general/index.html">一般資訊<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html">將應用程式 ID 新增至播放程式內嵌程式碼</a></li>
-                  
-                
-                  
-                    <li><a href="/general/adding-captions-videos-programmatically.html">以程式設計方式將字幕新增至視訊</a></li>
-                  
-                
-                  
-                    <li><a href="https://studio.support.brightcove.com/media/adding-chapters-video.html">新增章節至視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/general/brightcove-player-6-now-default-version.html">布萊特灣球員 6 現在預設版本</a></li>
-                  
-                
-                  
-                    <li><a href="/general/brightcove-player-accessibility.html">布萊特灣玩家無障礙</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/custom-endscreen-plugin.html">自訂螢幕外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/display-overlay-plugin.html">顯示覆蓋外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="/references/guide-playlist-api.html">指南：播放清單 API </a></li>
-                  
-                
-                  
-                    <li><a href="/general/identify-and-delete-low-performing-videos.html">識別和刪除效能不佳的影片</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-cue-points-programmatically.html">以程式設計方式實作提示點</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-playlists.html">實作播放清單</a></li>
-                  
-                
-                  
-                    <li><a href="/general/implementing-modaldialog.html">實現模式對話框</a></li>
-                  
-                
-                  
-                    <li><a href="/general/live-hls.html">即時 HLS </a></li>
-                  
-                
-                  
-                    <li><a href="/general/live-stream-configuration.html">即時串流組態</a></li>
-                  
-                
-                  
-                    <li><a href="/general/multiple-audio-tracks.html">多個音軌</a></li>
-                  
-                
-                  
-                    <li><a href="/general/player-configuration-guide.html">播放程式組態指南</a></li>
-                  
-                
-                  
-                    <li><a href="/general/playing-live-streams.html">播放即時串流</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/playlist-ui-plugin.html">播放清單 UI 插件</a></li>
-                  
-                
-                  
-                    <li><a href="/content-protection/signed-urls-and-token-auth-live-stream.html">具有即時串流的已簽署 URL 和權杖驗證</a></li>
-                  
-                
-                  
-                    <li><a href="/plugins/social-sharing-plugin.html">社交媒體外掛程式</a></li>
-                  
-                
-                  
-                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/step-step-player-management.html">逐步：玩家管理</a></li>
-                  
-                
-                  
-                    <li><a href="/styling/styling-playlists.html">設定播放清單樣式</a></li>
-                  
-                
-                  
-                    <li><a href="/general/using-screen-reader-brightcove-player.html">使用螢幕閱讀程式與布萊特灣播放器</a></li>
-                  
-                
-                  
-                    <li><a href="/general/versions-brightcove-player-documentation.html">布萊特灣玩家文件的版本</a></li>
-                  
-                
-                  
-                    <li><a href="/general/volume-control.html">音量控制</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/code-samples/index.html">程式碼範例<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/code-samples/index-thumb.html">依群組的程式碼範例</a></li>
-                  
-                
-                  
-                    <li><a href="/code-samples/index.html">程式碼範例索引</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/amp/index.html">放大器<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/amp/amp-using-video-cloud-video.html">AMP 使用視訊雲端視訊</a></li>
-                  
-                
-                  
-                    <li><a href="/amp/amp-using-external-video.html">使用外部視訊的 AMP </a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/training/index.html">訓練<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/training/online-training-courses.html">所有線上訓練課程</a></li>
-                  
-                
-                  
-                    <li><a href="/training/developer-basics-videos.html">開發人員基本資訊</a></li>
-                  
-                
-                  
-                    <li><a href="/training/player-development-training-videos.html">玩家開發訓練影片</a></li>
-                  
-                
-                  
-                    <li><a href="/training/register-training.html">註冊參加講師指導訓練</a></li>
-                  
-                
-                  
-                    <li><a href="/training/training-demand-developing-brightcove-player.html">訓練：與布萊特灣玩家一起進行開發</a></li>
-                  
-                
-                  
-                    <li><a href="https://apis.support.brightcove.com/player-management/getting-started/training-demand-quick-start-player-management.html">訓練：玩家管理快速入門</a></li>
-                  
-                
-                  
-                    <li><a href="/training/brightcove-university.html">布萊特灣大學培訓課程</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/release-notes/index.html">版本說明<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/release-notes/brightcove-player-release-notes.html">布萊特灣玩家發行紀錄</a></li>
-                  
-                
-                  
-                    <li><a href="/release-notes/brightcove-player-prerelease-notes.html">布萊特灣玩家預先發行紀錄</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/support/index.html">支援<strong> + </strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    
-                  
-                
-                  
-                    <li><a href="/support/viewing-brightcove-system-status-page.html">檢視布萊特灣系統狀態頁面</a></li>
-                  
-                
-                  
-                    <li><a href="/support/contact-sales.html">聯絡銷售人員</a></li>
-                  
-                
-                  
-                    <li><a href="/support/opening-case-with-brightcove-support.html">開啟支援案例</a></li>
-                  
-                
-              </ul>
-            
-          
-      </nav>
-    </div>
-    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
-  <!-- bootstrap layout -->
-
-<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="導覽功能表"/></p>
-
-<!-- search bar -->
-<div id="nav-search-box" style="margin-top: 1rem;"></div>
-<!-- in-page navigation for narrow screens -->
-<details class="centered-inpage-nav" id="centered_inpage_nav">
-  <summary><h6 class="toc">頁面內容</h6></summary>
-  <nav id="centered_toc"></nav>
-  <ul id="centered_in_page_toc" class="list-none"></ul>
-</details>
-<!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="在新分頁中開啟" style="margin-top:4em;width: 1.5em;"/></a>
-
-
-
-  
-    
-
+---
+title: '一步步：Video.js 插件生成器
+parent: Coding Topics
+description: In this topic, you will learn how to use the video.js plugin generator to create and test plugins for the Brightcove Player.
+---
 
 <article class="bcls-article">
-  <h1>逐步：Video.js 外掛程式產生器</h1>
-  <summary>
-    <p>在本主題中，您將學習如何使用video.js插件生成器為Brightcove Player創建和測試插件。</p>
-    <p>video.js插件生成器創建創建常規插件所需的文件和文件夾。它包括一個測試環境，以便您在開發插件時可以輕鬆查看所做的更改。它甚至生成最終的插件文件，供您準備好發佈時使用。</p>
-    <aside class="bcls-aside bcls-aside--information">這是一個開源項目，沒有被布萊特灣正式支持。由於許多開發人員都在使用它，因此通常會保持最新狀態。</aside>
-  </summary>
+  <h1>一步步：Video.js插件生成器</h1>
+  <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <h2 id="Overview">概覽</h2>
+    <p>video.js插件生成器創建創建常規插件所需的文件和文件夾。它包括一個測試環境，以便您在開發插件時可以輕鬆查看所做的更改。它甚至會生成最終的插件文件，供您準備好發佈時使用。</p>
+    <aside class="bcls-aside bcls-aside--information">這是一個開源項目，並沒有得到 Brightcove 的官方支持。由於它被許多開發人員使用，它通常保持最新。
+  </section>
+  <section class="bcls-section">
+    <h2 id="Overview">概述</h2>
     <p>在本主題中，您將執行以下任務：</p>
     <ul>
-      <li><a href="#Setup_your_environment">設置環境</a></li>
+      <li><a href="#Setup_your_environment">設置您的環境</a></li>
       <li><a href="#Create_the_plugin_foundation">創建插件基礎</a></li>
       <li><a href="#View_the_source_files">查看源文件</a></li>
       <li><a href="#Test_your_plugin">測試您的插件</a></li>
       <li><a href="#Edit_the_JavaScript_file">編輯JavaScript文件</a></li>
       <li><a href="#Edit_the_CSS_file">編輯CSS文件</a></li>
-      <li><a href="#Build_your_plugin">構建你的插件</a></li>
+      <li><a href="#Build_your_plugin">構建您的插件</a></li>
       <li><a href="#Pass_data_to_your_plugin">將數據傳遞到您的插件</a></li>
       <li><a href="#Recommendations">推薦建議</a></li>
       <li><a href="#Resources">資源</a></li>
     </ul>
-    <p>如需影片概觀，請參閱下列內容：</p>
+    <p>有關視頻概述，請參見以下內容：</p>
     <p>
       <iframe src="//players.brightcove.net/20318290001/S1icdlw9g_default/index.html?playlistId=5341117557001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="800" height="450"></iframe>
     </p>
   </section>
   <section class="bcls-section">
-    <h2 id="Setup_your_environment">設置環境</h2>
-    <p>要設置您的環境以運行插件生成器，請遵循以下步驟：</p>
+    <h2 id="Setup_your_environment">設置您的環境</h2>
+    <p>要設置您的環境以運行插件生成器，請按照下列步驟操作：</p>
     <ol class="bcls-tasklist">
       <li>
-        <p>如果尚未安裝，請下載並安裝<a href="https://nodejs.org/en/">Node.js JavaScript運行時</a>。這包括npm，npm是一個軟件包生態系統，其中包含大量開源庫。</p>
-        <aside class="bcls-aside bcls-aside--tip">使用<strong>推薦給大多數用戶</strong>版本的Node.js。</aside>
+        <p>如果尚未安裝，請下載並安裝<a href="https://nodejs.org/en/">Node.js JavaScript運行時</a>。其中包括npm，npm是一個軟件包生態系統，其中包含大量開源庫。</p>
+        <aside class="bcls-aside bcls-aside--tip">使用<strong>推薦給大多數用戶</strong> Node.js 的版本。</aside>
       </li>
-      <li>
-        <p>在計算機上創建一個本地文件夾。在此示例中，我們將創建一個名為<strong>測試</strong>。這是生成器文件和插件文件所在的位置。</p>
-        <aside class="bcls-aside bcls-aside--tip">為避免權限問題，通常最好將此文件夾放在用戶根目錄中。</aside>
+      <li>在您的計算機上創建一個本地文件夾。在此示例中，我們將創建一個名為<strong>測試</strong>。這是生成器文件和插件文件所在的位置。<aside class="bcls-aside bcls-aside--tip">為避免權限問題，通常最好將此文件夾放在用戶根目錄中。</aside>
       </li>
       <li>查看<strong>自述文件</strong>的信息<a href="https://github.com/videojs/generator-videojs-plugin">video.js插件生成器</a>。在裡面<strong>docs</strong>文件夾，打開並查看<a href="https://github.com/videojs/generator-videojs-plugin/blob/master/docs/conventions.md">video.js插件約定</a>。本文檔討論有關創建插件的建議規則。</li>
-      <li>在上一步中創建的文件夾中打開“終端”應用程序。對於本示例，請在<strong>測試</strong>夾。</li>
+      <li>在上一步中創建的文件夾中打開“終端"應用程序。對於本示例，請在<strong>測試</strong>文件夾。</li>
       <li>
         <p>在終端應用程序中，將插件生成器與Yeoman一起安裝：</p>
         <pre>
 <code class="language-javascript" translate="No">$ npm install -g yo generator-videojs-plugin</code></pre>
-        <p>video.js插件生成器使用Yeoman生成器，它是一種腳手架工具，可以為任何項目設置基礎。這將設置基本文件和文件夾。您不需要了解Yeoman。您只需要使用插件生成器進行安裝。</p>
+        <p>video.js插件生成器使用Yeoman生成器，Yeoman生成器是一種腳手架工具，可以為任何項目設置基礎。這將設置基本文件和文件夾。您不需要了解Yeoman。您只需要使用插件生成器進行安裝。</p>
         <!-- <aside class="bcls-aside bcls-aside--tip">If you are having permission issues, you may try using (super user do): <code translate="No">sudo npm</code></aside> --></li>
     </ol>
   </section>
@@ -1136,10 +56,10 @@ Brightcove
     <p>在本節中，您將為插件創建基礎文件夾和文件。</p>
     <ol class="bcls-tasklist">
       <li>
-        <p>在「終端機」中，執行下列命令：</p>
+        <p>在終端中，運行以下命令：</p>
         <pre>
 <code class="language-javascript" translate="No">$ yo videojs-plugin</code></pre>
-        <aside class="bcls-aside bcls-aside--tip">您可以根據需要多次運行此命令。如果您決定在使用插件後向其添加選項，這將很有幫助。該工具將記住您以前的選擇，但是您可能必須覆蓋一些文件。</aside>
+        <aside class="bcls-aside bcls-aside--tip">您可以根據需要多次運行此命令。如果您決定在使用插件後將選項添加到插件，這將很有幫助。該工具會記住您之前的選擇，但您可能需要覆蓋一些文件。
       </li>
       <li>
         <p>接下來，將詢問有關插件詳細信息的一系列問題。這是選項列表以及每個選項的簡要說明。</p>
@@ -1154,8 +74,8 @@ Brightcove
           <tbody class="bcls-table__body">
             <tr>
               <td>包裝範圍</td>
-              <td><strong>選用性</strong>：僅當您計劃將插件發佈到私有npm組織時才需要。您可以在此處使用您的公司名稱或將其保留為空白。</td>
-              <td>空白</td>
+              <td><strong>可選的</strong>：僅當您計劃將插件發佈到私有npm組織時才需要。您可以在此處使用您的公司名稱，也可以將其保留為空白。</td>
+              <td>空白的</td>
             </tr>
             <tr>
               <td>外掛程式名稱</td>
@@ -1173,53 +93,56 @@ Brightcove
               <td>[您的姓名] &lt;您的電子郵件地址&gt;</td>
             </tr>
             <tr>
-              <td>授權</td>
+              <td>執照</td>
               <td>選擇許可證選項之一。對於您的私人插件，您可以選擇<strong>無牌</strong>。</td>
               <td>無牌</td>
             </tr>
             <tr>
               <td>基本或高級插件</td>
-              <td>基於函數的基本插件是普通的JavaScript函數。如果您過去編寫過Video.js插件，那麼您應該熟悉基本的插件概念。<br/><br/> Video.js 6引入了基於類的高級插件。此插件類型以JavaScript類（構造函數）開始。<br/><br/>有關詳細信息，請參見<a href="https://github.com/videojs/Video.js/blob/master/docs/guides/plugins.md">Video.js插件</a>自述文件。</td>
+              <td>基於函數的基本插件是普通的JavaScript函數。如果您過去曾經編寫過Video.js插件，那麼您應該熟悉基本的插件概念。<br />
+                <br />
+                Video.js 6 引入了基於類的高級插件。此插件類型以JavaScript類（它是構造函數）開頭。<br />
+                <br />
+                有關詳細信息，請參閱<a href="https://github.com/videojs/Video.js/blob/master/docs/guides/plugins.md">Video.js 插件</a>自述文件。</td>
               <td>基本插件（基於功能）</td>
             </tr>
             <tr>
               <td>CSS工具</td>
               <td>如果要包括CSS樣式，請選擇是。這將生成一個CSS文件。</td>
-              <td>是</td>
+              <td>是的</td>
             </tr>
             <tr>
               <td>文檔工具</td>
               <td>如果是，則生成器包括JSDoc並提供生成文檔的命令。</td>
-              <td>否</td>
+              <td>沒有</td>
             </tr>
             <tr>
               <td>國際化字符串</td>
               <td>如果您有想要翻譯成不同語言的文本，這將很有幫助。該工具不提供自動翻譯功能，但可以將video.js JSON格式的文件轉換為JavaScript。然後，您可以像創建video.js一樣創建語言，並將其編譯到插件的輸出中。</td>
-              <td>否</td>
+              <td>沒有</td>
             </tr>
             <tr>
               <td>皮棉更改的文件</td>
               <td>包括稱為videojs標準的Linting工具。此過程檢查您的代碼中是否存在一些常見錯誤。</td>
-              <td>是</td>
+              <td>是的</td>
             </tr>
             <tr>
               <td>在Git推之前</td>
-              <td>如果選擇的檢查失敗，這使您可以選擇阻止推送到git存儲庫。檢查代碼質量是防止推送不符合標準的代碼的好方法。</td>
-              <td>否</td>
+              <td>如果選擇的檢查失敗，這為您提供了防止推送到git存儲庫的選項。檢查代碼質量是防止推送不符合標準的代碼的好方法。</td>
+              <td>沒有</td>
             </tr>
           </tbody>
         </table>
         <p>這是在此示例中設置了值的輸出結果：</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="選項值" src="//learning-services-media.brightcove.com/doc-assets/player-development/getting-started/plugin-generator/option-values.png"/>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Option values" src="/assets/images/coding-topics/sbs-videojs-option-values.png" />
           <figcaption class="bcls-caption--image">選項值</figcaption>
         </figure>
       </li>
-      <li>
-        <p>設置完成後，您將看到幾條消息。可能會有一些警告消息，但沒有錯誤。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="安裝完成" src="//learning-services-media.brightcove.com/doc-assets/player-development/getting-started/plugin-generator/setup-complete.png"/>
-          <figcaption class="bcls-caption--image">安裝完成</figcaption>
+      <li>設置完成後，您將看到幾條消息。可能會有一些警告消息，但沒有錯誤。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Setup complete" src="/assets/images/coding-topics/sbs-videojs-setup-complete.png" />
+          <figcaption class="bcls-caption--image">設定完成</figcaption>
         </figure>
-        <p>請注意，插件的名稱為<strong>videojs-demo</strong>。</p>
+        <p>請注意，該插件的名稱為<strong>videojs-demo</strong>。</p>
       </li>
     </ol>
   </section>
@@ -1228,17 +151,16 @@ Brightcove
     <p>在本節中，我們將回顧由videojs生成器創建的源文件。</p>
     <ol class="bcls-tasklist">
       <li>
-        <p>在編輯器中，打開放置插件項目的頂部文件夾。打開<strong>src</strong>夾。在這裡您將找到以下內容：</p>
+        <p>在編輯器中，打開放置插件項目的頂部文件夾。打開<strong>src</strong>文件夾。在這裡您將找到以下內容：</p>
         <ul>
           <li>一種<strong>plugin.js</strong>文件。該文件包含您插件的代碼。</li>
-          <li>一種<strong>plugin.css</strong>文件（如果選擇）<strong>是</strong>到CSS工具選項。</li>
+          <li>一種<strong>plugin.css</strong>文件（如果已選擇）<strong>是的</strong>到CSS工具選項。</li>
         </ul>
       </li>
-      <li>
-        <p>（如果您未選擇<strong>是</strong>到CSS工具選項中，則可以跳過此步驟。）打開<strong>src&gt; plugin.css</strong>文件。</p>
+      <li>（如果您未選擇<strong>是的</strong>到CSS工具選項中，則可以跳過此步驟。）打開<strong>src&gt; plugin.css</strong>文件。
         <!-- <aside class="bcls-aside bcls-aside--tip">You will make your coding changes in this SASS file, but a CSS file will be created for distribution. If you are not familiar with SASS, don't worry. Since CSS is a subset of SASS, you can also use CSS in this file.</aside> -->
         
-        <p>您的程式碼看起來應該類似下列內容：</p>
+        <p>您的代碼應類似於以下內容：</p>
         <!-- <ul>
 		<li>Lines 6-8: add the <code translate="No">vjs-demo</code> class to the player.</li>
 	</ul> -->
@@ -1273,13 +195,11 @@ Brightcove
     }
   }</code></pre>
       </li>
-      <li>
-        <p>打開<strong>src&gt; plugin.js</strong>文件。</p>
-        <aside class="bcls-aside bcls-aside--tip">生成器使用ES6，這是最新的JavaScript版本。在中了解有關新功能的更多信息<a href="http://es6-features.org/#Constants">ECMAScript 6</a>。生成器將您的ES6代碼轉換為ES5代碼，以便您的分發代碼將在大多數瀏覽器上運行。</aside>
-        <p>您的程式碼看起來應該類似下列內容：</p>
+      <li>打開<strong>src&gt; plugin.js</strong>文件。<aside class="bcls-aside bcls-aside--tip">生成器使用 ES6，這是最新的 JavaScript 版本。在中了解有關新功能的更多信息<a href="http://es6-features.org/#Constants">ECMAScript 6</a>。生成器將您的 ES6 代碼轉換為 ES5 代碼，以便您的分發代碼可以在大多數瀏覽器上運行。
+        <p>您的代碼應類似於以下內容：</p>
         <ul>
           <li>第25-27行：致電<code translate="No">onPlayerReady()</code>播放器準備就緒時的功能。在這裡，您可以使用<code translate="No">options</code>目的。</li>
-          <li>第26行：添加<code translate="No">vjs-demo</code>給玩家上課。默認情況下，這是框架代碼唯一要做的事情。您可以在此處向插件添加功能。</li>
+          <li>第26行：添加<code translate="No">vjs-demo</code>給您的玩家上課。默認情況下，這是框架代碼唯一要做的事情。您可以在此處向插件添加功能。</li>
           <li>第48行：將您的插件註冊到video.js。</li>
           <li>第51行：向插件添加版本參數。當您運行<strong>npm版本</strong>腳本，它將將此變量更新為您使用的版本。</li>
         </ul>
@@ -1349,51 +269,45 @@ export default demo;</code></pre>
         <pre>
 <code class="language-javascript" translate="No">$ npm start</code></pre>
       </li>
-      <li>
-        <p>在瀏覽器中，輸入以下內容以打開開發服務器：</p>
+      <li>在瀏覽器中，輸入以下內容以打開開發服務器：
         <pre>
 <code class="language-javascript" translate="No">http://localhost:9999/</code></pre>
-        <p>您應該看到播放器帶有測試視頻。生成器為您提供了在頁面中運行的演示播放器。在瀏覽器開發者工具中，打開<strong>元素</strong>標籤以查看播放器的HTML。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="瀏覽器測試" src="//learning-services-media.brightcove.com/doc-assets/player-development/getting-started/plugin-generator/browser-test.png"/>
+        <p>您應該會看到帶有測試視頻的播放器。生成器為您提供了一個在頁面中運行的演示播放器。在瀏覽器開發者工具中，打開<strong>元素</strong>標籤以查看播放器的HTML。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Browser testing" src="/assets/images/coding-topics/sbs-videojs-browser-test.png" />
           <figcaption class="bcls-caption--image">瀏覽器測試</figcaption>
         </figure>
       </li>
-      <li>
-        <p>檢查此網頁的元素。您應該看到<code translate="No">vjs-demo</code>類已添加到播放器。請記住，我們在插件代碼中將此類添加到了播放器。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="vjs-示範類別" src="//learning-services-media.brightcove.com/doc-assets/player-development/getting-started/plugin-generator/vjs-demo-class.png"/>
-          <figcaption class="bcls-caption--image">vjs-示範類別</figcaption>
+      <li>檢查此網頁的元素。您應該看到<code translate="No">vjs-demo</code>類已添加到播放器。請記住，我們在插件代碼中將此類添加到了播放器。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="vjs-demo class" src="/assets/images/coding-topics/sbs-videojs-vjs-demo-class.png" />
+          <figcaption class="bcls-caption--image">vjs-demo類</figcaption>
         </figure>
       </li>
-      <li>
-        <p>現在，讓我們嘗試向插件添加代碼，以在播放器加載時自動開始播放視頻。返回到<strong>src&gt; plugin.js</strong>文件在您的編輯器中。</p>
+      <li>現在，讓我們嘗試向插件添加代碼，以在播放器加載時自動開始播放視頻。返回到<strong>src&gt; plugin.js</strong>文件在您的編輯器中。
       </li>
-      <li>
-        <p>在裡面<code translate="No">onPlayerReady()</code>方法，添加代碼以開始播放視頻。</p>
+      <li>在裡面<code translate="No">onPlayerReady()</code>方法，添加代碼以開始播放視頻。
         <pre class="line-numbers">
 <code class="language-javascript" translate="No">const onPlayerReady = (player, options) =&gt; {
   player.addClass('vjs-demo');
   <span class="bcls-highlight">player.play();</span>
 };</code></pre>
       </li>
-      <li>
-        <p>保存<strong>plugin.js</strong>文件在您的編輯器中。刷新瀏覽器時，您應該看到視頻在測試環境中開始播放。</p>
-        <p>在開發插件時，<strong> plugin.js</strong>文件並保存更改，該工具會自動在瀏覽器中重建並重新加載播放器。這使開發和測試插件變得容易。</p>
+      <li>拯救<strong>plugin.js</strong>文件在您的編輯器中。刷新瀏覽器時，您應該看到視頻在測試環境中開始播放。
+        <p>在開發插件時，<strong> plugin.js</strong>文件並保存更改，該工具會自動在瀏覽器中重建並重新加載播放器。這使得開發和測試您的插件變得容易。</p>
       </li>
       <li>
         <p>刪除代碼行以開始播放視頻。</p>
         <pre>
 <code class="language-javascript" translate="No">player.play();</code></pre>
-        <aside class="bcls-aside bcls-aside--tip">在終端中，按CTRL-C停止開發服務器。</aside>
+        <aside class="bcls-aside bcls-aside--tip">在終端中，按 CTRL-C 停止開發服務器。</aside>
       </li>
     </ol>
   </section>
   <section class="bcls-section">
     <h2 id="Edit_the_JavaScript_file">編輯JavaScript文件</h2>
-    <p>在本節中，您將代碼添加到JavaScript源文件中，以向播放器添加帶有自定義文本的段落元素。</p>
+    <p>在本部分中，您將代碼添加到JavaScript源文件中，以將具有自定義文本的段落元素添加到播放器。</p>
     <ol class="bcls-tasklist">
-      <li>在您的編輯器中，返回到<strong> src &gt; plugin.js </strong>文件。</li>
-      <li>
-        <p>在裡面<code translate="No">onPlayerReady()</code>功能，添加代碼以添加<code translate="No">&lt;p&gt;</code>帶有自定義文本的元素。</p>
+      <li>在您的編輯器中，返回到<strong>src&gt; plugin.js</strong>文件。</li>
+      <li>在裡面<code translate="No">onPlayerReady()</code>功能，添加代碼以添加一個<code translate="No">&lt;p&gt;</code>播放器帶有自定義文本的元素。
         <pre class="line-numbers">
 <code class="language-javascript" translate="No">const onPlayerReady = (player, options) =&gt; {
   player.addClass('vjs-demo');
@@ -1403,12 +317,11 @@ export default demo;</code></pre>
   player.el().appendChild(textDisplay);</span>
 };</code></pre>
       </li>
-      <li>儲存檔案。請記住，您的變更將會在測試瀏覽器中自動更新。</li>
-      <li>
-        <p>返回測試瀏覽器。您將看不到播放器的任何變化。問題在於文本在那裡，但是看不見。接下來，我們將修復該問題。</p>
-        <p>要驗證是否已將文本元素添加到播放器，請使用瀏覽器中的開發工具。在裡面<strong>元素</strong>部分，擴展播放器的<code translate="No">&lt;div&gt;</code>元件。您應該看到新添加的段落標籤。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="新增段落標籤" src="//learning-services-media.brightcove.com/doc-assets/player-development/getting-started/plugin-generator/p-element.png"/>
-          <figcaption class="bcls-caption--image">新增段落標籤</figcaption>
+      <li>保存文件。請記住，您的更改將在測試瀏覽器中自動更新。</li>
+      <li>返回測試瀏覽器。您將看不到播放器中的任何更改。問題在於文本在那裡，但是看不見。接下來，我們將修復該問題。
+        <p>要驗證是否已將文本元素添加到播放器，請使用瀏覽器中的開發工具。在裡面<strong>元素</strong>部分，擴展播放器的<code translate="No">&lt;div&gt;</code>元素。您應該看到新添加的段落標籤。</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Added paragraph tag" src="/assets/images/coding-topics/sbs-videojs-p-element.png" />
+          <figcaption class="bcls-caption--image">添加了段落標籤</figcaption>
         </figure>
         <p>我們將使用CSS在下一部分中使文本可見。</p>
       </li>
@@ -1416,11 +329,10 @@ export default demo;</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="Edit_the_CSS_file">編輯CSS文件</h2>
-    <p>在本部分中，您將向CSS源文件添加代碼以在播放器上顯示文本。</p>
+    <p>在本節中，您將代碼添加到CSS源文件中，以在播放器上顯示文本。</p>
     <ol class="bcls-tasklist">
-      <li>在編輯器中，返回到<strong>src&gt; plugin.css</strong>文件。</li>
-      <li>
-        <p>添加<code translate="No">.vjs-text</code>選擇器，其樣式可在播放器中顯示自定義文本。</p>
+      <li>在您的編輯器中，返回到<strong>src&gt; plugin.css</strong>文件。</li>
+      <li>添加<code translate="No">.vjs-text</code>選擇器，其樣式可在播放器中顯示自定義文本。
         <pre class="line-numbers">
 <code class="language-css" translate="No">/* Note: all vars must be defined here, there are no "local" vars */
   :root {
@@ -1439,55 +351,52 @@ export default demo;</code></pre>
     margin-top: 10%;
   }</span></code></pre>
       </li>
-      <li>儲存檔案。請記住，您的變更將會在測試瀏覽器中自動更新。</li>
-      <li>
-        <p>返回測試瀏覽器。現在，您應該看到在播放器上顯示的自定義文本。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="播放器上方顯示的文字" src="//learning-services-media.brightcove.com/doc-assets/player-development/getting-started/plugin-generator/text-display.png"/>
-          <figcaption class="bcls-caption--image">播放器上方顯示的文字</figcaption>
+      <li>保存文件。請記住，您的更改將在測試瀏覽器中自動更新。</li>
+      <li>返回測試瀏覽器。現在，您應該看到在播放器上顯示的自定義文本。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Text displayed over the player" src="/assets/images/coding-topics/sbs-videojs-text-display.png" />
+          <figcaption class="bcls-caption--image">在播放器上顯示的文字</figcaption>
         </figure>
       </li>
-      <li>
-        <p>通過按停止開發服務器<strong>CTRL-C</strong>在終端應用程序中。</p>
-        <p>現在，您可以準備要分發的插件了。接下來，我們會做。</p>
+      <li>通過按停止開發服務器<strong>CTRL-C</strong>在終端應用程序中。</p>
+        <p>現在，您就可以準備要分發的插件了。接下來，我們將進行處理。</p>
       </li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="Build_your_plugin">構建你的插件</h2>
-    <p>在本節中，您將構建您的插件。這將獲取您的源代碼並創建可分發的CSS和JavaScript文件。</p>
+    <h2 id="Build_your_plugin">構建您的插件</h2>
+    <p>在本節中，您將構建您的插件。這將使用您的源代碼並創建可分發的CSS和JavaScript文件。</p>
     <ol class="bcls-tasklist">
       <li>
-        <p>在「終端機」中，執行下列命令：</p>
+        <p>在終端中，運行以下命令：</p>
         <pre>
 <code class="language-javascript" translate="No">$ npm run build</code></pre>
         <p>該構建將獲取您的ES6源代碼，並將其轉換為ES5 JavaScript代碼。</p>
       </li>
       <li>
-        <p>在您的項目文件夾中，展開<strong>dist</strong>夾。在這裡您可以找到插件的可分發版本。在這裡，您應該找到以下文件（假設您選擇了<strong>是</strong>用於CSS工具）：</p>
+        <p>在您的項目文件夾中，展開<strong>dist</strong>文件夾。在這裡，您可以找到可分發的插件版本。在這裡，您應該找到以下文件（假設您選擇了<strong>是的</strong>用於CSS工具）：</p>
         <ul>
-          <li>videojs-demo.css<strong></strong></li>
-          <li>videojs-demo.js<strong></strong></li>
-          <li>videojs-demo.min.js<strong></strong></li>
+          <li><strong>videojs-demo.css</strong></li>
+          <li><strong>videojs-demo.js</strong></li>
+          <li><strong>videojs-demo.min.js</strong></li>
         </ul>
         &nbsp;
-        <p>您還將找到以下不常用的文件：</p>
+        <p>您還將找到以下較不常用的文件：</p>
         <ul>
-          <li>videojs-demo.cjs.js<strong></strong>
+          <li><strong>videojs-demo.cjs.js</strong>
             <ul>
               <li>這是一個<a href="http://www.commonjs.org/">普通JS</a>在Node中需要您的項目時，或者在使用Browserify捆綁JavaScript時使用的模塊。</li>
             </ul>
           </li>
-          <li>videojs-demo.es.js<strong></strong>
+          <li><strong>videojs-demo.es.js</strong>
             <ul>
-              <li>這是個<a href="http://es6-features.org/#Constants">ES6</a>適用於使用WebPack或Rollup捆綁其依賴項的現代項目的模塊。</li>
+              <li>這是一<a href="http://es6-features.org/#Constants">ES6</a>適用於使用WebPack或Rollup捆綁其依賴項的現代項目的模塊。</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li>
-        <p>在裡面<strong>dist</strong>文件夾，打開<strong>videojs-demo.js</strong>文件。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="分發檔案" src="//learning-services-media.brightcove.com/doc-assets/player-development/getting-started/plugin-generator/dist-js.png"/>
-          <figcaption class="bcls-caption--image">分發檔案</figcaption>
+      <li>在裡面<strong>dist</strong>文件夾，打開<strong>videojs-demo.js</strong>文件。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Distribution files" src="/assets/images/coding-topics/sbs-videojs-dist-js.png" />
+          <figcaption class="bcls-caption--image">發行文件</figcaption>
         </figure>
         <p>有關此分發文件的一些注意事項：</p>
         <ul>
@@ -1503,17 +412,17 @@ export default demo;</code></pre>
     <p>本部分是可選的。除非您想了解如何將數據傳遞到插件，否則可以跳過本節。</p>
     <ol class="bcls-tasklist">
       <li>
-        <p>我們將使用<code translate="No">options</code>屬性將數據從我們的HTML頁面傳遞到插件。有關使用此屬性的詳細信息，請參見<a href="/coding-topics/pass-data-plugin.html">將數據傳遞到插件</a>文件。</p>
+        <p>我們將使用<code translate="No">options</code>屬性，將數據從我們的HTML頁面傳遞到插件中。有關使用此屬性的詳細信息，請參見<a href="/coding-topics/pass-data-plugin.html">將數據傳遞到插件</a>文檔。</p>
       </li>
       <li>
-        <p>在您的編輯器中，返回到<strong> src &gt; plugin.js </strong>文件。</p>
+        <p>在您的編輯器中，返回到<strong>src&gt; plugin.js</strong>文件。</p>
       </li>
       <li>
         <p>在裡面<code translate="No">onPlayerReady()</code>函數，在代碼中添加代碼以使用文本值<code translate="No">options</code>屬性（如果存在），否則使用默認文本值。</p>
         <ul>
           <li>第4行：創建一個段落元素</li>
           <li>第5行：分配文本類類型</li>
-          <li>第6行：檢查<code translate="No">displayText</code>對象存在於<code translate="No">options</code>屬性</li>
+          <li>第6行：檢查<code translate="No">displayText</code>對象存在於<code translate="No">options</code>財產</li>
           <li>第7行：使用<code translate="No">displayText</code>填充文本顯示的值</li>
           <li>第9行：使用默認的文字顯示值</li>
           <li>第13行：將顯示文本元素添加到DOM</li>
@@ -1535,12 +444,11 @@ export default demo;</code></pre>
 };</code></pre>
       </li>
       <li>保存文件並返回到測試瀏覽器。您應該看不到文本顯示的任何更改。</li>
-      <li>如果尚未這樣做，請為<code translate="No">.vjs-text</code>來自的選擇器<a href="#Edit_the_CSS_file">編輯CSS文件</a>部分。</li>
+      <li>如果您尚未這樣做，請為<code translate="No">.vjs-text</code>來自的選擇器<a href="#Edit_the_CSS_file">編輯CSS文件</a>部分。</li>
       <li>構建您的插件。我們將使用<strong>dist</strong>測試網頁中的文件夾。</li>
       <li>在本地測試服務器（如MAMP）中，創建一個名為<strong>插件生成器</strong>。</li>
       <li>在此文件夾中，複製<strong>videojs-demo.css</strong>和<strong>videojs-demo.js</strong>來自的文件<strong>dist</strong>文件夾並將其粘貼到測試服務器文件夾中，<strong>插件生成器</strong>。</li>
-      <li>
-        <p>接下來，在此文件夾中，使用調用我們的播放器創建HTML文件。<code translate="No">demo</code>插件並傳入顯示文本的值。我們將這個文件命名<strong>testing.html</strong>。</p>
+      <li>接下來，在此文件夾中，使用調用我們的播放器創建HTML文件。<code translate="No">demo</code>插件並傳入顯示文本的值。我們將這個文件命名<strong>testing.html</strong>。
         <ul>
           <li>第8行：包括我們的插件樣式。</li>
           <li>第13-22行：將Brightcove Player添加到我們的網頁。</li>
@@ -1588,17 +496,16 @@ export default demo;</code></pre>
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
       </li>
-      <li>
-        <p>在瀏覽器中，運行<strong>testing.html</strong>文件。您應該看到顯示文本值來自頁面代碼而不是插件。</p>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="傳遞給外掛程式的資料" src="//learning-services-media.brightcove.com/doc-assets/player-development/getting-started/plugin-generator/passed-data.png"/>
-          <figcaption class="bcls-caption--image">傳遞給外掛程式的資料</figcaption>
+      <li>在瀏覽器中，運行<strong>testing.html</strong>文件。您應該看到顯示文本值來自頁面代碼而不是插件。
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Data passed to the plugin" src="/assets/images/coding-topics/sbs-videojs-passed-data.png" />
+          <figcaption class="bcls-caption--image">數據傳遞給插件</figcaption>
         </figure>
       </li>
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="Recommendations">建議</h2>
-    <p>建議對所有插件使用此生成器，即使是簡單的插件也是如此。這樣，您將對所有插件始終具有相同的設置。它還使您擺脫了必須創建腳本來執行某些功能（如棉絨或棉籤）的任務。</p>
+    <h2 id="Recommendations">推薦建議</h2>
+    <p>建議對所有插件使用此生成器，即使是簡單的插件也是如此。這樣，您將始終為所有插件設置相同的設置。它也使您擺脫了必須創建腳本來執行某些功能（如棉絨或棉籤）的任務。</p>
     <p>使用此生成器，您可以專注於開發和測試插件，而不必擔心基礎工具。</p>
     <p>您可以將插件保留在本地，也可以將其放在私有GitHub存儲庫中。創建一個videojs插件意味著它將與Brightcove Player一起使用。</p>
   </section>
@@ -1607,7 +514,7 @@ export default demo;</code></pre>
     <p>這是在快速入門過程中將使用的資源的摘要。在以下步驟中也提供了這些鏈接：</p>
     <ul>
       <li>下載並安裝：<a href="https://nodejs.org/en/">Node.js（包括npm）</a>
-        <p>使用“推薦給大多數用戶”版本。</p>
+        <p>使用“推薦給大多數用戶"版本。</p>
       </li>
       <li><a href="https://github.com/videojs/generator-videojs-plugin">video.js生成器</a></li>
       <li><a href="https://github.com/videojs/generator-videojs-plugin/blob/master/docs/standards.md">video.js插件約定</a></li>
@@ -1616,160 +523,3 @@ export default demo;</code></pre>
     </ul>
   </section>
 </article>
-
-<!-- complete bootstrap layout -->
-    </div>
-    <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav" id="right_side_nav">
-        <h6 class="toc">頁面內容</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
-      
-    </div>
-  </div>
-</div>
-
-<hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
-    <div class="region region-footer-top-center col-md-12">
-      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
-
-        <h2>布萊特灣支援</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://status.brightcove.com">系統狀態</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡支援</a>
-          </li>
-          <li>
-            <a href="https://support.brightcove.com/">文獻資料</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
-
-        <h2>訓練</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">線上課程</a>
-          </li>
-          <li>
-            <a href="https://studio.support.brightcove.com/training/register-training.html">註冊課程</a>
-          </li>
-          <li>
-            <a href="https://university.brightcove.com/">布萊特灣大學</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
-
-        <h2>Brightcove</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://www.brightcove.com">亮麗</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">聯絡我們</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="region region-footer-bottom-center col-md-12">
-      <div class="bcls-copyright footer-menu">
-        <table>
-          <tr>
-            <td>
-              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> 布萊特灣公司版權所有</div>
-            </td>
-            <td><a href="https://www.brightcove.com/en/legal/privacy">私隱</a> | 條<a href="https://www.brightcove.com/en/terms-and-conditions">款及細則</a></td>
-            <td>
-              <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</div>
-</div>
-<script>
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documenation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/js/sajari-search-foot.js"></script>
-  
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <style>
-    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
-      background-color: lightblue;
-    }
-    div.sj-tabs__tab {
-      margin-top: 3rem;
-      margin-left: .3rem;
-      border-top-left-radius: .4rem;
-      border-top-right-radius: .4rem;
-      background-color:#e8e8e8;
-    }
-
-    div.sj-tabs__tab.sj-tabs__tab--selected {
-      border-bottom-color: crimson;
-      background-color: #f8f8f8;
-    }
-
-    p.sj-results__result__description.css-p9jvyt {
-      font-size: 1rem;
-    }
-
-    .sj-result__text.css-31l7gp h3 {
-      color: navy;
-      font-size: 1.4rem;
-    }
-    </style>
-
-</body>
-
-</html>

@@ -1,0 +1,193 @@
+---
+title:播放列表 Endscreen 插件
+description:在本主題中，您將學習如何在視頻末尾顯示播放列表。您可以使用 Video Cloud Studio 或通過 Brightcove Player 使用代碼將其添加到播放器。
+parent: Plugins
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">概述</h2> 
+    <p>Playlist Endscreen 插件允許您在視頻結束時顯示播放列表。該播放列表可以是使用智能播放列表的相關視頻，也可以是與主視頻無關的視頻。</p> 
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+          <tr>
+              <th style="text-align: center;">結束畫面將出現</th>
+              <th style="text-align: center;">結束畫面不會出現</th>                         
+          </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+          <tr>
+            <td>
+              <ul>
+                <li>播放列表 ID 可用且</li>
+                <li>插件已啟用</li>
+              </ul>
+            </td>   
+            <td>
+              <ul>
+                <li>未提供播放列表 ID</li>
+                <li>播放列表 ID 在運行時未設置</li>
+                <li>該插件已禁用</li>
+              </ul>
+            </td>                    
+          </tr>            
+      </tbody>
+    </table>
+
+    <br/>
+    <p>用戶還可以單擊 UI 中的結束屏幕按鈕以顯示播放列表結束屏幕。按鈕工具提示使用插件標題。在這種情況下，默認情況下，<strong>有關的影片</strong>，正在使用。</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Playlist Endscreen button" src="/assets/images/plugins/playlist-endscreen/related-videos-button.png" />
+      <figcaption class="bcls-caption--image">播放列表結束屏幕按鈕</figcaption>
+      </figure>
+
+    <h3>例子</h3>
+    <p>此示例顯示主視頻結束時相關視頻的播放列表。</p>
+
+    <p class="codepen" data-height="560" data-theme-id="34967" data-default-tab="result" data-user="bcls1969" data-slug-hash="LYWxorm" style="height: 560px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Playlist Endscreen Plugin">
+      <span>看筆<a href="https://codepen.io/team/bcls1969/pen/LYWxorm">播放列表 Endscreen 插件</a>通過 Brightcove 學習服務 ( <a href="https://codepen.io/bcls1969"> @bcls1969</a>） 在<a href="https://codepen.io">代碼筆</a> .</span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+    <br/>
+    <details>
+      <summary><h3 id="Using_the_CodePen">使用代碼筆</h3></summary>
+      <p>以下是一些有效使用上述 CodePen 的提示：</p>
+      <ul>
+        <li>通過單擊切換播放器的實際顯示<strong translate="No">結果</strong>按鈕。</li>
+        <li>點擊<strong translate="No">HTML / CSS / JS</strong>按鈕顯示一種代碼類型。</li>
+        <li>點擊<strong translate="No">在CODEPEN上編輯</strong>按鈕並在一個瀏覽器/瀏覽器選項卡中提供代碼。</li>
+        <ul>
+          <li>在CodePen中，調整要顯示的代碼。您可以在CodePen中更改不同代碼段的寬度。</li>
+        </ul>
+      </ul>
+    </details>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Requirements">需求</h2> 
+    <p>使用 Playlist Endscreen 插件需要滿足以下要求：</p>
+    <ul>
+      <li>Brightcove Player v6.51.3 及更新版本</li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Implement_using_Players_module">使用播放器模組實作</h2> 
+    <p>播放列表片尾畫面可以使用 Video Cloud Studio 的<strong>球員</strong>模塊。有關詳細信息，請參閱<a href="https://studio.support.brightcove.com/players/configuring-playlist-endscreen-using-plugin.html">使用 playlist-endscreen 插件配置播放列表 Endscreen</a>文檔。</p>
+    
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Implement_using_code">使用程式碼實作</h2> 
+    <p>要實現插件的播放器需要知道插件代碼的位置，如果需要的話，插件名稱和插件配置選項的樣式表。插件代碼和樣式表的位置如下：</p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>包含外掛程式碼：</p>
+        <pre>
+<code class="language-javascript" translate="No">https://players.brightcove.net/videojs-playlist-endscreen/1.0.4/videojs-playlist-endscreen.js</code></pre>
+      </li>
+      <li>
+        <p>包含外掛程式樣式：</p>
+        <pre>
+<code class="language-javascript" translate="No">https://players.brightcove.net/videojs-playlist-endscreen/1.0.4/videojs-playlist-endscreen.css</code></pre>
+      </li>
+      <li>使用插件名稱將其加載到播放器中：<code translate="No">playlistEndscreen</code></li> 
+      <li>
+        <p>一組示例選項是：</p>
+        <pre class="line-numbers">
+<code class="language-html" translate="No">{
+  &quot;playlistId&quot;: &quot;4602525726001&quot;,
+  &quot;title&quot;: &quot;Watch More&quot;
+}</code></pre>
+      </li>
+      <li>
+        <p>以下是使用進階嵌入實作的範例，將播放清單 Endscreen 外掛程式與播放器的單一實體建立關聯。</p>
+        <pre class="line-numbers">
+<code class="language-html" translate="No">&lt;link href=&quot;https://players.brightcove.net/videojs-playlist-endscreen/1.0.4/videojs-playlist-endscreen.css&quot; rel=&quot;stylesheet&quot;&gt;
+  
+  &lt;div style=&quot;max-width: 960px;&quot;&gt;
+  &lt;video-js id=&quot;myPlayerID&quot;
+    data-account=&quot;<span class="bcls-input">your account ID</span>&quot;
+    data-player=&quot;<span class="bcls-input">your player ID</span>&quot;
+    data-embed=&quot;default&quot;
+    controls=&quot;&quot;
+    data-video-id=&quot;<span class="bcls-input">your video ID</span>&quot;
+    data-playlist-id=&quot;&quot;
+    data-application-id=&quot;&quot;
+    class=&quot;vjs-fluid&quot;&gt;
+  &lt;/video-js&gt;
+&lt;/div&gt;
+&lt;script src=&quot;https://players.brightcove.net/<span class="bcls-input">your account ID</span>/<span class="bcls-input">your player ID</span>_default/index.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- script for the Playlist Endscreen plugin --&gt;
+&lt;script src=&quot;https://players.brightcove.net/videojs-playlist-endscreen/1.0.4/videojs-playlist-endscreen.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- custom script --&gt;
+&lt;script&gt;
+  videojs.getPlayer('myPlayerID').ready(function() {
+    var myPlayer = this;
+
+    // initialize the Playlist Endscreen plugin
+    myPlayer.playlistEndscreen({&quot;playlistId&quot;: &quot;<span class="bcls-input">your playlist ID</span>&quot;}); 
+  });
+&lt;/script&gt;</code></pre>
+      </li>
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Options">選項</h2> 
+    <p>您可以在初始化時將options對像傳遞給插件。該對象可能包含以下任何一個選項：</p>
+
+    <h3>播放列表 ID</h3>
+    <code translate="No">playlistId</code>
+    <ul>
+      <li>表示要在結束屏幕中顯示的播放列表 ID 的字符串。</li>
+      <li>類型：<code translate="No">string</code>   </li>
+      <li>默認：<code translate="No">""</code></li>
+    </ul>
+
+    <h3>標題</h3>
+    <code translate="No">title</code>
+    <ul>
+      <li>自定義結束屏幕標題的字符串，這也會修改按鈕工具提示。</li>
+      <li>類型：<code translate="No">string</code>   </li>
+      <li>默認：<code translate="No">"Related videos"</code></li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Options">設置播放列表 ID</h2> 
+    <p>此插件需要播放列表的 ID。播放列表將從 Playback API 獲取，結果將用於填充片尾畫面。播放列表 ID 應來自以下來源之一：</p>
+    <ul>
+      <li>
+        <p>頁內嵌入的屬性：<code translate="No">data-endscreen-playlist-id="123456789"</code></p>
+      </li>
+      <li>
+        <p>iframe 的查詢字符串：<code translate="No">&endscreenPlaylistId=123456789</code></p>
+      </li>
+      <li>
+        <p>插件選項：<code translate="No">player.playlistEndscreen({&quot;playlistId&quot;: "123456789"})</code></p>
+        <p>這可以添加到播放器配置中，或在運行時使用，如<a href="#Implement_using_code">上面的例子</a> .</p>
+      </li>
+      <li>
+        <p>編程後插件初始化：<code translate="No">player.playlistEndscreen().setPlaylistId("123456789")</code></p>
+      </li>
+    </ul>
+  </section>
+  
+  
+  <!-- <section class="bcls-section">
+    <h2 id="Known_issues">Known issues</h2>
+    <ul>
+      <li></li>
+    </ul>
+  </section> -->
+  <section class="bcls-section"> 
+    <h2 id="changelog">變更記錄檔</h2>
+    <p>見<a href="http://players.brightcove.net/release-notes/brightcove-player-playlist-endscreen/index.html">播放列表 Endscreen 插件發行說明</a> .</p>
+  </section>
+</article>

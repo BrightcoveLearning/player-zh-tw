@@ -1,0 +1,494 @@
+- section:
+  name: '家'
+  url: '/index.html'
+- section:
+  name: '入門'
+  url: '/getting-started/index.html'
+  docs:
+    - name: 開發人員基礎視頻
+      url: /training/developer-basics-videos.html
+    - name: '什麼是Brightcove Player？'
+      url: /getting-started/what-brightcove-player.html
+    - name: '概述：Brightcove播放器'
+      url: /getting-started/overview-brightcove-player.html
+    - name: '學習指南：視頻廣告'
+      url: /getting-started/learning-guide-video-advertising.html
+    - name: '概述：Brightcove Player插件'
+      url: /getting-started/overview-brightcove-player-plugins.html
+    - name: 玩家發展培訓視頻
+      url: /training/player-development-training-videos.html
+    - name: '一步步：Brightcove播放器'
+      url: /getting-started/step-step-brightcove-player.html
+    - name: '一步步：玩家定制'
+      url: /getting-started/step-step-player-customization.html
+    - name: '訓練：與Brightcove Player一起開發'
+      url: /training/training-demand-developing-brightcove-player.html
+    - name: '學習指南：使用 REST API'
+      url: /getting-started/learning-guide-using-rest-apis.html
+- section:
+  name: '學習基礎'
+  url: '/basics/index.html'
+  docs:
+    - name: 先進的播放器代碼
+      url: /basics/developer-basics-advanced-player-code.html
+    - name: 自動播放視頻
+      url: /basics/developer-basics-autoplaying-video.html
+    - name: '自定義插件-轉換代碼'
+      url: /basics/developer-basics-custom-plugin-converting-code.html
+    - name: '自定義插件-傳遞數據'
+      url: /basics/developer-basics-custom-plugin-passing-data.html
+    - name: '自定義插件-使用Studio'
+      url: /basics/developer-basics-custom-plugin-using-studio.html
+    - name: '自定義插件-為什麼和如何'
+      url: /basics/developer-basics-custom-plugin-why-and-how.html
+    - name: 開發人員基礎視頻
+      url: /training/developer-basics-videos.html
+    - name: 生成播放器代碼
+      url: /basics/developer-basics-generating-player-code.html
+    - name: 準備編寫代碼
+      url: /basics/developer-basics-preparing-write-code.html
+- section:
+  name: '參考'
+  url: '/references/index.html'
+  docs:
+    - name: Brightcove Player 5到6遷移指南
+      url: /references/brightcove-player-5-6-migration-guide.html
+    - name: Brightcove Player API 文檔
+      url: /brightcove-player/current-release/index.html
+    - name: Brightcove播放器Cookie
+      url: /references/brightcove-player-cookies.html
+    - name: Brightcove Player錯誤參考
+      url: /references/brightcove-player-error-reference.html
+    - name: Brightcove玩家公告論壇
+      url: 'https://groups.google.com/forum/embed/?place=forum/bcplayerdev#!forum/bcplayerdev'
+    - name: Brightcove Player系統要求
+      url: /references/brightcove-player-system-requirements.html
+    - name: 目錄搜索架構
+      url: /references/catalog-search-architecture.html
+    - name: 已知的問題
+      url: https://general.support.brightcove.com/general/known-issues-studio-brightcove-player-and-apis.html
+    - name: 玩家目錄
+      url: /references/player-catalog.html
+    - name: 瀏覽器對播放器功能的支持
+      url: /references/player-feature-support-browser.html
+    - name: 來自bcinfo的播放器元數據
+      url: /references/player-metadata-bcinfo.html
+    - name: 播放器方法/事件 API
+      url: /brightcove-player/current-release/Player.html
+    - name: 播放列表API指南
+      url: /references/guide-playlist-api.html
+    - name: 來自mediainfo的視頻元數據
+      url: /references/video-metadata-mediainfo.html
+- section:
+  name: '外掛程式'
+  url: '/plugins/index.html'
+  docs:
+    - name: 360º視頻
+      url: /plugins/360degvr-video-plugin.html
+    - name: 僅廣告
+      url: /plugins/ad-only-plugin.html
+    - name: 使用FreeWheel插件做廣告
+      url: /plugins/advertising-freewheel-plugin.html
+    - name: 使用IMA3插件做廣告
+      url: /plugins/advertising-ima3-plugin.html
+    - name: 升級到IMA3插件版本3
+      url: /plugins/upgrading-ima3-plugin-version-3.html
+    - name: 用SSAI做廣告
+      url: /plugins/implementing-server-side-ads-brightcove-player.html
+    - name: 隔空播放
+      url: /plugins/airplay-plugin.html
+    - Chromecastname: 
+      url: /plugins/chromecast-plugin-brightcove-player.html
+    - name: 自定義端屏
+      url: /plugins/custom-endscreen-plugin.html
+    - name: 顯示錯誤信息
+      url: /plugins/display-error-messages-plugin.html
+    - name: 顯示縮略圖預覽
+      url: /plugins/display-thumbnail-previews-plugin.html
+    - name: 數字版權管理
+      url: /plugins/configuring-brightcove-player-drm.html
+    - name: Google跟踪代碼管理器
+      url: /plugins/google-tag-manager-plugin-brightcove-player.html
+    - HLSname: 
+      url: /plugins/hls-plugin.html
+    - name: 直播DVRUX
+      url: /plugins/live-dvrux-plugin.html
+    - name: 覆蓋
+      url: /plugins/display-overlay-plugin.html
+    - name: '概述：播放器插件'
+      url: /plugins/overview-brightcove-player-plugins.html
+    - name: 畫中畫
+      url: /plugins/picture-picture-plugin-aka-floating-or-pinned.html
+    - name: 播放器/插件版本測試
+      url: /plugins/playerplugin-version-testing.html
+    - name: 播放列表結束畫面
+      url: /plugins/playlist-endscreen-plugin.html
+    - name: 播放清單使用者介面
+      url: /plugins/playlist-ui-plugin.html
+    - name: 插件變更日誌
+      url: /plugins/changelog/index.html
+    - name: 插件註冊表
+      url: /plugins/plugin-registry.html
+    - name: 插件版本參考
+      url: /plugins/plugin-version-reference.html
+    - name: 質量選擇
+      url: /plugins/quality-selection-plugin.html
+    - name: 社交媒體
+      url: /plugins/social-sharing-plugin.html
+    - name: Tealium標籤管理器
+      url: /plugins/tealium-plugin-brightcove-player.html
+    - name: 縮略圖搜索
+      url: /plugins/thumbnails-plugin.html
+    - name: 視頻SEO模式生成器
+      url: /plugins/video-seo-schema-generator-plugin.html
+- section:
+  name: '廣告'
+  url: '/advertising/index.html'
+  icon: '<i data-feather="dollar-sign"></i>'
+  docs:
+    - name: 廣告事件和廣告對象
+      url: /advertising/ad-events-and-ad-objects.html
+    - name: 僅廣告插件
+      url: /plugins/ad-only-plugin.html
+    - name: 使用FreeWheel插件做廣告
+      url: /plugins/advertising-freewheel-plugin.html
+    - name: 使用IMA3插件做廣告
+      url: /plugins/advertising-ima3-plugin.html
+    - name: '帶有實時SSAI的客戶端前置廣告'
+      url: /advertising/client-side-preroll-with-live-ssai.html
+    - name: 使用廣告提示點顯示廣告
+      url: /advertising/displaying-ads-using-ad-cue-points.html
+    - name: 使用IMA的Flash不再有效
+      url: /advertising/flash-no-longer-valid-ima.html
+    - name: '指導：廣告合作夥伴集成'
+      url: /advertising/guide-ad-partner-integration.html
+    - name: '指南：contrib-ads遷移'
+      url: /advertising/guide-contrib-ads-migration.html
+    - name: 使用Brightcove Player實施SSAI
+      url: /plugins/implementing-server-side-ads-brightcove-player.html
+    - name: '快速開始：標頭競價廣告'
+      url: /advertising/jump-start-header-bidding-ad.html
+    - name: '快速開始：外部廣告'
+      url: /advertising/jump-start-outstream-ad.html
+    - name: '快速開始：片頭廣告'
+      url: /advertising/jump-start-pre-roll-ad.html
+    - name: '已知的問題：服務器端廣告插入 (SSAI)'
+      url: /advertising/known-issues-server-side-ad-insertion-ssai.html
+    - name: '學習指南：視頻廣告'
+      url: /getting-started/learning-guide-video-advertising.html
+    - name: '一步步：實施廣告'
+      url: /advertising/step-step-implementing-advertising.html
+    - name: 測試預發布廣告插件
+      url: /advertising/testing-pre-release-advertising-plugins.html
+    - name: 在Brightcove Player中使用DFP廣告管理系統專業版
+      url: /advertising/using-dfp-premium-brightcove-player.html
+    - name: 將播放器增強功能用於實時SSAI
+      url: /advertising/using-player-enhancements-live-ssai-brightcove-player.html
+    - name: 視頻雲SSAI廣告代碼驗證
+      url: /advertising/video-cloud-ssai-ad-tag-validation.html
+- section:
+  name: '發布視頻和播放器'
+  url: '/publish/index.html'
+  docs:
+    - name: 通過編程將視頻分配給播放器
+      url: /publish/assigning-video-player-programmatically.html
+    - name: 高級（頁內）嵌入代碼的選項
+      url: /publish/available-options-advanced-page-embed-code.html
+    - name: 標準（iframe）嵌入代碼的選項
+      url: /publish/available-options-standard-iframe-embed-code.html
+    - name: Brightcove播放器加載程序
+      url: /publish/brightcove-player-loader.html
+    - name: 批量更新Brightcove默認播放器
+      url: /publish/bulk-updating-brightcove-default-player.html
+    - name: 選擇正確的嵌入代碼
+      url: https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html
+    - name: 延遲玩家實例化
+      url: /publish/delaying-player-instantiation.html
+    - name: 預發行播放器
+      url: /publish/pre-release-player.html
+    - name: 聯合策略
+      url: /publish/syndication-strategies.html
+    - name: 使用非Brightcove播放器
+      url: /publish/using-non-brightcove-player.html
+    - name: 在一頁上使用多個播放器
+      url: https://studio.support.brightcove.com/publish/using-multiple-players-one-page.html
+    - name: 使用參考編號
+      url: https://studio.support.brightcove.com/publish/using-reference-ids.html
+    - name: 視頻呈現檢查員
+      url:
+- section:
+  name: '故障排除'
+  url: '/troubleshooting/index.html'
+  docs:
+    - name: Brightcove播放技術應用程序
+      url: /troubleshooting/brightcove-playback-technology-app.html
+    - name: Brightcove Player錯誤參考
+      url: /references/brightcove-player-error-reference.html
+    - name: Brightcove玩家信息模式
+      url: /troubleshooting/brightcove-player-information-modal.html
+    - name: Brightcove Player故障排除指南
+      url: /troubleshooting/brightcove-player-troubleshooting-guide.html
+    - name: 創建查爾斯日誌
+      url: /troubleshooting/creating-charles-log.html
+    - name: 創建網絡日誌
+      url: /troubleshooting/creating-network-log.html
+    - name: 域限制消息
+      url: /troubleshooting/domain-restrictions-messaging.html
+    - name: 顯示錯誤消息插件
+      url: /plugins/display-error-messages-plugin.html
+    - name: 手動設置播放器版本
+      url: /troubleshooting/manually-setting-player-version.html
+    - name: 播放器/插件版本測試
+      url: /plugins/playerplugin-version-testing.html
+    - name: 玩家信息屬性
+      url: /troubleshooting/player-informational-properties.html
+    - name: '樣本：實時自定義錯誤消息'
+      url: /code-samples/brightcove-player-sample-live-custom-error-message.html
+    - name: '一步步：Brightcove播放器調試器'
+      url: /troubleshooting/step-step-brightcove-player-debugger.html
+    - name: 運行網絡路徑跟踪
+      url: /troubleshooting/running-network-path-trace.html
+    - name: 使用播放器參考
+      url: /troubleshooting/using-player-reference.html
+    - name: 審核Brightcove Player發布
+      url: /troubleshooting/vetting-brightcove-player-releases.html
+    - name: 查看播放器配置
+      url: /troubleshooting/viewing-player-configuration.html
+- section:
+  name: '造型與外觀'
+  url: '/styling/index.html'
+  docs:
+    - name: 自定義玩家外觀
+      url: /styling/customizing-player-appearance.html
+    - name: 自定義玩家外觀-舊版外觀
+      url: /styling/customizing-player-appearance-legacy-skin.html
+    - name: 球員造型操場
+      url: /styling/brightcove-player-sample-player-styling-playground.html
+    - name: '快速開始：玩家自定義-舊版皮膚'
+      url: /styling/quick-start-player-customization-legacy-skin.html
+    - name: '一步步：玩家定制'
+      url: /getting-started/step-step-player-customization.html
+    - name: Brightcove播放器的自適應大小調整
+      url: /styling/responsive-sizing-brightcove-player.html
+    - name: 調整播放器大小
+      url: /styling/sizing-player.html
+    - name: 皮膚和播放器版本
+      url: /styling/skins-and-player-versions.html
+    - name: 樣式說明
+      url: https://studio.support.brightcove.com/media/styling-captions.html
+    - name: 樣式播放列表
+      url: /styling/styling-playlists.html
+- section:
+  name: '回放'
+  url: '/playback/index.html'
+  docs:
+    - name: 自動播放注意事項
+      url: /playback/autoplay-considerations.html
+    - name: Brightcove播放技術應用程序
+      url: /troubleshooting/brightcove-playback-technology-app.html
+    - name: 中國配送
+      url: /playback/china-delivery-with-bcp.html
+    - name: 跨設備簡歷
+      url: /playback/xdr-with-bcplayer.html
+    - name: 深層連結
+      url: https://studio.support.brightcove.com/publish/deep-linking.html
+    - name: 傳送HLS視頻
+      url: /playback/delivering-hls-video.html
+    - name: 交貨規則
+      url: /playback/using-delivery-rules-with-bcp.html
+    - name: 確定將播放哪種演繹
+      url: /playback/determining-which-rendition-will-play.html
+    - name: 法醫水印
+      url: /playback/forensic-watermarking-with-bcp.html
+    - name: '指導：播放技術'
+      url: /playback/guide-playback-technology.html
+    - name: HLS插件
+      url: /plugins/hls-plugin.html
+    - name: iOS和Brightcove Player
+      url: /playback/ios-and-brightcove-player.html
+    - name: 播放限制
+      url: /playback/playback-restrictions-with-bcp.html
+    - name: '概述：HTTPS支持'
+      url: /playback/overview-https-support.html
+    - name: 質量選擇插件
+      url: /plugins/quality-selection-plugin.html
+    - name: 靜態網址傳遞
+      url: /playback/static-url-delivery.html
+    - name: 流播放受PlayReady保護的內容
+      url: /playback/streaming-playready-protected-content-dynamic-delivery.html
+    - name: 使用Brightcove Player進行TVE
+      url: /playback/using-brightcove-player-tve.html
+- section:
+  name: 'DRM 和內容保護'
+  url: '/content-protection/index.html'
+  docs:
+    - name: 配置播放器內容限制
+      url: https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html
+    - name: 為Brightcove Player創建DASH DRM清單
+      url: /content-protection/creating-dash-drm-manifest-brightcove-player.html
+    - name: 域限制消息
+      url: /troubleshooting/domain-restrictions-messaging.html
+    - name: DRM插件
+      url: /plugins/configuring-brightcove-player-drm.html
+    - name: '概述：內容保護'
+      url: /content-protection/overview-content-protection.html
+    - name: 政策金鑰
+      url: /content-protection/policy-keys.html
+    - name: 使用IP地址限制視頻播放
+      url: /content-protection/restricting-video-playback-using-ip-address.html
+    - name: 帶有實時流的簽名URL和令牌身份驗證
+      url: /content-protection/signed-urls-and-token-auth-live-stream.html
+- section:
+  name: '編碼主題'
+  url: '/coding-topics/index.html'
+  docs:
+    - name: Brightcove播放器加載程序
+      url: /publish/brightcove-player-loader.html
+    - name: 目錄搜索升級
+      url: /references/catalog-search-architecture.html
+    - name: 自訂活動
+      url: /code-samples/brightcove-player-sample-trigger-rewind-custom-event.html
+    - name: '指導：播放技術'
+      url: /playback/guide-playback-technology.html
+    - name: 本地化Brightcove Player
+      url: /coding-topics/programmatically-localizing-brightcove-player.html
+    - name: 本地化插件
+      url: /coding-topics/localizing-plugins.html
+    - name: 玩家事件
+      url: /coding-topics/player-events.html
+    - name: '概述：組件'
+      url: /coding-topics/overview-components.html
+    - name: '概述：HTTPS支持'
+      url: /playback/overview-https-support.html
+    - name: '概述：播放器API'
+      url: /coding-topics/overview-player-api.html
+    - name: 將數據傳遞到插件
+      url: /coding-topics/pass-data-plugin.html
+    - name: React Player加載程序
+      url: /coding-topics/react-player-loader.html
+    - name: 報告Brightcove Player配置
+      url: /coding-topics/reporting-brightcove-player-configurations.html
+    - name: RequireJS和Brightcove Player
+      url: /coding-topics/requirejs-and-brightcove-player.html
+    - name: 檢索當前呈現的比特率
+      url: /coding-topics/retrieve-bitrate-current-rendition.html
+    - name: '一步步：插件開發'
+      url: /coding-topics/step-step-plugin-development.html
+    - name: '一步步：Video.js插件生成器'
+      url: /coding-topics/step-step-videojs-plugin-generator.html
+    - name: 使用bc（）和getPlayer（）方法
+      url: /coding-topics/using-bc-and-getplayer-methods.html
+    - name: 查看播放器配置
+      url: /troubleshooting/viewing-player-configuration.html
+- section:
+  name: '一般信息'
+  url: '/general/index.html'
+  docs:
+    - name: 將應用程序ID添加到播放器嵌入代碼
+      url: https://studio.support.brightcove.com/publish/adding-application-id-player-embed-code.html
+    - name: 以編程方式向視頻添加字幕
+      url: /general/adding-captions-videos-programmatically.html
+    - name: 在視頻中添加章節
+      url: https://studio.support.brightcove.com/media/adding-chapters-video.html
+    - name: Brightcove Player 6現在為默認版本
+      url: /general/brightcove-player-6-now-default-version.html
+    - name: Brightcove播放器的可訪問性
+      url: /general/brightcove-player-accessibility.html
+    - name: 自定義終端屏幕插件
+      url: /plugins/custom-endscreen-plugin.html
+    - name: 顯示覆蓋插件
+      url: /plugins/display-overlay-plugin.html
+    - name: 'Google Analytics（分析）自我配置'
+      url: /general/ga-self-configure.html
+    - name: '指導：播放清單API'
+      url: /references/guide-playlist-api.html
+    - name: 識別並刪除效果不佳的視頻
+      url: /general/identify-and-delete-low-performing-videos.html
+    - name: 以編程方式實現提示點
+      url: /general/implementing-cue-points-programmatically.html
+    - name: 實施播放列表
+      url: /general/implementing-playlists.html
+    - name: 實現ModalDialog
+      url: /general/implementing-modaldialog.html
+    - name: 實時HLS
+      url: /general/live-hls.html
+    - name: 直播配置
+      url: /general/live-stream-configuration.html
+    - name: 多個音軌
+      url: /general/multiple-audio-tracks.html
+    - name: 播放器配置指南
+      url: /general/player-configuration-guide.html
+    - name: 播放直播
+      url: /general/playing-live-streams.html
+    - name: 播放列表用戶界面插件
+      url: /plugins/playlist-ui-plugin.html
+    - name: 帶有實時流的簽名URL和令牌身份驗證
+      url: /content-protection/signed-urls-and-token-auth-live-stream.html
+    - name: 社交媒體插件
+      url: /plugins/social-sharing-plugin.html
+    - name: '一步步：球員管理'
+      url: https://apis.support.brightcove.com/player-management/getting-started/step-step-player-management.html
+    - name: 樣式播放列表
+      url: /styling/styling-playlists.html
+    - name: 將屏幕閱讀器與Brightcove播放器一起使用
+      url: /general/using-screen-reader-brightcove-player.html
+    - name: Brightcove Player文檔的版本
+      url: /general/versions-brightcove-player-documentation.html
+    - name: 音量控制
+      url: /general/volume-control.html
+- section:
+  name: '代碼樣例'
+  url: '/code-samples/index.html'
+  docs:
+    - name: 按組的代碼樣本
+      url: /code-samples/index-thumb.html
+    - name: 代碼樣本索引
+      url: /code-samples/index.html
+- section:
+  name: '放大器'
+  url: '/amp/index.html'
+  docs:
+    - name: 使用視頻雲的AMP視頻
+      url: /amp/amp-using-video-cloud-video.html
+    - name: AMP使用外部視頻
+      url: /amp/amp-using-external-video.html
+    - name: AMP和廣告
+      url: /amp/amp-and-advertising.html
+- section:
+  name: '訓練'
+  url: '/training/index.html'
+  docs:
+    - name: 所有在線培訓課程
+      url: /training/online-training-courses.html
+    - name: 開發人員基礎視頻
+      url: /training/developer-basics-videos.html
+    - name: 玩家發展培訓視頻
+      url: /training/player-development-training-videos.html
+    - name: 註冊以講師指導的培訓
+      url: /training/register-training.html
+    - name: '訓練：與Brightcove Player一起開發'
+      url: /training/training-demand-developing-brightcove-player.html
+    - name: '訓練：播放器管理快速入門'
+      url: https://apis.support.brightcove.com/player-management/getting-started/training-demand-quick-start-player-management.html
+    - name: Brightcove大學培訓課程
+      url: /training/brightcove-university.html
+- section:
+  name: 發行說明
+  url: /release-notes/index.html
+  docs:
+    - name: Brightcove Player發行說明
+      url: /release-notes/brightcove-player-release-notes.html
+    - name: Brightcove Player發行前註意事項
+      url: /release-notes/brightcove-player-prerelease-notes.html
+- section:
+  name: '支持'
+  url: '/support/index.html'
+  docs:
+    - name: '查看 Brightcove 系統狀態頁面'
+      url: '/support/viewing-brightcove-system-status-page.html'
+    - name: '與銷售人員聯繫'
+      url: '/support/contact-sales.html'
+    - name: '打開支持案例'
+      url: '/support/opening-case-with-brightcove-support.html'
+    - name: '重置您的支持門戶密碼'
+      url: '/support/reset-support-portal-password.html'
