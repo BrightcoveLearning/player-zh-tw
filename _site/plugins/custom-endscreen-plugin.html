@@ -1216,7 +1216,7 @@ Brightcove
     <p>您可以使用CSS自定義端屏幕的外觀。以下是一些您可以做什麼的示例。確保測試您的實現，以確保它們可以與您的頁面內容一起使用。</p>
     <aside class="bcls-aside bcls-aside--information">本節中的代碼使用相對定位，可以將其與響應播放器結合使用。要使您的播放器具有響應性，請參見<a href="/styling/responsive-sizing-brightcove-player.html">自適應大小</a>記錄或使用<strong>玩家們</strong>設置<strong>漿紗</strong>設置為<strong>反應靈敏</strong>。</aside>
     <p>這是帶有重新啟動視頻按鈕和社交共享按鈕的最終屏幕的顯示方式。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="默認自定義最終屏幕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/custom-endscreens/plugin-doc/endscreen-default.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="默認自定義最終屏幕" src="/assets/images/player-customization/custom-endscreens/plugin-doc/endscreen-default.png"/></figure>
     <h3>更改按鈕大小</h3>
     <p>假設您要更改端屏按鈕的大小。這些按鈕圖像是可伸縮矢量圖形（SVG）格式，因此它們可以在所有平台上快速加載。因此，您無法使用<code translate="No">width</code>和<code translate="No">height</code> CSS屬性。</p>
     <p>相反，由於這些按鈕是XML文本文件，因此您可以使用<code translate="No">font-size</code> CSS屬性。</p>
@@ -1231,7 +1231,7 @@ Brightcove
   font-size: 50%;
 }</code></pre>
     <p>結果應該如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="小型端屏幕按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/custom-endscreens/plugin-doc/endscreen-small-buttons.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="小型端屏幕按鈕" src="/assets/images/player-customization/custom-endscreens/plugin-doc/endscreen-small-buttons.png"/></figure>
     <p>或者，您可以獨立控制每個按鈕的大小：</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">.vjs-restart-control {
@@ -1247,7 +1247,7 @@ Brightcove
   "content": "&lt;a href='https://www.brightcove.com'&gt;Visit our home page&lt;/a&gt;"
 }</code></pre>
     <p>默認情況下，您添加的內容顯示在最終屏幕按鈕上方：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="端屏幕按鈕上方的內容" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/custom-endscreens/plugin-doc/endscreen-content-above.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="端屏幕按鈕上方的內容" src="/assets/images/player-customization/custom-endscreens/plugin-doc/endscreen-content-above.png"/></figure>
     <p>使用以下CSS將HTML內容置於端屏幕按鈕下方：</p>
     <ul>
       <li>190-193行：從頂部放置按鈕。這些元素已經在您的頁面上居中。</li>
@@ -1269,7 +1269,7 @@ Brightcove
   width: 100%;
 }</code></pre>
     <p>結果應該如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="終端屏幕按鈕下方的內容" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/custom-endscreens/plugin-doc/endscreen-content-below.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="終端屏幕按鈕下方的內容" src="/assets/images/player-customization/custom-endscreens/plugin-doc/endscreen-content-below.png"/></figure>
     <h3>顯示垂直內容和按鈕</h3>
     <p>您還可以更改HTML內容和端屏幕按鈕的佈局。默認情況下，它們是水平顯示的，您的內容在按鈕上方。下面的代碼將您的內容浮動到按鈕的左側，並垂直顯示按鈕：</p>
     <ul>
@@ -1302,13 +1302,13 @@ Brightcove
 }
 </code></pre>
     <p>結果應該如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="垂直內容和端屏幕按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/custom-endscreens/plugin-doc/endscreen-vertical.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="垂直內容和端屏幕按鈕" src="/assets/images/player-customization/custom-endscreens/plugin-doc/endscreen-vertical.png"/></figure>
     <p>通過覆蓋默認的CSS屬性，您可以創造性地設計最終屏幕的外觀。在瀏覽器中，檢查元素以查找元素類名稱和值。要快速了解如何執行此操作，請參閱<a href="/styling/customizing-player-appearance.html">自定義玩家外觀</a>文件。</p>
   </section>
   <section id="mailto" class="bcls-section video-cloud-only">
     <h2>使用帶視頻名稱的mailto</h2>
     <p>您可能希望允許視頻的觀看者通過電子郵件向您發送問題或評論。您可以使用HTML來做到這一點<strong>郵寄</strong>自定義最終屏幕中的鏈接，如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="mailto客戶最終屏幕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/custom-endscreens/plugin-doc/custom-endscreen-mailto.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="mailto客戶最終屏幕" src="/assets/images/player-customization/custom-endscreens/plugin-doc/custom-endscreen-mailto.png"/></figure>
     <p>單擊該鏈接將打開客戶的默認電子郵件客戶端。下面的代碼顯示瞭如何使用視頻的元數據（在本例中為視頻名稱）自動成為電子郵件的主題。</p>
     <p>以下部分說明瞭如何執行該特定任務，此外，一旦您從<a href="/references/video-metadata-mediainfo.html">媒體信息</a>屬性，則可以在mailto鏈接中使用任何視頻元數據。</p>
     <ul>
@@ -1383,7 +1383,7 @@ Brightcove
   });
 });</code></pre>
     <p>這將導致以下最終屏幕：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="使用宏" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/custom-endscreens/plugin-doc/using-macros.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="使用宏" src="/assets/images/player-customization/custom-endscreens/plugin-doc/using-macros.png"/></figure>
     <p>這是可用宏的完整列表：</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">

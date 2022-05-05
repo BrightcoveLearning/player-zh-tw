@@ -1104,7 +1104,7 @@ Brightcove
       <li><strong>其餘 API </strong>：布萊特灣提供一套全方位的 API 來自訂、擴充和與布萊特灣平台整合。請參閱<a href="https://apis.support.brightcove.com/getting-started/getting-started-brightcove-apis.html">概觀：視訊雲端 API </a>文件以取得詳細資訊。</li>
     </ul>
     <p>下圖顯示過程的三個核心實體之間的互動，以從 Brightcove 的 REST API 中檢索數據：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="基本片段概述" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/client-proxy-api.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="基本片段概述" src="/assets/images/architecture/proxy-API-call/client-proxy-api.png"/></figure>
   </section>
   <section class="bcls-section">
     <h2 id="Client_functionality_overview">用戶端功能概觀</h2>
@@ -1123,7 +1123,7 @@ Brightcove
       <li>代理將數據返回給客戶端。</li>
     </ul>
     <p>請注意，調用<code translate="No">makeRequest()</code>（左下方框）的框中的邏輯流箭頭似乎表明代碼在兩個不同的時間執行，這正是如此。對函數進行調用，但回調函數不會執行，<code translate="No">makeRequest()</code>直到完成其工作並執行回調函數，該函數將請求的數據返回給函數調用代碼。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="用戶端功能概觀" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/proxy-API-call.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="用戶端功能概觀" src="/assets/images/architecture/proxy-API-call/proxy-API-call.png"/></figure>
   </section>
   <section class="bcls-section">
     <h2 id="Example_code_walkthrough">範例程式碼逐步解說</h2>
@@ -1194,7 +1194,7 @@ Brightcove
     <p>此代碼部分使調用<code translate="No">makeRequest()</code>函數。請注意，傳遞兩個參數。第一個是保存端點信息的選項對象，第二個是回調函數。請記住，這是一個異步調用，因此匿名定義的回調函數將不會被調用，直到 REST API 返回數據給該<code translate="No">makeRequest()</code>函數。</p>
     <ul>
       <li>第 1 行：調用該<code translate="No">makeRequest()</code>函數，傳遞<code translate="No">options</code>對象中調用所需的值。在此情況下，物件包含下列項目：
-        <figure class="bcls-figure"><img class="bcls-image" alt="選項物件" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/options-object-console.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="選項物件" src="/assets/images/architecture/proxy-API-call/options-object-console.png"/></figure>
       </li>
       <li>第 3-13 行：回調函數被定義為匿名函數（以黃色突出顯示）。請記住，這個函數是一個參數，不是在這裡調用，但稍後在代碼中調用。</li>
       <li>第 6 行，8，10：顯示的<code translate="No">console.log()</code>語句：
@@ -1207,7 +1207,7 @@ Brightcove
       <li>第十二行：調用顯示在控制欄中的視圖數量的功能。</li>
     </ul>
     <p>從控制台下面的屏幕截圖顯示從<code translate="No">console.log</code>語句實際顯示的數據：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="在回調函數中的數據處理" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/console-data-process-callback-function.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="在回調函數中的數據處理" src="/assets/images/architecture/proxy-API-call/console-data-process-callback-function.png"/></figure>
     <pre class="line-numbers">
 	<code class="language-javascript" translate="No">// +++ Make the request to the <span translate="No">Analytics API</span> +++
 	// Extract views from data returned by Analytics API
@@ -1269,7 +1269,7 @@ Brightcove
       <li>第八條線，二十六號線：定義<code translate="No">readyState</code>變更的事件處理常式函數。</li>
       <li>第九、二十三、二十五號線請求<code translate="No">try-catch</code>在高級別失敗的情況下使用.</li>
       <li>第十條第十條，第十一線：使用<code translate="No">if</code>語句來確保請求完成（<code translate="No">readyState</code>為 4）並成功完成，狀態在 200 範圍內。下列顯示事件處理常式定義中的<code translate="No">readyState</code>和<code translate="No">status</code>值的主控台記錄：
-        <figure class="bcls-figure"><img class="bcls-image" alt="記錄就緒狀態和狀態" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/console-readystate-and-status.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="記錄就緒狀態和狀態" src="/assets/images/architecture/proxy-API-call/console-readystate-and-status.png"/></figure>
       </li>
       <li>第 18 行：回調函數被執行。這會將傳回的資料從 API 傳回回回呼函式，如上述<strong>呼叫 MakeRequest () </strong>一節所述。</li>
       <li>第 33 行：設置事件的事件處理程序。<code translate="No">XMLHttpRequest.onreadystatechange</code></li>
@@ -1353,7 +1353,7 @@ Brightcove
     <p>在本節中提出了幾個簡單的建議，是開始調試冒險的好地方。以下兩節提供了一種方法來查看您需要的最基本信息，通過進行通話時傳入的內容，以及返回的內容。</p>
     <h3>檢查通話選項</h3>
     <p>本文件中討論的客戶端代碼基本上是關於提供與代理一起使用的正確選項，以及實際的 API。因此，知道選項是正確的，對於代碼的正確運行至關重要。一個簡單的方法是在將<code translate="No">options</code>對象傳遞到使用它們的<code translate="No">makeRequest</code>函數之前登錄到控制台：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="除錯程式碼記錄選項" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/debugging-code-log-options.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="除錯程式碼記錄選項" src="/assets/images/architecture/proxy-API-call/debugging-code-log-options.png"/></figure>
     <p>選項對象包含的內容將根據您想要做的事情而有所不同，但是一些基礎知識將始終存在，那些是：</p>
     <ul>
       <li>帳號 ID。這可以是個別的屬性，也可以是 API 端點 URL 的一部分。</li>
@@ -1367,17 +1367,17 @@ Brightcove
       </li>
     </ul>
     <p>視 API 要求而定，在選項物件中可能需要其他屬性。以下是您在記錄選項對象時在控制台中看到的示例，以便為特定帳戶中的所有玩家提出請求：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="除錯選項簡單" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/debugging-options-simple.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="除錯選項簡單" src="/assets/images/architecture/proxy-API-call/debugging-options-simple.png"/></figure>
     <p>以下是更新玩家時使用更複雜的記錄選項對象：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="除錯選項" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/debugging-options.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="除錯選項" src="/assets/images/architecture/proxy-API-call/debugging-options.png"/></figure>
     <h3>檢視傳回的資料</h3>
     <p>返回的內容將根據您請求的數據以及是否返回錯誤而有所不同。但是，無論返回什麼，您很可能想要查看返回哪些數據。一個簡單的方法是在調用<code translate="No">makeRequest</code>函數之後將原始數<code translate="No">response</code>據記錄到控制台：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="除錯程式碼記錄選項" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/debugging-code-log-response.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="除錯程式碼記錄選項" src="/assets/images/architecture/proxy-API-call/debugging-code-log-response.png"/></figure>
     <p>將返回的內容幾乎有無限的可能性，但以下是幾個例子。第一個顯示在詢問帳號中的所有玩家時響應的開始：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="調試玩家請求的響應" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/debugging-response-multiple-players.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="調試玩家請求的響應" src="/assets/images/architecture/proxy-API-call/debugging-response-multiple-players.png"/></figure>
     <aside class="bcls-aside bcls-aside--tip">這是一個很好的例子，當查看響應可以非常有幫助，因為它顯示播放器信息存儲在一個名為的數組中<code translate="No">items</code>。</aside>
     <p>以下是使用<code translate="No">PATCH</code> HTTP 方法更新玩家後的響應：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="偵錯播放器修補程式的回應" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/debugging-response-on-player-patch.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="偵錯播放器修補程式的回應" src="/assets/images/architecture/proxy-API-call/debugging-response-on-player-patch.png"/></figure>
     <p>這是第一個響應中數據的更好格式化的視圖：</p>
     <pre class="line-numbers">
 	<code class="language-json" translate="No">{
@@ -1387,7 +1387,7 @@ Brightcove
 		"preview_embed_code": "&lt;iframe src='//preview-players.brightcove.net/v2/accounts/.../master/index.html' ...&gt;&lt;/iframe&gt;"
 	}</code></pre>
     <p>最後，這是一個非常有價值的回應，從發生錯誤時。在這種情況下，帳戶正在使用沒有適當的認證：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="錯誤時的除錯回應" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/proxy-API-call/debugging-response-on-error.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="錯誤時的除錯回應" src="/assets/images/architecture/proxy-API-call/debugging-response-on-error.png"/></figure>
   </section>
   <h3>其他疑難排解秘訣</h3>
   <p>如果您遇到問題，以下是其他一些需要尋找的事項。</p>

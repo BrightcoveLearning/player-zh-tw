@@ -1089,15 +1089,15 @@ Brightcove
     <h2 id="Overview">概覽</h2>
     <p>可以通過域限制來限制可以觀看視頻的位置。的<a href="https://studio.support.brightcove.com/players/configuring-player-content-restrictions.html">配置播放器內容限制</a>本文檔介紹瞭如何使用Video Cloud來應用域限制。您正在閱讀的文檔將指導您如何實施代碼，以通知用戶播放器正在使用域限制。</p>
     <p>默認情況下，Brightcove Player不會通知用戶他們試圖觀看的視頻在域受限的播放器中。播放器僅顯示黑屏。如果您查看控制台，則會看到以下內容。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="域限制控制台錯誤" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-error-console.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="域限制控制台錯誤" src="/assets/images/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-error-console.png"/></figure>
     <p>這不是很有幫助，但是如果您檢查<strong>網絡</strong>標籤，然後點擊<strong>名稱</strong>與您的視頻ID相對應的內容，然後檢查<strong>預習</strong>標籤上，您將看到一個更加啟發性的錯誤。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="域消息控制台的“網絡”選項卡" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-error-network.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="域消息控制台的“網絡”選項卡" src="/assets/images/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-error-network.png"/></figure>
     <p>本文檔實施了一種策略，使用戶知道他們嘗試觀看的視頻受域限制。</p>
   </section>
   <section class="bcls-section">
     <h2 id="errorobject">播放器目錄的錯誤對象</h2>
     <p>創建用戶友好消息的關鍵是<code translate="No">error</code> Brightcove Player的對象<code translate="No">catalog</code>。域限制錯誤的示例在下面的瀏覽器控制台屏幕快照中顯示。請注意，該對象包含一個<code translate="No">data</code>屬性，它本身包含一個數組。該數組將保存目錄在加載視頻時遇到的最後一個錯誤。在示例中，您看到數組中的元素報告了域限制問題。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="目錄錯誤對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-catalog-error.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="目錄錯誤對象" src="/assets/images/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-catalog-error.png"/></figure>
   </section>
   <section class="bcls-section">
     <h2 id="bccatalogerror">處理BC-catalog錯誤</h2>
@@ -1152,7 +1152,7 @@ Brightcove
     });
   &lt;/script&gt;</code></pre>
     <p>以下屏幕截圖顯示了播放器下方顯示的消息。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="玩家以下錯誤" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-html-message.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="玩家以下錯誤" src="/assets/images/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-html-message.png"/></figure>
   </section>
   <section class="bcls-section">
     <h2 id="errorplugin">通過錯誤插件發送消息</h2>
@@ -1188,12 +1188,12 @@ Brightcove
     });
   &lt;/script&gt;</code></pre>
     <p>以下屏幕截圖顯示了錯誤插件顯示的已定義錯誤。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="定義的錯誤" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-errors-plugin.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="定義的錯誤" src="/assets/images/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-errors-plugin.png"/></figure>
   </section>
   <section id="generalerror" class="bcls-section">
     <h2>一般錯誤顯示</h2>
     <p>上面的兩個部分專門處理顯示從受限區域查看地理受限視頻時產生的錯誤。某些錯誤無法提供域限制所提供的詳細信息。此處顯示了此類錯誤對象的示例。請注意<strong>數據</strong>字段為空，而域限制錯誤包含關鍵錯誤信息。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="一般錯誤對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-general-error.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="一般錯誤對象" src="/assets/images/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-general-error.png"/></figure>
     <p>以下代碼顯示瞭如何顯示來自<code translate="No">catalog.error</code>不論詳細程度如何。在較高級別，代碼執行以下操作：</p>
     <ul>
       <li>檢查是否發生目錄錯誤。</li>
@@ -1223,7 +1223,7 @@ Brightcove
     });
   &lt;/script&gt;</code></pre>
     <p>以下屏幕截圖顯示了以HTML顯示的一般錯誤消息。當然，您也可以使用錯誤插件顯示消息，如本文檔前面部分所示。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="播放器下方顯示一般錯誤消息" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-general-message.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="播放器下方顯示一般錯誤消息" src="/assets/images/playback/troubleshooting/domain-restrictions-messaging/domain-restrictions-general-message.png"/></figure>
   </section>
 </article>
 

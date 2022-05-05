@@ -1093,9 +1093,9 @@ Brightcove
   <section id="includelanguage" class="bcls-section">
     <h2>包括語言</h2>
     <p>本地化的首要任務是包括您希望用於本地化的語言。您可以在上看到可用的語言<a href="//github.com/videojs/video.js/tree/master/lang">Video.js語言頁面</a>，顯示在這裡。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="語言本地化" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/localization-languages.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="語言本地化" src="/assets/images/playback/localization/localization-languages.png"/></figure>
     <p>德語（de）文件的內容如下所示。該文件顯示將自動翻譯的單詞/短語。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="德語github文件" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/localization-deutsch-github-file.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="德語github文件" src="/assets/images/playback/localization/localization-deutsch-github-file.png"/></figure>
     <p>一旦決定了支持本地化的語言，就必須配置播放器以包括它們。您可以使用<a href="https://apis.support.brightcove.com/player-management/">播放器管理API</a>。創建播放器時，可以使用以下curl語句上的模式代碼來增加語言支持：</p>
     <aside class="bcls-aside bcls-aside--information">注意：如果您沒有使用Player Management API的curl語句的經驗，建議您從<a href="https://apis.support.brightcove.com/player-management/getting-started/step-step-player-management.html">一步步：球員管理。</a></aside>
     <pre class="line-numbers">
@@ -1140,7 +1140,7 @@ Brightcove
 --request POST \
 https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/publish</code></pre>
     <p>設置了語言的示例播放器配置如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="播放器配置" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/localization-player-config.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="播放器配置" src="/assets/images/playback/localization/localization-player-config.png"/></figure>
   </section>
   <section id="setlanguage" class="bcls-section">
     <h2>設定語言</h2>
@@ -1153,20 +1153,20 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/pu
     </ol>
     <h4>iframe查詢參數</h4>
     <p>如果您使用播放器的iframe實現，則可以通過在播放器中添加查詢參數來設置該播放器的語言<code translate="No">src</code>屬性。例如，添加到具有視頻ID的現有查詢參數中<code translate="No">?videoId=4607746980001</code>，您可以使用<code translate="No">&amp;language=</code>然後是語言代碼。例如，這是一個iframe播放器實現，將語言設置為德語：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="iframe本地化參數" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/iframe-language-parameter.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="iframe本地化參數" src="/assets/images/playback/localization/iframe-language-parameter.png"/></figure>
   </section>
   <section id="results" class="bcls-section">
     <h2>結果</h2>
     <p>如本文檔開頭所述，不容易看到本地化玩家的結果。要檢查本地化是否成功，您可以檢查大播放按鈕。使用瀏覽器的調試工具檢查按鈕。</p>
     <aside class="bcls-aside bcls-aside--information">
       <p>注意：如果您熟悉jQuery，則可以使用瀏覽器的控制台和表達式快速查看本地化的文本<code translate="No">$(".vjs-big-play-button").firstChild</code>。你會看見<strong>播放視頻</strong>已本地化，如控制台中的以下屏幕截圖所示：</p>
-      <figure class="bcls-figure"><img class="bcls-image" alt="檢查播放按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/console-video-abspielen.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="檢查播放按鈕" src="/assets/images/playback/localization/console-video-abspielen.png"/></figure>
     </aside>
-    <figure class="bcls-figure"><img class="bcls-image" alt="檢查播放按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/localization-inspect-play-button.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="檢查播放按鈕" src="/assets/images/playback/localization/localization-inspect-play-button.png"/></figure>
     <p>向下鑽取HTML，直到看到按鈕的文本，在非本地化版本中為<strong>播放視頻</strong>。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="英語本地化" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/localization-english.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="英語本地化" src="/assets/images/playback/localization/localization-english.png"/></figure>
     <p>按照上述步驟操作後，播放器將被本地化。在以下屏幕截圖中，按鈕已本地化為德語。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="德國本地化" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/localization-deutsch.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="德國本地化" src="/assets/images/playback/localization/localization-deutsch.png"/></figure>
   </section>
   <section id="iframeimplementation" class="bcls-section">
     <h2>iframe 實現</h2>
@@ -1184,7 +1184,7 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/pu
   "Goodbye": "Auf Wiedersehen"
 });  </code></pre>
     <p>此JavaScript可能在HTML頁面本身中，作為源包含在<code translate="No">&lt;script&gt;</code>標籤，但最好的方法是使用Studio將腳本簡單地添加到播放器的配置中。該文件的網址已添加到<strong>外掛程式</strong>播放器屬性部分。使用<strong>新增檔案</strong>按鈕添加JavaScript文件，如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="在Studio中添加腳本" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/localization-studio-add-script.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="在Studio中添加腳本" src="/assets/images/playback/localization/localization-studio-add-script.png"/></figure>
     <p>在語言文件中添加詞彙後，您就可以使用播放器的<code translate="No">localize()</code>訪問它的方法。以下代碼段顯示了的本地化單詞<strong>你好</strong>在HTML頁面中使用，然後是結果的屏幕截圖。</p>
     <pre class="line-numbers">
 <code class="language-html" translate="No">  &lt;p id="textTarget"&gt;In here: &lt;/p&gt;
@@ -1195,7 +1195,7 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/pu
       <span class="bcls-highlight">document.getElementById("textTarget").innerHTML += myPlayer.localize("Hello");</span>
     });
   &lt;/script&gt;</code></pre>
-    <figure class="bcls-figure"><img class="bcls-image" alt="頁面文字本地化" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/localization/localization-page-text.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="頁面文字本地化" src="/assets/images/playback/localization/localization-page-text.png"/></figure>
   </section>
 </article>
 

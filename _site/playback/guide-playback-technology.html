@@ -1115,7 +1115,7 @@ Brightcove
       <li>用您自己的帳戶，播放器和視頻替換默認輸入值。</li>
     </ol>
     <p>您的輸出應類似於以下內容：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="播放技術應用" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/tech/playback-tech-app.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="播放技術應用" src="/assets/images/architecture/tech/playback-tech-app.png"/></figure>
   </section>
   <section class="bcls-section">
     <h2 id="viewTechManually" class="bcls-expander-head">手動查看播放技術</h2>
@@ -1127,13 +1127,13 @@ Brightcove
 <code class="language-javascript" translate="No">videojs.getPlayers().video_1.currentSrc()</code></pre>
       <aside class="bcls-aside bcls-aside--information">注意：的<code translate="No">video_1</code>在這種情況下，條目的“部分”代表玩家的ID。如果您正在嘗試並有一個具有ID的玩家，則該ID將替換<code translate="No">video_1</code>。</aside>
       <p>您應該看到當前源文件的擴展名為<strong>m3u8</strong>。</p>
-      <figure class="bcls-figure"><img class="bcls-image" alt="技術名稱" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/tech/hls-rendition.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="技術名稱" src="/assets/images/architecture/tech/hls-rendition.png"/></figure>
       <p>您可能不希望hls格式說明會在此瀏覽器中播放，因為Chrome本身不支持hls。但是，Brightcove Player在Chrome瀏覽器中使用MSE（媒體源擴展）播放hls。</p>
       <h3>vjs-tech類</h3>
       <p>接下來，讓我們驗證是否正在使用HTML5播放hls格式。在控制台的命令提示符中，輸入以下內容以返回使用名為class的類的第一個玩家元素<code translate="No">vjs-tech</code>：</p>
       <pre class="line-numbers">
 <code class="language-javascript" translate="No">document.getElementsByClassName("vjs-tech")[0]</code></pre>
-      <figure class="bcls-figure"><img class="bcls-image" alt="技術名稱" src="//learning-services-media.brightcove.com/doc-assets/player-development/architecture/tech/tech-details.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="技術名稱" src="/assets/images/architecture/tech/tech-details.png"/></figure>
       <p>在這裡，您可以看到HTML5 <code translate="No">video</code>元素正在使用中。</p>
     </div>
   </section>

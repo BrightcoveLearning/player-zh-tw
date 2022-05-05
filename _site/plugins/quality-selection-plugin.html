@@ -1096,7 +1096,7 @@ Brightcove
   </aside>
   <section class="bcls-section">
     <h2 id="Player_example">播放器範例</h2>
-    <p>以下是使用質量選擇插件的Brightcove Player。播放視頻後，在控制欄中您將看到以下圖標：<img alt="" src="//learning-services-media.brightcove.com/doc-assets/player-development/plugins/manual-rendition-selection/icon-in-controlbar.png"/></p>
+    <p>以下是使用質量選擇插件的Brightcove Player。播放視頻後，在控制欄中您將看到以下圖標：<img alt="" src="/assets/images/plugins/manual-rendition-selection/icon-in-controlbar.png"/></p>
     <p>選擇之後，齒輪將旋轉，直到對於DASH源呈現新的質量，或者對於HLS源呈現新的質量。下面提供了有關您選擇的質量選項以及齒輪旋轉行為的更多信息。</p>
     <aside class="bcls-aside bcls-aside--information">如果您擁有快速的Internet連接，則可能需要做許多選擇，然後才能看到齒輪旋轉，因為本視頻正在使用HLS演繹來快速進行更改。</aside>
     <video data-video-id="5842800655001" data-account="1752604059001" data-player="B1CWQFiPZ" data-embed="default" data-application-id="" class="video-js" controls="" width="640" height="360">&nbsp;</video>
@@ -1104,9 +1104,9 @@ Brightcove
     <section class="bcls-section">
       <h2 id="Quality_options">品質選項</h2>
       <p>單擊齒輪圖標時，將顯示許多質量選項供用戶選擇。例如，具有以下呈現形式的視頻：</p>
-      <figure class="bcls-figure"><img class="bcls-image" alt="所有視頻片段" src="//learning-services-media.brightcove.com/doc-assets/player-development/plugins/manual-rendition-selection/video-renditions.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="所有視頻片段" src="/assets/images/plugins/manual-rendition-selection/video-renditions.png"/></figure>
       <p>將創建以下質量選項：</p>
-      <figure class="bcls-figure"><img class="bcls-image" alt="品質選項" src="//learning-services-media.brightcove.com/doc-assets/player-development/plugins/manual-rendition-selection/quality-options.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="品質選項" src="/assets/images/plugins/manual-rendition-selection/quality-options.png"/></figure>
       <p>這是構建這些選項然後選擇特定格式的方式：</p>
       <ul>
         <li>基於水平分辨率的線（例如，在上面的示例中為270p，360p，540p，720p和1080p）將所有再現分組，並用作質量選項。</li>
@@ -1143,7 +1143,7 @@ Brightcove
         <li>按一下播放程式的連結以開啟播放程式的屬性。</li>
         <li>按一下左側導覽功能表中的「<strong>控制項</strong>」。</li>
         <li>選中前面的框<strong>質量選擇器</strong>。
-          <figure class="bcls-figure"><img class="bcls-image" alt="配置顯示質量選擇器" src="//learning-services-media.brightcove.com/doc-assets/player-development/plugins/manual-rendition-selection/studio-show-quality-selector.png"/></figure>
+          <figure class="bcls-figure"><img class="bcls-image" alt="配置顯示質量選擇器" src="/assets/images/plugins/manual-rendition-selection/studio-show-quality-selector.png"/></figure>
         </li>
         <li>使用單選按鈕可顯示可用的不同分辨率，或僅顯示<strong>高清/標清</strong>選項。</li>
         <li>按一下「<strong>儲存</strong>」。</li>
@@ -1298,7 +1298,7 @@ Brightcove
   "useResolutionLabels": false
 }</code></pre>
           <p>產生的質量選項將顯示如下：</p>
-          <figure class="bcls-figure"><img class="bcls-image" alt="僅選配SD和HD" src="//learning-services-media.brightcove.com/doc-assets/player-development/plugins/manual-rendition-selection/quality-options-sd-hd-only.png"/></figure>
+          <figure class="bcls-figure"><img class="bcls-image" alt="僅選配SD和HD" src="/assets/images/plugins/manual-rendition-selection/quality-options-sd-hd-only.png"/></figure>
           <p>然後，玩家將從選定的組中選擇最佳再現。如本節中所述，<code translate="No">sdBitrateLimit</code>可配置以確定歸類為<strong>標清</strong>和<strong>高清</strong></p>
           <aside class="bcls-aside bcls-aside--tip language-editable">矛盾的設置將不起作用。例如，以下兩種情況都沒有用處，因為在兩種情況下，您都基於<code translate="No">useResolutionLabels</code>設置。
             <pre class="line-numbers">
@@ -1317,7 +1317,7 @@ Brightcove
             <li>什麼時候<code translate="No">true</code>，該插件會將比特率信息附加到分辨率標籤（例如720p @ 13806 kbps）。此選項在以下情況下無效<code translate="No">useResolutionLabels</code>為false或解決方案信息不可用時。</li>
           </ul>
           <p>設置此配置選項後，<code translate="No">true</code>，質量選擇器將顯示如下：</p>
-          <figure class="bcls-figure"><img class="bcls-image" alt="所有視訊位元率" src="//learning-services-media.brightcove.com/doc-assets/player-development/plugins/manual-rendition-selection/bitrates-displayed.png"/></figure>
+          <figure class="bcls-figure"><img class="bcls-image" alt="所有視訊位元率" src="/assets/images/plugins/manual-rendition-selection/bitrates-displayed.png"/></figure>
         </li>
       </ul>
     </section>
@@ -1366,7 +1366,7 @@ Brightcove
         </tbody>
       </table>
       <p>例如，要實現以下目的：</p>
-      <figure class="bcls-figure"><img class="bcls-image" alt="所有視訊位元率" src="//learning-services-media.brightcove.com/doc-assets/player-development/plugins/manual-rendition-selection/styled-menu.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="所有視訊位元率" src="/assets/images/plugins/manual-rendition-selection/styled-menu.png"/></figure>
       <p>您將使用以下CSS：</p>
       <pre class="line-numbers">
 <code class="language-css" translate="No">/* Style the icon */

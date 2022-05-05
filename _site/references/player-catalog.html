@@ -1216,7 +1216,7 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/co
     </ul>
     <h3>傳回的值</h3>
     <p><code translate="No">catalog</code>調用本身返回一個類型的對象<strong translate="No">XMLHttpRequest</strong>。此對象的示例如下：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="請求對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/player-catalog/request-object.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="請求對象" src="/assets/images/references/player-catalog/request-object.png"/></figure>
     <p>雖然調用返回一個<strong translate="No">XMLHttpRequest</strong>對象，但你很可能永遠不會處理該對象。原因是在回調函數中，將自動解析JSON響應，並且將有用的對像傳遞給回調函數，在本例中為視頻對象。</p>
     <h3>範例：影片ID為字串</h3>
     <p>以下示例顯示了<code translate="No">getVideo()</code>方法：</p>
@@ -1391,7 +1391,7 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/co
   });
 &lt;/script&gt;</code></pre>
     <p>下面的屏幕截圖顯示在上面的代碼中的兩個<code translate="No">console.log()</code>結果。的<code translate="No">catalogParams</code>顯示搜索參數，並且<code translate="No">videosReturned</code>數組顯示搜索返回的三個視頻。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="從get方法調用在控制台中的對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/player-catalog/get-search-callback.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="從get方法調用在控制台中的對象" src="/assets/images/references/player-catalog/get-search-callback.png"/></figure>
     <h3>無極的例子</h3>
     <p>在此代碼中，使用<code translate="No">get()</code>方法如上所示，但結果作為Promise處理。</p>
     <pre class="line-numbers">
@@ -1464,7 +1464,7 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/co
   });
 &lt;/script&gt;</code></pre>
     <p>下面的屏幕截圖顯示在上面的代碼中的兩個<code translate="No">console.log()</code>結果。的<code translate="No">catalogParams</code>顯示搜索所需的參數，並且<code translate="No">videosReturned</code>數組顯示搜索返回的三個視頻。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="通過getSearch方法調用在控制台中的對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/player-catalog/getsearch-console.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="通過getSearch方法調用在控制台中的對象" src="/assets/images/references/player-catalog/getsearch-console.png"/></figure>
   </section>
   <section class="bcls-section">
     <h2 id="getSequence_method">getSequence（）方法</h2>
@@ -1555,7 +1555,7 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/co
   });
 &lt;/script&gt;</code></pre>
     <p>以下屏幕截圖顯示了<code translate="No">mySequences</code>數組，後跟返回的視頻對像數組：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="myStructures數據結構" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/player-catalog/getSequences-mySequences.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="myStructures數據結構" src="/assets/images/references/player-catalog/getSequences-mySequences.png"/></figure>
   </section>
   <section class="bcls-section">
     <h2 id="getLazySequence_method">getLazySequence（）方法</h2>
@@ -1652,13 +1652,13 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/co
       </li>
     </ul>
     <p>以下顯示了從請求到響應以及從響應返回事件的控制台日誌<code translate="No">catalog</code>：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="請求和響應事件對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/player-catalog/events.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="請求和響應事件對象" src="/assets/images/references/player-catalog/events.png"/></figure>
     <p>您會看到事件對象的許多標準屬性。對...特別感興趣<code translate="No">catalog</code>事件是<strong translate="No">type</strong>和<strong translate="No">url</strong>。</p>
     <p>下面顯示了一個控制台日誌<code translate="No">catalog</code>請求錯誤對象：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="錯誤事件對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/player-catalog/error-event-object.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="錯誤事件對象" src="/assets/images/references/player-catalog/error-event-object.png"/></figure>
     <h3 id="Response_information">回應信息</h3>
     <p>的<code translate="No">catalog_response</code>事件對象包含JSON格式的<code translate="No">response</code>包含來自的原始數據的屬性<span translate="No">catalog</span> API響應。下面顯示了響應屬性的控制台日誌：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="響應事件對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/player-catalog/parsed-response.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="響應事件對象" src="/assets/images/references/player-catalog/parsed-response.png"/></figure>
     <p>要實際使用來自response屬性的數據，您需要將原始JSON格式的字符串解析為一個對象。以下顯示了訪問<code translate="No">name</code>屬性：</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">myPlayer.on('catalog_response',function(evt){
@@ -1871,7 +1871,7 @@ https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/co
     </ul>
     <h3 id="Handle_geo-filtering_error">處理地理過濾錯誤</h3>
     <p>如前所述，地理過濾可能會導致目錄錯誤。您可以像顯示的那樣非常相似地處理它們。將顯示代碼，在“錯誤的”播放器下方放置一條消息，如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="地理誤差" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/player-catalog/geo-error.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="地理誤差" src="/assets/images/references/player-catalog/geo-error.png"/></figure>
     <p>以下代碼捕獲了目錄錯誤，然後檢查是否是地理過濾問題。如果是，則在HTML頁面中播放器正下方顯示一條適當的消息，如屏幕截圖所示。</p>
     <pre class="line-numbers">
 <code class="language-html" translate="No">&lt;video-js id="myPlayerID"

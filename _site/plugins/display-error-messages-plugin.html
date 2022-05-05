@@ -1088,7 +1088,7 @@ Brightcove
     <section id="Overview" class="bcls-section">
         <h2>概覽</h2>
         <p>錯誤消息插件允許播放器在遇到錯誤時顯示用戶友好的消息。默認樣式表將消息顯示為視頻元素本身頂部的半透明覆蓋層。您可以更改現有的消息文本並添加自己的樣式。您甚至可以創建需要時觸發的自定義消息。</p>
-        <figure class="bcls-figure"><img class="bcls-image" alt="錯誤消息插件" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/errors-plugin/error-message-plugin.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="錯誤消息插件" src="/assets/images/playback/troubleshooting/errors-plugin/error-message-plugin.png"/></figure>
         <p>上圖中顯示的錯誤消息是通過用無效的更新播放器而創建的<code translate="No">src</code>的價值<code translate="No">sources</code>屬性。</p>
         <p>錯誤消息插件是默認插件，並且會自動隨Brightcove Player一起加載。但是，您可以選擇不加載它。如果沒有此插件，您將看到一組有限的錯誤消息，並且某些錯誤只會出現在瀏覽器控制台中。有關如何在創建播放器時不加載默認插件的詳細信息，請參見<a href="/plugins/overview-brightcove-player-plugins.html">播放器插件概述</a>文件。</p>
         <aside class="bcls-aside bcls-aside--warning language-editable">要自定義錯誤消息，可以使用本文檔中顯示的兩種方法之一：
@@ -1174,7 +1174,7 @@ Brightcove
             <li><code translate="No">type</code>：這是<strong>錯誤代碼：</strong>文本。</li>
             <li><code translate="No">message</code>：這是<strong>技術細節：</strong>文本。</li>
         </ul>
-        <figure class="bcls-figure"><img class="bcls-image" alt="錯誤消息插件" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/errors-plugin/error-message-plugin2.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="錯誤消息插件" src="/assets/images/playback/troubleshooting/errors-plugin/error-message-plugin2.png"/></figure>
         <!-- <p>Once your player is created, in Studio edit the <strong>Plugins</strong> section of the <strong>Players</strong> module with a JSON object to set property values.</p> -->
         <p>下面的示例顯示瞭如何使用錯誤代碼值覆蓋標準錯誤的消息文本。<code translate="No">4</code>。這些屬性定義如下：</p>
         <ul>
@@ -1304,7 +1304,7 @@ Brightcove
             </li>
         </ul>
         <aside class="bcls-aside bcls-aside--information">對於那些沒有代碼的錯誤，將使用消息作為代碼。例如，此處顯示域限制錯誤：
-            <figure class="bcls-figure"><img class="bcls-image" alt="域限制錯誤消息" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/errors-plugin/domain-restriction-error.png"/></figure>
+            <figure class="bcls-figure"><img class="bcls-image" alt="域限制錯誤消息" src="/assets/images/playback/troubleshooting/errors-plugin/domain-restriction-error.png"/></figure>
         </aside>
     </section>
     <section class="bcls-section">
@@ -1345,18 +1345,18 @@ myPlayer.on("loadstart", function () {
 });</code></pre>
         <p>在這裡<code translate="No">age_appropriate</code>變量設置為<code translate="No">false</code>，但是您將添加自己的代碼來確定何時顯示自定義錯誤消息。</p>
         <p>該錯誤將顯示給用戶，如下所示：</p>
-        <figure class="bcls-figure"><img class="bcls-image" alt="用戶自定義錯誤消息" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/errors-plugin/user-custom-error-message.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="用戶自定義錯誤消息" src="/assets/images/playback/troubleshooting/errors-plugin/user-custom-error-message.png"/></figure>
         <aside class="bcls-aside bcls-aside--tip">注意：任何引發自定義錯誤的代碼都必須等待視頻加載。使用<code translate="No">loadstart</code>事件來確定這一點。如果您嘗試不等待而顯示消息，則視頻加載後，消息將消失。</aside>
     </section>
     <section class="bcls-section">
         <h2 id="Making_custom_errors_non_dismissible">使自定義錯誤不可忽略</h2>
         <p>默認情況下，視頻查看器會拒絕自定義錯誤消息。如以下屏幕截圖所示，有一個<strong>好</strong>按鈕以關閉窗口，以及<strong>X</strong>在右上角。</p>
-        <figure class="bcls-figure"><img class="bcls-image" alt="可忽略的錯誤消息" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/errors-plugin/dismissible.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="可忽略的錯誤消息" src="/assets/images/playback/troubleshooting/errors-plugin/dismissible.png"/></figure>
         <p>如果您不想允許視頻查看器消除該錯誤消息，則可以執行此操作。當您致電<code translate="No">error()</code>方法，您可以設置<code translate="No">dismiss</code>財產<code translate="No">false</code>。</p>
         <pre class="line-numbers">
 <code class="language-javascript" translate="No">myPlayer.error({code:'age-gate-error', <span class="bcls-highlight">dismiss: false</span>});</code></pre>
         <p>當您這樣做時，錯誤消息將顯示如下，而無法消除該錯誤。</p>
-        <figure class="bcls-figure"><img class="bcls-image" alt="不可忽略的錯誤消息" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/errors-plugin/not-dismissible.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="不可忽略的錯誤消息" src="/assets/images/playback/troubleshooting/errors-plugin/not-dismissible.png"/></figure>
     </section>
     <section class="bcls-section">
         <h2 id="getAll_method">getAll（）方法</h2>
@@ -1364,7 +1364,7 @@ myPlayer.on("loadstart", function () {
         <pre class="line-numbers">
 <code class="language-javascript" translate="No">console.log('myPlayer.errors.getAll()',myPlayer.errors.getAll());</code></pre>
         <p>控制台顯示的示例，其中擴展了一些錯誤以獲取詳細信息：</p>
-        <figure class="bcls-figure"><img class="bcls-image" alt="getAll控制台顯示" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/errors-plugin/getAll-method.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="getAll控制台顯示" src="/assets/images/playback/troubleshooting/errors-plugin/getAll-method.png"/></figure>
     </section>
     <section id="dispatcherror" class="bcls-section">
         <h2>派送錯誤</h2>

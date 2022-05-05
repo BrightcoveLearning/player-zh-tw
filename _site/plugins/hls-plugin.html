@@ -1413,7 +1413,7 @@ https://players.api.brightcove.com/v2/accounts/YOUR_ACCOUNT_ID/players/YOUR_PLAY
     <h2 id="In-manifest_WebVTT">資訊清單內網路</h2>
     <p>HLS插件支持清單內WebVTT。啟用此功能無需做任何事情，因為該功能是插件中的標準功能。必須在考慮清單內WebVTT的情況下攝取視頻。例如Brightcove <span translate="No">Dynamic Ingest API</span>可以提取視頻並將字幕配置為清單內。見<a href="https://apis.support.brightcove.com/dynamic-ingest/getting-started/overview-dynamic-ingest-api-dynamic-delivery.html#ingest_captions">概述：<span translate="No">Dynamic Ingest API</span>動態交付</a>有關更多詳細信息的文檔。</p>
     <p>下面的播放器正在播放帶有清單內WebVTT字幕的視頻。您可以通過字幕圖標選擇字幕，如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="顯示字幕圖標" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/HLS-plugin/in-manifest-webvtt-example.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="顯示字幕圖標" src="/assets/images/playback/HLS-plugin/in-manifest-webvtt-example.png"/></figure>
     <p>開始播放視頻後，您將可以選擇想要的字幕。</p>
     <iframe src="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=5427617218001" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" width="640" height="360"></iframe>
     <p>只是看一下，因為這是您自己無法構建的東西，因此以下是上面播放器中顯示的視頻的清單：</p>
@@ -1466,13 +1466,13 @@ https://players.api.brightcove.com/v2/accounts/YOUR_ACCOUNT_ID/players/YOUR_PLAY
     <h3>方法：videojs.log.history（）</h3>
     <p>的<code translate="No">history()</code>方法返回一個數組，其中包含已記錄到歷史記錄中的所有內容。</p>
     <p>通過記錄的任何消息<code translate="No">videojs.log</code> API將附加到<code translate="No">history</code>數組。放置在該數組中的信息取決於正在使用哪些使用該API的插件以及播放器的狀態。這意味著歷史記錄可以輕鬆地包含非HLS信息。控制台的示例顯示<code translate="No">history</code>數組如下：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示歷史記錄數組" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/HLS-plugin/history-array.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示歷史記錄數組" src="/assets/images/playback/HLS-plugin/history-array.png"/></figure>
     <aside class="bcls-aside bcls-aside--tip">這倆<code translate="No">level()</code>和<code translate="No">history()</code>方法屬於<code translate="No">log</code>類，其參考文檔位於<a href="https://docs.brightcove.com/brightcove-player/current-release/module-create-logger-createLogger-log.html">這裡</a>。</aside>
     <p>如果您需要發送<code translate="No">history</code>要支持的數組，最好的做法是在控制台中鍵入以下內容：</p>
     <pre class="line-numbers">
 <code class="language-javascript" translate="No">JSON.stringify(videojs.log.history())</code></pre>
     <p>您將獲得類似於此處顯示的信息：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示字符串化的歷史記錄" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/HLS-plugin/stringify.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示字符串化的歷史記錄" src="/assets/images/playback/HLS-plugin/stringify.png"/></figure>
     <p>複製生成的JSON，然後可以將其發送給支持部門。</p>
     <h3>屬性：player.tech（）。hls.stats</h3>
     <p>該對象包含HLS和與玩家相關的統計信息的摘要。可用屬性如下表所示：</p>
@@ -1579,7 +1579,7 @@ https://players.api.brightcove.com/v2/accounts/YOUR_ACCOUNT_ID/players/YOUR_PLAY
     </table>
     <aside class="bcls-aside bcls-aside--warning">如果您使用的是Brightcove Player版本5，則應使用<code translate="No">player.tech_.hls.stats</code>獲取表中顯示的HLS信息。另外，某些屬性在版本5實現中不可用。</aside>
     <p>控制台的示例顯示<code translate="No">stats</code>對像如下：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示統計對象" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/HLS-plugin/stats-object.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示統計對象" src="/assets/images/playback/HLS-plugin/stats-object.png"/></figure>
     <aside class="bcls-aside bcls-aside--tip">在控制台中時，要實際顯示屬性值，您需要單擊省略號（...）。</aside>
     <h3>程式碼範例</h3>
     <p>如果您想嘗試這些調試功能，可以將基於以下內容的代碼作為服務器的起點：</p>

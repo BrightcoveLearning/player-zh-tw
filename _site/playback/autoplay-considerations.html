@@ -1233,7 +1233,7 @@ Brightcove
     <p>When you want Brightcove Player to try to autoplay a video you need to set that in the player's configuration. You can do this either with Studio or the <a href="https://apis.support.brightcove.com/player-management/">Player Management API</a>.</p>
     
     <p>In Studio, edit the desired player then in the <strong>Playback</strong> section set the value:</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="Set autoplay in Studio" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/autoplay/studio-setting.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="Set autoplay in Studio" src="/assets/images/playback/autoplay/studio-setting.png" /></figure>
     <p>The meaning of each setting is as follows:</p>
     <ol>
       <li>Do Not Auto-Play: Will not try to autoplay</li>
@@ -1263,10 +1263,10 @@ Brightcove
   <section class="bcls-section">
     <h2 id="Programmatic_autoplay_detection">Programmatic autoplay detection</h2>
     <p>You can programmatically detect if autoplay succeeded by listening for a JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> returned by the player's <code translate="No">play() </code> method. Brightcove Player's <code translate="No">play() </code> method returns a Promise object that indicates whether autoplay succeeded. Following are two console screenshots showing the Promise object when autoplay succeeded (Promise resolved) or autoplay failed (Promise rejected).</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="promise resolved" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/autoplay/promise-resolved.png" />
+    <figure class="bcls-figure"><img class="bcls-image" alt="promise resolved" src="/assets/images/playback/autoplay/promise-resolved.png" />
       <figcaption class="bcls-caption--image">Autoplay succeeded</figcaption>
     </figure>
-    <figure class="bcls-figure"><img class="bcls-image" alt="promise rejected" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/autoplay/promise-rejected.png" />
+    <figure class="bcls-figure"><img class="bcls-image" alt="promise rejected" src="/assets/images/playback/autoplay/promise-rejected.png" />
       <figcaption class="bcls-caption--image">Autoplay failed</figcaption>
     </figure>
     <p>As per standard JavaScript handling of a Promise, here is a code snippet using the <code translate="No">play()</code>'s Promise. See the next section in this document for a specific use case that plays with audio of the video autoplays, or plays without audio if the video does not autoplay.</p>

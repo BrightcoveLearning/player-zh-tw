@@ -1105,10 +1105,10 @@ Brightcove
       <li>瀏覽新建立的頁面。默認情況下，播放器的尺寸將為默認尺寸300 x 150像素。</li>
       <li>打開瀏覽器的開發工具，然後深入HTML來查找<code translate="No">div</code>環繞播放器的標籤。您會看到<code translate="No">div</code>標籤具有一類<code translate="No">video-js</code>。的<code translate="No">div</code>包含玩家的總會有一類<code translate="No">video-js</code>。<code translate="No">video-js</code>是在設計播放器樣式時需要的類名稱。</li>
       <li>檢查下面的屏幕截圖，看到以紅色突出顯示的班級。視頻標記為Brightcove Player，以綠色突出顯示。
-        <figure class="bcls-figure"><img class="bcls-image" alt="帶視頻的播放器div" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/player-div-with-video.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="帶視頻的播放器div" src="/assets/images/player-customization/1x-customize-quick-start/player-div-with-video.png"/></figure>
         <aside class="bcls-aside bcls-aside--tip language-editable">
           <p>注意：根據所使用的操作系統和瀏覽器，可能會顯示播放器的Flash後備版本。如果您的播放器使用的是Flash後備版本，則不會看到<code translate="No">video</code>標籤。相反，您會看到<code translate="No">div</code>圍繞<code translate="No">object</code>標籤，如下所示。</p>
-          <figure class="bcls-figure"><img class="bcls-image" alt="帶對象的球員" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/player-div-with-object.png"/></figure>
+          <figure class="bcls-figure"><img class="bcls-image" alt="帶對象的球員" src="/assets/images/player-customization/1x-customize-quick-start/player-div-with-object.png"/></figure>
         </aside>
       </li>
       <li>現在您知道了用於CSS選擇器的正確類，我們可以使用該類選擇器來更改播放器的大小。的<code translate="No">style</code>下面的塊應放置在<code translate="No">head</code> HTML頁面的部分。在CSS術語中，這是使用<strong>類選擇器</strong>。
@@ -1131,7 +1131,7 @@ Brightcove
       <li>瀏覽您的 HTML 網頁。</li>
       <li>右鍵單擊覆蓋播放器的播放按鈕，然後選擇<strong>檢查元素</strong>。</li>
       <li>請注意<code translate="No">div</code>突出顯示的標記表示播放按鈕，並具有<code translate="No">vjs-big-play-button</code>。
-        <figure class="bcls-figure"><img class="bcls-image" alt="大按鈕div" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/big-play-button-div.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="大按鈕div" src="/assets/images/player-customization/1x-customize-quick-start/big-play-button-div.png"/></figure>
       </li>
       <li>更改樣式以包括CSS，該CSS可以更改播放按鈕的顏色和不透明度（第17-18行），並使按鈕在播放器內部居中（第19-23行）。
         <pre class="line-numbers">
@@ -1152,15 +1152,15 @@ Brightcove
         &lt;/style&gt;  </code></pre>
       </li>
       <li>瀏覽您的頁面，你會看到沒有所有的樣式已被使用。按鈕不是紅色的。
-        <figure class="bcls-figure"><img class="bcls-image" alt="非紅色按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/button-not-red.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="非紅色按鈕" src="/assets/images/player-customization/1x-customize-quick-start/button-not-red.png"/></figure>
       </li>
       <li>看看你的開發人員工具的右側，你會看到你的樣式的摘要。你可以往下看，看到將背景更改為紅色被覆蓋，由它被劃掉。
-        <figure class="bcls-figure"><img class="bcls-image" alt="樣式背景覆蓋" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/styles-background-overridden.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="樣式背景覆蓋" src="/assets/images/player-customization/1x-customize-quick-start/styles-background-overridden.png"/></figure>
         <aside class="bcls-aside bcls-aside--information language-editable">注意：在 Safari 中，即使樣式被覆蓋，也可能不會被刪除。</aside>
         <p>發生的事情是對背景顏色進行了許多變化。您設置的樣式已被覆蓋在 CSS 的「級聯」部分。您可以通過利用 CSS 稱為<strong>特異性</strong>的功能來改變這一點。特異性決定了哪些 CSS 規則是由瀏覽器應用，並且是一種加權，它與層疊樣式表（CSS）規則的顯示方式有關。使用特殊性，你可以使你的風格比其他人更重要，迫使它被使用。有關CSS專用性的簡要介紹，請參見<a href="/styling/customizing-player-appearance-legacy-skin.html#specificity">自定義玩家外觀-舊版皮膚</a> doc，以及任何搜索中的大量參考文獻。</p>
       </li>
       <li>請注意<code translate="No">div</code>標籤周圍，播放器具有許多與之相關的類。
-        <figure class="bcls-figure"><img class="bcls-image" alt="多班" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/multiple-classes.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="多班" src="/assets/images/player-customization/1x-customize-quick-start/multiple-classes.png"/></figure>
       </li>
       <li>在這種情況下，請結合使用<code translate="No">video-js</code>和<code translate="No">vjs-mouse</code>將“增強”您的樣式優先。變更您的樣式以使用新的組合選取器。請注意，前兩個類之間沒有空格，但最後一個類之前沒有空格（為什麼可以在特異性規則中找到詳細信息）。
         <pre class="line-numbers">
@@ -1175,10 +1175,10 @@ Brightcove
           }</code></pre>
       </li>
       <li>瀏覽您的頁面，看看現在已套用所有樣式。
-        <figure class="bcls-figure"><img class="bcls-image" alt="樣式背景工作" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/styles-background-working.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="樣式背景工作" src="/assets/images/player-customization/1x-customize-quick-start/styles-background-working.png"/></figure>
       </li>
       <li>再次看看你的開發人員工具的右側，你會看到你的樣式的摘要。現在你看到你的背景顏色更改沒有被覆蓋。
-        <figure class="bcls-figure"><img class="bcls-image" alt="樣式背景未覆蓋" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/styles-background-NOT-overridden.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="樣式背景未覆蓋" src="/assets/images/player-customization/1x-customize-quick-start/styles-background-NOT-overridden.png"/></figure>
       </li>
     </ol>
   </section>
@@ -1313,7 +1313,7 @@ Brightcove
       <li>在 Studio 中，進入<strong>玩家</strong>模組並編輯您要用來快速啟動的播放器。</li>
       <li>找到<strong>插件</strong>部分，然後單擊<strong>編輯</strong>按鈕。</li>
       <li>點擊<strong>的CSS</strong>輸入並輸入CSS文件的路徑，如下所示：
-        <figure class="bcls-figure"><img class="bcls-image" alt="工作室輸入css" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-quick-start/studio-enter-css.png"/></figure>
+        <figure class="bcls-figure"><img class="bcls-image" alt="工作室輸入css" src="/assets/images/player-customization/1x-customize-quick-start/studio-enter-css.png"/></figure>
       </li>
       <li>請點擊<strong>保存</strong>將您的更改保存在<strong>插件</strong>部分。
         <aside class="bcls-aside bcls-aside--information language-editable">頁面頂部的預覽播放器將更新，以顯示應用於按鈕的CSS樣式。</aside>

@@ -1095,7 +1095,7 @@ Brightcove
     </ul>
     <p>玩家參考頁面位於<a href="http://players.brightcove.net/3303963094001/player-reference-app/index.html">http://players.brightcove.net/3303963094001/player-reference-app/index.html</a>。</p>
     <aside class="bcls-aside bcls-aside--warning language-editable">如果您將HL11資產與IE11 / Win7一起使用，則必須通過單擊<strong>模式</strong>播放器參考中的按鈕。
-      <figure class="bcls-figure"><img class="bcls-image" alt="閃光模式" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/player-reference/flash-mode.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="閃光模式" src="/assets/images/playback/troubleshooting/player-reference/flash-mode.png"/></figure>
     </aside>
   </section>
   <section id="Video_demonstration" class="bcls-section">
@@ -1108,13 +1108,13 @@ Brightcove
     <p>您需要做的第一件事是為播放器提供視頻源，或使用提供的默認視頻之一。您粘貼URL，然後在“配置”按鈕欄中單擊要測試的選項。您必須預先選擇選項，然後單擊<strong>加載</strong>。</p>
     <aside class="bcls-aside bcls-aside--warning">播放期間在配置按鈕欄中選擇選項無效。您必須單擊配置按鈕，然後單擊<strong>加載</strong>再次。另外，您需要手動選擇正確的<strong>URL內容類型</strong>用於提供的視頻。如果您選擇了錯誤的類型，則可能會收到錯誤消息或無法播放視頻。</aside>
     <p>如果願意，可以使用Video Cloud源進行測試。只需轉到<strong>媒體</strong> Studio中的模塊，單擊視頻，然後在<strong>視頻文件</strong>在該部分中，右鍵單擊<strong>格式</strong>列，然後選擇<strong>複製鏈接地址</strong>。然後，您可以將復制的鏈接粘貼到URL輸入區域中。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="在Studio中獲取視頻源URL" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/player-reference/get-video-source-url.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="在Studio中獲取視頻源URL" src="/assets/images/playback/troubleshooting/player-reference/get-video-source-url.png"/></figure>
     <aside class="bcls-aside bcls-aside--information">提供DASH視頻源時，還將要求您提供許可證服務器URL。請注意，目前您無法提供完整的<strong>keySystemsOptions</strong>作為對象<strong>播放器選項</strong>。</aside>
   </section>
   <section id="section-name" class="bcls-section">
     <h2>提供播放器選項</h2>
     <p>需要一些說明的“配置”按鈕欄上的一個選項是<strong>播放器選項</strong>按鈕。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="播放器選項按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/player-reference/player-options-button.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="播放器選項按鈕" src="/assets/images/playback/troubleshooting/player-reference/player-options-button.png"/></figure>
     <p>通過此按鈕，您可以使用有效的JSON格式的數據將某些配置選項傳遞給播放器。例如，以下內容將提供一個新的海報，並在完成後進行視頻循環：</p>
     <pre class="line-numbers">
 {“ poster”：“ http://solutions.brightcove.com/fish_poster.png”，“ loop”：true}</pre>
@@ -1126,15 +1126,15 @@ Brightcove
     <h3>比特率切換</h3>
     <p>首先，如果您正在查看MP4視頻源，則本節將看不到任何信息。對於MP4，視頻源已發送，沒有進一步協商。對於HLS，會定期請求分段，因此根據帶寬，可以請求較低質量或較高質量的分段。圖表中一條趨勢呈上坡趨勢（正斜率）的線表示可用比特率正在增加，並且將請求更高質量的分段。相反，圖中趨勢線呈下坡（負斜率）趨勢將意味著可用比特率正在下降，並且將請求質量較差的段。</p>
     <p>圖中的線對應於視頻可用的演繹形式。當繪製的圖形移動到一條線上方時，玩家將請求更高質量的細分。當繪製的圖形移到一條線以下時，情況正好相反。請注意，當繪圖儀曲線越過一條線時，您很可能不會立即看到視頻質量的變化。所請求的段必鬚根據請求發送，並且在接收到時附加到當前在緩衝區中的段。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="比特率切換圖" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/player-reference/bitrate-switching.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="比特率切換圖" src="/assets/images/playback/troubleshooting/player-reference/bitrate-switching.png"/></figure>
     <aside class="bcls-aside bcls-aside--information">注意：上圖顯示了較高且不變的可用帶寬。</aside>
     <p>如下圖所示，曲線圖中的尖峰很可能觸發移交更改。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="圖形中的尖峰" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/player-reference/sharp-spikes.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="圖形中的尖峰" src="/assets/images/playback/troubleshooting/player-reference/sharp-spikes.png"/></figure>
     <h3>活動時間表</h3>
     <p>事件時間軸將僅顯示已調度的事件。此屏幕快照顯示了開始播放之前的HLS視頻，並且只有<code translate="No">progress</code>和<code translate="No">loadedmetadata</code>事件已調度。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="開始時的活動" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/player-reference/events-at-start.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="開始時的活動" src="/assets/images/playback/troubleshooting/player-reference/events-at-start.png"/></figure>
     <p>以下屏幕截圖顯示了該視頻在開始播放，已暫停和重新啟動以及執行搜索後的同一視頻。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="玩後活動" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/troubleshooting/player-reference/events-after-playing.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="玩後活動" src="/assets/images/playback/troubleshooting/player-reference/events-after-playing.png"/></figure>
   </section>
 </article>
 

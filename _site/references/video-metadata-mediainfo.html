@@ -1241,7 +1241,7 @@ Brightcove
 &lt;/script&gt;</code></pre>
     <p>控制台顯示的示例如下所示：</p>
     <aside class="bcls-aside bcls-aside--information">在此屏幕快照中，顯示了舊式的蛇形案例（account_id）屬性名稱以及當前的駱駝案例（accountId）名稱。</aside>
-    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/mediainfo/console-display.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示" src="/assets/images/references/mediainfo/console-display.png"/></figure>
   </section>
   <section id="populatetheobject" class="bcls-section player-only">
     <h2>填充對象</h2>
@@ -1288,7 +1288,7 @@ Brightcove
     <h2 id="displaytagsfields">顯示標籤和自定義字段</h2>
     <aside class="bcls-aside bcls-aside--information player-only">儘管您不太可能手動填充<strong translate="No">custom fields</strong>和<strong translate="No">tags</strong>對象，這是可能的，因此包含了此內容。</aside>
     <p>標籤和自定義字段都存儲在復雜的數據結構中。的<strong translate="No">customFields</strong>在一個物體上<strong translate="No">tags</strong>在一個數組中。以下屏幕截圖顯示了在<code translate="No">mediainfo</code>目的。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示中的標籤和自定義字段" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/mediainfo/tags-custom-fields.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="控制台顯示中的標籤和自定義字段" src="/assets/images/references/mediainfo/tags-custom-fields.png"/></figure>
     <p>要顯示這些複雜數據結構中的數據，您需要兩種循環。一種<code translate="No">for</code>循環用於遍歷標籤數組（第16-20行），並將動態構建的HTML無序列表注入到<code translate="No">&lt;div&gt;</code>（在第9行中定義）。一種<code translate="No">for-in</code>循環用於遍歷自定義字段對象（第24-27行），並將動態構建的HTML無序列表注入到<code translate="No">&lt;div&gt;</code>。</p>
     <pre class="line-numbers">
 <code class="language-html" translate="No">&lt;video-js id="myPlayerID"
@@ -1323,7 +1323,7 @@ Brightcove
   });
 &lt;/script&gt;</code></pre>
     <p>呈現的HTML如下圖所示。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="HTML中的標籤和自定義顯示" src="//learning-services-media.brightcove.com/doc-assets/player-development/references/mediainfo/html-display.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="HTML中的標籤和自定義顯示" src="/assets/images/references/mediainfo/html-display.png"/></figure>
     <aside class="bcls-aside bcls-aside--information video-cloud-only">注意：自定義字段鍵，<strong translate="No">customfield1</strong>和<strong translate="No">customfield2</strong>，僅是演示名稱。您將選擇可反映自定義字段中存儲的數據的鍵名。</aside>
   </section>
 </article>

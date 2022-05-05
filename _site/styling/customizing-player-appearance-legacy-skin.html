@@ -1096,7 +1096,7 @@ Brightcove
     <h2 id="player">播放程式</h2>
     <aside class="bcls-aside bcls-aside--information">注意：本文件假設 CSS 的一些知識，並使用瀏覽器的開發工具來檢視 HTML 元素的類別，並檢查適用的 CSS。如果您不具備先決條件的基礎知識，則最好是通過<a href="/styling/quick-start-player-customization-legacy-skin.html">快速開始：玩家自定義-舊版皮膚</a>。</aside>
     <p>您可以改變播放器的外觀，但您必須先有辦法解決它。要查看此內容，請瀏覽包含播放器embed_in_page代碼的HTML頁面。在裡面<strong>元素</strong>開發工具部分找到第一個<code translate="No">&lt;div&gt;</code>您將看到它具有一個帶有值的類<code translate="No">video-js</code>分配，等等。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="自訂玩家-元素" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/player-elements.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="自訂玩家-元素" src="/assets/images/player-customization/1x-customize-appearance/player-elements.png"/></figure>
     <p>一旦你知道這一點，你可以使用樣式來改變玩家本身。例如，要更改播放器的大小，可以使用以下樣式：</p>
     <pre class="line-numbers">
 <code class="language-css" translate="No">&lt;style&gt;
@@ -1109,7 +1109,7 @@ Brightcove
   <section class="bcls-section">
     <h2 id="iframeplayer">框架播放器</h2>
     <p>如果您使用播放器的iframe實現，則情況會有所不同。您仍然會看到帶有<code translate="No">video-js</code>類，但它當然會在iframe中。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="iframe 播放器元素" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/iframe-elements.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="iframe 播放器元素" src="/assets/images/player-customization/1x-customize-appearance/iframe-elements.png"/></figure>
     <p>您創建的樣式仍然可以與 iframe 中的播放器一起使用，但需要創建 CSS 文件並與使用 Studio 的播放器相關聯。您可以通過轉到<strong>玩家們</strong>模塊，然後單擊要與CSS關聯的視頻，然後在<strong>外掛程式</strong>部分添加您的CSS文件的路徑。</p>
     <p>如果您確實希望自定義iframe本身，則可以通過添加一個<code translate="No">class</code>歸因於<code translate="No">iframe</code>元素（第27行）。在這種情況下，類值是<code translate="No">videoFrame</code>。然後使用<code translate="No">&lt;style&gt;</code>標籤根據需要進行修改。在下面的示例中<code translate="No">width</code>和<code translate="No">height</code>被改變了。</p>
     <pre class="line-numbers" data-start="10">
@@ -1138,9 +1138,9 @@ Brightcove
   <section class="bcls-section">
     <h2 id="button">播放按鈕</h2>
     <p>如果你想改變播放按鈕的外觀，你首先需要知道如何解決它。在Chrome中，請確保<strong>開發工具</strong>打開，然後右鍵單擊該按鈕。從出現的選擇中選擇<strong>檢查元素</strong>。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="檢查按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/inspect-button-1x.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="檢查按鈕" src="/assets/images/player-customization/1x-customize-appearance/inspect-button-1x.png"/></figure>
     <p>在裡面<strong>元素</strong>開發工具”部分，您將看到與按鈕元素相對應的HTML代碼。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="大型播放按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/big-play-button.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="大型播放按鈕" src="/assets/images/player-customization/1x-customize-appearance/big-play-button.png"/></figure>
     <p>從上面突出顯示的代碼，你可以看到分配給按鈕的類是<code translate="No">vjs-big-play-button</code>。播放按鈕的顏色（與老虎相匹配）和不透明度將隨著以下樣式改變：</p>
     <pre class="line-numbers" data-start="36">
 <code class="language-css" translate="No">  &lt;style&gt;
@@ -1177,7 +1177,7 @@ Brightcove
     }
   &lt;/style&gt;</code></pre>
     <p>以下是將按鈕從深灰色更改為橙色的結果：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="橙色播放按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/orange-play-button-1x.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="橙色播放按鈕" src="/assets/images/player-customization/1x-customize-appearance/orange-play-button-1x.png"/></figure>
     <h3>中心播放按鈕</h3>
     <p>您可以使用以下樣式在水平和垂直方向上將播放按鈕居中：</p>
     <pre class="line-numbers" data-start="199">
@@ -1197,10 +1197,10 @@ margin: auto;</code></pre>
   <section class="bcls-section">
     <h2 id="progressvolume">進度和數量</h2>
     <p>我們將在本文檔中查看的最後一個外觀定制將是更改進度和音量指示器的顏色。兩者的默認顏色均為紫紅色，如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="進度和數量" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/progress-and-volume-1x.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="進度和數量" src="/assets/images/player-customization/1x-customize-appearance/progress-and-volume-1x.png"/></figure>
     <p>這裡的挑戰是找到元素的類名。使用與上述相同的技術，右鍵單擊元素選擇<strong>檢查元素</strong>，您可以轉到整個進度指示器，然後向下鑽取將看到<code translate="No">vjs-play-progress</code>類。</p>
     <p>在Chrome中<strong>元素</strong>面板，將鼠標懸停在<code translate="No">div</code>類名稱為的元素<code translate="No">vjs-play-progress</code>在播放器中查看以下內容：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="進度控制" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/progress-control.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="進度控制" src="/assets/images/player-customization/1x-customize-appearance/progress-control.png"/></figure>
     <p>檢查音量級別元素時，Chrome中的工具非常有用。請注意，只有將鼠標懸停在音量按鈕上才能看到音量。要在檢查和查找正確的元素時顯示音量級別，請執行以下步驟：</p>
     <ul>
       <li>右鍵單擊音量按鈕並檢查</li>
@@ -1208,7 +1208,7 @@ margin: auto;</code></pre>
       <li>檢查<strong>：徘徊</strong>框（在框中以紅色突出顯示<strong>款式</strong>部分）以在您檢查元素時模擬鼠標懸停</li>
       <li>向下鑽取，直到找到音量級別元素（在<strong>元素</strong>部分）</li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image" alt="檢查音頻按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/inspect-audio-button.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="檢查音頻按鈕" src="/assets/images/player-customization/1x-customize-appearance/inspect-audio-button.png"/></figure>
     <p>現在<code translate="No">background-color</code>這兩個元素都需要進行樣式設置。您希望它們與按鈕具有相同的顏色，因此請如下所示更改樣式：</p>
     <pre class="line-numbers" data-start="94">
 <code class="language-html" translate="No">  &lt;style&gt;
@@ -1227,7 +1227,7 @@ margin: auto;</code></pre>
   &lt;/style&gt;</code></pre>
     <p>請注意，我們在每個類別的前面都加上了玩家的ID <code translate="No">div</code>元件。這為CSS特異性方面的類更改提供了相關性。這將在下一節中討論。</p>
     <p>結果顯示如下：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="進度卷樣式" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/progress-volume-styled-1x.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="進度卷樣式" src="/assets/images/player-customization/1x-customize-appearance/progress-volume-styled-1x.png"/></figure>
     <p>該入門知識可讓您快速了解播放器的樣式。如您所見，方法是找到與您要更改的元素相對應的類名稱，然後設置其樣式。請記住，如<strong>iframe</strong>如果您使用的是iframe播放器，則必須將樣式放在文件中，然後使用curl語句將樣式與播放器相關聯。</p>
     <p>請記住，最佳做法是將自定義設置添加到播放器配置中，以便可以對其進行優化並隨播放器一起嵌入。</p>
   </section>
@@ -1267,7 +1267,7 @@ margin: auto;</code></pre>
     <h2 id="specificity">CSS 特殊性</h2>
     <p>CSS 特異性是指瀏覽器確定哪些屬性值根據其相關性應用於元素的方式。如需有關此概念的詳細資訊，請檢閱<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">特殊性</a>文章。</p>
     <p>在 Chrome 中，檢查大型播放按鈕。請注意，該<code translate="No">background</code>屬性是使用多個類別設定的。這意味著我們不能只使用一個<code translate="No">.vjs-big-play-button</code>類來覆蓋此屬性。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="播放按鈕類" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/play-button-classes.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="播放按鈕類" src="/assets/images/player-customization/1x-customize-appearance/play-button-classes.png"/></figure>
     <p>以下是自訂大型播放按鈕的三種方法：</p>
     <ul>
       <li>參照分配給玩家的 ID。</li>
@@ -1296,7 +1296,7 @@ margin: auto;</code></pre>
     }
   &lt;/style&gt;</code></pre>
     <p>你應該看到大的播放按鈕現在是橙色的。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="橙色播放按鈕" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/1x-customize-appearance/orange-play-button-1x.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="橙色播放按鈕" src="/assets/images/player-customization/1x-customize-appearance/orange-play-button-1x.png"/></figure>
     <h3>使用多個類別</h3>
     <p>自從<code translate="No">background</code>大播放按鈕的屬性是使用兩個類設置的，因此在CSS選擇器中至少需要兩個類才能覆蓋此屬性。</p>
     <p>將類添加到<code translate="No">.video-js</code><code translate="No">.vjs-big-play-button</code>類選擇器中。請記住，該<code translate="No">.video-js</code>類是在視頻容器上設置的。</p>

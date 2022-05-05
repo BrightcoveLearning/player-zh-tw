@@ -1088,16 +1088,16 @@ Brightcove
   <section class="bcls-section">
     <h2 id="View_player_information">查看玩家信息</h2>
     <p>通過右鍵單擊播放器並選擇來顯示播放器信息。<strong>玩家信息</strong>，如該屏幕截圖所示。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="從上下文菜單中選擇播放器信息" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/player-info-modal/context-menu.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="從上下文菜單中選擇播放器信息" src="/assets/images/playback/player-info-modal/context-menu.png"/></figure>
     <aside class="bcls-aside bcls-aside--information">注意：在移動設備上，您可以長按打開模式。</aside>
     <p>一旦選擇<strong>玩家信息</strong>您將看到包含有關播放器信息的模式窗口，如此屏幕截圖所示。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="模態中的玩家信息" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/player-info-modal/modal-with-info.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="模態中的玩家信息" src="/assets/images/playback/player-info-modal/modal-with-info.png"/></figure>
     <aside class="bcls-aside bcls-aside--information">注意：只有Brightcove提供的插件是配置的一部分，才會顯示在<strong>外掛程式</strong>部分。如果在HTML頁面的JavaScript中添加Brightcove插件，則該插件不會出現在列表中。客戶開發的插件，即使作為播放器配置的一部分列出，也不會出現。</aside>
   </section>
   <section id="Close_the_modal_window" class="bcls-section">
     <h2>關閉模式窗口</h2>
     <p>您可以通過按<strong>退出</strong>鍵或單擊左上角的關閉圖標。</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="關閉圖示" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/player-info-modal/close-modal.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="關閉圖示" src="/assets/images/playback/player-info-modal/close-modal.png"/></figure>
   </section>
   <section class="bcls-section">
     <h2 id="Alter_the_context_menu">更改上下文菜單</h2>
@@ -1112,7 +1112,7 @@ Brightcove
     <p>如果您希望根本不顯示播放器信息上下文菜單，則可以執行以下任一操作：</p>
     <h4>使用 JSON 編輯器</h4>
     <p>通過添加突出顯示的屬性來改變播放器的配置（請務必保存更改）：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="JSON編輯器無調試器" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/player-info-modal/json-editor-no-debugger.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="JSON編輯器無調試器" src="/assets/images/playback/player-info-modal/json-editor-no-debugger.png"/></figure>
     <h4>使用捲曲</h4>
     <pre class="line-numbers">
 <code class="language-bash" translate="No">curl \
@@ -1124,7 +1124,7 @@ Brightcove
   }' \
   https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/configuration</code></pre>
     <aside class="bcls-aside bcls-aside--information">注意：每當你使用 curl 對球員進行更改時，你需要重新發布播放器。您可以在 Studio 中執行此操作，您將看到您的播放器被標記為需要發佈在<strong>狀態</strong>欄中：
-      <figure class="bcls-figure"><img class="bcls-image" alt="狀態顯示需要公佈" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/player-info-modal/needs-to-be-published.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="狀態顯示需要公佈" src="/assets/images/playback/player-info-modal/needs-to-be-published.png"/></figure>
       <p>您也可以使用 curl 發布您的播放器：</p>
       <pre class="line-numbers">
 <code class="language-bash" translate="No">curl \
@@ -1137,7 +1137,7 @@ Brightcove
     <p>如果您想防止<strong>關於光明灣</strong>從出現菜單選項時，您可以執行以下操作之一：</p>
     <h4>使用 JSON 編輯器</h4>
     <p>通過添加突出顯示的屬性來改變播放器的配置（請務必保存更改）：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="JSON 編輯器沒有布萊特灣播放器品牌" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/player-info-modal/json-editor-no-bc-branding.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="JSON 編輯器沒有布萊特灣播放器品牌" src="/assets/images/playback/player-info-modal/json-editor-no-bc-branding.png"/></figure>
     <h4>使用捲曲</h4>
     <pre class="line-numbers">
 <code class="language-bash" translate="No">curl \
@@ -1149,7 +1149,7 @@ Brightcove
   }' \
   https://players.api.brightcove.com/v2/accounts/$ACCOUNT_ID/players/$PLAYER_ID/configuration</code></pre>
     <aside class="bcls-aside bcls-aside--information">注意：每當你使用 curl 對球員進行更改時，你需要重新發布播放器。您可以在 Studio 中執行此操作，您將看到您的播放器被標記為需要發佈在<strong>狀態</strong>欄中：
-      <figure class="bcls-figure"><img class="bcls-image" alt="狀態顯示需要公佈" src="//learning-services-media.brightcove.com/doc-assets/player-development/playback/player-info-modal/needs-to-be-published.png"/></figure>
+      <figure class="bcls-figure"><img class="bcls-image" alt="狀態顯示需要公佈" src="/assets/images/playback/player-info-modal/needs-to-be-published.png"/></figure>
       <p>您也可以使用 curl 發布您的播放器：</p>
       <pre class="line-numbers">
 <code class="language-bash" translate="No">curl \

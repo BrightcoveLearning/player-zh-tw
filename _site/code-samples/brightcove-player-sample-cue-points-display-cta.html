@@ -1198,7 +1198,7 @@ Brightcove
     <pre class="line-numbers">
 <code class="language-html" translate="No">https://players.brightcove.net/videojs-overlay/2/videojs-overlay.css</code></pre>
     <p>然後添加配置信息，如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="在 Studio 中建立提示點" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/cue-points/cue-points-cta/overlay-plugin-studio.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="在 Studio 中建立提示點" src="/assets/images/player-customization/cue-points/cue-points-cta/overlay-plugin-studio.png"/></figure>
     <aside class="bcls-aside bcls-aside--tip">沒有<strong>內容</strong>會在“覆蓋”配置中提供，因為它將動態生成並註入到覆蓋中。</aside>
     <p>與播放器一起發布的視頻必須包含在Studio中配置的提示點。有關CTA的信息存儲在<strong>元數據</strong>領域。在用分號分隔的列表中，存儲以下內容：</p>
     <ul>
@@ -1206,7 +1206,7 @@ Brightcove
       <li>錨標籤的文字</li>
       <li>定位標記的網址</li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image" alt="在 Studio 中建立提示點" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/cue-points/cue-points-cta/make-cp-in-studio.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="在 Studio 中建立提示點" src="/assets/images/player-customization/cue-points/cue-points-cta/make-cp-in-studio.png"/></figure>
     <h3>其他 HTML</h3>
     <p>不會將其他 HTML 元素新增至頁面。</p>
   </section>
@@ -1227,7 +1227,7 @@ Brightcove
     <pre>
 <code class="language-javascript" translate="No">// ### Listen for cue change then pass data to be displayed ###</code></pre>
     <p>從中提取提示點信息後<code translate="No">mediainfo</code>對象，則使用JavaScript的<code translate="No">oncuechange</code>偵聽提示點啟動的事件處理程序。然後，您提取當前提示點的提示點信息，並調用<code translate="No">displayCTA()</code>方法。有關傳遞給自定義函數的提示點的信息如下所示：</p>
-    <figure class="bcls-figure"><img class="bcls-image" alt="提示點信息" src="//learning-services-media.brightcove.com/doc-assets/player-development/player-customization/cue-points/cue-points-cta/console-cp-info.png"/></figure>
+    <figure class="bcls-figure"><img class="bcls-image" alt="提示點信息" src="/assets/images/player-customization/cue-points/cue-points-cta/console-cp-info.png"/></figure>
     <aside class="bcls-aside bcls-aside--tip">的<code translate="No">endTime</code>在下一個提示點的時間或視頻結束時，在此應用程序中沒有幫助。請記住，疊加層顯示的持續時間存儲在提示點的<strong>元數據</strong>。</aside>
     <!-- UPDATE task 2 -->
     
