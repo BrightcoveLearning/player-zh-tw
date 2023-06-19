@@ -1,0 +1,10 @@
+{
+  "overlays": [
+    {
+      "align": "top",
+      "start": 0,
+      "end": 6,
+      "content": "<div id=\"regForm\"> <h1>To view the video, please register or login.</h1> <p>First name: <input id=\"fname\" type=\"text\" size=\"30\"></p> <p>Last name: <input id=\"lname\" type=\"text\" size=\"30\"></p> <p>Email: <input id=\"email\" type=\"text\" size=\"35\"></p> <p> <button id=\"reg\">Register</button> <button id=\"login\">Login</button> <button id=\"noThanks\">No thanks</button> </p> </div> <div id=\"regPass\" style=\"display:none;\"> <p>Choose a password: <input type=\"password\" id=\"regPassword\"></p> <p><button id=\"submitRegPassword\">Submit</button></p> </div> <div id=\"loginPass\" style=\"display:none;\"> <p>Enter your password: <input type=\"password\" id=\"loginPassword\"></p> <p><button id=\"submitLoginPassword\">Submit</button></p> </div> <div id=\"noThanksMessage\" style=\"display:none;\"> <p> <strong>Thanks for dropping by anyway!</strong> </p> </div>"
+    }
+  ]
+}
