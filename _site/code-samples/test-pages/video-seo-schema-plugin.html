@@ -1,0 +1,19 @@
+﻿<video-js id="myPlayerID"
+data-video-id="5796745147001"
+data-account="1507807800001"
+data-player="default"
+data-embed="default"
+data-application-id=""
+controls=""
+width="640"
+height="360"></video-js>
+<script src="//players.brightcove.net/1507807800001/default_default/index.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/videojs-schema/dist/videojs-schema.min.js"></script>
+
+<script translate="no">
+  videojs.getPlayer('myPlayerID').ready(function () {
+    var myPlayer = this;
+    myPlayer.schema();
+  });
+</script>

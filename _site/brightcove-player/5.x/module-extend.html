@@ -1,0 +1,557 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Brightcove Player v5.22.2 模塊：擴展</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.yeti.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Brightcove 播放器 v5.22.2</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">模塊<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="module-browser.html">瀏覽器</a></li><li><a href="module-buffer.html">緩衝</a></li><li><a href="module-computed-style.html">計算風格</a></li><li><a href="module-dom.html">主場</a></li><li><a href="module-events.html">事件</a></li><li><a href="module-extend.html">延長</a></li><li><a href="module-flash-rtmp.html">閃存-rtmp</a></li><li><a href="module-fn.html">FN</a></li><li><a href="module-Format-time.html">格式化時間</a></li><li><a href="module-guid.html">嚮導</a></li><li><a href="module-log.html">日誌</a></li><li><a href="module-merge-options.html">合併選項</a></li><li><a href="module-obj.html">對象</a></li><li><a href="module-plugins.html">外掛程式</a></li><li><a href="module-setup.html">設置</a></li><li><a href="module-stylesheet.html">樣式表</a></li><li><a href="module-text-track-list-converter.html">文本曲目列表轉換器</a></li><li><a href="module-time-ranges.html">時間範圍</a></li><li><a href="module-to-title-case.html">標題大小寫</a></li><li><a href="module-url.html">網址</a></li><li><a href="module-videojs.html">視頻</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">班級<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="AudioTrack.html">音軌</a></li><li><a href="AudioTrackButton.html">音軌按鈕</a></li><li><a href="AudioTrackList.html">音軌列表</a></li><li><a href="AudioTrackMenuItem.html">音軌菜單項</a></li><li><a href="BigPlayButton.html">大播放按鈕</a></li><li><a href="Button.html">按鈕</a></li><li><a href="CaptionsButton.html">字幕按鈕</a></li><li><a href="CaptionSettingsMenuItem.html">字幕設置菜單項</a></li><li><a href="ChaptersButton.html">章節按鈕</a></li><li><a href="ChaptersTrackMenuItem.html">章節跟踪菜單項</a></li><li><a href="ClickableComponent.html">可點擊組件</a></li><li><a href="CloseButton.html">關閉按鈕</a></li><li><a href="Component.html">成分</a></li><li><a href="ControlBar.html">控制列</a></li><li><a href="CurrentTimeDisplay.html">當前時間顯示</a></li><li><a href="CustomControlSpacer.html">自定義控制墊片</a></li><li><a href="DescriptionsButton.html">描述按鈕</a></li><li><a href="DurationDisplay.html">時長顯示</a></li><li><a href="ErrorDisplay.html">錯誤顯示</a></li><li><a href="EventTarget.html">事件目標</a></li><li><a href="Flash.html">閃光</a></li><li><a href="FullscreenToggle.html">全屏切換</a></li><li><a href="Html5.html">HTML5</a></li><li><a href="HTMLTrackElement.html">HTMLTrack元素</a></li><li><a href="HtmlTrackElementList.html">HTMLTrackElementList</a></li><li><a href="LiveDisplay.html">現場展示</a></li><li><a href="LoadingSpinner.html">加載微調器</a></li><li><a href="LoadProgressBar.html">加載進度條</a></li><li><a href="MediaError.html">媒體錯誤</a></li><li><a href="MediaLoader.html">媒體加載器</a></li><li><a href="Menu.html">菜單</a></li><li><a href="MenuButton.html">菜單按鈕</a></li><li><a href="MenuItem.html">菜單項</a></li><li><a href="ModalDialog.html">模態對話框</a></li><li><a href="module-videojs-videojs.AudioTrack.videojs.AudioTrack.html">視頻〜視頻. 音軌. 視頻.</a></li><li><a href="module-videojs-videojs.EventTarget.videojs.EventTarget.html">視頻〜視頻. 活動文件. 視頻.</a></li><li><a href="module-videojs-videojs.TextTrack.videojs.TextTrack.html">視頻〜視頻. 文本跟踪. 視頻.</a></li><li><a href="module-videojs-videojs.VideoTrack.videojs.VideoTrack.html">視頻〜視頻. 視頻軌道.</a></li><li><a href="MouseTimeDisplay.html">鼠標時間顯示</a></li><li><a href="MuteToggle.html">靜音開關</a></li><li><a href="OffTextTrackMenuItem.html">離文字軌跡功能表項目</a></li><li><a href="PlaybackRateMenuButton.html">播放速率功能表按鈕</a></li><li><a href="PlaybackRateMenuItem.html">播放速率菜單項</a></li><li><a href="Player.html">玩家</a></li><li><a href="PlayProgressBar.html">播放進度條</a></li><li><a href="PlayToggle.html">播放開關</a></li><li><a href="Popup.html">彈出窗口</a></li><li><a href="PopupButton.html">彈出按鈕</a></li><li><a href="PosterImage.html">海報圖片</a></li><li><a href="ProgressControl.html">進度控制</a></li><li><a href="RemainingTimeDisplay.html">剩餘時間顯示</a></li><li><a href="SeekBar.html">搜索欄</a></li><li><a href="Slider.html">滑塊</a></li><li><a href="Spacer.html">墊片</a></li><li><a href="SubtitlesButton.html">字幕按鈕</a></li><li><a href="Tech.html">科技</a></li><li><a href="TextTrack.html">文本軌道</a></li><li><a href="TextTrackButton.html">文本軌道按鈕</a></li><li><a href="TextTrackCueList.html">文字追蹤清單</a></li><li><a href="TextTrackDisplay.html">文本軌道顯示</a></li><li><a href="TextTrackList.html">文本軌道列表</a></li><li><a href="TextTrackMenuItem.html">文字軌跡功能表項目</a></li><li><a href="TextTrackSettings.html">文本軌道設置</a></li><li><a href="TimeDivider.html">分時器</a></li><li><a href="TooltipProgressBar.html">工具提示進度條</a></li><li><a href="Track.html">追踪</a></li><li><a href="TrackButton.html">音軌按鈕</a></li><li><a href="TrackList.html">曲目列表</a></li><li><a href="VideoTrack.html">視頻軌道</a></li><li><a href="VideoTrackList.html">視頻曲目列表</a></li><li><a href="VolumeBar.html">音量條</a></li><li><a href="VolumeControl.html">音量控制</a></li><li><a href="VolumeLevel.html">音量級別</a></li><li><a href="VolumeMenuButton.html">音量菜單按鈕</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">混入<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="module-flash-rtmp-FlashRtmpDecorator.html">閃光 RTMP 〜閃光燈裝飾</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">事件<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="AudioTrack.html#event:enabledchange">音軌 #事件:啟用變更</a></li><li><a href="AudioTrackList.html#event:addtrack">音軌列表 #事件:新增曲目</a></li><li><a href="AudioTrackList.html#event:change">AudioTrackList#事件：改變</a></li><li><a href="AudioTrackList.html#event:removetrack">音軌列表 #事件:移除</a></li><li><a href="BigPlayButton.html#event:dispose">大播放按鈕 #事件:處置</a></li><li><a href="BigPlayButton.html#event:ready">BigPlayButton#事件：準備就緒</a></li><li><a href="BigPlayButton.html#event:resize">BigPlayButton#事件：調整大小</a></li><li><a href="BigPlayButton.html#event:tap">BigPlayButton#事件：點擊</a></li><li><a href="Button.html#event:dispose">按鈕#event:dispose</a></li><li><a href="Button.html#event:ready">按鈕#event：就緒</a></li><li><a href="Button.html#event:resize">按鈕#event：調整大小</a></li><li><a href="Button.html#event:tap">按鈕#事件：點擊</a></li><li><a href="ClickableComponent.html#event:dispose">可點擊組件 #事件:處置</a></li><li><a href="ClickableComponent.html#event:ready">ClickableComponent#事件：就緒</a></li><li><a href="ClickableComponent.html#event:resize">ClickableComponent#事件：調整大小</a></li><li><a href="ClickableComponent.html#event:tap">ClickableComponent#事件：點擊</a></li><li><a href="CloseButton.html#event:close">關閉按鈕#event:close</a></li><li><a href="CloseButton.html#event:dispose">關閉按鈕#event:dispose</a></li><li><a href="CloseButton.html#event:ready">關閉按鈕#event：準備就緒</a></li><li><a href="CloseButton.html#event:resize">關閉按鈕#event:resize</a></li><li><a href="CloseButton.html#event:tap">關閉按鈕#event:點擊</a></li><li><a href="Component.html#event:dispose">組件#event:dispose</a></li><li><a href="Component.html#event:ready">組件#event：就緒</a></li><li><a href="Component.html#event:resize">組件#event：調整大小</a></li><li><a href="Component.html#event:tap">組件#event:點擊</a></li><li><a href="ControlBar.html#event:dispose">控制欄#事件：處置</a></li><li><a href="ControlBar.html#event:ready">控制欄#event：就緒</a></li><li><a href="ControlBar.html#event:resize">控制欄#事件：調整大小</a></li><li><a href="ControlBar.html#event:tap">控制欄#事件：點擊</a></li><li><a href="CurrentTimeDisplay.html#event:dispose">當前時間顯示#event:dispose</a></li><li><a href="CurrentTimeDisplay.html#event:ready">當前時間顯示#event：就緒</a></li><li><a href="CurrentTimeDisplay.html#event:resize">當前時間顯示#event:resize</a></li><li><a href="CurrentTimeDisplay.html#event:tap">當前時間顯示#event:tap</a></li><li><a href="CustomControlSpacer.html#event:dispose">CustomControlSpacer#事件：處置</a></li><li><a href="CustomControlSpacer.html#event:ready">CustomControlSpacer#事件：準備就緒</a></li><li><a href="CustomControlSpacer.html#event:resize">CustomControlSpacer#事件：調整大小</a></li><li><a href="CustomControlSpacer.html#event:tap">CustomControlSpacer#事件：點擊</a></li><li><a href="DurationDisplay.html#event:dispose">持續時間顯示#event:dispose</a></li><li><a href="DurationDisplay.html#event:ready">持續時間顯示#event：就緒</a></li><li><a href="DurationDisplay.html#event:resize">持續時間顯示#event:resize</a></li><li><a href="DurationDisplay.html#event:tap">持續時間顯示#event:tap</a></li><li><a href="ErrorDisplay.html#event:beforemodalclose">錯誤顯示#event:beforemodalclose</a></li><li><a href="ErrorDisplay.html#event:beforemodalempty">錯誤顯示#event:beforemodalempty</a></li><li><a href="ErrorDisplay.html#event:beforemodalfill">錯誤顯示#event:beforemodalfill</a></li><li><a href="ErrorDisplay.html#event:beforemodalopen">錯誤顯示#event:beforemodalopen</a></li><li><a href="ErrorDisplay.html#event:modalclose">錯誤顯示#event:modalclose</a></li><li><a href="ErrorDisplay.html#event:modalempty">錯誤顯示#event:modalempty</a></li><li><a href="ErrorDisplay.html#event:modalfill">錯誤顯示#event:modalfill</a></li><li><a href="ErrorDisplay.html#event:modalopen">錯誤顯示#event:modalopen</a></li><li><a href="Flash.html#event:audiotrackchange">閃光燈#event:audiotrackchange</a></li><li><a href="Flash.html#event:progress">Flash#事件：進度</a></li><li><a href="Flash.html#event:texttrackchange">閃光燈#event:texttrackchange</a></li><li><a href="Flash.html#event:timeupdate">Flash#事件：時間更新</a></li><li><a href="Flash.html#event:videotrackchange">閃光燈#event:videotrackchange</a></li><li><a href="Flash.html#event:vttjsloaded">Flash#事件：vttjsloaded</a></li><li><a href="FullscreenToggle.html#event:dispose">全屏切換#事件：處置</a></li><li><a href="FullscreenToggle.html#event:ready">全屏切換#事件：準備就緒</a></li><li><a href="FullscreenToggle.html#event:resize">全屏切換#事件：調整大小</a></li><li><a href="FullscreenToggle.html#event:tap">全屏切換#事件：點擊</a></li><li><a href="Html5.html#event:audiotrackchange">事件：音軌更改</a></li><li><a href="Html5.html#event:progress">Html5#事件：進度</a></li><li><a href="Html5.html#event:texttrackchange">Html5#事件：texttrackchange</a></li><li><a href="Html5.html#event:timeupdate">Html5#事件：時間更新</a></li><li><a href="Html5.html#event:videotrackchange">事件：視頻跟踪更改</a></li><li><a href="Html5.html#event:vttjsloaded">Html5#事件：vttjsloaded</a></li><li><a href="LiveDisplay.html#event:dispose">LiveDisplay#事件：處置</a></li><li><a href="LiveDisplay.html#event:ready">LiveDisplay#event：準備就緒</a></li><li><a href="LiveDisplay.html#event:resize">LiveDisplay#事件：調整大小</a></li><li><a href="LiveDisplay.html#event:tap">LiveDisplay#事件：點擊</a></li><li><a href="LoadingSpinner.html#event:dispose">LoadingSpinner#事件：處置</a></li><li><a href="LoadingSpinner.html#event:ready">LoadingSpinner#事件：準備好了</a></li><li><a href="LoadingSpinner.html#event:resize">LoadingSpinner#事件：調整大小</a></li><li><a href="LoadingSpinner.html#event:tap">LoadingSpinner#事件：點擊</a></li><li><a href="LoadProgressBar.html#event:dispose">LoadProgressBar#事件：處置</a></li><li><a href="LoadProgressBar.html#event:ready">加載進度條#事件：準備就緒</a></li><li><a href="LoadProgressBar.html#event:resize">LoadProgressBar#事件：調整大小</a></li><li><a href="LoadProgressBar.html#event:tap">LoadProgressBar#事件：點擊</a></li><li><a href="MediaLoader.html#event:dispose">媒體處理器 #事件:處置</a></li><li><a href="MediaLoader.html#event:ready">MediaLoader#事件：就緒</a></li><li><a href="MediaLoader.html#event:resize">MediaLoader#事件：調整大小</a></li><li><a href="MediaLoader.html#event:tap">MediaLoader#事件：點擊</a></li><li><a href="Menu.html#event:dispose">菜單#event:dispose</a></li><li><a href="Menu.html#event:ready">菜單#event：就緒</a></li><li><a href="Menu.html#event:resize">菜單#event：調整大小</a></li><li><a href="Menu.html#event:tap">菜單#事件：點擊</a></li><li><a href="MenuButton.html#event:dispose">菜單按鈕#event:dispose</a></li><li><a href="MenuButton.html#event:ready">菜單按鈕#event：就緒</a></li><li><a href="MenuButton.html#event:resize">菜單按鈕#事件：調整大小</a></li><li><a href="MenuButton.html#event:tap">菜單按鈕#事件：點擊</a></li><li><a href="MenuItem.html#event:dispose">菜單項#event:dispose</a></li><li><a href="MenuItem.html#event:ready">菜單項#event：就緒</a></li><li><a href="MenuItem.html#event:resize">菜單項#事件：調整大小</a></li><li><a href="MenuItem.html#event:tap">菜單項#事件：點擊</a></li><li><a href="ModalDialog.html#event:beforemodalclose">模式對話框 #事件:不去除關閉</a></li><li><a href="ModalDialog.html#event:beforemodalempty">模式對話框 #事件:不去除空</a></li><li><a href="ModalDialog.html#event:beforemodalfill">模式對話方塊 #事件:使用移除填充</a></li><li><a href="ModalDialog.html#event:beforemodalopen">模式對話方塊 #事件:開放式</a></li><li><a href="ModalDialog.html#event:dispose">模式對話方塊 #事件:處置</a></li><li><a href="ModalDialog.html#event:modalclose">模式對話方塊 #事件:模式關閉</a></li><li><a href="ModalDialog.html#event:modalempty">模式對話框 ＃ 事件：空模式</a></li><li><a href="ModalDialog.html#event:modalfill">模式對話方塊 #事件:模式填充</a></li><li><a href="ModalDialog.html#event:modalopen">模態對話框#event:modalopen</a></li><li><a href="ModalDialog.html#event:ready">ModalDialog#事件：就緒</a></li><li><a href="ModalDialog.html#event:resize">ModalDialog#事件：調整大小</a></li><li><a href="ModalDialog.html#event:tap">ModalDialog#事件：點擊</a></li><li><a href="MouseTimeDisplay.html#event:dispose">鼠標時間顯示#event:dispose</a></li><li><a href="MouseTimeDisplay.html#event:ready">鼠標時間顯示#event:ready</a></li><li><a href="MouseTimeDisplay.html#event:resize">鼠標時間顯示#event:resize</a></li><li><a href="MouseTimeDisplay.html#event:tap">鼠標時間顯示#event:tap</a></li><li><a href="MuteToggle.html#event:dispose">MuteToggle#事件：處置</a></li><li><a href="MuteToggle.html#event:ready">MuteToggle#事件：準備就緒</a></li><li><a href="MuteToggle.html#event:resize">MuteToggle#事件：調整大小</a></li><li><a href="MuteToggle.html#event:tap">MuteToggle#event:點擊</a></li><li><a href="Player.html#event:abort">玩家#事件：中止</a></li><li><a href="Player.html#event:canplay">玩家#event：可以玩</a></li><li><a href="Player.html#event:canplaythrough">玩家#event:canplaythrough</a></li><li><a href="Player.html#event:controlsdisabled">播放器#event:controlsdisabled</a></li><li><a href="Player.html#event:controlsenabled">播放器#event:controlsenabled</a></li><li><a href="Player.html#event:dispose">玩家#event:dispose</a></li><li><a href="Player.html#event:durationchange">玩家#event:durationchange</a></li><li><a href="Player.html#event:emptied">玩家#事件：清空</a></li><li><a href="Player.html#event:ended">玩家#event：結束</a></li><li><a href="Player.html#event:enterFullWindow">播放器#event:enterFullWindow</a></li><li><a href="Player.html#event:error">玩家#事件：錯誤</a></li><li><a href="Player.html#event:exitFullWindow">玩家#event:exitFullWindow</a></li><li><a href="Player.html#event:firstplay">玩家#event:firstplay</a></li><li><a href="Player.html#event:fullscreenchange">播放器#event:fullscreenchange</a></li><li><a href="player_.html#event:loadeddata">播放器#event:loadeddata</a></li><li><a href="Player.html#event:loadeddata">播放器#event:loadeddata</a></li><li><a href="Player.html#event:loadedmetadata">播放器#event:loadedmetadata</a></li><li><a href="Player.html#event:loadstart">播放器#event:loadstart</a></li><li><a href="Player.html#event:pause">播放器#事件：暫停</a></li><li><a href="Player.html#event:play">玩家#event:play</a></li><li><a href="Player.html#event:playing">播放器#event：播放</a></li><li><a href="Player.html#event:posterchange">玩家#event:posterchange</a></li><li><a href="Player.html#event:progress">玩家#event:progress</a></li><li><a href="player_.html#event:ratechange">玩家#event:ratechange</a></li><li><a href="Player.html#event:ready">玩家#event：準備好</a></li><li><a href="Player.html#event:resize">播放器#event：調整大小</a></li><li><a href="Player.html#event:seeked">玩家#event:seeked</a></li><li><a href="Player.html#event:seeking">玩家#event:尋求</a></li><li><a href="Player.html#event:stalled">玩家#event：停滯不前</a></li><li><a href="Player.html#event:suspend">播放器#event：暫停</a></li><li><a href="Player.html#event:tap">玩家#event:點擊</a></li><li><a href="Player.html#event:textdata">播放器#事件：文本數據</a></li><li><a href="player_.html#event:texttrackchange">播放器#event:texttrackchange</a></li><li><a href="player_.html#event:timeupdate">玩家#事件：時間更新</a></li><li><a href="Player.html#event:timeupdate">播放器#event:timeupdate</a></li><li><a href="Player.html#event:useractive">播放器#event:useractive</a></li><li><a href="Player.html#event:userinactive">播放器#event：userinactive</a></li><li><a href="Player.html#event:usingcustomcontrols">播放器#event:usingcustomcontrols</a></li><li><a href="Player.html#event:usingnativecontrols">播放器#event:usingnativecontrols</a></li><li><a href="Player.html#event:volumechange">玩家#event：volumechange</a></li><li><a href="player_.html#event:volumechange">播放器#event：volumechange</a></li><li><a href="Player.html#event:waiting">玩家#事件：等待</a></li><li><a href="PlayProgressBar.html#event:dispose">播放進度條#event:dispose</a></li><li><a href="PlayProgressBar.html#event:ready">播放進度條#event:ready</a></li><li><a href="PlayProgressBar.html#event:resize">播放進度條#事件：調整大小</a></li><li><a href="PlayProgressBar.html#event:tap">播放進度條#event:tap</a></li><li><a href="PlayToggle.html#event:dispose">播放切換 #事件:處置</a></li><li><a href="PlayToggle.html#event:ready">播放切換#事件：準備就緒</a></li><li><a href="PlayToggle.html#event:resize">播放切換#事件：調整大小</a></li><li><a href="PlayToggle.html#event:tap">PlayToggle#event:點擊</a></li><li><a href="Popup.html#event:dispose">彈出#事件：處置</a></li><li><a href="Popup.html#event:ready">彈出#事件：就緒</a></li><li><a href="Popup.html#event:resize">彈出#事件：調整大小</a></li><li><a href="Popup.html#event:tap">彈出#事件：點擊</a></li><li><a href="PopupButton.html#event:dispose">彈出按鈕#event:dispose</a></li><li><a href="PopupButton.html#event:ready">彈出按鈕#事件：準備就緒</a></li><li><a href="PopupButton.html#event:resize">彈出按鈕#事件：調整大小</a></li><li><a href="PopupButton.html#event:tap">彈出按鈕#事件：點擊</a></li><li><a href="PosterImage.html#event:dispose">PosterImage#事件：處置</a></li><li><a href="PosterImage.html#event:ready">海報圖片#event：準備好</a></li><li><a href="PosterImage.html#event:resize">海報圖片#事件：調整大小</a></li><li><a href="PosterImage.html#event:tap">PosterImage#事件：點擊</a></li><li><a href="ProgressControl.html#event:dispose">進度控制#event:dispose</a></li><li><a href="ProgressControl.html#event:ready">ProgressControl#event：就緒</a></li><li><a href="ProgressControl.html#event:resize">ProgressControl#事件：調整大小</a></li><li><a href="ProgressControl.html#event:tap">進度控制#event:tap</a></li><li><a href="RemainingTimeDisplay.html#event:dispose">剩餘時間顯示#event:dispose</a></li><li><a href="RemainingTimeDisplay.html#event:ready">剩餘時間顯示#event:ready</a></li><li><a href="RemainingTimeDisplay.html#event:resize">剩餘時間顯示#event:resize</a></li><li><a href="RemainingTimeDisplay.html#event:tap">剩餘時間顯示#event:tap</a></li><li><a href="SeekBar.html#event:slideractive">搜索欄 ＃ 事件：滑塊激活</a></li><li><a href="SeekBar.html#event:sliderinactive">搜索欄 ＃ 事件：滑塊非活動</a></li><li><a href="Slider.html#event:dispose">滑塊#event：處理</a></li><li><a href="Slider.html#event:ready">滑塊#event：準備好</a></li><li><a href="Slider.html#event:resize">滑塊#event：調整大小</a></li><li><a href="Slider.html#event:slideractive">滑塊#event：slideractive</a></li><li><a href="Slider.html#event:sliderinactive">滑塊#event：sliderinactive</a></li><li><a href="Slider.html#event:tap">滑塊#event：點擊</a></li><li><a href="Spacer.html#event:dispose">墊片#事件：處置</a></li><li><a href="Spacer.html#event:ready">墊片#event：就緒</a></li><li><a href="Spacer.html#event:resize">墊片#event：調整大小</a></li><li><a href="Spacer.html#event:tap">Spacer#event:點擊</a></li><li><a href="Tech.html#event:audiotrackchange">技術#event:audiotrackchange</a></li><li><a href="Tech.html#event:dispose">技術#event:dispose</a></li><li><a href="Tech.html#event:progress">科技#event:progress</a></li><li><a href="Tech.html#event:ready">技術#event：準備就緒</a></li><li><a href="Tech.html#event:resize">技術#事件：調整大小</a></li><li><a href="Tech.html#event:tap">技術#事件：點擊</a></li><li><a href="Tech.html#event:texttrackchange">科技#event:texttrackchange</a></li><li><a href="Tech.html#event:timeupdate">科技#event:timeupdate</a></li><li><a href="Tech.html#event:videotrackchange">技術#event:videotrackchange</a></li><li><a href="Tech.html#event:vttjsloaded">技術#event:vttjsloaded</a></li><li><a href="TextTrack.html#event:modechange">TextTrack#事件：模式改變</a></li><li><a href="TextTrackDisplay.html#event:dispose">文字軌跡顯示 #事件:配置</a></li><li><a href="TextTrackDisplay.html#event:ready">TextTrackDisplay#事件：就緒</a></li><li><a href="TextTrackDisplay.html#event:resize">TextTrackDisplay#事件：調整大小</a></li><li><a href="TextTrackDisplay.html#event:tap">TextTrackDisplay#事件：點擊</a></li><li><a href="TextTrackList.html#event:addtrack">TextTrackList#事件：添加軌道</a></li><li><a href="TextTrackList.html#event:change">TextTrackList#event:改變</a></li><li><a href="TextTrackList.html#event:removetrack">文本軌道列表#event:removetrack</a></li><li><a href="TextTrackSettings.html#event:dispose">文字軌跡設定 #事件:配置</a></li><li><a href="TextTrackSettings.html#event:ready">TextTrackSettings#事件：就緒</a></li><li><a href="TextTrackSettings.html#event:resize">TextTrackSettings#event:調整大小</a></li><li><a href="TextTrackSettings.html#event:tap">TextTrackSettings#event:點擊</a></li><li><a href="TimeDivider.html#event:dispose">時間 #事件:處置</a></li><li><a href="TimeDivider.html#event:ready">TimeDivider#事件：就緒</a></li><li><a href="TimeDivider.html#event:resize">TimeDivider#事件：調整大小</a></li><li><a href="TimeDivider.html#event:tap">TimeDivider#event:點擊</a></li><li><a href="TooltipProgressBar.html#event:dispose">工具提示進度條#event:dispose</a></li><li><a href="TooltipProgressBar.html#event:ready">工具提示進度條#event:ready</a></li><li><a href="TooltipProgressBar.html#event:resize">工具提示進度條#事件：調整大小</a></li><li><a href="TooltipProgressBar.html#event:tap">工具提示進度條#event:tap</a></li><li><a href="TrackList.html#event:addtrack">曲目列表#event:addtrack</a></li><li><a href="TrackList.html#event:change">曲目列表#event:change</a></li><li><a href="TrackList.html#event:removetrack">曲目列表#event:removetrack</a></li><li><a href="VideoTrack.html#event:selectedchange">視頻軌道#event:selectedchange</a></li><li><a href="VideoTrackList.html#event:addtrack">視頻軌道列表#event:addtrack</a></li><li><a href="VideoTrackList.html#event:change">VideoTrackList#event:改變</a></li><li><a href="VideoTrackList.html#event:removetrack">視頻軌道列表#event:removetrack</a></li><li><a href="VolumeBar.html#event:slideractive">音量條#event:slideractive</a></li><li><a href="VolumeBar.html#event:sliderinactive">音量條#event:sliderinactive</a></li><li><a href="VolumeControl.html#event:dispose">音量控制#event:dispose</a></li><li><a href="VolumeControl.html#event:ready">音量控制#event：就緒</a></li><li><a href="VolumeControl.html#event:resize">音量控制#event:resize</a></li><li><a href="VolumeControl.html#event:tap">音量控制#event:tap</a></li><li><a href="VolumeLevel.html#event:dispose">音量級別#event:dispose</a></li><li><a href="VolumeLevel.html#event:ready">音量級別#event：準備就緒</a></li><li><a href="VolumeLevel.html#event:resize">VolumeLevel#事件：調整大小</a></li><li><a href="VolumeLevel.html#event:tap">音量級別#event:點擊</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">全球的<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li>activeCues<a href="global.html#activeCues"></a></li><li><a href="global.html#createTrackHelper">創建跟踪助手</a></li><li><a href="global.html#cues">線索</a></li><li><a href="global.html#currentSrc">當前源</a></li><li><a href="global.html#default">默認</a></li><li><a href="global.html#emulateTextTracks">模擬文本軌道</a></li><li><a href="global.html#enabled">啟用</a></li><li><a href="global.html#id">ID</a></li><li><a href="global.html#kind">種類</a></li><li><a href="global.html#label">標籤</a></li><li><a href="global.html#language">語言</a></li><li><a href="global.html#length">長度</a></li><li><a href="global.html#mode">模式</a></li><li><a href="global.html#NONE">沒有任何</a></li><li><a href="global.html#readyState">就緒狀態</a></li><li><a href="global.html#selected">已選擇</a></li><li><a href="global.html#track">追踪</a></li><li><a href="global.html#tryUpdateStyle">嘗試更新樣式</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜尋" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">模塊：擴展</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>擴展.js</p></div>
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		擴展.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">方法</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="~extendFn"><span class="type-signature">&lt;內&gt;</span> extendFn(超類 [, subClassMethods])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>使用 videojs 內部使用的相同繼承進行子類化的函數</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>爭論</th>
+        
+
+        
+        <th>預設</th>
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>超類</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>要繼承的類</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>子類方法</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last"><p>要繼承的類</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		擴展.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>具有繼承 superClass 的 subClassMethods 的新對象。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">目的</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">搜索結果</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">版權所有 2017</span><span class="jsdoc-message">生成的文檔<a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> 2017 年 6 月 5 日使用<a href="https://github.com/docstrap/docstrap">DocStrap 模板</a> .</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script translate="no">
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+<script translate="no">
+	$( function () {
+		$( '#main' ).localScroll( {
+			offset : { top : 60 } //offset by the height of your header (give or take a few px, see what works for you)
+		} );
+		$( "dt.name" ).each( function () {
+			var $this = $( this ).find("h4");
+			var icon = $( "<i/>" ).addClass( "icon-plus-sign" ).addClass( "pull-right" ).addClass( "icon-white" );
+			var dt = $(this);
+			var children = dt.next( "dd" );
+
+			dt.prepend( icon ).css( {cursor : "pointer"} );
+			dt.addClass( "member-collapsed" ).addClass( "member" );
+
+
+			children.hide();
+
+			dt.children().on( "click", function () {
+				children = dt.next( "dd" );
+				children.slideToggle( "fast", function () {
+
+					if ( children.is( ":visible" ) ) {
+						icon.addClass( "icon-minus-sign" ).removeClass( "icon-plus-sign" ).removeClass( "icon-white" );
+						dt.addClass( "member-open" ).animate( "member-collapsed" );
+					} else {
+						icon.addClass( "icon-plus-sign" ).removeClass( "icon-minus-sign" ).addClass( "icon-white" );
+						dt.addClass( "member-collapsed" ).removeClass( "member-open" );
+					}
+				} );
+			} );
+
+		} );
+	} );
+</script>
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+
+</body>
+</html>

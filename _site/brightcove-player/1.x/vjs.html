@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+  <!-- change title to match the h1 heading -->
+  <title>vjs</title>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.css" />
+  <script src="//use.edgefonts.net/source-code-pro.js"></script>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack-extended.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/en/styles/bcls-doc-site.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/atelier-forest.light.min.css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack-extended.min.css">
+
+  <script translate="no">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2728311-23', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script>
+  </head>
+
+<body>
+	<!-- header navbar -->
+	<div id="navWrapper" class="fixed"></div>
+	<!-- breadcrumbs -->
+	<nav id="breadCrumbWrapper" class="breadcrumbs show-for-medium-up"></nav>
+	<!-- search -->
+	<div id="searchModal" class="reveal-modal" data-reveal></div>
+	<!-- content -->
+    <div class="row">
+        <div class="sidebar large-2 columns show-for-large-up">
+            <div id="sidenav" class="side-nav"></div>
+        </div>
+        <div id="main" class="large-10 small-12 columns">
+      <div id="top" class="section">
+
+<!-- GENERATED FROM SOURCE -->
+<h1>vjs</h1>
+<div class="right"><a href="./index.html">原料藥指數</a></div>
+
+<p><strong>定義於</strong> : <a href="https://github.com/videojs/video.js/blob/master/src/js/core.js#L26"> src/js/core.js#L26</a>  </p>
+
+<p>兼作用戶創建播放器實例的主要功能，也是主要的庫對象。</p>
+
+<p><strong>別名</strong>視頻，<em> V</em>（棄用）</p>
+
+<p>這<code>vjs</code>函數可用於初始化或檢索播放器。</p>
+
+<pre><code>var myPlayer = vjs('my_video_id');
+</code></pre>
+
+<hr>
+
+<div class="section" id="index">
+<h2>指數</h2>
+
+<ul>
+<li><p><a href="#properties">特性</a></p>
+
+<ul>
+<li><a href="#options">選項</a></li>
+<li><a href="#players">球員</a></li>
+</ul></li>
+<li><p>課程</p>
+
+<ul>
+<li><a href="vjs.BigPlayButton.html">大播放按鈕</a></li>
+<li><a href="vjs.Button.html">按鈕</a></li>
+<li><a href="vjs.CaptionsButton.html">字幕按鈕</a></li>
+<li><a href="vjs.CaptionsTrack.html">字幕軌道</a></li>
+<li><a href="vjs.ChaptersButton.html">章節按鈕</a></li>
+<li><a href="vjs.ChaptersTrack.html">章節追踪</a></li>
+<li><a href="vjs.ChaptersTrackMenuItem.html">章節跟踪菜單項</a></li>
+<li><a href="vjs.Component.html">成分</a></li>
+<li><a href="vjs.ControlBar.html">控制列</a></li>
+<li><a href="vjs.CoreObject.html">核心對象</a></li>
+<li><a href="vjs.CurrentTimeDisplay.html">當前時間顯示</a></li>
+<li><a href="vjs.DurationDisplay.html">時長顯示</a></li>
+<li><a href="vjs.Flash.html">閃光</a></li>
+<li><a href="vjs.FullscreenToggle.html">全屏切換</a></li>
+<li><a href="vjs.Html5.html">HTML5</a></li>
+<li><a href="vjs.LoadProgressBar.html">加載進度條</a></li>
+<li><a href="vjs.LoadingSpinner.html">加載微調器</a></li>
+<li><a href="vjs.MediaLoader.html">媒體加載器</a></li>
+<li><a href="vjs.MediaTechController.html">媒體技術控制器</a></li>
+<li><a href="vjs.Menu.html">菜單</a></li>
+<li><a href="vjs.MenuButton.html">菜單按鈕</a></li>
+<li><a href="vjs.MenuItem.html">菜單項</a></li>
+<li><a href="vjs.MuteToggle.html">靜音開關</a></li>
+<li><a href="vjs.OffTextTrackMenuItem.html">離文字軌跡功能表項目</a></li>
+<li><a href="vjs.PlayProgressBar.html">播放進度條</a></li>
+<li><a href="vjs.PlayToggle.html">播放開關</a></li>
+<li><a href="player.html">玩家</a></li>
+<li><a href="vjs.PosterImage.html">海報圖片</a></li>
+<li><a href="vjs.ProgressControl.html">進度控制</a></li>
+<li><a href="vjs.RemainingTimeDisplay.html">剩餘時間顯示</a></li>
+<li><a href="vjs.SeekBar.html">搜索欄</a></li>
+<li><a href="vjs.SeekHandle.html">尋找句柄</a></li>
+<li><a href="vjs.Slider.html">滑塊</a></li>
+<li><a href="vjs.SliderHandle.html">滑塊手柄</a></li>
+<li><a href="vjs.SubtitlesButton.html">字幕按鈕</a></li>
+<li><a href="vjs.SubtitlesTrack.html">字幕軌道</a></li>
+<li><a href="vjs.TextTrack.html">文本軌道</a></li>
+<li><a href="vjs.TextTrackButton.html">文本軌道按鈕</a></li>
+<li><a href="vjs.TextTrackDisplay.html">文本軌道顯示</a></li>
+<li><a href="vjs.TextTrackMenuItem.html">文字軌跡功能表項目</a></li>
+<li><a href="vjs.TimeDivider.html">分時器</a></li>
+<li><a href="vjs.VolumeBar.html">音量條</a></li>
+<li><a href="vjs.VolumeControl.html">音量控制</a></li>
+<li><a href="vjs.VolumeHandle.html">卷句柄</a></li>
+<li><a href="vjs.VolumeLevel.html">音量級別</a></li>
+<li><a href="vjs.VolumeMenuButton.html">音量菜單按鈕</a></li>
+</ul></li>
+<li><p><a href="#methods">方法</a></p>
+
+<ul>
+<li><a href="#plugin-name-init-">插入</a></li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h2 id="properties">特性</h2>
+
+<h3 id="options">選項</h3>
+
+<blockquote>
+<p>全局 Player 實例選項，從 vjs.Player.prototype.options_vjs.options = vjs.Player.prototype.options_ 浮出水面_所有選項都應使用字符串鍵，以免被閉包編譯器重命名</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/core.js#L77"> src/js/core.js#L77</a></p>
+
+<hr>
+
+<h3 id="players">玩家</h3>
+
+<blockquote>
+<p>全球玩家列表</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/core.js#L118"> src/js/core.js#L118</a></p>
+
+<hr>
+
+</div>
+<div class="section" id="methodsSection">
+<h2 id="methods">方法</h2>
+
+<h3 id="plugin-name-init-">插件（名稱，初始化）</h3>
+
+<blockquote>
+<p>註冊video.js插件的方法</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>姓名</strong><code>細繩</code>插件名稱</li>
+<li><strong>在裡面</strong><code>功能</code>播放器初始化時運行的函數</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/plugins.js#L7"> src/js/plugins.js#L7</a></p>
+
+<hr>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bcl scripts -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+  <script src="/en/scripts/log.js"></script>
+    <script src="/en/scripts/docs-nav-data.min.js"></script>
+    <script src="/en/scripts/bcls-doc-site-v1.js"></script>
+    <script src="/en/scripts/bc-mapi.js"></script>
+    <script translate="no">
+        $(document).foundation();
+    </script>
+    <script type="text/javascript">
+    /******** Any scripts specific to page samples should go here *********/
+  </script>
+    
+    
+	<div style="text-align:center">
+    
+</div>
+
+</body>
+
+</html>

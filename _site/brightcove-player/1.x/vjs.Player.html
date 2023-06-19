@@ -1,0 +1,2048 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+  <!-- change title to match the h1 heading -->
+  <title>布萊特灣玩家 API</title>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.css" />
+  <script src="//use.edgefonts.net/source-code-pro.js"></script>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack-extended.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/en/styles/bcls-doc-site.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/atelier-forest.light.min.css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack-extended.min.css">
+
+  <script translate="no">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2728311-23', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script>
+  </head>
+
+<body>
+	<!-- header navbar -->
+	<div id="navWrapper" class="fixed"></div>
+	<!-- breadcrumbs -->
+	<nav id="breadCrumbWrapper" class="breadcrumbs show-for-medium-up"></nav>
+	<!-- search -->
+	<div id="searchModal" class="reveal-modal" data-reveal></div>
+	<!-- content -->
+    <div class="row">
+        <div class="sidebar large-2 columns show-for-large-up">
+            <div id="sidenav" class="side-nav"></div>
+        </div>
+        <div id="main" class="large-10 small-12 columns">
+      <div id="top" class="section">
+
+<!-- GENERATED FROM SOURCE -->
+<h1>布萊特灣玩家 API</h1>
+<div class="right"><a href="./index.html">原料藥指數</a></div>
+<div class="section" id="index">
+<h2>索引</h2>
+
+<ul>
+<li><p><a href="#playercreation">玩家創建</a></p>
+<ul>
+<li><a href="#vjsplayer">vjs播放器</a></li> 
+</ul>
+<br/>
+<li><p><a href="#methods">方法</a></p>
+
+<ul>
+<li><a href="#addremotetexttrack">添加遠程文本軌道</a></li> 
+<li><a href="#autoplay">自動播放</a></li> 
+<li><a href="#buffered">緩衝的</a></li>
+<li><a href="#bufferedEnd">緩衝結束</a></li> 
+<li><a href="#bufferedpercent">緩衝百分比</a></li>
+<li><a href="#cancelfullscreen">取消全屏</a><em><code>棄用</code></em></li>
+<li  class="video-cloud-only"><a href="#cataloggetvideo">catalog.get視頻</a></li>
+<li  class="video-cloud-only"><a href="#catalogload">目錄.load</a></li>
+<li><a href="#controls-controls-">控制</a></li>
+<li><a href="#currentSrc">當前源</a></li> 
+<li><a href="#currenttime-seconds-">當前時間</a></li>
+<li><a href="#currentType">當前類型</a></li> 
+<li><a href="#dispose">處置</a></li>
+<li><a href="#duration-seconds-">持續時間</a></li>
+<li><a href="#ended">結束</a></li> 
+<li><a href="#error">錯誤</a></li> 
+<li><a href="#exitFullscreen">退出全屏</a></li> 
+<li><a href="#init-tag-options-ready-">在裡面</a></li>
+<li><a href="#isFullScreen">是全屏</a><em><code>棄用</code></em></li> 
+<li><a href="#isFullscreen">是全屏</a></li> 
+<li><a href="#language">語言</a></li> 
+<li><a href="#load">加載</a></li> 
+<li><a href="#loop">迴圈</a></li> 
+<li><a href="#muted-muted-">靜音</a></li>
+<li><a href="#options">選項</a></li>
+<li><a href="#pause">暫停</a></li>
+<li><a href="#paused">暫停</a></li>
+<li><a href="#play">播放</a></li>
+<li><a href="#playbackRate">回放率</a></li> 
+<li><a href="#poster-src-">海報</a></li>
+<li><a href="#preload">預先載入</a></li> 
+<li><a href="#remainingTime">剩餘時間</a></li> 
+<li><a href="#requestFullScreen">請求全屏</a><em><code>棄用</code></em></li>
+<li><a href="#requestFullscreen">請求全屏</a></li> 
+<li><a href="#seeking">尋求</a></li> 
+<li><a href="#src-source-">來源</a></li>
+<li><a href="#volume-percentasdecimal-">體積</a></li>
+<li><a href="#addchild-child-options-">添加孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#addclass-classtoadd-">添加類</a><em><code>遺傳</code></em></li>
+<li><a href="#buildcssclass">構建CSS類</a><em><code>遺傳</code></em></li>
+<li><a href="#children">孩子們</a><em><code>遺傳</code></em></li>
+<li><a href="#clearInterval">清除間隔</a><em><code>遺傳</code></em></li> 
+<li><a href="#clearTimeout">清除超時</a><em><code>遺傳</code></em></li> 
+<li><a href="#contentel">內容El</a><em><code>遺傳</code></em></li>
+<li><a href="#createel-tagname-attributes-">創建El</a><em><code>遺傳</code></em></li>
+<li><a href="#dimensions-width-height-">方面</a><em><code>遺傳</code></em></li>
+<!--<li><a href="#disable">disable</a> <em><code>inherited</code></em></li>-->
+<li><a href="#el">埃爾</a><em><code>遺傳</code></em></li>
+<li><a href="#enableTouchActivity">啟用觸摸活動</a><em><code>遺傳</code></em></li> 
+<li><a href="#getchild-name-">得到孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#getchildbyid-id-">通過 Id 獲取孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#hasClass">有類</a><em><code>遺傳</code></em></li>
+<li><a href="#height-num-skiplisteners-">高度</a><em><code>遺傳</code></em></li>
+<li><a href="#hide">隱藏</a><em><code>遺傳</code></em></li>
+<li><a href="#id">ID</a><em><code>遺傳</code></em></li>
+<li><a href="#initchildren">初始化孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#name">姓名</a><em><code>遺傳</code></em></li>
+<li><a href="#off-type-fn-">離開</a><em><code>遺傳</code></em></li>
+<li><a href="#on-type-fn-">在</a><em><code>遺傳</code></em></li>
+<li><a href="#one-type-fn-">一</a><em><code>遺傳</code></em></li>
+<li><a href="#options-obj-">選項</a><em><code>遺傳</code></em></li>
+<li><a href="#player">玩家</a><em><code>遺傳</code></em></li>
+<li><a href="#ready-fn-">準備好</a><em><code>遺傳</code></em></li>
+<li><a href="#removechild-component-">刪除孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#removeclass-classtoremove-">移除類</a><em><code>遺傳</code></em></li>
+<li><a href="#setInterval">設置間隔</a><em><code>遺傳</code></em></li>
+<li><a href="#setTimeout">設置超時</a><em><code>遺傳</code></em></li>
+<li><a href="#show">展示</a><em><code>遺傳</code></em></li>
+<li><a href="#trigger-type-event-">扳機</a><em><code>遺傳</code></em></li>
+<li><a href="#triggerready">觸發就緒</a><em><code>遺傳</code></em></li>
+<li><p><a href="#width-num-skiplisteners-">寬度</a><em><code>遺傳</code></em></p></li>
+</ul></li>
+<li><p><a href="#events">事件</a></p>
+
+<ul>
+<li><a href="#durationchange-event">持續時間變化</a></li>
+<li><a href="#ended-event">結束</a></li>
+<li><a href="#error-event">錯誤</a></li>
+<li><a href="#firstplay-event">先玩</a></li>
+<li><a href="#fullscreenchange-event">全屏變化</a></li>
+<li><a href="#loadedalldata-event">加載所有數據</a></li>
+<li><a href="#loadeddata-event">加載的數據</a></li>
+<li><a href="#loadedmetadata-event">載入的詮釋資料</a></li>
+<li><a href="#loadstart-event">載入啟動</a></li>
+<li><a href="#pause-event">暫停</a></li>
+<li><a href="#play-event">播放</a></li>
+<li><a href="#progress-event">進步</a></li>
+<li><a href="#timeupdate-event">時間更新</a></li>
+<li><a href="#volumechange-event">體積變化</a></li>
+<li><a href="#resize-event">調整大小</a><em><code>遺傳</code></em></li>
+</ul></li>
+</ul>
+
+<hr>
+
+</div>
+
+<div id="vjsplayer" class="section">
+<h3>vjs.播放器</h3>
+
+<p><strong>延伸</strong> : <a href="vjs.Component.html"> vjs.組件</a><br/><strong>定義於</strong> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L21"> src/js/player.js#L21</a>  </p>
+
+<p>的一個實例<code>vjs.播放器</code>當任何 Video.js 設置方法用於初始化視頻時，都會創建該類。</p>
+
+<pre><code class="js">&lt;video id="我的播放器ID"
+  ...&gt;
+&lt;/ video&gt;
+...
+&lt;腳本類型 =「文本/文本」&gt;
+  var myPlayer = videojs('myPlayerID');
+&lt;/腳本 &gt;
+</code></pre>
+
+<p>在下面的示例中，一些屬性告訴 Video.js 庫在庫準備就緒時創建一個播放器實例。</p>
+
+<pre><code class="html">&lt;視頻
+  數據帳戶=“3423279428001”
+  數據播放器=“89d39071-6b96-412c-b759-2aff4f7811b3”
+  數據嵌入 =「默認」
+  數據-視頻-id="3971877621001"
+  class="video-js" 控件&gt;&lt;/video&gt;
+</code></pre>
+在以下任何屬性中使用<code>&lt;視頻&gt;</code>標記將導致創建播放器實例：
+<ul>
+    <li>數據帳戶</li>
+    <li>數據播放器</li>
+    <li>數據視頻ID</li>
+    <li>數據設置</li>
+</ul>
+</div>
+
+
+<div class="section" id="methodsSection">
+<h2 id="methods">方法</h2>
+
+<h3 id="addchild-child-options-">添加孩子（孩子，[選項]）</h3>
+
+<blockquote>
+<p>在此組件內添加一個子組件</p>
+
+<pre><code>我的組件.el();
+// -&gt; &lt;div class='my-component'&gt;&lt;/div&gt;
+myComonent.children();
+// [空數組]
+
+var myButton = myComponent.addChild('MyButton');
+// -&gt; &lt;div class='my-component'&gt;&lt;div class="my-button"&gt;myButton&lt;div&gt;&lt;/div&gt;
+// -&gt; myButton === myComonent.children()[0];
+</code></pre>
+
+<p>傳遞子構造函數的選項和子項的子項的選項</p>
+
+<pre><code>var myButton = myComponent.addChild('MyButton', {
+  文本：'按我'，
+  孩子們： {
+    buttonChild 示例：{
+      buttonChildOption: true
+    }
+  }
+}）；
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>孩子</strong><code>字符串|vjs.Component</code>要添加的子項的類名或實例</li>
+<li><strong>選項</strong><code>目的</code><em>（選修的）</em>選項，包括要傳遞給孩子的孩子的選項。</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code>子組件（如果使用了字符串，則由該過程創建）</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L362"> src/js/component.js#L362</a></p>
+
+<hr>
+
+<h3 id="addclass-classtoadd-">添加類（類添加）</h3>
+
+<blockquote>
+<p>將 CSS 類名稱添加到組件的元素</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>添加類</strong><code>細繩</code>要添加的類名</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L826"> src/js/component.js#L826</a></p>
+
+<hr>
+
+<h3 id="addremotetexttrack">addRemoteTextTrack(trackToAdd)</h3>
+<blockquote>
+<p>向播放器對象添加文本軌道</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>添加軌道</strong><code>JSON對象</code>軌道添加</li>
+</ul>
+<p>示例字幕軌道：</p>
+<pre><code>變種恩跟踪 = 我的圖層. 添加刪除文本跟踪 ({
+ 種類：'字幕'，
+ 語言：'en'，
+ 標籤：'英語'，
+ src: 'http://solutions.brightcove.com/bcls/captions/adding_captions_to_videos.vtt'
+}）;</code></pre>
+
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>VJ. 文本跟踪列表</code> </li>
+</ul>
+
+<hr>	
+
+<h3 id="autoplay">自動播放（值）</h3>
+
+<blockquote>
+<p>獲取或設置自動播放屬性。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>價值</strong> </li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>獲取時的autoplay屬性值</li>
+<li><code>vjs.播放器</code>設置時返回播放器</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1275"> src/js/player.js#L1275</a></p>
+
+<hr>
+
+<h3 id="buffered">緩衝的（）</h3>
+
+<blockquote>
+<p>獲取包含已下載視頻時間的 TimeRange 對象</p>
+
+<p>如果您只想要已下載視頻的百分比，請使用 bufferedPercent。</p>
+
+<pre><code>// 已緩衝的不同時間範圍的數量。通常 1。
+numberOfRanges = bufferedTimeRange.length,
+
+// 第一個範圍開始時的時間（以秒為單位）。通常為 0。
+firstRangeStart = bufferedTimeRange.start(0),
+
+// 第一個範圍結束時的時間（以秒為單位）
+firstRangeEnd = bufferedTimeRange.end(0),
+
+// 第一個時間範圍的長度（以秒為單位）
+firstRangeLength = firstRangeEnd - firstRangeStart;
+</code></pre>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>目的</code>模擬 TimeRange 對象（遵循 HTML 規範）</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L782"> src/js/player.js#L782</a></p>
+
+<hr>
+	
+<h3 id="bufferedEnd">緩衝結束（）</h3>
+
+<blockquote>
+<p>獲取最後一次緩衝時間範圍的結束時間</p>
+
+<p>這在進度條中用於封裝所有時間範圍。</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>最後緩衝時間範圍的結束</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L833"> src/js/player.js#L833</a></p>
+
+<hr>
+
+<h3 id="bufferedpercent">緩衝百分比（）</h3>
+
+<blockquote>
+<p>獲取已下載視頻的百分比（小數形式）</p>
+
+<pre><code>VAR 如何下載 = 我的播放器. 自助百分比 ();
+</code></pre>
+
+<p>0 表示沒有，1 表示全部。（此方法不在 HTML5 規範中，但非常方便）</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code> 0 到 1 之間的小數，表示百分比</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L802"> src/js/player.js#L802</a></p>
+
+<hr>
+
+<h3 id="buildcssclass">構建CSSClass()</h3>
+
+<blockquote>
+<p>允許子組件堆疊 CSS 類名</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>構造的類名</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L536"> src/js/component.js#L536</a></p>
+
+<hr>
+
+<h3 id="cancelfullscreen">取消全屏()</h3>
+
+<blockquote>
+<p>exitFullscreen 的舊命名已棄用 true</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1038"> src/js/player.js#L1038</a></p>
+
+<hr>
+
+<div class="video-cloud-only">
+<h3 id="cataloggetvideo">catalog.getVideo(videoId, 回調)</h3>
+
+<blockquote>
+<p>對具有指定 ID 的視頻發出目錄請求，並在請求完成時調用回調</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>videoId</strong><code>細繩</code>視頻雲視頻的標識符</li>
+<li><strong>打回來</strong><code>功能</code>視頻返回時使用的回調函數</li>
+</ul>
+
+<p>有關詳細信息，請參閱<a href="//docs.brightcove.com/en/player/brightcove-player/guides/player-catalog.html#getVideo">播放器目錄</a>文檔。</p>
+
+<hr>
+</div>
+
+<div class="video-cloud-only">
+<h3 id="catalogload">catalog.load（視頻）</h3>
+
+<blockquote>
+<p>將視頻對象加載到播放器中</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>視頻</strong><code>目的</code>視頻雲視頻對象</li>
+</ul>
+
+<p>有關詳細信息，請參閱<a href="//docs.brightcove.com/en/player/brightcove-player/guides/player-catalog.html#load">播放器目錄</a>文檔。</p>
+
+<hr>
+</div>
+
+<h3 id="children">孩子們（）</h3>
+
+<blockquote>
+<p>獲取所有子組件的數組</p>
+
+<pre><code>VAR 孩子 = 我的成分. 兒童 ();
+</code></pre>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>大批</code>這些孩子</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L296"> src/js/component.js#L296</a></p>
+
+<hr>
+	
+<h3 id="clearInterval">clearInterval( 間隔Id )</h3>
+
+<blockquote>
+<p>清除間隔並刪除關聯的處置偵聽器</p>
+</blockquote>
+	
+<h5>參數：</h5>
+
+<ul>
+<li><strong>間隔Id</strong><code>數字</code>要清除的間隔的id</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>返回間隔 ID</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L1219"> src/js/component.js#L1219</a></p>
+
+<hr>
+	
+<h3 id="clearTimeout">清除超時（ timeoutId ）</h3>
+
+<blockquote>
+<p>清除超時並刪除關聯的處理偵聽器</p>
+</blockquote>
+	
+<h5>參數：</h5>
+
+<ul>
+<li><strong>超時ID</strong><code>數字</code>超時清除的id</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>返回超時 ID</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L1181"> src/js/component.js#L1181</a></p>
+
+<hr>
+
+<h3 id="contentel">內容El()</h3>
+
+<blockquote>
+<p>返回組件的 DOM 元素以嵌入內容。將是 el_ 或 createEl 中定義的新元素。</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>元素</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L239"> src/js/component.js#L239</a></p>
+
+<hr>
+
+<h3 id="controls-controls-">控制（控制）</h3>
+
+<blockquote>
+<p>獲取或設置控件是否顯示。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>控制</strong><code>布爾值</code>將控件設置為顯示或不顯示</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>布爾值</code>控件正在顯示</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1355"> src/js/player.js#L1355</a></p>
+
+<hr>
+
+<h3 id="createel-tagname-attributes-">createEl( [標籤名稱], [屬性] )</h3>
+
+<blockquote>
+<p>創建組件的 DOM 元素</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>標籤名</strong><code>細繩</code><em>（選修的）</em>元素的節點類型。例如'div'</li>
+<li><strong>屬性</strong><code>目的</code><em>（選修的）</em>應在元素上設置的元素屬性的對象</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>元素</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L200"> src/js/component.js#L200</a></p>
+
+<hr>
+	
+<h3 id="currentSrc">當前源()</h3>
+
+<blockquote>
+<p>返回當前源值的完全限定 URL，例如 http://mysite.com/video.mp4 可以與 currentType 結合使用以幫助重建當前源對象</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>當前來源</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1242"> src/js/player.js#L1242</a></p>
+
+<hr>
+
+<h3 id="currenttime-seconds-">當前時間（[秒]）</h3>
+
+<blockquote>
+<p>獲取或設置當前時間（以秒為單位）</p>
+
+<pre><code>// 得到
+var whereYouAt = myPlayer.currentTime();
+
+// 放
+myPlayer.currentTime(120); // 視頻 2 分鐘
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>秒</strong><code>數字|字符串</code><em>（選修的）</em>尋求的時間</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>以秒為單位的時間，不設置時</li>
+<li><code>vjs.播放器</code> self，當設置當前時間時</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L702"> src/js/player.js#L702</a></p>
+
+<hr>
+	
+<h3 id="currentType">當前類型()</h3>
+
+<blockquote>
+<p>獲取當前源類型，例如視頻/mp4 這可以讓您重建當前源對象，以便您以後可以加載相同的源和技術</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>源 MIME 類型</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1252"> src/js/player.js#L1252</a></p>
+
+<hr>
+
+<h3 id="dimensions-width-height-">尺寸（寬度，高度）</h3>
+
+<blockquote>
+<p>同時設置寬度和高度</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>寬度</strong><code>數字|字符串</code> </li>
+<li><strong>高度</strong><code>數字|字符串</code> </li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code>組件</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L938"> src/js/component.js#L938</a></p>
+
+<hr>
+
+<!--
+<h3 id="disable">disable()</h3>
+
+<blockquote>
+<p>Disable component by making it unshowable</p>
+</blockquote>
+
+<p><em>inherited from</em>: <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L691">src/js/component.js#L691</a></p>
+
+<hr>
+-->
+
+<h3 id="dispose">dispose（）</h3>
+
+<blockquote>
+<p>銷毀視頻播放器並進行任何必要的清理</p>
+
+<pre><code>我的圖層。處理（）;
+</code></pre>
+
+<p>如果您動態地向 DOM 添加視頻或從 DOM 中刪除視頻，這將特別有用。</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L164"> src/js/player.js#L164</a></p>
+
+<hr>
+
+<h3 id="duration-seconds-">持續時間（秒）</h3>
+
+<blockquote>
+<p>以秒為單位獲取視頻的時間長度</p>
+
+<pre><code>VAR 長度視頻 = 我的播放器。持續時間（）;
+</code></pre>
+
+<p><strong>筆記</strong> :在知道持續時間之前，視頻必須已經開始加載，對於 Flash，可能要等到視頻開始播放後才能知道。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>秒</strong> </li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>視頻時長（以秒為單位）</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L730"> src/js/player.js#L730</a></p>
+
+<hr>
+
+<h3 id="el">el () </h3>
+
+<blockquote>
+<p>獲取組件的 DOM 元素</p>
+
+<pre><code>變種多梅爾 = 我的元件. EL ();
+</code></pre>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>元素</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L220"> src/js/component.js#L220</a></p>
+
+<hr>
+
+<h3 id="enableTouchActivity">enableTouchActivity()</h3>
+
+<blockquote>
+<p>發生觸摸事件時報告用戶觸摸活動</p>
+<p>用戶活動用於確定控件何時應顯示/隱藏。鼠標事件相對簡單，因為任何鼠標事件都應該顯示控件。因此，我們捕獲冒泡到玩家的鼠標事件並在發生時報告活動。</p>
+<p>對於觸摸事件，這並不容易。我們不能依賴播放器級別的觸摸事件，因為在移動設備上點擊視頻本身（touchstart + touchend）意味著關閉（和打開）控件。用戶活動是異步檢查的，因此可能發生的情況是視頻上的點擊事件關閉控件，然後 touchend 事件冒泡到播放器，如果它報告用戶活動，將立即重新打開控件。（我們也不想完全阻止觸摸事件冒泡）</p>
+<p>此外，觸摸移動、觸摸+按住以及點擊以外的任何操作都不應該在移動設備上重新打開控件。</p>
+<p>在這裡，我們將默認組件行為設置為在觸摸事件發生時報告用戶活動，並且可以通過希望觸摸事件以不同方式進行操作的組件將其關閉。</p>
+
+</blockquote>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L1120"> src/js/component.js#L1120</a></p>
+
+<hr>
+	
+<h3 id="ended">結束（）</h3>
+
+<blockquote>
+<p>返回播放器是否處於“結束”狀態</p>
+</blockquote>
+	
+<h5>傳回：</h5>
+
+<ul>
+<li><code>布爾值</code>如果玩家處於結束狀態則為真，否則為假</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1476"> src/js/player.js#L1476</a></p>
+
+<hr>
+	
+<h3 id="error">錯誤（錯誤）</h3>
+
+<blockquote>
+<p>設置或獲取當前的 MediaError</p>
+</blockquote>
+	
+<h5>參數：</h5>
+
+<ul>
+<li><strong>呃</strong><code>*</code>要轉換為 MediaError 的 MediaError 或字符串/數字</li>
+</ul>
+	
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.MediaError|null</code>當得到</li>
+<li><code>vjs.播放器</code>設置時</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1440"> src/js/player.js#L1440</a></p>
+
+<hr>
+	
+<h3 id="exitFullscreen">退出全屏()</h3>
+
+<blockquote>
+<p>在全屏模式下將視頻恢復到正常大小</p>
+</blockquote>
+	
+<pre><code>我的播放器. 退出全屏（）;
+</code></pre>
+	
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.播放器</code>自己</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1017"> src/js/player.js#L1017</a></p>
+
+<hr>
+	
+<h3 id="getchild-name-">getChild(名字)</h3>
+
+<blockquote>
+<p>返回具有提供名稱的子組件</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>姓名</strong> </li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L330"> src/js/component.js#L330</a></p>
+
+<hr>
+
+<h3 id="getchildbyid-id-">getChildById（id）</h3>
+
+<blockquote>
+<p>返回具有提供的 ID 的子組件</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>ID</strong> </li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L313"> src/js/component.js#L313</a></p>
+
+<hr>
+	
+<h3 id="hasClass">hasClass( classToCheck )</h3>
+
+<blockquote>
+<p>檢查組件的元素是否具有 CSS 類名</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>類檢查</strong><code>細繩</code>要檢查的類名</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L816"> src/js/component.js#L816</a></p>
+
+<hr>
+
+<h3 id="height-num-skiplisteners-">高度( [num], [skipListeners] )</h3>
+
+<blockquote>
+<p>獲取或設置組件的高度（CSS 值）</p>
+
+<p>設置視頻標籤尺寸值僅適用於以像素為單位的值。百分比值將不起作用。可以使用一些百分比，但 width()/height() 將返回數字 + %，而不是實際計算的寬度/高度。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>數</strong><code>數字|字符串</code><em>（選修的）</em>新組件高度</li>
+<li><strong>跳過聽眾</strong><code>布爾值</code><em>（選修的）</em>跳過調整大小事件觸發器</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code>該組件，在設置高度時</li>
+<li><code>數字|字符串</code>高度，當得到</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L927"> src/js/component.js#L927</a></p>
+
+<hr>
+
+<h3 id="hide">隱藏（）</h3>
+
+<blockquote>
+<p>如果當前顯示，則隱藏組件元素</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L857"> src/js/component.js#L857</a></p>
+
+<hr>
+
+<h3 id="id">ID（）</h3>
+
+<blockquote>
+<p>獲取組件的 ID</p>
+
+<pre><code>變種 ID = 我的組件. ID ();
+</code></pre>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>字串</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L258"> src/js/component.js#L258</a></p>
+
+<hr>
+
+<h3 id="init-tag-options-ready-">初始化（標籤，[選項]，[就緒]）</h3>
+
+<blockquote>
+<p>玩家的構造函數</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>標籤</strong><code>元素</code>用於配置選項的原始視頻標籤</li>
+<li><strong>選項</strong><code>目的</code><em>（選修的）</em>播放器選項</li>
+<li><strong>準備好</strong><code>功能</code><em>（選修的）</em>準備好回調函數</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L32"> src/js/player.js#L32</a></p>
+
+<hr>
+
+<h3 id="initchildren">初始化兒童（）</h3>
+
+<blockquote>
+<p>從選項中添加和初始化默認子組件</p>
+
+<pre><code>// 創建 MyComponent 的實例時，選項中的所有子項
+// 將通過它們的名稱字符串和選項添加到實例
+MyComponent.prototype.options_.children = {
+  我的孩子組件：{
+    我的孩子選項：真
+  }
+}
+
+// 或者在創建組件時
+var myComp = new MyComponent(播放器, {
+  孩子們： {
+    我的孩子組件：{
+      我的孩子選項：真
+    }
+  }
+}）;</code></pre>
+<p>子選項也可以是子名稱數組或子選項對象（也包括“名稱”鍵）。</p>
+<pre><code>var myComp = new MyComponent(播放器, {
+  孩子們： [
+    '按鈕'，
+    {
+      名稱：'按鈕'，
+      一些其他選項：真
+    }
+  ]
+}）;</code></pre>
+</blockquote>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L481"> src/js/component.js#L481</a></p>
+
+<hr>
+	
+<h3 id="isFullScreen">isFullScreen( isFS )</h3>
+
+<blockquote>
+<p>isFullscreen() 的舊命名已棄用 true</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>是FS</strong> </li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L940"> src/js/player.js#L940</a></p>
+
+<hr>
+	
+<h3 id="isFullscreen">isFullscreen( [isFS] )</h3>
+
+<blockquote>
+<p>檢查播放器是否處於全屏模式</p>
+
+<pre><code>// 得到
+var fullscreenOrNot = myPlayer.isFullscreen();
+
+// 放
+myPlayer.isFullscreen(true); // 告訴播放器它是全屏的
+</code></pre>
+<p>注意：從最新的 HTML5 規範開始，isFullscreen 不再是官方屬性，而是使用 document.fullscreenElement。但是 isFullscreen 仍然是內部播放器工作的寶貴屬性。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>是FS</strong><code>布爾值</code><em>（選修的）</em>更新播放器的全屏狀態</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>布爾值</code>如果全屏則為 true，否則為 false</li>
+<li><code>vjs.播放器</code>自我，設置時</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L928"> src/js/player.js#L928</a></p>
+
+<hr>
+	
+<h3 id="language">語言（語言代碼）</h3>
+
+<blockquote>
+<p>玩家的語言代碼</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>語言代碼</strong><code>細繩</code>語言環境字符串</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>獲取時的語言環境字符串</li>
+<li><code>vjs.播放器</code>自我，設置時</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L124"> src/js/player.js#L124</a></p>
+
+<hr>
+	
+<h3 id="load">加載（）</h3>
+
+<blockquote>
+<p>開始加載 src 數據</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.播放器</code>返回播放器</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1232"> src/js/player.js#L1232</a></p>
+
+<hr>
+	
+<h3 id="loop">循環（值）</h3>
+
+<blockquote>
+<p>獲取或設置視頻元素的循環屬性</p>
+</blockquote>
+	
+<h5>參數：</h5>
+
+<ul>
+<li><strong>價值</strong>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>獲取時的loop屬性值</li>
+<li><code>vjs.播放器</code>設置時返回播放器</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1289"> src/js/player.js#L1289</a></p>
+
+<hr>
+
+<h3 id="muted-muted-">靜音（[靜音]）</h3>
+
+<blockquote>
+<p>獲取當前靜音狀態，或者開啟或關閉靜音</p>
+
+<pre><code>// 得到
+var isVolumeMuted = myPlayer.muted();
+
+// 放
+myPlayer.muted(true); // 靜音
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>靜音</strong><code>布爾值</code><em>（選修的）</em>真為靜音，假為取消靜音</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>布爾值</code>如果靜音開啟則為真，否則為假</li>
+<li><code>vjs.播放器</code>自我，當設置靜音</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L890"> src/js/player.js#L890</a></p>
+
+<hr>
+
+<h3 id="name">姓名（）</h3>
+
+<blockquote>
+<p>獲取組件的名稱。該名稱通常用於引用組件。</p>
+
+<pre><code>變種名稱 = 我的組件. 名稱 ();
+</code></pre>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>字串</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L277"> src/js/component.js#L277</a></p>
+
+<hr>
+
+<h3 id="off-type-fn-">關閉（[第一]，[第二]，[第三]）</h3>
+
+<blockquote>
+<p>從組件的元素中刪除事件偵聽器</p>
+
+<pre><code>myComponent.off('eventType', myFunc);
+</code></pre>
+<p>如果排除 myFunc，將刪除該事件類型的所有偵聽器。如果排除了 eventType，將從組件中刪除所有偵聽器。</p>
+<p>或者你可以使用<code>離開</code>刪除使用添加到其他元素或組件的偵聽器<code>myComponent.on(其他組件...</code> .在這種情況下，事件類型和偵聽器函數都是必需的。</p>
+<pre><code>myComponent.off(otherElement, 'eventType', myFunc);
+myComponent.off(otherComponent, 'eventType', myFunc);
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>第一的</strong><code>字符串|vjs.Component</code><em>（選修的）</em>事件類型或其他組件</li>
+<li><strong>第二</strong><code>函數|字符串</code><em>（選修的）</em>偵聽器函數或事件類型</li>
+<li><strong>第三</strong><code>功能</code><em>（選修的）</em>其他組件的監聽器</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L646"> src/js/component.js#L646</a></p>
+
+<hr>
+
+<h3 id="on-type-fn-">在（第一，第二，第三）</h3>
+
+<blockquote>
+<p>向該組件的元素添加一個事件偵聽器</p>
+
+<pre><code>var myFunc = 函數(){
+  var myPlayer = this;
+  // 當事件被觸發時做一些事情
+};
+
+myComponent.on("eventType", myFunc);
+</code></pre>
+
+<p>myFunc 的上下文將是 myComponent 除非之前綁定。</p>
+<p>或者，您可以將偵聽器添加到另一個元素或組件。</p>
+	
+<pre><code>我的成分。上（其他發布，「事件名稱」，我的 FUNC）;
+myComponent.on(otherComponent, "eventName", myFunc);
+</code></pre>
+<p>使用這個的好處<code>vjs.on(otherElement, "eventName", myFunc)</code>和<code>otherComponent.on("eventName", myFunc)</code>是這樣的，當任一組件被處置時，偵聽器將被自動清理。它還會將 myComponent 綁定為 myFunc 的上下文。</p>
+<p>注意：在除窗口和文檔（都是永久性的）之外的頁面元素上使用它時，如果從 DOM 中刪除元素，則需要調用<code>vjs.trigger(el, "處置")</code>在它上面清理對它的引用並允許瀏覽器對其進行垃圾回收。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>第一的</strong><code>字符串|vjs.Component</code>事件類型或其他組件</li>
+<li><strong>第二</strong><code>函數|字符串</code>事件處理程序或事件類型</li>
+<li><strong>第三</strong><code>功能</code>事件處理程序</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code>自己</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L577"> src/js/component.js#L577</a></p>
+
+<hr>
+
+<h3 id="one-type-fn-">一個（第一，第二，[第三]）</h3>
+
+<blockquote>
+<p>添加一個只觸發一次然後移除的事件監聽器</p>
+<pre><code>我的組件。一（「事件名稱」，我的 FUNC）;
+</code></pre>
+<p>或者，您可以將偵聽器添加到另一個只會觸發一次的元素或組件。</p>
+<pre><code>我的成分。一（其他發布，「事件名稱」，我的 FUNC）;
+myComponent.one(otherComponent, "eventName", myFunc);
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>第一的</strong><code>字符串|vjs.Component</code>事件類型或其他組件</li>
+<li><strong>第二</strong><code>函數|字符串</code>偵聽器函數或事件類型</li>
+<li><strong>第三</strong><code>功能</code><em>（選修的）</em>其他組件的監聽函數</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L691"> src/js/component.js#L691</a></p>
+
+<hr>
+
+
+<h3 id="options">選項（ ）</h3>
+<blockquote>
+<p>從嵌入標籤和播放器初始化中檢索數據</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li>對象</li>
+</ul>
+<p>返回的數據示例<code>選項（）</code>方法</p>
+<div><img src="/en/player/brightcove-player/reference/assets/options-console-log.png" alt="選項控制台日誌"/></div>
+<p>注意：如果播放器僅通過目錄填充了源，則<code>來源</code>數組中沒有任何東西</p>
+
+<hr>  
+
+<h3 id="options-obj-">選項（對象）</h3>
+
+<blockquote>
+<p>選項對象的深度合併</p>
+
+<p>每當一個屬性是兩個選項對像上的一個對象時，這兩個屬性將使用 vjs.obj.deepMerge 合併。</p>
+
+<p>這用於合併子組件的選項。我們希望能夠輕鬆地覆蓋子組件上的各個選項，而不必重寫所有其他默認選項。</p>
+
+<pre><code>父. 原型. 選項 _ = {
+  孩子們： {
+    'childOne': { 'foo': 'bar', 'asdf': 'fdsa' },
+    'childTwo'：{}，
+    'childThree'：{}
+  }
+}
+新選項 = {
+  孩子們： {
+    'childOne': { 'foo': 'baz', 'abc':'123' }
+    'childTwo'：空，
+    'childFour'：{}
+  }
+}
+
+這個。選項（新選項）；
+</code></pre>
+
+<p>結果</p>
+
+<pre>{<code>
+  孩子們： {
+    'childOne': { 'foo': 'baz', 'asdf': 'fdsa', 'abc':'123' },
+    'childTwo': null, // 禁用。不會被初始化。
+    'childThree'：{}，
+    'childFour'：{}
+  }
+}
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>對象</strong><code>目的</code>新選項值的對象</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>目的</code> this.options_ 和 obj 合併的新對象</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L179"> src/js/component.js#L179</a></p>
+
+<hr>
+
+<h3 id="pause">暫停（）</h3>
+
+<blockquote>
+<p>暫停視頻播放</p>
+
+<pre><code>我的圖層。暫停（）;
+</code></pre>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.播放器</code>自己</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L671"> src/js/player.js#L671</a></p>
+
+<hr>
+
+<h3 id="paused">暫停 () </h3>
+
+<blockquote>
+<p>檢查播放器是否暫停</p>
+
+<pre><code>變種運行 = 我的圖層。暫停（）;
+var isPlaying = !myPlayer.paused();
+</code></pre>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>布爾值</code>如果媒體當前正在播放則為 false，否則為 true</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L684"> src/js/player.js#L684</a></p>
+
+<hr>
+
+<h3 id="play">播放（）</h3>
+
+<blockquote>
+<p>開始媒體播放</p>
+
+<pre><code>我的播放器.play();
+</code></pre>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.播放器</code>自己</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L659"> src/js/player.js#L659</a></p>
+
+<hr>
+	
+<h3 id="playbackRate">回放率（速率）</h3>
+
+<blockquote>
+<p>獲取或設置當前播放速率</p>
+</blockquote>
+	
+<h5>參數：</h5>
+
+<ul>
+<li><strong>速度</strong><code>數字</code>要設置的新播放速率</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>設置時返回新的播放速率</li>
+<li><code>數字</code>獲取時返回當前播放速率</li>
+</ul>
+
+<p>警告</p>
+<ul>
+    <li>僅支持 HTML 視頻，並且僅在具有對不同播放速度的標準兼容支持的平台上</li>
+    <li>依賴於瀏覽器的功能，因此不會在所有地方工作（應該在 iPad、Chrome 和 Firefox 上工作良好）</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1618"> src/js/player.js#L1618</a></p>
+
+<hr>
+
+<h3 id="player">玩家（）</h3>
+
+<blockquote>
+<p>返回組件的播放器</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.播放器</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L126"> src/js/component.js#L126</a></p>
+
+<hr>
+
+<h3 id="poster-src-">海報（[src]）</h3>
+
+<blockquote>
+<p>獲取或設置海報圖像源 url</p>
+
+<h5>例子：</h5>
+
+<pre><code>// 得到
+var currentPoster = myPlayer.poster();
+
+// 環境
+myPlayer.poster('http://example.com/myImage.jpg');
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>來源</strong><code>細繩</code><em>（選修的）</em>海報圖片來源網址</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>獲取時的海報網址</li>
+<li><code>vjs.播放器</code>設置時自己</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1320"> src/js/player.js#L1320</a></p>
+
+<hr>
+	
+<h3 id="preload">預加載（值）</h3>
+
+<blockquote>
+<p>獲取或設置預加載屬性</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>價值</strong> </li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>獲取時的preload屬性值</li>
+<li><code>vjs.播放器</code>設置時返回播放器</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1261"> src/js/player.js#L1261</a></p>
+
+<hr>
+
+<h3 id="ready-fn-">準備好（fn）</h3>
+
+<blockquote>
+<p>將偵聽器綁定到組件的就緒狀態</p>
+
+<p>與事件偵聽器的不同之處在於，如果就緒事件已經發生，它將立即觸發該功能。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>fn</strong><code>功能</code>準備好的傾聽者</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L769"> src/js/component.js#L769</a></p>
+
+<hr>
+	
+<h3 id="remainingTime">剩餘時間（）</h3>
+
+<blockquote>
+<p>計算剩餘時間</p>
+<pre><code>var 時間左 = 我的圖層。剩餘時間（）;
+</code></pre>
+<p>不是原生的視頻元素功能，但是很有用</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>剩餘時間以秒為單位</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L754"> src/js/player.js#L754</a></p>
+
+<hr>
+
+<h3 id="removechild-component-">removeChild(組件)</h3>
+
+<blockquote>
+<p>從這個組件的子列表中移除一個子組件，並從這個組件的元素中移除子組件的元素</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>成分</strong><code>vjs.組件</code>要刪除的組件</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L420"> src/js/component.js#L420</a></p>
+
+<hr>
+
+<h3 id="removeclass-classtoremove-">刪除類（類刪除）</h3>
+
+<blockquote>
+<p>從組件的元素中刪除 CSS 類名</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>要刪除的類</strong><code>細繩</code>要刪除的類名</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L837"> src/js/component.js#L837</a></p>
+
+<hr>
+
+<h3 id="requestFullScreen">請求全屏()</h3>
+
+<blockquote>
+<p>requestFullscreen 的舊命名已棄用 true</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1004"> src/js/player.js#L1004</a></p>
+
+<hr>
+	
+<h3 id="requestFullscreen">請求全屏()</h3>
+
+<blockquote>
+<p>將視頻的大小增加到全屏</p>
+
+<pre><code>我的頁面。請求全屏（）;
+</code></pre>
+
+<p>在某些瀏覽器中，本機不支持全屏，因此它會進入“全窗口模式”，視頻會填滿瀏覽器窗口。在支持本機全屏的瀏覽器和設備中，有時會顯示瀏覽器的默認控件，而不是 Video.js 自定義皮膚。這包括大多數移動設備（iOS、Android）和舊版本的 Safari。</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.播放器</code>自己</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L959"> src/js/player.js#L959</a></p>
+
+<hr>
+	
+<h3 id="seeking">求()</h3>
+
+<blockquote>
+<p>返回玩家是否處於“尋找”狀態</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>布爾值</code>如果玩家處於尋求狀態則為真，否則為假</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1482"> src/js/player.js#L1482</a></p>
+
+<hr>
+	
+<h3 id="setInterval">設置間隔（fn，間隔）</h3>
+
+<blockquote>
+<p>創建一個間隔並自動設置處置</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>fn</strong><code>功能</code>每 N 秒運行一次的函數</li>
+<li><strong>間隔</strong><code>數字</code>執行指定函數前延遲的毫秒數</li>
+</ul>
+	
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>返回間隔 ID</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L1198"> src/js/component.js#L1198</a></p>
+
+<hr>
+	
+<h3 id="setTimeout">設置超時（fn，超時）</h3>
+
+<blockquote>
+<p>創建超時並自動設置處理</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>fn</strong><code>功能</code>超時後運行的函數</li>
+<li><strong>暫停</strong><code>數字</code>執行指定函數前延遲的毫秒數</li>
+</ul>
+	
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>返回超時 ID</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L1158"> src/js/component.js#L1158</a></p>
+
+<hr>
+
+<h3 id="show">展示（）</h3>
+
+<blockquote>
+<p>如果隱藏則顯示組件元素</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L847"> src/js/component.js#L847</a></p>
+
+<hr>
+
+<h3 id="src-source-">src( [來源], 類型 )</h3>
+
+<blockquote>
+<p>源函數更新視頻源</p>
+
+<p>您可以將三種類型的變量作為參數傳遞。</p>
+
+<p><strong>網址字符串</strong> :視頻文件的 URL。如果您確定當前的播放技術 (HTML5/Flash) 可以支持您提供的源，請使用此方法。目前只有 MP4 文件可以在 HTML5 和 Flash 中使用。</p>
+
+<pre><code>我的圖層. SRC (」http://www.example.com/path/to/video.mp4「);
+</code></pre>
+
+<p><strong>源對象（或元素）：</strong>包含有關源文件信息的 javascript 對象。如果您希望播放器使用類型信息確定它是否支持該文件，請使用此方法。</p>
+
+<pre><code>我的圖層。SRC（{類型：「視頻/MP4」，SRC："http://www.example.com/path/to/video.mp4"}）;
+</code></pre>
+
+<p><strong>源對像數組：</strong>要提供源的多個版本以便它可以使用 HTML5 跨瀏覽器播放，您可以使用源對像數組。Video.js 將檢測支持哪個版本並加載該文件。</p>
+
+<pre><code>我的播放器.src([
+  { type: "video/mp4", src: "http://www.example.com/path/to/video.mp4" },
+  { type: "video/webm", src: "http://www.example.com/path/to/video.webm" },
+  { 類型：“video/ogg”，src：“http://www.example.com/path/to/video.ogv”}
+]）;
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>來源</strong><code>字符串|對象|數組</code>源 URL、對像或源數組</li>
+<li><strong>類型</strong><code>細繩</code>視頻格式；可以包括
+<ul>
+    <li>視頻/mp4</li>
+    <li>視頻/webm</li>
+    <li>視頻/ogg</li>
+    <li>應用程序/x-mpegURL（用於 HLS）</li>
+</ul>
+
+</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>細繩</code>獲取時的當前視頻源</li>
+<li><code>細繩</code>設置時的播放器</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L1147"> src/js/player.js#L1147</a></p>
+
+<hr>
+
+<h3 id="trigger-type-event-">觸發器（事件）</h3>
+
+<blockquote>
+<p>在元素上觸發事件</p>
+
+<pre><code>myComponent.trigger('eventName');
+myComponent.trigger({'type':'eventName'});
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>事件</strong><code>事件|對象|字符串</code>字符串（類型）或具有類型屬性的事件對象</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code>自己</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L724"> src/js/component.js#L724</a></p>
+
+<hr>
+
+<h3 id="triggerready">觸發就緒（）</h3>
+
+<blockquote>
+<p>觸發準備好的聽眾</p>
+</blockquote>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L788"> src/js/component.js#L788</a></p>
+
+<hr>
+
+<h3 id="volume-percentasdecimal-">音量（小數百分比）</h3>
+
+<blockquote>
+<p>獲取或設置媒體的當前音量</p>
+
+<pre><code>// 得到
+var howLoudIsIt = myPlayer.volume();
+
+// 放
+我的播放器音量（0.5）； // 將音量設置為一半
+</code></pre>
+
+<p>0 關閉（靜音），1.0 一直向上，0.5 是一半。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>小數百分比</strong><code>數字</code>以小數百分比表示的新體積</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>數字</code>當前音量，當獲取</li>
+<li><code>vjs.播放器</code>自我，設置時</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L860"> src/js/player.js#L860</a></p>
+
+<hr>
+
+<h3 id="width-num-skiplisteners-">寬度( [num], skipListeners )</h3>
+
+<blockquote>
+<p>設置或獲取組件的寬度（CSS 值）</p>
+
+<p>設置視頻標籤尺寸值僅適用於以像素為單位的值。百分比值將不起作用。可以使用一些百分比，但 width()/height() 將返回數字 + %，而不是實際計算的寬度/高度。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>數</strong><code>數字|字符串</code><em>（選修的）</em>可選寬度數</li>
+<li><strong>跳過聽眾</strong><code>布爾值</code>跳過“調整大小”事件觸發器</li>
+</ul>
+
+<h5>傳回：</h5>
+
+<ul>
+<li><code>vjs.組件</code>這個組件，在設置寬度的時候</li>
+<li><code>數字|字符串</code>寬度，當得到</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L910"> src/js/component.js#L910</a></p>
+
+<hr>
+
+</div>
+<div class="section" id="eventsSection">
+<h2 id="events">活動</h2>
+
+<h3 id="durationchange-event">持續時間變化<code>事件</code></h3>
+
+<blockquote>
+<p>當首次知道或更改媒體資源的持續時間時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L554"> src/js/player.js#L554</a></p>
+
+<hr>
+
+<h3 id="ended-event">結束<code>事件</code></h3>
+
+<blockquote>
+<p>到達媒體資源末尾時觸發（currentTime == duration）</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L541"> src/js/player.js#L541</a></p>
+
+<hr>
+
+<!--
+<h3 id="error-event">error <code>EVENT</code></h3>
+
+<blockquote>
+<p>Fired when there is an error in playback</p>
+</blockquote>
+
+<h5>Parameters:</h5>
+
+<ul>
+<li><strong>e</strong> </li>
+</ul>
+
+<p><em>defined in</em>: <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L525">src/js/player.js#L525</a></p>
+
+<hr>
+-->
+
+<h3 id="firstplay-event">先玩<code>事件</code></h3>
+
+<blockquote>
+<p>第一次播放視頻時觸發</p>
+
+<p>不是 HLS 規範的一部分，我們不確定這是否是最好的實現，所以請謹慎使用。如果您沒有理由阻止播放，請使用<code>myPlayer.one('播放');</code>反而。</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L498"> src/js/player.js#L498</a></p>
+
+<hr>
+
+<h3 id="fullscreenchange-event">全屏變化<code>事件</code></h3>
+
+<blockquote>
+<p>當播放器進入或退出全屏模式時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L583"> src/js/player.js#L583</a></p>
+
+<hr>
+
+<h3 id="loadedalldata-event">加載所有數據<code>事件</code></h3>
+
+<blockquote>
+<p>當播放器完成下載源數據時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L445"> src/js/player.js#L445</a></p>
+
+<hr>
+
+<h3 id="loadeddata-event">加載數據<code>事件</code></h3>
+
+<blockquote>
+<p>當播放器在當前播放位置下載數據時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L439"> src/js/player.js#L439</a></p>
+
+<hr>
+
+<h3 id="loadedmetadata-event">加載的元數據<code>事件</code></h3>
+
+<blockquote>
+<p>當播放器具有初始持續時間和維度信息時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L433"> src/js/player.js#L433</a></p>
+
+<hr>
+
+<h3 id="loadstart-event">加載開始<code>事件</code></h3>
+
+<blockquote>
+<p>當用戶代理開始尋找媒體數據時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L389"> src/js/player.js#L389</a></p>
+
+<hr>
+
+<h3 id="pause-event">暫停<code>事件</code></h3>
+
+<blockquote>
+<p>媒體暫停時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L512"> src/js/player.js#L512</a></p>
+
+<hr>
+
+<h3 id="play-event">玩<code>事件</code></h3>
+
+<blockquote>
+<p>每當媒體開始或恢復播放時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L451"> src/js/player.js#L451</a></p>
+
+<hr>
+
+<h3 id="progress-event">進步<code>事件</code></h3>
+
+<blockquote>
+<p>當用戶代理正在下載媒體數據時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L530"> src/js/player.js#L530</a></p>
+
+<hr>
+
+<h3 id="resize-event">調整大小<code>事件</code></h3>
+
+<blockquote>
+<p>當組件的寬度和/或高度發生變化時觸發</p>
+</blockquote>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L1020"> src/js/component.js#L1020</a></p>
+
+<hr>
+
+<h3 id="seeked-event">尋求<code>事件</code></h3>
+
+<blockquote>
+<p>當玩家完成跳轉到新時間時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L485"> src/js/player.js#L485</a></p>
+
+<hr>
+
+<h3 id="seeking-event">尋求<code>事件</code></h3>
+
+<blockquote>
+<p>每當玩家跳到新時間時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L477"> src/js/player.js#L477</a></p>
+
+<hr>
+
+<h3 id="timeupdate-event">時間更新<code>事件</code></h3>
+
+<blockquote>
+<p>當前播放位置改變時觸發</p>
+
+<p>在播放期間，每 15-250 毫秒觸發一次，具體取決於所使用的播放技術。</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L524"> src/js/player.js#L524</a></p>
+
+<hr>
+
+<h3 id="volumechange-event">體積變化<code>事件</code></h3>
+
+<blockquote>
+<p>音量變化時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L577"> src/js/player.js#L577</a></p>
+
+<hr>
+
+<h3 id="waiting-event">等待<code>事件</code></h3>
+
+<blockquote>
+<p>每當媒體開始等待時觸發</p>
+</blockquote>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/player.js#L460"> src/js/player.js#L460</a></p>
+
+<hr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bcl scripts -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+  <script src="/en/scripts/log.js"></script>
+    <script src="/en/scripts/docs-nav-data.min.js"></script>
+    <script src="/en/scripts/bcls-doc-site-v1.js"></script>
+    <script src="/en/scripts/bc-mapi.js"></script>
+    <script translate="no">
+        $(document).foundation();
+    </script>
+    <script type="text/javascript">
+    /******** Any scripts specific to page samples should go here *********/
+  </script>
+    
+    
+	<div style="text-align:center">
+    
+</div>
+
+</body>
+
+</html>

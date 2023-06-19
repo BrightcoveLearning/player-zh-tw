@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>社交媒體外掛程式</title>
+
+  <!-- Open Graph Sharing Metadata -->
+  <meta property="og:site_name" content="Brightcove video" />
+  <meta property="og:title" content="Tiger" />
+  <meta property="og:description" content="tiger video" />
+  <meta property="og:url" content="https://player.support.brightcove.com/plugins/samples/social-media.html" />
+  <meta property="og:image" content="https://player.support.brightcove.com/plugins/samples/assets/images/Tiger_poster.png" />
+  <meta property="og:type" content="video" />
+  <meta property="og:video:width" content="640" />
+  <meta property="og:video:height" content="360" />
+
+  <!-- Twitter: card/meta-tags -->
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:site" content="@username" />
+  <meta name="twitter:title" content="Tiger" />
+  <meta name="twitter:description" content="tiger video" />
+  <meta name="twitter:image" content="https://player.support.brightcove.com/plugins/samples/assets/images/Tiger_poster.png" />
+  <meta name="twitter:player" content="https://players.brightcove.net/1752604059001/0941eb05-4306-4ad8-854a-6869efadd2dc_default/index.html?autoplay=false" />
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+  <meta name="twitter:stream" content="https://player.support.brightcove.com/plugins/samples/social-media.html" />
+  <meta name="twitter:player:stream:content_type" content="video/mp4" />
+
+</head>
+
+<body>
+  <h1>社交媒體示例頁面</h1>
+
+  <div style="max-width: 640px;">
+    <video-js 
+      data-account="1752604059001" 
+      data-player="rklk1S3Zdz" 
+      data-embed="default" 
+      controls="" 
+      data-video-id="3851380732001" 
+      data-playlist-id="" 
+      data-application-id="" 
+      class="vjs-fluid">
+    </video-js>
+  </div>
+  <script src="https://players.brightcove.net/1752604059001/rklk1S3Zdz_default/index.min.js"></script>
+
+  <script type="text/javascript">
+    videojs.getPlayer('myPlayerID').ready(function() {
+      var myPlayer = this,
+      options = {
+        "title": "Tiger",
+        "description": "Video of two tigers",
+        "url": "https://player.support.brightcove.com/plugins/samples/social-media.html",
+        "embedCode": "<iframe src='http://bcove.me/niqx01er'>",
+        "deeplinking": true,
+        "offset": "00:00:05",
+        "services": {
+          "facebook": true,
+          "twitter": true,
+          "tumblr": true,
+          "pinterest": true,
+          "linkedin": true
+        }
+      };
+      myPlayer.social(options);
+    });
+  </script>
+</body>
+
+</html>

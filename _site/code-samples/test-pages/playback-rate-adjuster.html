@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>播放速率調整器</title>
+  <!-- <script src="assets/js/node_modules/@brightcove/player-loader/dist/brightcove-player-loader.min.js"></script> -->
+</head>
+
+<body>
+
+  <!-- Player embed code with an id attribute and muted attribute -->
+  <video-js id="myPlayerID"
+data-video-id="5604123528001"
+data-account="1752604059001"
+data-player="default"
+data-embed="default"
+data-application-id
+width="640" height="360"
+controls muted></video-js>
+  <script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+
+  <script>
+    // +++ Define the middleware function +++
+    // Calculate playback time ranges
+    const createNewRanges = (timeRanges, playbackRate) => {
+      const newRanges = [];
+
+      for (let i = 0; i < timeRanges.length; i++) {
+        newRanges.push([
+          timeRanges.start(i) / playbackRate,
+          timeRanges.end(i) / playbackRate]);
+      }
+
+      return videojs.createTimeRange(newRanges);
+    };
+
+    // Adjust values based on playback rate 
+    const playbackrateAdjuster = function (player) {
+      let tech;
+
+      // Listen for ratechange event 
+      player.on('ratechange', function () {
+        tech.trigger('durationchange');
+        tech.trigger('timeupdate');
+      });
+
+      // Implement setSource() to work with all sources 
+      return {
+        setSource(srcObj, next) {
+          next(null, srcObj);
+        },
+
+        // Store the tech that Video.js gives us after source selection is complete. 
+
+        setTech(newTech) {
+          tech = newTech;
+        },
+
+        // Override methods
+        duration(dur) {
+          return dur / player.playbackRate();
+        },
+
+        currentTime(ct) {
+          return ct / player.playbackRate();
+        },
+
+        setCurrentTime(ct) {
+          return ct * player.playbackRate();
+        },
+
+        buffered(bf) {
+          return createNewRanges(bf, player.playbackRate());
+        },
+
+        seekable(seekable) {
+          return createNewRanges(seekable, player.playbackRate());
+        },
+
+        played(played) {
+          return createNewRanges(played, player.playbackRate());
+        }
+
+      };
+    };
+
+    // +++ Register the middleware with the player +++
+    videojs.use('*', playbackrateAdjuster);
+
+    videojs.getPlayer("myPlayerID").ready(function () {
+      // When the player is ready, get a reference to it
+      var myPlayer = this;
+      // +++ Define the playback rate options +++
+      options = { "playbackRates": [0.5, 1, 1.5, 2, 4] };
+      // +++ Initialize the playback rate button +++
+      myPlayer.controlBar.playbackRateMenuButton = myPlayer.controlBar.addChild('PlaybackRateMenuButton', {
+        playbackRates: options.playbackRates
+      });
+    });
+  </script>
+
+</body>
+
+</html>

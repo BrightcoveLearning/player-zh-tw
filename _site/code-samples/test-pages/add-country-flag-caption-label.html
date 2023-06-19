@@ -1,0 +1,33 @@
+﻿<video-js id="myPlayerID"
+  data-video-id="5993987133001"
+  data-account="1752604059001"
+  data-player="default"
+  data-embed="default"
+  data-application-id=""
+  controls=""
+  width="640" height="380"></video-js>
+<script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+
+<script translate="no">
+  videojs.getPlayer("myPlayerID").ready(function () {
+    var myPlayer = this;
+    myPlayer.on("loadedmetadata", function () {
+      // +++ Retrieve the menu options +++
+      var menuOptions = myPlayer.controlBar.subsCapsButton.menu.children();
+      console.log(menuOptions);
+      // +++ Add flag to each menu option +++
+      menuOptions.forEach(function (item) {
+        if (item.track.language === "de") {
+          item.$(".vjs-menu-item-text").innerHTML = "🇩🇪 " + item.track.label;
+        }
+      });
+
+      menuOptions.forEach(function (item) {
+        if (item.track.language === "en") {
+          item.$(".vjs-menu-item-text").innerHTML = "🇺🇸 " + item.track.label;
+        }
+      });
+    });
+  });
+
+</script>

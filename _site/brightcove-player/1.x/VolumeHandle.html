@@ -1,0 +1,814 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+  <!-- change title to match the h1 heading -->
+  <title>vjs.音量句柄</title>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.css" />
+  <script src="//use.edgefonts.net/source-code-pro.js"></script>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack-extended.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/en/styles/bcls-doc-site.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/atelier-forest.light.min.css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack-extended.min.css">
+
+  <script translate="no">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2728311-23', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/vendor/modernizr.js"></script>
+  </head>
+
+<body>
+	<!-- header navbar -->
+	<div id="navWrapper" class="fixed"></div>
+	<!-- breadcrumbs -->
+	<nav id="breadCrumbWrapper" class="breadcrumbs show-for-medium-up"></nav>
+	<!-- search -->
+	<div id="searchModal" class="reveal-modal" data-reveal></div>
+	<!-- content -->
+    <div class="row">
+        <div class="sidebar large-2 columns show-for-large-up">
+            <div id="sidenav" class="side-nav"></div>
+        </div>
+        <div id="main" class="large-10 small-12 columns">
+      <div id="top" class="section">
+
+<!-- GENERATED FROM SOURCE -->
+<h1>vjs.音量句柄</h1>
+<div class="right"><a href="./index.html">原料藥指數</a></div>
+
+<p><strong>延伸</strong> : <a href="vjs.SliderHandle.html"> vjs.SliderHandle</a><br/><strong>定義於</strong> : <a href="https://github.com/videojs/video.js/blob/master/src/js/control-bar/volume-control.js#L132"> src/js/control-bar/volume-control.js#L132</a>  </p>
+
+<p>可以拖動音量手柄來調節音量大小</p>
+
+<hr>
+
+<div class="section" id="index">
+<h2>指數</h2>
+
+<ul>
+<li><p><a href="#methods">方法</a></p>
+
+<ul>
+<li><a href="#createel-tagname-attributes-">創建El</a></li>
+<li><a href="#addchild-child-options-">添加孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#addclass-classtoadd-">添加類</a><em><code>遺傳</code></em></li>
+<li><a href="#buildcssclass">構建CSS類</a><em><code>遺傳</code></em></li>
+<li><a href="#children">孩子們</a><em><code>遺傳</code></em></li>
+<li><a href="#contentel">內容El</a><em><code>遺傳</code></em></li>
+<li><a href="#dimensions-width-height-">方面</a><em><code>遺傳</code></em></li>
+<li><a href="#disable">禁用</a><em><code>遺傳</code></em></li>
+<li><a href="#dispose">處置</a><em><code>遺傳</code></em></li>
+<li><a href="#el">埃爾</a><em><code>遺傳</code></em></li>
+<li><a href="#getchild-name-">得到孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#getchildbyid-id-">通過 Id 獲取孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#height-num-skiplisteners-">高度</a><em><code>遺傳</code></em></li>
+<li><a href="#hide">隱藏</a><em><code>遺傳</code></em></li>
+<li><a href="#id">ID</a><em><code>遺傳</code></em></li>
+<li><a href="#init-player-options-ready-">在裡面</a><em><code>遺傳</code></em></li>
+<li><a href="#initchildren">初始化孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#name">姓名</a><em><code>遺傳</code></em></li>
+<li><a href="#off-type-fn-">離開</a><em><code>遺傳</code></em></li>
+<li><a href="#on-type-fn-">在</a><em><code>遺傳</code></em></li>
+<li><a href="#one-type-fn-">一</a><em><code>遺傳</code></em></li>
+<li><a href="#options-obj-">選項</a><em><code>遺傳</code></em></li>
+<li><a href="#player">玩家</a><em><code>遺傳</code></em></li>
+<li><a href="#ready-fn-">準備好</a><em><code>遺傳</code></em></li>
+<li><a href="#removechild-component-">刪除孩子</a><em><code>遺傳</code></em></li>
+<li><a href="#removeclass-classtoremove-">移除類</a><em><code>遺傳</code></em></li>
+<li><a href="#show">展示</a><em><code>遺傳</code></em></li>
+<li><a href="#trigger-type-event-">扳機</a><em><code>遺傳</code></em></li>
+<li><a href="#triggerready">觸發就緒</a><em><code>遺傳</code></em></li>
+<li><a href="#width-num-skiplisteners-">寬度</a><em><code>遺傳</code></em></li>
+</ul></li>
+<li><p><a href="#events">事件</a></p>
+
+<ul>
+<li><a href="#resize-event">調整大小</a><em><code>遺傳</code></em></li>
+</ul></li>
+</ul>
+
+<hr>
+
+</div>
+<div class="section" id="methodsSection">
+<h2 id="methods">方法</h2>
+
+<h3 id="addchild-child-options-">添加孩子（孩子，[選項]）</h3>
+
+<blockquote>
+<p>在此組件內添加一個子組件</p>
+
+<pre><code>我的組件.el();
+// -&gt; &lt;div class='my-component'&gt;&lt;/div&gt;
+myComonent.children();
+// [空數組]
+
+var myButton = myComponent.addChild('MyButton');
+// -&gt; &lt;div class='my-component'&gt;&lt;div class="my-button"&gt;myButton&lt;div&gt;&lt;/div&gt;
+// -&gt; myButton === myComonent.children()[0];
+</code></pre>
+
+<p>傳遞子構造函數的選項和子項的子項的選項</p>
+
+<pre><code>var myButton = myComponent.addChild('MyButton', {
+  文本：'按我'，
+  孩子們： {
+    buttonChild 示例：{
+      buttonChildOption: true
+    }
+  }
+}）；
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>孩子</strong><code>字符串|vjs.Component</code>要添加的子項的類名或實例</li>
+<li><strong>選項</strong><code>目的</code><em>（選修的）</em>選項，包括要傳遞給孩子的孩子的選項。</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code>子組件（如果使用了字符串，則由該過程創建）</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L343"> src/js/component.js#L343</a></p>
+
+<hr>
+
+<h3 id="addclass-classtoadd-">添加類（類添加）</h3>
+
+<blockquote>
+<p>將 CSS 類名稱添加到組件的元素</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>添加類</strong><code>細繩</code>要添加的類名</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L628"> src/js/component.js#L628</a></p>
+
+<hr>
+
+<h3 id="buildcssclass">構建CSSClass()</h3>
+
+<blockquote>
+<p>允許子組件堆疊 CSS 類名</p>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>細繩</code>構造的類名</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L471"> src/js/component.js#L471</a></p>
+
+<hr>
+
+<h3 id="children">孩子們（）</h3>
+
+<blockquote>
+<p>獲取所有子組件的數組</p>
+
+<pre><code>VAR 孩子 = 我的成分. 兒童 ();
+</code></pre>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>大批</code>這些孩子</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L277"> src/js/component.js#L277</a></p>
+
+<hr>
+
+<h3 id="contentel">內容El()</h3>
+
+<blockquote>
+<p>返回組件的 DOM 元素以嵌入內容。將是 el_ 或 createEl 中定義的新元素。</p>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>元素</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L220"> src/js/component.js#L220</a></p>
+
+<hr>
+
+<h3 id="createel-tagname-attributes-">createEl( [標籤名稱], [屬性] )</h3>
+
+<blockquote>
+<p>創建組件的 DOM 元素</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>標籤名</strong><code>細繩</code><em>（選修的）</em>元素的節點類型。例如'div'</li>
+<li><strong>屬性</strong><code>目的</code><em>（選修的）</em>應在元素上設置的元素屬性的對象</li>
+</ul>
+
+<p><em>定義於</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/control-bar/volume-control.js#L137"> src/js/control-bar/volume-control.js#L137</a></p>
+
+<hr>
+
+<h3 id="dimensions-width-height-">尺寸（寬度，高度）</h3>
+
+<blockquote>
+<p>同時設置寬度和高度</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>寬度</strong><code>數字|字符串</code> </li>
+<li><strong>高度</strong><code>數字|字符串</code> </li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code>組件</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L737"> src/js/component.js#L737</a></p>
+
+<hr>
+
+<h3 id="disable">禁用（）</h3>
+
+<blockquote>
+<p>通過使其不可顯示來禁用組件</p>
+</blockquote>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L691"> src/js/component.js#L691</a></p>
+
+<hr>
+
+<h3 id="dispose">dispose（）</h3>
+
+<blockquote>
+<p>處置組件和所有子組件</p>
+</blockquote>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L74"> src/js/component.js#L74</a></p>
+
+<hr>
+
+<h3 id="el">el () </h3>
+
+<blockquote>
+<p>獲取組件的 DOM 元素</p>
+
+<pre><code>變種多梅爾 = 我的元件. EL ();
+</code></pre>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>元素</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L201"> src/js/component.js#L201</a></p>
+
+<hr>
+
+<h3 id="getchild-name-">getChild(名字)</h3>
+
+<blockquote>
+<p>返回具有提供名稱的子組件</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>姓名</strong> </li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L311"> src/js/component.js#L311</a></p>
+
+<hr>
+
+<h3 id="getchildbyid-id-">getChildById（id）</h3>
+
+<blockquote>
+<p>返回具有提供的 ID 的子組件</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>ID</strong> </li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L294"> src/js/component.js#L294</a></p>
+
+<hr>
+
+<h3 id="height-num-skiplisteners-">高度( [num], [skipListeners] )</h3>
+
+<blockquote>
+<p>獲取或設置組件的高度（CSS 值）</p>
+
+<p>設置視頻標籤尺寸值僅適用於以像素為單位的值。百分比值將不起作用。可以使用一些百分比，但 width()/height() 將返回數字 + %，而不是實際計算的寬度/高度。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>數</strong><code>數字|字符串</code><em>（選修的）</em>新組件高度</li>
+<li><strong>跳過聽眾</strong><code>布爾值</code><em>（選修的）</em>跳過調整大小事件觸發器</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code>該組件，在設置高度時</li>
+<li><code>數字|字符串</code>高度，當得到</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L726"> src/js/component.js#L726</a></p>
+
+<hr>
+
+<h3 id="hide">隱藏（）</h3>
+
+<blockquote>
+<p>如果當前顯示，則隱藏組件元素</p>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L659"> src/js/component.js#L659</a></p>
+
+<hr>
+
+<h3 id="id">ID（）</h3>
+
+<blockquote>
+<p>獲取組件的 ID</p>
+
+<pre><code>變種 ID = 我的組件. ID ();
+</code></pre>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>字串</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L239"> src/js/component.js#L239</a></p>
+
+<hr>
+
+<h3 id="init-player-options-ready-">初始化（播放器，選項，準備就緒）</h3>
+
+<blockquote>
+<p>該類的構造函數</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>播放器</strong> </li>
+<li><strong>選項</strong> </li>
+<li><strong>準備</strong> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L41"> src/js/component.js#L41</a></p>
+
+<hr>
+
+<h3 id="initchildren">初始化兒童（）</h3>
+
+<blockquote>
+<p>從選項中添加和初始化默認子組件</p>
+
+<pre><code>// 創建 MyComponent 的實例時，選項中的所有子項
+// 將通過它們的名稱字符串和選項添加到實例
+MyComponent.prototype.options_.children = {
+  我的孩子組件：{
+    我的孩子選項：真
+  }
+}
+</code></pre>
+</blockquote>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L439"> src/js/component.js#L439</a></p>
+
+<hr>
+
+<h3 id="name">姓名（）</h3>
+
+<blockquote>
+<p>獲取組件的名稱。該名稱通常用於引用組件。</p>
+
+<pre><code>變種名稱 = 我的組件. 名稱 ();
+</code></pre>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>字串</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L258"> src/js/component.js#L258</a></p>
+
+<hr>
+
+<h3 id="off-type-fn-">關閉（[類型]，[fn]）</h3>
+
+<blockquote>
+<p>從組件的元素中刪除事件偵聽器</p>
+
+<pre><code>我的組件。關閉（「事件名稱」，我的 FUNC）;
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>類型</strong><code>細繩</code><em>（選修的）</em>事件類型。如果沒有類型，它將刪除所有偵聽器。</li>
+<li><strong>fn</strong><code>功能</code><em>（選修的）</em>事件監聽器。沒有 fn 它將刪除一個類型的所有偵聽器。</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L510"> src/js/component.js#L510</a></p>
+
+<hr>
+
+<h3 id="on-type-fn-">on（類型，fn）</h3>
+
+<blockquote>
+<p>向該組件的元素添加一個事件偵聽器</p>
+
+<pre><code>var myFunc = 函數(){
+  var myPlayer = this;
+  // 當事件被觸發時做一些事情
+};
+
+myPlayer.on("事件名稱", myFunc);
+</code></pre>
+
+<p>上下文將是組件。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>類型</strong><code>細繩</code>事件類型，例如“點擊”</li>
+<li><strong>fn</strong><code>功能</code>事件監聽器</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code>自己</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L496"> src/js/component.js#L496</a></p>
+
+<hr>
+
+<h3 id="one-type-fn-">一個（類型，fn）</h3>
+
+<blockquote>
+<p>添加一個只觸發一次然後移除的事件監聽器</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>類型</strong><code>細繩</code>事件類型</li>
+<li><strong>fn</strong><code>功能</code>事件監聽器</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L522"> src/js/component.js#L522</a></p>
+
+<hr>
+
+<h3 id="options-obj-">選項（對象）</h3>
+
+<blockquote>
+<p>選項對象的深度合併</p>
+
+<p>每當一個屬性是兩個選項對像上的一個對象時，這兩個屬性將使用 vjs.obj.deepMerge 合併。</p>
+
+<p>這用於合併子組件的選項。我們希望能夠輕鬆地覆蓋子組件上的各個選項，而不必重寫所有其他默認選項。</p>
+
+<pre><code>父. 原型. 選項 _ = {
+  孩子們： {
+    'childOne': { 'foo': 'bar', 'asdf': 'fdsa' },
+    'childTwo'：{}，
+    'childThree'：{}
+  }
+}
+新選項 = {
+  孩子們： {
+    'childOne': { 'foo': 'baz', 'abc':'123' }
+    'childTwo'：空，
+    'childFour'：{}
+  }
+}
+
+這個。選項（新選項）；
+</code></pre>
+
+<p>結果</p>
+
+<pre>{<code>
+  孩子們： {
+    'childOne': { 'foo': 'baz', 'asdf': 'fdsa', 'abc':'123' },
+    'childTwo': null, // 禁用。不會被初始化。
+    'childThree'：{}，
+    'childFour'：{}
+  }
+}
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>對象</strong><code>目的</code>新選項值的對象</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>目的</code> this.options_ 和 obj 合併的新對象</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L169"> src/js/component.js#L169</a></p>
+
+<hr>
+
+<h3 id="player">玩家（）</h3>
+
+<blockquote>
+<p>返回組件的播放器</p>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.播放器</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L116"> src/js/component.js#L116</a></p>
+
+<hr>
+
+<h3 id="ready-fn-">準備好（fn）</h3>
+
+<blockquote>
+<p>將偵聽器綁定到組件的就緒狀態</p>
+
+<p>與事件偵聽器的不同之處在於，如果就緒事件已經發生，它將立即觸發該功能。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>fn</strong><code>功能</code>準備好的傾聽者</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L581"> src/js/component.js#L581</a></p>
+
+<hr>
+
+<h3 id="removechild-component-">removeChild(組件)</h3>
+
+<blockquote>
+<p>從這個組件的子列表中移除一個子組件，並從這個組件的元素中移除子組件的元素</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>成分</strong><code>vjs.組件</code>要刪除的組件</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L401"> src/js/component.js#L401</a></p>
+
+<hr>
+
+<h3 id="removeclass-classtoremove-">刪除類（類刪除）</h3>
+
+<blockquote>
+<p>從組件的元素中刪除 CSS 類名</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>要刪除的類</strong><code>細繩</code>要刪除的類名</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L639"> src/js/component.js#L639</a></p>
+
+<hr>
+
+<h3 id="show">展示（）</h3>
+
+<blockquote>
+<p>如果隱藏則顯示組件元素</p>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L649"> src/js/component.js#L649</a></p>
+
+<hr>
+
+<h3 id="trigger-type-event-">觸發器（類型，事件）</h3>
+
+<blockquote>
+<p>在元素上觸發事件</p>
+
+<pre><code>myComponent.trigger('eventName');
+</code></pre>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>類型</strong><code>細繩</code>要觸發的事件類型，例如“點擊”</li>
+<li><strong>事件</strong><code>事件|對象</code>要傳遞給偵聽器的事件對象</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code>自己</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L536"> src/js/component.js#L536</a></p>
+
+<hr>
+
+<h3 id="triggerready">觸發就緒（）</h3>
+
+<blockquote>
+<p>觸發準備好的聽眾</p>
+</blockquote>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code> </li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L600"> src/js/component.js#L600</a></p>
+
+<hr>
+
+<h3 id="width-num-skiplisteners-">寬度( [num], skipListeners )</h3>
+
+<blockquote>
+<p>設置或獲取組件的寬度（CSS 值）</p>
+
+<p>設置視頻標籤尺寸值僅適用於以像素為單位的值。百分比值將不起作用。可以使用一些百分比，但 width()/height() 將返回數字 + %，而不是實際計算的寬度/高度。</p>
+</blockquote>
+
+<h5>參數：</h5>
+
+<ul>
+<li><strong>數</strong><code>數字|字符串</code><em>（選修的）</em>可選寬度數</li>
+<li><strong>跳過聽眾</strong><code>布爾值</code>跳過“調整大小”事件觸發器</li>
+</ul>
+
+<h5>退貨：</h5>
+
+<ul>
+<li><code>vjs.組件</code>這個組件，在設置寬度的時候</li>
+<li><code>數字|字符串</code>寬度，當得到</li>
+</ul>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L709"> src/js/component.js#L709</a></p>
+
+<hr>
+
+</div>
+<div class="section" id="eventsSection">
+<h2 id="events">事件</h2>
+
+<h3 id="resize-event">調整大小<code>事件</code></h3>
+
+<blockquote>
+<p>當組件的寬度和/或高度發生變化時觸發</p>
+</blockquote>
+
+<p><em>繼承自</em> : <a href="https://github.com/videojs/video.js/blob/master/src/js/component.js#L816"> src/js/component.js#L816</a></p>
+
+<hr>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bcl scripts -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+  <script src="/en/scripts/log.js"></script>
+    <script src="/en/scripts/docs-nav-data.min.js"></script>
+    <script src="/en/scripts/bcls-doc-site-v1.js"></script>
+    <script src="/en/scripts/bc-mapi.js"></script>
+    <script translate="no">
+        $(document).foundation();
+    </script>
+    <script type="text/javascript">
+    /******** Any scripts specific to page samples should go here *********/
+  </script>
+    
+    
+	<div style="text-align:center">
+    
+</div>
+
+</body>
+
+</html>

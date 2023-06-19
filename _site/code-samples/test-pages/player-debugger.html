@@ -1,0 +1,60 @@
+﻿
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>BC 播放器調試器</title>
+  <style>
+    .video-js {
+      width: 640px;
+      height: 360px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <video-js id="myPlayerID"
+	 data-video-id="4817237857001"
+		data-account="1752604059001"
+		data-player="default"
+		data-embed="default"
+		data-application-id
+		controls
+		height="360" width="640"></video-js>
+  <script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+
+  <!-- IMA styles and script -->
+  <link href="//players.brightcove.net/videojs-ima3/4/videojs.ima3.css" rel="stylesheet">
+  <script src="//players.brightcove.net/videojs-ima3/4/videojs.ima3.min.js"></script>
+
+  <!-- BC Player Debugger styles and script -->
+  <link href="/assets/css/videojs-player-debugger.css" rel="stylesheet">
+  <script src="/assets/js/videojs-player-debugger.min.js"></script>
+
+  <!-- page script -->
+  <script>
+    var myPlayer,
+      options;
+
+    videojs('myPlayerID').ready(function () {
+      myPlayer = this;
+
+      // var myAdUrl = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=";
+      // myPlayer.ima3({
+      //   serverUrl: myAdUrl,
+      //   timeout: 5000,
+      //   debug: true
+      // });
+
+      //options = {"debugAds":true, "logClasses": true, "showPlayerClasses": true };
+      options = { "debugAds": true, "logClasses": true };
+      myPlayer.playerDebugger(options);
+    });
+
+  </script>
+
+</body>
+
+</html>

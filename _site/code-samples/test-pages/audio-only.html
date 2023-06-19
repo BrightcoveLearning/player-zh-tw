@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>純音頻播放器</title>
+  <!-- <link rel="stylesheet" type="text/css" href="https://players.brightcove.net/videojs-custom-endscreen/2/videojs-custom-endscreen.css"> -->
+</head>
+
+<body>
+
+  <div style="max-width: 640px;">
+    <video-js 
+      id="myPlayerID"
+      data-account="1752604059001" 
+      data-player="GjkNfCUHx" 
+      data-embed="default" 
+      controls="" 
+      data-video-id="1730750848976252324" 
+      data-playlist-id="" 
+      data-application-id="" 
+      class="vjs-fluid">
+    </video-js>
+  </div>
+  <script src="https://players.brightcove.net/1752604059001/GjkNfCUHx_default/index.min.js"></script>
+
+
+  <script>
+    videojs.getPlayer('myPlayerID').ready(function() {
+      var myPlayer = this;
+      myPlayer.audioOnlyMode(true);
+      // myPlayer.audioPosterMode(true);
+    });
+  </script> 
+
+</body>
+</html>

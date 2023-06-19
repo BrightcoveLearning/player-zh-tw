@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Brightcove 播放器自定義結束屏幕</title>
+  <link rel="stylesheet" type="text/css" href="https://players.brightcove.net/videojs-custom-endscreen/2/videojs-custom-endscreen.css">
+</head>
+
+<body>
+
+  <!-- <div style="max-width: 960px;">
+    <video-js data-account="1752604059001" data-player="xBYY7vsisQ" data-embed="default" controls="" data-video-id="5811864560001" data-playlist-id="" data-application-id="" class="vjs-fluid"></video-js>
+  </div>
+  <script src="https://players.brightcove.net/1752604059001/xBYY7vsisQ_default/index.min.js"></script> -->
+
+  <video-js id="myPlayerID"
+    data-account="1752604059001"
+    data-player="default"
+    data-embed="default"
+    data-video-id="4077874637001"
+    controls="">
+  </video-js>
+
+  <script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+
+  <script src="https://players.brightcove.net/videojs-custom-endscreen/2/videojs-custom-endscreen.min.js"></script>
+
+  <script>
+    videojs.getPlayer('myPlayerID').ready(function () {
+      var myPlayer = this;
+      myPlayer.customEndscreen({
+        "content": "<strong>Content</strong> for <em>custom</em> end screen"
+      })
+    });
+  </script>
+
+</body>
+
+</html>

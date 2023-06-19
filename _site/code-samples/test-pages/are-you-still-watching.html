@@ -1,0 +1,33 @@
+﻿<link href="//player.support.brightcove.com/assets/css/videojs.afk-monitor.min.css" rel="stylesheet">
+
+<video-js id="myPlayerID"
+  data-video-id="2026627037001"
+  data-account="1752604059001"
+  data-player="default"
+  data-embed="default"
+  data-application-id=""
+  controls=""
+  width="640" height="360"></video-js>
+
+<script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+
+<script src="//player.support.brightcove.com/assets/js/videojs.afk-monitor.min.js"></script>
+
+<script>
+  videojs.getPlayer('myPlayerID').ready(function() {
+  var myPlayer = this;
+  var options = {"showMessageAfter": 1000,"pausePlayerAfter": 1000};
+  myPlayer.AFKMonitor(options);
+});
+</script>
+
+<!-- <video-js id="myPlayerID"
+  data-video-id="2026627037001"
+  data-account="1752604059001"
+  data-player="S1oxIQm7"
+  data-embed="default"
+  data-application-id=""
+  controls=""
+  width="640" height="360"></video-js>
+
+<script src="https://players.brightcove.net/1752604059001/S1oxIQm7_default/index.min.js"></script> -->

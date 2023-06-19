@@ -1,0 +1,12794 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Brightcove Player v5.22.2 類：閃光</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.yeti.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Brightcove 播放器 v5.22.2</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">模塊<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="module-browser.html">瀏覽器</a></li><li><a href="module-buffer.html">緩衝</a></li><li><a href="module-computed-style.html">計算風格</a></li><li><a href="module-dom.html">主場</a></li><li><a href="module-events.html">事件</a></li><li><a href="module-extend.html">延長</a></li><li><a href="module-flash-rtmp.html">閃存-rtmp</a></li><li><a href="module-fn.html">FN</a></li><li><a href="module-Format-time.html">格式化時間</a></li><li><a href="module-guid.html">嚮導</a></li><li><a href="module-log.html">日誌</a></li><li><a href="module-merge-options.html">合併選項</a></li><li><a href="module-obj.html">對象</a></li><li><a href="module-plugins.html">外掛程式</a></li><li><a href="module-setup.html">設置</a></li><li><a href="module-stylesheet.html">樣式表</a></li><li><a href="module-text-track-list-converter.html">文本曲目列表轉換器</a></li><li><a href="module-time-ranges.html">時間範圍</a></li><li><a href="module-to-title-case.html">標題大小寫</a></li><li><a href="module-url.html">網址</a></li><li><a href="module-videojs.html">視頻</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">班級<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="AudioTrack.html">音軌</a></li><li><a href="AudioTrackButton.html">音軌按鈕</a></li><li><a href="AudioTrackList.html">音軌列表</a></li><li><a href="AudioTrackMenuItem.html">音軌菜單項</a></li><li><a href="BigPlayButton.html">大播放按鈕</a></li><li><a href="Button.html">按鈕</a></li><li><a href="CaptionsButton.html">字幕按鈕</a></li><li><a href="CaptionSettingsMenuItem.html">字幕設置菜單項</a></li><li><a href="ChaptersButton.html">章節按鈕</a></li><li><a href="ChaptersTrackMenuItem.html">章節跟踪菜單項</a></li><li><a href="ClickableComponent.html">可點擊組件</a></li><li><a href="CloseButton.html">關閉按鈕</a></li><li><a href="Component.html">成分</a></li><li><a href="ControlBar.html">控制列</a></li><li><a href="CurrentTimeDisplay.html">當前時間顯示</a></li><li><a href="CustomControlSpacer.html">自定義控制墊片</a></li><li><a href="DescriptionsButton.html">描述按鈕</a></li><li><a href="DurationDisplay.html">時長顯示</a></li><li><a href="ErrorDisplay.html">錯誤顯示</a></li><li><a href="EventTarget.html">事件目標</a></li><li><a href="Flash.html">閃光</a></li><li><a href="FullscreenToggle.html">全屏切換</a></li><li><a href="Html5.html">HTML5</a></li><li><a href="HTMLTrackElement.html">HTMLTrack元素</a></li><li><a href="HtmlTrackElementList.html">HTMLTrackElementList</a></li><li><a href="LiveDisplay.html">現場展示</a></li><li><a href="LoadingSpinner.html">加載微調器</a></li><li><a href="LoadProgressBar.html">加載進度條</a></li><li><a href="MediaError.html">媒體錯誤</a></li><li><a href="MediaLoader.html">媒體加載器</a></li><li><a href="Menu.html">菜單</a></li><li><a href="MenuButton.html">菜單按鈕</a></li><li><a href="MenuItem.html">菜單項</a></li><li><a href="ModalDialog.html">模態對話框</a></li><li><a href="module-videojs-videojs.AudioTrack.videojs.AudioTrack.html">視頻〜視頻. 音軌. 視頻.</a></li><li><a href="module-videojs-videojs.EventTarget.videojs.EventTarget.html">視頻〜視頻. 活動文件. 視頻.</a></li><li><a href="module-videojs-videojs.TextTrack.videojs.TextTrack.html">視頻〜視頻. 文本跟踪. 視頻.</a></li><li><a href="module-videojs-videojs.VideoTrack.videojs.VideoTrack.html">視頻〜視頻. 視頻軌道.</a></li><li><a href="MouseTimeDisplay.html">鼠標時間顯示</a></li><li><a href="MuteToggle.html">靜音開關</a></li><li><a href="OffTextTrackMenuItem.html">離文字軌跡功能表項目</a></li><li><a href="PlaybackRateMenuButton.html">播放速率功能表按鈕</a></li><li><a href="PlaybackRateMenuItem.html">播放速率菜單項</a></li><li><a href="Player.html">玩家</a></li><li><a href="PlayProgressBar.html">播放進度條</a></li><li><a href="PlayToggle.html">播放開關</a></li><li><a href="Popup.html">彈出窗口</a></li><li><a href="PopupButton.html">彈出按鈕</a></li><li><a href="PosterImage.html">海報圖片</a></li><li><a href="ProgressControl.html">進度控制</a></li><li><a href="RemainingTimeDisplay.html">剩餘時間顯示</a></li><li><a href="SeekBar.html">搜索欄</a></li><li><a href="Slider.html">滑塊</a></li><li><a href="Spacer.html">墊片</a></li><li><a href="SubtitlesButton.html">字幕按鈕</a></li><li><a href="Tech.html">科技</a></li><li><a href="TextTrack.html">文本軌道</a></li><li><a href="TextTrackButton.html">文本軌道按鈕</a></li><li><a href="TextTrackCueList.html">文字追蹤清單</a></li><li><a href="TextTrackDisplay.html">文本軌道顯示</a></li><li><a href="TextTrackList.html">文本軌道列表</a></li><li><a href="TextTrackMenuItem.html">文字軌跡功能表項目</a></li><li><a href="TextTrackSettings.html">文本軌道設置</a></li><li><a href="TimeDivider.html">分時器</a></li><li><a href="TooltipProgressBar.html">工具提示進度條</a></li><li><a href="Track.html">追踪</a></li><li><a href="TrackButton.html">音軌按鈕</a></li><li><a href="TrackList.html">曲目列表</a></li><li><a href="VideoTrack.html">視頻軌道</a></li><li><a href="VideoTrackList.html">視頻曲目列表</a></li><li><a href="VolumeBar.html">音量條</a></li><li><a href="VolumeControl.html">音量控制</a></li><li><a href="VolumeLevel.html">音量級別</a></li><li><a href="VolumeMenuButton.html">音量菜單按鈕</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">混入<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="module-flash-rtmp-FlashRtmpDecorator.html">閃光 RTMP 〜閃光燈裝飾</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">事件<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li><a href="AudioTrack.html#event:enabledchange">音軌 #事件:啟用變更</a></li><li><a href="AudioTrackList.html#event:addtrack">音軌列表 #事件:新增曲目</a></li><li><a href="AudioTrackList.html#event:change">AudioTrackList#事件：改變</a></li><li><a href="AudioTrackList.html#event:removetrack">音軌列表 #事件:移除</a></li><li><a href="BigPlayButton.html#event:dispose">大播放按鈕 #事件:處置</a></li><li><a href="BigPlayButton.html#event:ready">BigPlayButton#事件：準備就緒</a></li><li><a href="BigPlayButton.html#event:resize">BigPlayButton#事件：調整大小</a></li><li><a href="BigPlayButton.html#event:tap">BigPlayButton#事件：點擊</a></li><li><a href="Button.html#event:dispose">按鈕#event:dispose</a></li><li><a href="Button.html#event:ready">按鈕#event：就緒</a></li><li><a href="Button.html#event:resize">按鈕#event：調整大小</a></li><li><a href="Button.html#event:tap">按鈕#事件：點擊</a></li><li><a href="ClickableComponent.html#event:dispose">可點擊組件 #事件:處置</a></li><li><a href="ClickableComponent.html#event:ready">ClickableComponent#事件：就緒</a></li><li><a href="ClickableComponent.html#event:resize">ClickableComponent#事件：調整大小</a></li><li><a href="ClickableComponent.html#event:tap">ClickableComponent#事件：點擊</a></li><li><a href="CloseButton.html#event:close">關閉按鈕#event:close</a></li><li><a href="CloseButton.html#event:dispose">關閉按鈕#event:dispose</a></li><li><a href="CloseButton.html#event:ready">關閉按鈕#event：準備就緒</a></li><li><a href="CloseButton.html#event:resize">關閉按鈕#event:resize</a></li><li><a href="CloseButton.html#event:tap">關閉按鈕#event:點擊</a></li><li><a href="Component.html#event:dispose">組件#event:dispose</a></li><li><a href="Component.html#event:ready">組件#event：就緒</a></li><li><a href="Component.html#event:resize">組件#event：調整大小</a></li><li><a href="Component.html#event:tap">組件#event:點擊</a></li><li><a href="ControlBar.html#event:dispose">控制欄#事件：處置</a></li><li><a href="ControlBar.html#event:ready">控制欄#event：就緒</a></li><li><a href="ControlBar.html#event:resize">控制欄#事件：調整大小</a></li><li><a href="ControlBar.html#event:tap">控制欄#事件：點擊</a></li><li><a href="CurrentTimeDisplay.html#event:dispose">當前時間顯示#event:dispose</a></li><li><a href="CurrentTimeDisplay.html#event:ready">當前時間顯示#event：就緒</a></li><li><a href="CurrentTimeDisplay.html#event:resize">當前時間顯示#event:resize</a></li><li><a href="CurrentTimeDisplay.html#event:tap">當前時間顯示#event:tap</a></li><li><a href="CustomControlSpacer.html#event:dispose">CustomControlSpacer#事件：處置</a></li><li><a href="CustomControlSpacer.html#event:ready">CustomControlSpacer#事件：準備就緒</a></li><li><a href="CustomControlSpacer.html#event:resize">CustomControlSpacer#事件：調整大小</a></li><li><a href="CustomControlSpacer.html#event:tap">CustomControlSpacer#事件：點擊</a></li><li><a href="DurationDisplay.html#event:dispose">持續時間顯示#event:dispose</a></li><li><a href="DurationDisplay.html#event:ready">持續時間顯示#event：就緒</a></li><li><a href="DurationDisplay.html#event:resize">持續時間顯示#event:resize</a></li><li><a href="DurationDisplay.html#event:tap">持續時間顯示#event:tap</a></li><li><a href="ErrorDisplay.html#event:beforemodalclose">錯誤顯示#event:beforemodalclose</a></li><li><a href="ErrorDisplay.html#event:beforemodalempty">錯誤顯示#event:beforemodalempty</a></li><li><a href="ErrorDisplay.html#event:beforemodalfill">錯誤顯示#event:beforemodalfill</a></li><li><a href="ErrorDisplay.html#event:beforemodalopen">錯誤顯示#event:beforemodalopen</a></li><li><a href="ErrorDisplay.html#event:modalclose">錯誤顯示#event:modalclose</a></li><li><a href="ErrorDisplay.html#event:modalempty">錯誤顯示#event:modalempty</a></li><li><a href="ErrorDisplay.html#event:modalfill">錯誤顯示#event:modalfill</a></li><li><a href="ErrorDisplay.html#event:modalopen">錯誤顯示#event:modalopen</a></li><li><a href="Flash.html#event:audiotrackchange">閃光燈#event:audiotrackchange</a></li><li><a href="Flash.html#event:progress">Flash#事件：進度</a></li><li><a href="Flash.html#event:texttrackchange">閃光燈#event:texttrackchange</a></li><li><a href="Flash.html#event:timeupdate">Flash#事件：時間更新</a></li><li><a href="Flash.html#event:videotrackchange">閃光燈#event:videotrackchange</a></li><li><a href="Flash.html#event:vttjsloaded">Flash#事件：vttjsloaded</a></li><li><a href="FullscreenToggle.html#event:dispose">全屏切換#事件：處置</a></li><li><a href="FullscreenToggle.html#event:ready">全屏切換#事件：準備就緒</a></li><li><a href="FullscreenToggle.html#event:resize">全屏切換#事件：調整大小</a></li><li><a href="FullscreenToggle.html#event:tap">全屏切換#事件：點擊</a></li><li><a href="Html5.html#event:audiotrackchange">事件：音軌更改</a></li><li><a href="Html5.html#event:progress">Html5#事件：進度</a></li><li><a href="Html5.html#event:texttrackchange">Html5#事件：texttrackchange</a></li><li><a href="Html5.html#event:timeupdate">Html5#事件：時間更新</a></li><li><a href="Html5.html#event:videotrackchange">事件：視頻跟踪更改</a></li><li><a href="Html5.html#event:vttjsloaded">Html5#事件：vttjsloaded</a></li><li><a href="LiveDisplay.html#event:dispose">LiveDisplay#事件：處置</a></li><li><a href="LiveDisplay.html#event:ready">LiveDisplay#event：準備就緒</a></li><li><a href="LiveDisplay.html#event:resize">LiveDisplay#事件：調整大小</a></li><li><a href="LiveDisplay.html#event:tap">LiveDisplay#事件：點擊</a></li><li><a href="LoadingSpinner.html#event:dispose">LoadingSpinner#事件：處置</a></li><li><a href="LoadingSpinner.html#event:ready">LoadingSpinner#事件：準備好了</a></li><li><a href="LoadingSpinner.html#event:resize">LoadingSpinner#事件：調整大小</a></li><li><a href="LoadingSpinner.html#event:tap">LoadingSpinner#事件：點擊</a></li><li><a href="LoadProgressBar.html#event:dispose">LoadProgressBar#事件：處置</a></li><li><a href="LoadProgressBar.html#event:ready">加載進度條#事件：準備就緒</a></li><li><a href="LoadProgressBar.html#event:resize">LoadProgressBar#事件：調整大小</a></li><li><a href="LoadProgressBar.html#event:tap">LoadProgressBar#事件：點擊</a></li><li><a href="MediaLoader.html#event:dispose">媒體處理器 #事件:處置</a></li><li><a href="MediaLoader.html#event:ready">MediaLoader#事件：就緒</a></li><li><a href="MediaLoader.html#event:resize">MediaLoader#事件：調整大小</a></li><li><a href="MediaLoader.html#event:tap">MediaLoader#事件：點擊</a></li><li><a href="Menu.html#event:dispose">菜單#event:dispose</a></li><li><a href="Menu.html#event:ready">菜單#event：就緒</a></li><li><a href="Menu.html#event:resize">菜單#event：調整大小</a></li><li><a href="Menu.html#event:tap">菜單#事件：點擊</a></li><li><a href="MenuButton.html#event:dispose">菜單按鈕#event:dispose</a></li><li><a href="MenuButton.html#event:ready">菜單按鈕#event：就緒</a></li><li><a href="MenuButton.html#event:resize">菜單按鈕#事件：調整大小</a></li><li><a href="MenuButton.html#event:tap">菜單按鈕#事件：點擊</a></li><li><a href="MenuItem.html#event:dispose">菜單項#event:dispose</a></li><li><a href="MenuItem.html#event:ready">菜單項#event：就緒</a></li><li><a href="MenuItem.html#event:resize">菜單項#事件：調整大小</a></li><li><a href="MenuItem.html#event:tap">菜單項#事件：點擊</a></li><li><a href="ModalDialog.html#event:beforemodalclose">模式對話框 #事件:不去除關閉</a></li><li><a href="ModalDialog.html#event:beforemodalempty">模式對話框 #事件:不去除空</a></li><li><a href="ModalDialog.html#event:beforemodalfill">模式對話方塊 #事件:使用移除填充</a></li><li><a href="ModalDialog.html#event:beforemodalopen">模式對話方塊 #事件:開放式</a></li><li><a href="ModalDialog.html#event:dispose">模式對話方塊 #事件:處置</a></li><li><a href="ModalDialog.html#event:modalclose">模式對話方塊 #事件:模式關閉</a></li><li><a href="ModalDialog.html#event:modalempty">模式對話框 ＃ 事件：空模式</a></li><li><a href="ModalDialog.html#event:modalfill">模式對話方塊 #事件:模式填充</a></li><li><a href="ModalDialog.html#event:modalopen">模態對話框#event:modalopen</a></li><li><a href="ModalDialog.html#event:ready">ModalDialog#事件：就緒</a></li><li><a href="ModalDialog.html#event:resize">ModalDialog#事件：調整大小</a></li><li><a href="ModalDialog.html#event:tap">ModalDialog#事件：點擊</a></li><li><a href="MouseTimeDisplay.html#event:dispose">鼠標時間顯示#event:dispose</a></li><li><a href="MouseTimeDisplay.html#event:ready">鼠標時間顯示#event:ready</a></li><li><a href="MouseTimeDisplay.html#event:resize">鼠標時間顯示#event:resize</a></li><li><a href="MouseTimeDisplay.html#event:tap">鼠標時間顯示#event:tap</a></li><li><a href="MuteToggle.html#event:dispose">MuteToggle#事件：處置</a></li><li><a href="MuteToggle.html#event:ready">MuteToggle#事件：準備就緒</a></li><li><a href="MuteToggle.html#event:resize">MuteToggle#事件：調整大小</a></li><li><a href="MuteToggle.html#event:tap">MuteToggle#event:點擊</a></li><li><a href="Player.html#event:abort">玩家#事件：中止</a></li><li><a href="Player.html#event:canplay">玩家#event：可以玩</a></li><li><a href="Player.html#event:canplaythrough">玩家#event:canplaythrough</a></li><li><a href="Player.html#event:controlsdisabled">播放器#event:controlsdisabled</a></li><li><a href="Player.html#event:controlsenabled">播放器#event:controlsenabled</a></li><li><a href="Player.html#event:dispose">玩家#event:dispose</a></li><li><a href="Player.html#event:durationchange">玩家#event:durationchange</a></li><li><a href="Player.html#event:emptied">玩家#事件：清空</a></li><li><a href="Player.html#event:ended">玩家#event：結束</a></li><li><a href="Player.html#event:enterFullWindow">播放器#event:enterFullWindow</a></li><li><a href="Player.html#event:error">玩家#事件：錯誤</a></li><li><a href="Player.html#event:exitFullWindow">玩家#event:exitFullWindow</a></li><li><a href="Player.html#event:firstplay">玩家#event:firstplay</a></li><li><a href="Player.html#event:fullscreenchange">播放器#event:fullscreenchange</a></li><li><a href="player_.html#event:loadeddata">播放器#event:loadeddata</a></li><li><a href="Player.html#event:loadeddata">播放器#event:loadeddata</a></li><li><a href="Player.html#event:loadedmetadata">播放器#event:loadedmetadata</a></li><li><a href="Player.html#event:loadstart">播放器#event:loadstart</a></li><li><a href="Player.html#event:pause">播放器#事件：暫停</a></li><li><a href="Player.html#event:play">玩家#event:play</a></li><li><a href="Player.html#event:playing">播放器#event：播放</a></li><li><a href="Player.html#event:posterchange">玩家#event:posterchange</a></li><li><a href="Player.html#event:progress">玩家#event:progress</a></li><li><a href="player_.html#event:ratechange">玩家#event:ratechange</a></li><li><a href="Player.html#event:ready">玩家#event：準備好</a></li><li><a href="Player.html#event:resize">播放器#event：調整大小</a></li><li><a href="Player.html#event:seeked">玩家#event:seeked</a></li><li><a href="Player.html#event:seeking">玩家#event:尋求</a></li><li><a href="Player.html#event:stalled">玩家#event：停滯不前</a></li><li><a href="Player.html#event:suspend">播放器#event：暫停</a></li><li><a href="Player.html#event:tap">玩家#event:點擊</a></li><li><a href="Player.html#event:textdata">播放器#事件：文本數據</a></li><li><a href="player_.html#event:texttrackchange">播放器#event:texttrackchange</a></li><li><a href="player_.html#event:timeupdate">玩家#事件：時間更新</a></li><li><a href="Player.html#event:timeupdate">播放器#event:timeupdate</a></li><li><a href="Player.html#event:useractive">播放器#event:useractive</a></li><li><a href="Player.html#event:userinactive">播放器#event：userinactive</a></li><li><a href="Player.html#event:usingcustomcontrols">播放器#event:usingcustomcontrols</a></li><li><a href="Player.html#event:usingnativecontrols">播放器#event:usingnativecontrols</a></li><li><a href="Player.html#event:volumechange">玩家#event：volumechange</a></li><li><a href="player_.html#event:volumechange">播放器#event：volumechange</a></li><li><a href="Player.html#event:waiting">玩家#事件：等待</a></li><li><a href="PlayProgressBar.html#event:dispose">播放進度條#event:dispose</a></li><li><a href="PlayProgressBar.html#event:ready">播放進度條#event:ready</a></li><li><a href="PlayProgressBar.html#event:resize">播放進度條#事件：調整大小</a></li><li><a href="PlayProgressBar.html#event:tap">播放進度條#event:tap</a></li><li><a href="PlayToggle.html#event:dispose">播放切換 #事件:處置</a></li><li><a href="PlayToggle.html#event:ready">播放切換#事件：準備就緒</a></li><li><a href="PlayToggle.html#event:resize">播放切換#事件：調整大小</a></li><li><a href="PlayToggle.html#event:tap">PlayToggle#event:點擊</a></li><li><a href="Popup.html#event:dispose">彈出#事件：處置</a></li><li><a href="Popup.html#event:ready">彈出#事件：就緒</a></li><li><a href="Popup.html#event:resize">彈出#事件：調整大小</a></li><li><a href="Popup.html#event:tap">彈出#事件：點擊</a></li><li><a href="PopupButton.html#event:dispose">彈出按鈕#event:dispose</a></li><li><a href="PopupButton.html#event:ready">彈出按鈕#事件：準備就緒</a></li><li><a href="PopupButton.html#event:resize">彈出按鈕#事件：調整大小</a></li><li><a href="PopupButton.html#event:tap">彈出按鈕#事件：點擊</a></li><li><a href="PosterImage.html#event:dispose">PosterImage#事件：處置</a></li><li><a href="PosterImage.html#event:ready">海報圖片#event：準備好</a></li><li><a href="PosterImage.html#event:resize">海報圖片#事件：調整大小</a></li><li><a href="PosterImage.html#event:tap">PosterImage#事件：點擊</a></li><li><a href="ProgressControl.html#event:dispose">進度控制#event:dispose</a></li><li><a href="ProgressControl.html#event:ready">ProgressControl#event：就緒</a></li><li><a href="ProgressControl.html#event:resize">ProgressControl#事件：調整大小</a></li><li><a href="ProgressControl.html#event:tap">進度控制#event:tap</a></li><li><a href="RemainingTimeDisplay.html#event:dispose">剩餘時間顯示#event:dispose</a></li><li><a href="RemainingTimeDisplay.html#event:ready">剩餘時間顯示#event:ready</a></li><li><a href="RemainingTimeDisplay.html#event:resize">剩餘時間顯示#event:resize</a></li><li><a href="RemainingTimeDisplay.html#event:tap">剩餘時間顯示#event:tap</a></li><li><a href="SeekBar.html#event:slideractive">搜索欄 ＃ 事件：滑塊激活</a></li><li><a href="SeekBar.html#event:sliderinactive">搜索欄 ＃ 事件：滑塊非活動</a></li><li><a href="Slider.html#event:dispose">滑塊#event：處理</a></li><li><a href="Slider.html#event:ready">滑塊#event：準備好</a></li><li><a href="Slider.html#event:resize">滑塊#event：調整大小</a></li><li><a href="Slider.html#event:slideractive">滑塊#event：slideractive</a></li><li><a href="Slider.html#event:sliderinactive">滑塊#event：sliderinactive</a></li><li><a href="Slider.html#event:tap">滑塊#event：點擊</a></li><li><a href="Spacer.html#event:dispose">墊片#事件：處置</a></li><li><a href="Spacer.html#event:ready">墊片#event：就緒</a></li><li><a href="Spacer.html#event:resize">墊片#event：調整大小</a></li><li><a href="Spacer.html#event:tap">Spacer#event:點擊</a></li><li><a href="Tech.html#event:audiotrackchange">技術#event:audiotrackchange</a></li><li><a href="Tech.html#event:dispose">技術#event:dispose</a></li><li><a href="Tech.html#event:progress">科技#event:progress</a></li><li><a href="Tech.html#event:ready">技術#event：準備就緒</a></li><li><a href="Tech.html#event:resize">技術#事件：調整大小</a></li><li><a href="Tech.html#event:tap">技術#事件：點擊</a></li><li><a href="Tech.html#event:texttrackchange">科技#event:texttrackchange</a></li><li><a href="Tech.html#event:timeupdate">科技#event:timeupdate</a></li><li><a href="Tech.html#event:videotrackchange">技術#event:videotrackchange</a></li><li><a href="Tech.html#event:vttjsloaded">技術#event:vttjsloaded</a></li><li><a href="TextTrack.html#event:modechange">TextTrack#事件：模式改變</a></li><li><a href="TextTrackDisplay.html#event:dispose">文字軌跡顯示 #事件:配置</a></li><li><a href="TextTrackDisplay.html#event:ready">TextTrackDisplay#事件：就緒</a></li><li><a href="TextTrackDisplay.html#event:resize">TextTrackDisplay#事件：調整大小</a></li><li><a href="TextTrackDisplay.html#event:tap">TextTrackDisplay#事件：點擊</a></li><li><a href="TextTrackList.html#event:addtrack">TextTrackList#事件：添加軌道</a></li><li><a href="TextTrackList.html#event:change">TextTrackList#event:改變</a></li><li><a href="TextTrackList.html#event:removetrack">文本軌道列表#event:removetrack</a></li><li><a href="TextTrackSettings.html#event:dispose">文字軌跡設定 #事件:配置</a></li><li><a href="TextTrackSettings.html#event:ready">TextTrackSettings#事件：就緒</a></li><li><a href="TextTrackSettings.html#event:resize">TextTrackSettings#event:調整大小</a></li><li><a href="TextTrackSettings.html#event:tap">TextTrackSettings#event:點擊</a></li><li><a href="TimeDivider.html#event:dispose">時間 #事件:處置</a></li><li><a href="TimeDivider.html#event:ready">TimeDivider#事件：就緒</a></li><li><a href="TimeDivider.html#event:resize">TimeDivider#事件：調整大小</a></li><li><a href="TimeDivider.html#event:tap">TimeDivider#event:點擊</a></li><li><a href="TooltipProgressBar.html#event:dispose">工具提示進度條#event:dispose</a></li><li><a href="TooltipProgressBar.html#event:ready">工具提示進度條#event:ready</a></li><li><a href="TooltipProgressBar.html#event:resize">工具提示進度條#事件：調整大小</a></li><li><a href="TooltipProgressBar.html#event:tap">工具提示進度條#event:tap</a></li><li><a href="TrackList.html#event:addtrack">曲目列表#event:addtrack</a></li><li><a href="TrackList.html#event:change">曲目列表#event:change</a></li><li><a href="TrackList.html#event:removetrack">曲目列表#event:removetrack</a></li><li><a href="VideoTrack.html#event:selectedchange">視頻軌道#event:selectedchange</a></li><li><a href="VideoTrackList.html#event:addtrack">視頻軌道列表#event:addtrack</a></li><li><a href="VideoTrackList.html#event:change">VideoTrackList#event:改變</a></li><li><a href="VideoTrackList.html#event:removetrack">視頻軌道列表#event:removetrack</a></li><li><a href="VolumeBar.html#event:slideractive">音量條#event:slideractive</a></li><li><a href="VolumeBar.html#event:sliderinactive">音量條#event:sliderinactive</a></li><li><a href="VolumeControl.html#event:dispose">音量控制#event:dispose</a></li><li><a href="VolumeControl.html#event:ready">音量控制#event：就緒</a></li><li><a href="VolumeControl.html#event:resize">音量控制#event:resize</a></li><li><a href="VolumeControl.html#event:tap">音量控制#event:tap</a></li><li><a href="VolumeLevel.html#event:dispose">音量級別#event:dispose</a></li><li><a href="VolumeLevel.html#event:ready">音量級別#event：準備就緒</a></li><li><a href="VolumeLevel.html#event:resize">VolumeLevel#事件：調整大小</a></li><li><a href="VolumeLevel.html#event:tap">音量級別#event:點擊</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">全球的<b class="caret"></b></a>
+				<ul class="dropdown-menu inline">
+					<li>activeCues<a href="global.html#activeCues"></a></li><li><a href="global.html#createTrackHelper">創建跟踪助手</a></li><li><a href="global.html#cues">線索</a></li><li><a href="global.html#currentSrc">當前源</a></li><li><a href="global.html#default">默認</a></li><li><a href="global.html#emulateTextTracks">模擬文本軌道</a></li><li><a href="global.html#enabled">啟用</a></li><li><a href="global.html#id">ID</a></li><li><a href="global.html#kind">種類</a></li><li><a href="global.html#label">標籤</a></li><li><a href="global.html#language">語言</a></li><li><a href="global.html#length">長度</a></li><li><a href="global.html#mode">模式</a></li><li><a href="global.html#NONE">沒有任何</a></li><li><a href="global.html#readyState">就緒狀態</a></li><li><a href="global.html#selected">已選擇</a></li><li><a href="global.html#track">追踪</a></li><li><a href="global.html#tryUpdateStyle">嘗試更新樣式</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜尋" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">班級：閃光</h1>
+<section>
+
+<header>
+    
+        <h2>
+        閃光
+        </h2>
+        
+            <div class="class-description"><p>Flash Media Controller - Flash Media API 的包裝器</p></div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="Flash"><span class="type-signature"></span>新的 Flash（[選項]，準備就緒）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建此技術的實例。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>爭論</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>選項</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>播放器選項的鍵/值存儲。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>準備</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Component.html#~ReadyCallback">組件~ReadyCallback</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>回調函數調用時<code>閃光</code>技術準備就緒。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+        <dt class="mixes">混入：</dt>
+
+        <dd class="mixes"><ul>
+        
+            <li>FlashRtmp裝飾器</li>
+        
+            <li>技術~SouceHandlerAdditions</li>
+        
+        </ul></dd>
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">延伸</h3>
+
+        
+
+
+    <ul>
+        <li><a href="Tech.html">科技</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">成員</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id=".formats">
+    <h4 id=".formats"><span class="type-signature">&lt;靜態，常量&gt;</span>格式<span class="type-signature">：目的</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Flash 支持的 MIME 類型。</p>
+    </div>
+    
+
+    
+        <h5>類型：</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">目的</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="featuresFullscreenResize">
+    <h4 id="featuresFullscreenResize"><span class="type-signature"></span>功能全屏調整大小<span class="type-signature">：布爾值</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>布爾值指示是否<code>科技</code>支持全屏調整大小控制。使用請求全屏調整插件大小會重新加載插件</p>
+    </div>
+    
+
+    
+        <h5>類型：</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">布爾值</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#featuresFullscreenResize">技術#featuresFullscreenResize</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="featuresNativeTextTracks">
+    <h4 id="featuresNativeTextTracks"><span class="type-signature"></span> featuresNativeTextTracks <span class="type-signature">：布爾值</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>布爾值指示是否<code>科技</code>支持原生<code>文本軌道</code>秒。這將幫助我們與原生集成<code>文本軌道</code>如果瀏覽器支持它們。</p>
+    </div>
+    
+
+    
+        <h5>類型：</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">布爾值</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#featuresNativeTextTracks">技術#featuresNativeTextTracks</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="featuresPlaybackRate">
+    <h4 id="featuresPlaybackRate"><span class="type-signature"></span>特徵回放率<span class="type-signature">：布爾值</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>布爾值指示是否<code>科技</code>支持更改視頻播放的速度。範例：</p>
+<ul>
+<li>將播放器設置為播放速度的 2 倍（兩倍）</li>
+<li>將播放器設置為 0.5 倍（一半）的播放速度</li>
+</ul>
+    </div>
+    
+
+    
+        <h5>類型：</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">布爾值</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#featuresPlaybackRate">技術#featuresPlaybackRate</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="featuresProgressEvents">
+    <h4 id="featuresProgressEvents"><span class="type-signature"></span>功能進度事件<span class="type-signature">：布爾值</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>布爾值指示是否<code>科技</code>支持<code>進步</code>事件。這目前不是由 video-js-swf 觸發的。這將用於確定是否<a href="Tech.html#manualProgressOn">技術#manualProgressOn</a>應該被調用。</p>
+    </div>
+    
+
+    
+        <h5>類型：</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">布爾值</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#featuresProgressEvents">科技#featuresProgressEvents</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="featuresTimeupdateEvents">
+    <h4 id="featuresTimeupdateEvents"><span class="type-signature"></span>功能時間更新事件<span class="type-signature">：布爾值</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>布爾值指示是否<code>科技</code>支持<code>時間更新</code>事件。這目前不是由 video-js-swf 觸發的。這將用於確定是否應調用 Tech#manualTimeUpdates。</p>
+    </div>
+    
+
+    
+        <h5>類型：</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">布爾值</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#featuresTimeupdateEvents">技術#featuresTimeupdateEvents</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="featuresVolumeControl">
+    <h4 id="featuresVolumeControl"><span class="type-signature"></span>功能音量控制<span class="type-signature">：布爾值</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>布爾值指示是否<code>科技</code>支持音量控制。</p>
+    </div>
+    
+
+    
+        <h5>類型：</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">布爾值</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#featuresVolumeControl">技術#featuresVolumeControl</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+	<dt class="tag-default method-doc-label method-doc-details-label">默認值：</dt>
+	<dd class="tag-default">
+		<ul class="dummy">
+			<li>真正</li>
+		</ul>
+	</dd>
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">方法</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".checkReady"><span class="type-signature">&lt;靜態&gt;</span>檢查就緒（技術）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>SWF 並不總是像它說的那樣準備就緒。有時仍然需要將 API 函數添加到對像中。如果它還沒有準備好，我們會設置一個超時來很快再次檢查。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>技術</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Flash.html">閃光</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要檢查的閃存技術的實例。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".embed"><span class="type-signature">&lt;靜態&gt;</span>嵌入（swf、flashVars、參數、屬性）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>僅用於非 iframe 嵌入。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>瑞士法郎</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>videojs-swf 對象。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>閃存變量</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>用作閃存選項變量的名稱和值。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>參數</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要在對像上設置的樣式參數。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>屬性</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要在元素上設置的屬性。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>嵌入的 Flash DOM 元素。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">元素</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".getEmbedCode"><span class="type-signature">&lt;靜態&gt;</span> getEmbedCode（swf、flashVars、參數、屬性）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>僅用於非 iframe 嵌入。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>瑞士法郎</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>videojs-swf 對象。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>閃存變量</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>用作閃存選項變量的名稱和值。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>參數</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要在對像上設置的樣式參數。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>屬性</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要在元素上設置的屬性。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>嵌入的 Flash DOM 元素。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">元素</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".isSupported"><span class="type-signature">&lt;靜態&gt;</span>支持（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>檢查當前是否支持 Flash 技術。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>如果支持閃存技術則為真。<pre class="prettyprint source"><code>-否則為假。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".onError"><span class="type-signature">&lt;靜態&gt;</span> onError(swfID, The)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>在 Flash 技術上記錄來自 swf 的錯誤。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>瑞士法郎</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>出現錯誤的 swf 的 ID。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>這</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>error string 要在 Flash Tech 上設置的錯誤。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>當 err 為 'srcnotfound' 時返回 MediaError<pre class="prettyprint source"><code>- 否則返回未定義。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="MediaError.html">媒體錯誤</a></span> | <span class="param-type">不明確的</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".onEvent"><span class="type-signature">&lt;靜態&gt;</span> onEvent(swfID, 事件名稱)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>從 Flash Tech 上的 swf 觸發事件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>瑞士法郎</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>發生事件的 swf 的 ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>事件名稱</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要觸發的事件的名稱</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".onReady"><span class="type-signature">&lt;靜態&gt;</span> onReady()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>當 swf“準備好”時調用，並使用 Flash#checkReady 確保 swf 確實準備好</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".version"><span class="type-signature">&lt;靜態&gt;</span>版本（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取頁面上正在使用的當前 Flash 版本。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>一系列可用的版本。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">大批</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addRemoteTextTrack"><span class="type-signature"></span> addRemoteTextTrack（選項 [，manualCleanup]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建一個遠程文本軌道對象並返回一個 html 軌道元素。</p>
+<blockquote>
+<p>注意：這可以是一個模擬<a href="HTMLTrackElement.html">HTMLTrack元素</a>或本地人。</p>
+</blockquote>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>爭論</th>
+        
+
+        
+        <th>預設</th>
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>選項</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>看<a href="Tech.html#createRemoteTextTrack">技術#createRemoteTextTrack</a>更詳細的屬性。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>手動清理</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布爾值</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    真正
+                
+                </td>
+            
+
+            <td class="description last"><ul>
+<li>當為 false 時：TextTrack 將自動從視頻中移除<pre class="prettyprint source"><code>每當源更改時的元素
+ - 為真時：必須手動清理 TextTrack</code></pre></li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#addRemoteTextTrack">技術#addRemoteTextTrack</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+	<dt class="important tag-deprecated method-doc-label method-doc-details-label">棄用：</dt>
+	
+    <dd>
+        <ul class="dummy">
+            <li>此函數的默認功能將等同於將來的“manualCleanup=false”。manualCleanup 參數也將被刪除。</li>
+        </ul>
+    </dd>
+    
+    
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>一個 Html 軌道元素。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="HTMLTrackElement.html">HTMLTrack元素</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addTextTrack"><span class="type-signature"></span> addTextTrack（種類[，標籤] [，語言]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建並返回一個遙控器<a href="TextTrack.html">文本軌道</a>目的。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>爭論</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>種類</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p><code>文本軌道</code>種類（字幕、說明、描述、章節或元數據）</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>標籤</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>標識文本軌道的標籤</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>語言</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>兩個字母的語言縮寫</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#addTextTrack">技術#addTextTrack</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>創建的 TextTrack。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="TextTrack.html">文本軌道</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addWebVttScript_"><span class="type-signature"></span>添加網站腳本 _ ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>如有必要，使用 vtt.js 模擬 TextTracks</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#addWebVttScript_">技術#addWebVttScript_</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>火災：</h5>
+    <ul>
+        <li><a href="Tech.html#event:vttjsloaded">技術#event:vttjsloaded</a></li>
+    
+        <li>技術#事件：vttjserror</li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="audioTracks"><span class="type-signature"></span>音軌()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>得到<code>科技</code>秒<a href="AudioTrackList.html">音軌列表</a> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#audioTracks">技術#audioTracks</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>Tech 當前正在使用的音軌列表。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="AudioTrackList.html">音軌列表</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="autoplay"><span class="type-signature"></span>自動播放（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>自動播放</code>來自瑞士法郎。<code>自動播放</code>指示媒體應在頁面準備就緒後立即開始播放。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>的價值<code>自動播放</code>來自瑞士法郎。<pre class="prettyprint source"><code>- True 表示媒體應在頁面加載後立即啟動。
+  - False 表示媒體不應在頁面加載後立即啟動。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="buffered"><span class="type-signature"></span>緩衝的（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取並創建一個<code>時間範圍</code>用於緩衝的對象。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+    <dt class="tag-overrides">覆蓋：</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Tech.html#buffered">技術#緩衝</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>創建的時間範圍對象。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">時間範圍</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="bufferedPercent"><span class="type-signature"></span>緩衝百分比（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取當前緩衝的當前視頻的百分比。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#bufferedPercent">技術#bufferedPercent</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>一個從 0 到 1 的數字，表示緩衝視頻的小數百分比。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="cleanupAutoTextTracks"><span class="type-signature"></span>清理自動文字軌跡 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>刪除通過 addRemoteTextTrack 添加的任何標記為自動垃圾收集的 TextTrack</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#cleanupAutoTextTracks">技術#cleanupAutoTextTracks</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="clearTracks"><span class="type-signature"></span>清除軌道（類型）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>清除單個<code>曲目列表</code>或數組<code>曲目列表</code>給出了他們的名字。</p>
+<blockquote>
+<p>注意：沒有源處理程序的技術人員應該在源之間調用它<code>視頻</code> &amp; <code>聲音的</code>軌道。你不想在曲目之間使用它們！</p>
+</blockquote>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>類型</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數組.&lt;字符串&gt;</span> | <span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要清除的 TrackList 名稱，有效名稱是<code>視頻</code> , <code>聲音的</code>， 和<code>文本</code> .</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#clearTracks">技術#clearTracks</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="controller"><span class="type-signature"></span>控制器（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>控制器</code>來自瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>當前值<code>控制器</code>在瑞士法郎。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">細繩</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="controls"><span class="type-signature"></span>控制（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>控制</code>來自瑞士法郎。<code>控制</code>指示應顯示還是隱藏本機 Flash 控件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>的價值<code>控制</code>來自瑞士法郎。<pre class="prettyprint source"><code>- True 表示應顯示本機控件。
+  - False 表示應隱藏本機控件。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="controls"><span class="type-signature"></span>控制（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>控制</code>來自瑞士法郎。<code>控制</code>指示應顯示還是隱藏本機 Flash 控件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>的價值<code>控制</code>來自瑞士法郎。<pre class="prettyprint source"><code>- True 表示應顯示本機控件。
+  - False 表示應隱藏本機控件。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="createEl"><span class="type-signature"></span>創建El()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建<code>閃光</code> Tech 的 DOM 元素。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>被創建的元素。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">元素</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="createRemoteTextTrack"><span class="type-signature"></span> createRemoteTextTrack（選項）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>創建一個模擬的 TextTrack 以供 addRemoteTextTrack 使用</p>
+<p>這旨在被繼承自 Tech 的類覆蓋，以創建本機或自定義 TextTrack。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>選項</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">目的</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>該對象應包含用於初始化 TextTrack 的選項。</p>
+                <h6 class="method-params-label method-subparams-label">性質</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>爭論</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>種類</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p><code>文本軌道</code>種類（字幕、說明、說明、章節或元數據）。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>標籤</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>標識文本軌道的標籤</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>語言</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>兩個字母的語言縮寫。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#createRemoteTextTrack">技術#createRemoteTextTrack</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>創建的軌道元素。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="HTMLTrackElement.html">HTMLTrack元素</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="currentTime"><span class="type-signature"></span>當前時間（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取當前播放時間，單位秒</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>當前播放時間，以秒為單位。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="defaultMuted"><span class="type-signature"></span>默認靜音（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>默認靜音</code>來自瑞士法郎。<code>默認靜音</code>指示媒體是否應以靜音方式開始。僅更改媒體的默認狀態。<code>靜音</code>和<code>默認靜音</code>可以有不同的值。<code>靜音</code>指示當前狀態。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>的價值<code>默認靜音</code>來自瑞士法郎。<pre class="prettyprint source"><code>- True 表示媒體應該開始靜音。
+  - False 表示媒體不應以靜音方式啟動。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="defaultPlaybackRate"><span class="type-signature"></span>默認播放速率()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>默認播放速率</code>來自瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>當前值<code>默認播放速率</code>在瑞士法郎。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="dispose"><span class="type-signature"></span>處置（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>關閉所有事件 polyfill，清除<code>科技</code>秒<a href="AudioTrackList.html">音軌列表</a> , <a href="VideoTrackList.html">視頻曲目列表</a>， 和<a href="TextTrackList.html">文本軌道列表</a>，並處置該技術。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#dispose">技術#dispose</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>火災：</h5>
+    <ul>
+        <li><a href="Component.html#event:dispose">組件#event:dispose</a></li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="duration"><span class="type-signature"></span>期間（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取當前媒體的總時長。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>8 當前媒體的總持續時間。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="ended"><span class="type-signature"></span>結束（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>結束</code>來自瑞士法郎。<code>結束</code>指示媒體是否已到達末尾。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://www.w3.org/TR/html5/embedded-content-0.html#dom-media-ended">規格</a></p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>True 表示媒體已經結束。<pre class="prettyprint source"><code>- False 表示媒體還沒有結束。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="enterFullScreen"><span class="type-signature"></span>進入全屏()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Flash 不允許通過 javascript 全屏，所以這總是返回 false。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>Flash 技術不支持全屏，所以它總是返回 false。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="error"><span class="type-signature"></span>錯誤（[錯誤]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取或設置技術錯誤。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>爭論</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>呃</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="MediaError.html">媒體錯誤</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>技術設置錯誤</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#error">技術#error</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>技術上的當前錯誤對象，如果沒有則為 null。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="MediaError.html">媒體錯誤</a></span> | <span class="param-type">無效的</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getVideoPlaybackQuality"><span class="type-signature"></span>獲取視頻播放質量（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取由 W3C 的媒體播放質量 API 指定的可用媒體播放質量指標。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+    <dt class="tag-overrides">覆蓋：</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Tech.html#getVideoPlaybackQuality">技術#getVideoPlaybackQuality</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><p><a href="https://wicg.github.io/media-playback-quality">規格</a></p></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>具有支持的媒體播放質量指標的對象</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">目的</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="initialTime"><span class="type-signature"></span>初始時間()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>初始時間</code>來自瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>這<code>初始時間</code>瑞士法郎的財產。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="initTextTrackListeners"><span class="type-signature"></span>伊特文本跟踪監聽器（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>打開監聽器<a href="TextTrackList.html">文本軌道列表</a>事件。這為 EventTarget~EventListeners 添加了<code>文本軌道變化</code> , <code>添加音軌</code>和<code>刪除軌道</code> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#initTextTrackListeners">技術#initTextTrackListeners</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>火災：</h5>
+    <ul>
+        <li><a href="Tech.html#event:texttrackchange">科技#event:texttrackchange</a></li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="initTrackListeners"><span class="type-signature"></span>起動軌道監聽器（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>打開監聽器<a href="VideoTrackList.html">視頻曲目列表</a>和 {AudioTrackList 事件。這為 EventTarget~EventListeners 添加了<code>添加音軌</code>， 和<code>刪除軌道</code> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#initTrackListeners">技術#initTrackListeners</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>火災：</h5>
+    <ul>
+        <li><a href="Tech.html#event:audiotrackchange">技術#event:audiotrackchange</a></li>
+    
+        <li><a href="Tech.html#event:videotrackchange">技術#event:videotrackchange</a></li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="load"><span class="type-signature"></span>加載（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>將媒體加載到技術中。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="loop"><span class="type-signature"></span>環形（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>環形</code>來自瑞士法郎。<code>環形</code>指示媒體應返回到媒體的開頭並在到達結尾後繼續播放。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>的價值<code>環形</code>來自瑞士法郎。<pre class="prettyprint source"><code>- True 表示播放應該重新開始一次
+    到達媒體的結尾。
+  - False 表示播放不應該循環回到開始時
+    到達媒體的末端。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="manualProgressOff"><span class="type-signature"></span>手動進度 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>關閉 polyfill <code>進步</code>創建的事件<a href="Tech.html#manualProgressOn">技術#manualProgressOn</a></p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#manualProgressOff">技術#manualProgressOff</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="manualProgressOn"><span class="type-signature"></span>手动进步 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Polyfill 的<code>進步</code>適用於本機不支持它的瀏覽器的事件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#manualProgressOn">技術#manualProgressOn</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Tech.html#trackProgress">科技#trackProgress</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="manualTimeUpdatesOff"><span class="type-signature"></span>手動更新軟件（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>關閉 polyfill <code>時間更新</code>創建的事件<a href="Tech.html#manualTimeUpdatesOn">技術#manualTimeUpdatesOn</a></p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#manualTimeUpdatesOff">技術#manualTimeUpdatesOff</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="manualTimeUpdatesOn"><span class="type-signature"></span>手動時間更新（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Polyfill 的<code>時間更新</code>不支持它的瀏覽器的事件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#manualTimeUpdatesOn">技術#manualTimeUpdatesOn</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">請參閱：</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="Tech.html#trackCurrentTime">科技#trackCurrentTime</a></li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="mediaGroup"><span class="type-signature"></span>媒體組（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>媒體集團</code>來自瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>當前值<code>媒體集團</code>在瑞士法郎。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">細繩</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="muted"><span class="type-signature"></span>靜音（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>靜音</code>來自瑞士法郎。<code>靜音</code>指示當前音頻級別應該是無聲的。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>如果音頻應設置為靜音，則為真<pre class="prettyprint source"><code>-否則為假</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="networkState"><span class="type-signature"></span>網絡狀態()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>網絡狀態</code>來自瑞士法郎。<code>網絡狀態</code>指示當前網絡狀態。它從以下列表返回一個枚舉：</p>
+<ul>
+<li>0：NETWORK_EMPTY</li>
+<li>1：NEWORK_IDLE</li>
+<li>2：網絡加載</li>
+<li>3：NETWORK_NO_SOURCE</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>的價值<code>網絡狀態</code>來自瑞士法郎。這將是描述中列表中的一個數字。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="onDurationChange"><span class="type-signature"></span> onDurationChange(事件)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>更新我們的內部持續時間<code>持續時間變化</code>通過調用 Tech#duration 事件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>事件</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>這<code>持續時間變化</code>導致此運行的事件。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#onDurationChange">技術#onDurationChange</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li>科技#event:durationchange</li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="pause"><span class="type-signature"></span>暫停（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>呼叫者<a href="Player.html#pause">播放器#暫停</a>暫停使用<code>閃光</code><code>科技</code> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="paused"><span class="type-signature"></span>暫停（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>暫停</code>來自瑞士法郎。<code>暫停</code>指示 swf 當前是否已暫停。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>的價值<code>暫停</code>來自瑞士法郎。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="play"><span class="type-signature"></span>玩（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>呼叫者<a href="Player.html#play">玩家#play</a>使用<code>閃光</code><code>科技</code> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="playbackRate"><span class="type-signature"></span>回放率()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>回放率</code>來自瑞士法郎。<code>回放率</code>指示媒體當前播放的速率。範例：</p>
+<ul>
+<li>如果 playbackRate 設置為 2，媒體將以兩倍的速度播放。</li>
+<li>如果 playbackRate 設置為 0.5，媒體播放速度將減半。</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>的價值<code>回放率</code>來自瑞士法郎。一個數字，表示媒體的當前播放速度，其中 1 是正常速度。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="played"><span class="type-signature"></span>播放()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>返回<code>時間範圍</code>已為當前源播放過的 s。</p>
+<blockquote>
+<p>注意：這個實現是不完整的。它不跟踪播放<code>時間範圍</code> .它只檢查源是否播放過。</p>
+</blockquote>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#played">技術#played</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>單個時間範圍（如果該視頻已播放）<pre class="prettyprint source"><code>- 如果不是，則為一組空範圍。</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">時間範圍</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="playsinline"><span class="type-signature">&lt;摘要&gt;</span>播放內聯（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>一種檢查“playsinine”是否存在的方法 <video> 屬性。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#playsinline">技術#playsinline</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="poster"><span class="type-signature"></span>海報（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取在技術上設置的海報圖像。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="preload"><span class="type-signature"></span>預加載（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>預加載</code>來自瑞士法郎。<code>預加載</code>指示在與媒體交互之前應該下載什麼。它可以具有以下值：</p>
+<ul>
+<li>無：不應下載任何內容</li>
+<li>元數據：可以下載海報和媒體的前幾幀以獲得媒體尺寸和其他元數據</li>
+<li>auto：允許在交互之前下載媒體和媒體的元數據</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>的價值<code>預加載</code>來自瑞士法郎。將是“無”、“元數據”或“自動”。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">細繩</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="readyState"><span class="type-signature"></span>就緒狀態()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>就緒狀態</code>來自瑞士法郎。<code>就緒狀態</code>指示媒體元素的當前狀態。它從以下列表返回一個枚舉：</p>
+<ul>
+<li>0：一無所有</li>
+<li>1：有_元數據</li>
+<li>2：有_CURRENT_DATA</li>
+<li>3：有_FUTURE_DATA</li>
+<li>4：有_ENOUGH_DATA</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>的價值<code>就緒狀態</code>來自瑞士法郎。這將是描述中列表中的一個數字。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="readyState"><span class="type-signature"></span>就緒狀態()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>就緒狀態</code>來自瑞士法郎。<code>就緒狀態</code>指示媒體元素的當前狀態。它從以下列表返回一個枚舉：</p>
+<ul>
+<li>0：一無所有</li>
+<li>1：有_元數據</li>
+<li>2：有_CURRENT_DATA</li>
+<li>3：有_FUTURE_DATA</li>
+<li>4：有_ENOUGH_DATA</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>的價值<code>就緒狀態</code>來自瑞士法郎。這將是描述中列表中的一個數字。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="remoteTextTrackEls"><span class="type-signature"></span>遠端文字軌跡 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>得到<code>科技</code> s {HTMLTrackElementList}，它們是 DOM 中用作 TextTrack 的元素。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#remoteTextTrackEls">技術#remoteTextTrackEls</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>技術存在的當前 HTML 軌道元素。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">HTML 追蹤清單</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="remoteTextTracks"><span class="type-signature"></span>遠程文本軌道()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>得到<code>科技</code>遙控器<a href="TextTrackList.html">文本軌道列表</a>，它是從添加到 DOM 的元素創建的。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#remoteTextTracks">科技#remoteTextTracks</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>Tech 當前正在使用的遠程文本軌道列表。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="TextTrackList.html">文本軌道列表</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeRemoteTextTrack"><span class="type-signature"></span> removeRemoteTextTrack（軌道）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>從遙控器中刪除遠程文本軌道<code>文本軌道列表</code> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>追踪</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="TextTrack.html">文本軌道</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p><code>文本軌道</code>從中刪除<code>文本軌道列表</code></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#removeRemoteTextTrack">技術#removeRemoteTextTrack</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="reset"><span class="type-signature">&lt;摘要&gt;</span>重置（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>重置技術，這將刪除所有源並重置內部 readyState。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#reset">技術#reset</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="rtmpConnection"><span class="type-signature"></span> rtmp連接()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>rtmp連接</code>來自瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>當前值<code>rtmp連接</code>在瑞士法郎。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">細繩</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="rtmpStream"><span class="type-signature"></span> RTMP 流 ()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>rtmp流</code>來自瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>當前值<code>rtmp流</code>在瑞士法郎。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">細繩</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="seekable"><span class="type-signature"></span>可搜索（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>確定可以在媒體中搜索到的時間範圍。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>返回可以搜索到的時間範圍。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">時間範圍</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="seeking"><span class="type-signature"></span>求()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>指示媒體當前是否正在尋找新位置。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>如果尋求新職位，則為真<pre class="prettyprint source"><code>-否則為假</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setAutoplay"><span class="type-signature"></span>設置自動播放（自動播放）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>自動播放</code>在瑞士法郎。<code>自動播放</code>指示媒體應在頁面準備就緒後立即開始播放。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>自動播放</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布爾值</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><ul>
+<li>的價值<code>自動播放</code>來自瑞士法郎。<pre class="prettyprint source"><code>- True 表示媒體應在頁面加載後立即啟動。
+ - False 表示媒體不應在頁面加載後立即啟動。</code></pre></li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setController"><span class="type-signature"></span>設置控制器（控制器）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>控制器</code>在瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>控制器</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>新值 當前值<code>控制器</code>在瑞士法郎。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setCurrentTime"><span class="type-signature"></span>設置當前時間（時間）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>返回媒體播放的當前時間（以秒為單位）。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>時間</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>媒體的當前播放時間（以秒為單位）。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+    <dt class="tag-overrides">覆蓋：</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Tech.html#setCurrentTime">科技#setCurrentTime</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setDefaultMuted"><span class="type-signature"></span>設置默認靜音（默認靜音）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>默認靜音</code>在瑞士法郎。<code>默認靜音</code>指示媒體是否應以靜音方式開始。僅更改媒體的默認狀態。<code>靜音</code>和<code>默認靜音</code>可以有不同的值。<code>靜音</code>指示當前狀態。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>默認靜音</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布爾值</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><ul>
+<li>True 表示媒體應該開始靜音。<pre class="prettyprint source"><code>- False 表示媒體不應以靜音方式啟動。</code></pre></li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setDefaultPlaybackRate"><span class="type-signature"></span>設定預設播放回率 (預設播放回率)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>默認播放速率</code>在瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>默認播放速率</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要設置的新值<code>默認播放速率</code>財產到。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setLoop"><span class="type-signature"></span>設置循環（循環）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>環形</code>在瑞士法郎。<code>環形</code>指示媒體應返回到媒體的開頭並在到達結尾後繼續播放。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>迴圈</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布爾值</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><ul>
+<li>True 表示播放應該回頭開始一次<pre class="prettyprint source"><code>到達媒體的結尾。
+ - False 表示播放不應該循環回到開始時
+   到達媒體的末端。</code></pre></li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setMediaGroup"><span class="type-signature"></span> setMediaGroup（媒體組）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>媒體集團</code>在瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>媒體集團</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>的新價值<code>媒體集團</code>設置在瑞士法郎。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setMuted"><span class="type-signature"></span>設置靜音（靜音）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>靜音</code>在瑞士法郎。<code>靜音</code>指示當前音頻級別應為無聲。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>靜音</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">布爾值</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><ul>
+<li>如果音頻應設置為靜音，則為真<pre class="prettyprint source"><code>-否則為假</code></pre></li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setPlaybackRate"><span class="type-signature"></span> setPlaybackRate(播放率)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>回放率</code>在瑞士法郎。<code>回放率</code>指示媒體當前播放的速率。範例：</p>
+<ul>
+<li>如果 playbackRate 設置為 2，媒體將以兩倍的速度播放。</li>
+<li>如果 playbackRate 設置為 0.5，媒體播放速度將減半。</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>回放率</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>的新價值<code>回放率</code>在瑞士法郎。一個數字，表示媒體的當前播放速度，其中 1 是正常速度。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setPlaysinline"><span class="type-signature">&lt;摘要&gt;</span> setPlaysinline()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置或取消設置“playsinine”的方法 <video> 屬性。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#setPlaysinline">技術#setPlaysinline</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setPoster"><span class="type-signature"></span>設置海報()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>海報圖片不是由 Flash 技術處理的，所以這是一個空操作。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+    <dt class="tag-overrides">覆蓋：</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Tech.html#setPoster">技術#setPoster</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setPreload"><span class="type-signature"></span> setPreload（預加載）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>預加載</code>在瑞士法郎。<code>預加載</code>指示在與媒體交互之前應該下載什麼。它可以具有以下值：</p>
+<ul>
+<li>無：不應下載任何內容</li>
+<li>元數據：可以下載海報和媒體的前幾幀以獲得媒體尺寸和其他元數據</li>
+<li>auto：允許在交互之前下載媒體和媒體的元數據</li>
+</ul>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>預先載入</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>的價值<code>預加載</code>設置在瑞士法郎。應該是“無”、“元數據”或“自動”。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setRtmpConnection"><span class="type-signature"></span>安裝 TP 連接 (RTMP 連接)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>rtmp連接</code>在瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rtmp連接</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要設置的新值<code>rtmp連接</code>財產到。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setRtmpStream"><span class="type-signature"></span> setRtmpStream（rtmpStream）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>rtmp流</code>在瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rtmp流</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>要設置的新值<code>rtmp流</code>財產到。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setSrc"><span class="type-signature"></span>設置源（[源]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>的吸氣劑/吸氣劑<code>閃光</code> Tech 的源對象。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>爭論</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>來源</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Tech.html#~SourceObject">科技~SourceObject</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>您要在<code>閃光</code>技術人員。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>未傳入源時的當前源對象。<pre class="prettyprint source"><code>- 設置時未定義</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tech.html#~SourceObject">科技~SourceObject</a></span> | <span class="param-type">不明確的</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setVolume"><span class="type-signature"></span>設定音量（百分比十進制）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置值<code>體積</code>在瑞士法郎。<code>體積</code>以十進制形式的百分比表示當前音頻電平。這意味著 1 是 100%，0.5 是 50%，依此類推。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>小數百分比</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">數字</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>小數形式的體積百分比。值將在 0-1 之間。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="src"><span class="type-signature"></span>來源（[來源]）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>的吸氣劑/吸氣劑<code>閃光</code> Tech 的源對象。</p>
+<blockquote>
+<p>注意：請使用 Flash#setSource</p>
+</blockquote>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+        <th>爭論</th>
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>來源</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Tech.html#~SourceObject">科技~SourceObject</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;可選&gt; <br/>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>您要在<code>閃光</code>技術人員。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+	<dt class="important tag-deprecated method-doc-label method-doc-details-label">棄用：</dt>
+	
+    <dd>
+        <ul class="dummy">
+            <li>從第 5 版開始。</li>
+        </ul>
+    </dd>
+    
+    
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <ul>
+<li>未傳入源時的當前源對象。<pre class="prettyprint source"><code>- 設置時未定義</code></pre></li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="Tech.html#~SourceObject">科技~SourceObject</a></span> | <span class="param-type">不明確的</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="startOffsetTime"><span class="type-signature"></span>開始偏移時間()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>開始偏移時間</code>來自瑞士法郎。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>這<code>開始偏移時間</code>瑞士法郎的財產。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="stopTrackingCurrentTime"><span class="type-signature"></span>停止跟踪當前時間()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>停止創建的區間函數<a href="Tech.html#trackCurrentTime">科技#trackCurrentTime</a>所以這樣<code>時間更新</code>不再觸發事件。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#stopTrackingCurrentTime">科技#stopTrackingCurrentTime</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li>{技術#event:暫停}</li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="stopTrackingProgress"><span class="type-signature"></span>停止跟踪進度()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>關閉 polyfill <code>進步</code>創建的事件<a href="Tech.html#manualProgressOn">技術#manualProgressOn</a>通過清除設置的間隔來停止手動跟踪進度事件<a href="Tech.html#trackProgress">科技#trackProgress</a> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#stopTrackingProgress">技術#stopTrackingProgress</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="supportsFullScreen"><span class="type-signature"></span>支持全屏()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲得全屏支持 -</p>
+<p>Flash 不允許通過 javascript 全屏，所以這總是返回 false。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>Flash 技術不支持全屏，所以它總是返回 false。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">布爾值</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="textTracks"><span class="type-signature"></span>文本軌道（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>得到<code>科技</code>秒<a href="TextTrackList.html">文本軌道列表</a> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#textTracks">技術#textTracks</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>Tech 當前正在使用的文本軌道列表。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="TextTrackList.html">文本軌道列表</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="trackCurrentTime"><span class="type-signature"></span>跟踪當前時間()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>設置一個間隔函數來跟踪當前時間和触發器<code>時間更新</code>每 250 毫秒。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#trackCurrentTime">科技#trackCurrentTime</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li>科技#event:play</li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="trackProgress"><span class="type-signature"></span>跟踪進度（事件）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>這用於觸發<code>進步</code>緩衝百分比更改時的事件。它設置了一個間隔函數，每 500 毫秒調用一次，以檢查緩衝區結束百分比是否已更改。</p>
+<blockquote>
+<p>這個函數被調用<a href="Tech.html#manualProgressOn">技術#manualProgressOn</a></p>
+</blockquote>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>參數：</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>事件</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>這<code>準備好</code>導致此運行的事件。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#trackProgress">科技#trackProgress</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+    <h5>火災：</h5>
+    <ul>
+        <li><a href="Tech.html#event:progress">科技#event:progress</a></li>
+    </ul>
+    
+
+    
+    <h5>監聽事件：</h5>
+    <ul>
+        <li><a href="Tech.html#event:ready">技術#event：準備就緒</a></li>
+    </ul>
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="videoTracks"><span class="type-signature"></span>視頻軌道（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>得到<code>科技</code>秒<a href="VideoTrackList.html">視頻曲目列表</a> .</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#videoTracks">技術#videoTracks</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>技術人員當前正在使用的視頻曲目列表。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="VideoTrackList.html">視頻曲目列表</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="videoWidth"><span class="type-signature"></span>視頻寬度()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>視頻寬度</code>來自瑞士法郎。<code>視頻寬度</code>指示媒體的當前寬度（以 css 像素為單位）。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>的價值<code>視頻寬度</code>來自瑞士法郎。這將是一個以 css 像素為單位的數字。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="volume"><span class="type-signature"></span>體積（）</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>獲取值<code>體積</code>來自瑞士法郎。<code>體積</code>以十進制形式的百分比表示當前音頻電平。這意味著 1 是 100%，0.5 是 50%，依此類推。</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>傳回：</h5>
+    
+            
+<div class="param-desc">
+    <p>小數形式的體積百分比。值將在 0-1 之間。</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        類型
+    </dt>
+    <dd>
+        
+<span class="param-type">數字</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">類型定義</h3>
+
+        <dl>
+                
+<hr>
+<dt class="name" id="~PartsObject">
+    <h4 id="~PartsObject">零件物件</h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>包含連接和流信息的 Flash 部件對象。</p>
+    </div>
+    
+
+    
+        <h5>類型：</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">目的</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">特性：</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>名字</th>
+        
+
+        <th>類型</th>
+
+        
+
+        
+
+        <th class="last">描述</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>聯繫</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>源的連接字符串，默認為空字符串。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>溪流</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">細繩</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>源的流字符串，默認為空字符串。</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/flash-rtmp.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            </dl>
+    
+
+    
+        <h3 class="subsection-title">活動</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:audiotrackchange">音軌變化</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>在 Tech 上添加或刪除曲目時觸發<a href="AudioTrackList.html">音軌列表</a></p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#event:audiotrackchange">技術#event:audiotrackchange</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:progress">進步</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>見球員#progress</p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#event:progress">科技#event:progress</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:texttrackchange">文本軌道變化</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>在 Tech 上添加或刪除曲目時觸發<a href="TextTrackList.html">文本軌道列表</a></p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#event:texttrackchange">科技#event:texttrackchange</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:timeupdate">時間更新</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>以 250 毫秒的間隔觸發，表示時間正在視頻中流逝。</p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#event:timeupdate">科技#event:timeupdate</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">覆蓋：</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Tech.html#event:timeupdate">科技#event:timeupdate</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:videotrackchange">視頻軌道變化</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>在 Tech 上添加或刪除曲目時觸發<a href="VideoTrackList.html">視頻曲目列表</a></p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#event:videotrackchange">技術#event:videotrackchange</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="event:vttjsloaded">vttjs加載</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>加載 vtt.js 時觸發。</p>
+    </div>
+    
+
+    
+
+    
+        <h5>類型：<span class="param-type"><a href="EventTarget.html#~Event">事件目標~事件</a></span>
+
+
+</h5>
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">繼承自：</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="Tech.html#event:vttjsloaded">技術#event:vttjsloaded</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+    <dt class="tag-overrides">覆蓋：</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="Tech.html#event:vttjsloaded">技術#event:vttjsloaded</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">來源：</dt>
+	<dd class="tag-source">
+		技術/技術.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">搜索結果</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">版權所有 2017</span><span class="jsdoc-message">生成的文檔<a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> 2017 年 6 月 5 日使用<a href="https://github.com/docstrap/docstrap">DocStrap 模板</a> .</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script translate="no">
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+<script translate="no">
+	$( function () {
+		$( '#main' ).localScroll( {
+			offset : { top : 60 } //offset by the height of your header (give or take a few px, see what works for you)
+		} );
+		$( "dt.name" ).each( function () {
+			var $this = $( this ).find("h4");
+			var icon = $( "<i/>" ).addClass( "icon-plus-sign" ).addClass( "pull-right" ).addClass( "icon-white" );
+			var dt = $(this);
+			var children = dt.next( "dd" );
+
+			dt.prepend( icon ).css( {cursor : "pointer"} );
+			dt.addClass( "member-collapsed" ).addClass( "member" );
+
+
+			children.hide();
+
+			dt.children().on( "click", function () {
+				children = dt.next( "dd" );
+				children.slideToggle( "fast", function () {
+
+					if ( children.is( ":visible" ) ) {
+						icon.addClass( "icon-minus-sign" ).removeClass( "icon-plus-sign" ).removeClass( "icon-white" );
+						dt.addClass( "member-open" ).animate( "member-collapsed" );
+					} else {
+						icon.addClass( "icon-plus-sign" ).removeClass( "icon-minus-sign" ).addClass( "icon-white" );
+						dt.addClass( "member-collapsed" ).removeClass( "member-open" );
+					}
+				} );
+			} );
+
+		} );
+	} );
+</script>
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+
+</body>
+</html>

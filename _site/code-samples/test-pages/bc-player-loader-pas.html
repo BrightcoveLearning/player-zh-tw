@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>具有播放限制的 Brightcove Player Loader</title>
+  <script src="assets/js/node_modules/@brightcove/player-loader/dist/brightcove-player-loader.min.js"></script>
+  <style>
+    .video-js {
+        width: 640px;
+        height: 360px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="theDiv">
+  </div>
+
+  <script>
+    brightcovePlayerLoader({
+      refNode: document.querySelector('#theDiv'),
+      accountId: '1752604059001',
+      playerId: 'wHBRh9M3o',
+      videoId: '4607357817001'
+    })
+    .then(function(success) {
+      var myPlayer = success.ref;
+      console.log('success', success);
+      myPlayer.on('loadedmetadata',function(){
+        myPlayer.muted(true);
+        myPlayer.play();
+      });
+    })
+    .catch(function(error) {
+      console.log('error', error);
+    })
+  </script>
+
+</body>
+
+</html>
