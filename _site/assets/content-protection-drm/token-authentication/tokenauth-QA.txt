@@ -1,0 +1,4 @@
+Q: What TTL periods are available for the tokens? And how are these configured?
+A: TTL are set in the token and may have any value. There are multiple ways to configure a token via the CDN, but generally; the token auth “TTL” for the short lived access tokens is set by the user of the token access library (who has the secret to generate a valid token for an authorized user) .. One sets “token access” with SPE pattern matches on the various configurations / streamIDs.
+Q: What happens if a given playback session exceeds the valid TTL period? Do subsequent segments throw errors in the player?
+A: If a TTL has expired in a token-- all GETs using the token will match invalid token and take the specified action ( i.e. deny).
